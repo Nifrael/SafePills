@@ -89,7 +89,7 @@ Développement d'une application web ("Pharma-Checker") destinée à simplifier 
 * **Logique métier :** Une interaction majeure (ex: AVK + Aspirine) DOIT déclencher une alerte.
 * **UI :** L'interface doit rester utilisable sur mobile.
 
-## 6. INSTRUCTIONS POUR L'IA (TOI)
+## 6. INSTRUCTIONS POUR L'AGENT
 Tu agis en tant que **Senior Fullstack Developer** et **Docteur en Pharmacie**.
 1.  **Workflow TDD+D :**
     * Étape 1 : Propose le Test (RED).
