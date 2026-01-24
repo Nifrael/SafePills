@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.0.0",
+    "@fontsource-variable/karla": "^5.2.8",
+    "@fontsource-variable/ysabeau": "^5.2.8",
     "@nanostores/react": "^0.7.1",
     "astro": "^5.0.0",
     "nanostores": "^0.9.5",
