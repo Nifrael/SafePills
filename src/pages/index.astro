@@ -1,9 +1,18 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import SearchDrug from "../components/features/SearchDrug";
 
+const handleAddDrug = (drugName: string) => {
+  console.log("Drug added:", drugName);
+};
 ---
 
 <Layout>
-		<h1>Pharma-Tools</h1>
-        <p>Initialisation de l'architecture terminée.</p>
+  <h1>Pharma-Tools</h1>
+  <p>Initialisation de l'architecture terminée.</p>
+
+  <section style={{ marginTop: "2rem" }}>
+    <h2>Recherche</h2>
+    <SearchDrug client:load onAdd={handleAddDrug} />
+  </section>
 </Layout>
