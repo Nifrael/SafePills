@@ -1,18 +1,261 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import SearchDrug from "../components/features/SearchDrug";
+import SelectedDrugsList from "../components/features/SelectedDrugsList";
+import { addDrug } from "../lib/stores/medicationStore";
+import type { Drug } from "../components/features/SearchDrug";
 
-const handleAddDrug = (drugName: string) => {
-  console.log("Drug added:", drugName);
+const handleAddDrug = (drug: Drug) => {
+  addDrug(drug);
 };
 ---
 
 <Layout>
-  <h1>Pharma-Tools</h1>
-  <p>Initialisation de l'architecture terminée.</p>
+  <div class="page-header">
+    <h1>Pharma-Tools</h1>
+    <p class="subtitle">Analyse instantanée des interactions médicamenteuses</p>
+  </div>
 
-  <section style={{ marginTop: "2rem" }}>
-    <h2>Recherche</h2>
-    <SearchDrug client:load onAdd={handleAddDrug} />
-  </section>
+  <main class="checker-container">
+    <div class="glass-card">
+      <section class="search-section">
+        <h2>1. Recherchez vos médicaments</h2>
+        <p class="instruction">
+          Tapez le nom d'une marque (ex: Doliprane) ou d'une molécule (ex:
+          Ibuprofène).
+        </p>
+        <SearchDrug client:load />
+      </section>
+
+      <section class="list-section">
+        <h2>2. Votre ordonnance virtuelle</h2>
+        <SelectedDrugsList client:load />
+      </section>
+
+      <section class="interaction-status">
+        <div class="status-placeholder">
+          <p>
+            Ajoutez au moins deux médicaments pour vérifier les interactions.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
 </Layout>
+
+<style lang="scss" is:global>
+  @use "../styles/config/variables" as vars;
+  @use "../styles/config/mixins" as mixins;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #636e72;
+    }
+  }
+
+  .checker-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem 5rem;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  section {
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2d3436;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .instruction {
+      font-size: 0.9rem;
+      color: #b2bec3;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // --- Styles pour SearchDrug.tsx ---
+  .search-drug {
+    position: relative;
+    width: 100%;
+
+    &__container {
+      position: relative;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      border: 2px solid #f1f2f6;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      background: #f8f9fa;
+
+      &:focus {
+        outline: none;
+        border-color: #2ecc71;
+        background: #fff;
+        box-shadow: 0 8px 16px rgba(46, 204, 113, 0.1);
+      }
+    }
+
+    &__loader {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      color: #2ecc71;
+    }
+
+    &__results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-radius: 16px;
+      margin-top: 0.5rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      max-height: 400px;
+      overflow-y: auto;
+      list-style: none;
+      padding: 0.5rem;
+      border: 1px solid #f1f2f6;
+    }
+
+    &__no-results {
+      padding: 1rem;
+      color: #636e72;
+      font-size: 0.9rem;
+      font-style: italic;
+      background: #f8f9fa;
+      border-radius: 12px;
+      margin-top: 0.5rem;
+      border: 1px solid #f1f2f6;
+    }
+
+    &__item {
+      padding: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #f1fcf5;
+      }
+    }
+
+    &__name {
+      font-weight: 600;
+      color: #2d3436;
+      margin-bottom: 0.2rem;
+    }
+
+    &__substances {
+      font-size: 0.8rem;
+      color: #636e72;
+      text-transform: capitalize;
+    }
+  }
+
+  // --- Styles pour SelectedDrugsList.tsx ---
+  .drugs-list {
+    &__empty {
+      color: #b2bec3;
+      font-style: italic;
+      text-align: center;
+      padding: 2rem;
+      background: #fbfbfb;
+      border-radius: 16px;
+      border: 2px dashed #f1f2f6;
+    }
+
+    &__container {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    &__item {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #f1f2f6;
+      animation: slideIn 0.3s ease;
+    }
+
+    &__name {
+      font-weight: 500;
+      color: #2d3436;
+    }
+
+    &__remove {
+      background: #fff5f5;
+      color: #ff7675;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #ff7675;
+        color: #fff;
+      }
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
