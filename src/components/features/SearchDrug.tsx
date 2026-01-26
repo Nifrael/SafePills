@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { addDrug } from '../../lib/stores/medicationStore';
 
 export interface Substance {
-  code_substance: string;
-  nom: string;
-  dosage: string;
+  substance_code: string;
+  name: string;
+  dose?: string;
 }
 
 export interface Drug {
   cis: string;
-  nom: string;
+  name: string;
   substances: Substance[];
 }
 
-const SearchDrug: React.FC = () => {
+export const SearchDrug = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Drug[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +27,7 @@ const SearchDrug: React.FC = () => {
 
       setIsLoading(true);
       try {
-        const response = await fetch(`http://localhost:8000/api/search?q=${encodeURIComponent(query)}`);
+        const response = await fetch(`http://127.0.0.1:8000/api/search?q=${query}`);
         if (response.ok) {
           const data = await response.json();
           setResults(data);
@@ -70,9 +70,9 @@ const SearchDrug: React.FC = () => {
               onClick={() => handleSelect(drug)}
               className="search-drug__item"
             >
-              <div className="search-drug__name">{drug.nom}</div>
+              <div className="search-drug__name">{drug.name}</div>
               <div className="search-drug__substances">
-                {drug.substances.map(s => s.nom).join(', ')}
+                {drug.substances.map(s => s.name).join(', ')}
               </div>
             </li>
           ))}
@@ -88,4 +88,3 @@ const SearchDrug: React.FC = () => {
   );
 };
 
-export default SearchDrug;

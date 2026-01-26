@@ -14,7 +14,7 @@ const SelectedDrugsList: React.FC = () => {
       <ul className="drugs-list__container">
         {drugs.map((drug) => (
           <li key={drug.cis} className="drugs-list__item">
-            <span className="drugs-list__name">{drug.nom}</span>
+            <span className="drugs-list__name">{drug.name}</span>
             <button
               onClick={() => removeDrug(drug.cis)}
               className="drugs-list__remove"

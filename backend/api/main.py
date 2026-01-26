@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query
 from typing import List
-from backend.services.search_service import SearchEngine
+from backend.services.search_service import search_drugs
 from backend.core.models import Drug
 import os
 
@@ -21,20 +21,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialisation du moteur de recherche
-# On utilise un chemin relatif vers les données
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(BASE_DIR, "data", "raw")
-search_engine = SearchEngine(data_dir=DATA_DIR)
-
-@app.get("/health")
-async def health_check():
-    """Vérifie que l'API est opérationnelle."""
-    return {"status": "ok", "drugs_loaded": len(search_engine.drugs)}
-
 @app.get("/api/search", response_model=List[Drug])
-async def search_drugs(q: str = Query(..., min_length=1)):
+async def get_drug_search(q: str = Query(..., min_length=2)):
     """
-    Recherche des médicaments par nom ou substance.
+    Reçoit une requête textuelle et renvoie la liste des médicaments 
+    avec leurs substances depuis la base SQLite.
     """
-    return search_engine.search(q)
+    results = search_drugs(q)
+    return results
+
+@app.get("/")
+def read_root():
+    return {"message": "Bienvenue sur l'API SafePills"}

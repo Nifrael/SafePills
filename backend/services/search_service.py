@@ -1,54 +1,51 @@
-import unicodedata
-from typing import List, Dict
-from backend.services.drug_loader import load_drugs
-from backend.core.models import Drug
+import sqlite3
+from typing import List
+from backend.core.models import Drug, Substance
 
-def normalize_string(s: str) -> str:
-    """Enlève les accents et met en majuscules pour une recherche robuste."""
-    if not s:
-        return ""
-    # Normalise les caractères (ex: É -> E)
-    s = unicodedata.normalize('NFD', s)
-    s = "".join([c for c in s if unicodedata.category(c) != 'Mn'])
-    return s.upper().strip()
+DB_PATH = "backend/safepills.db"
 
-class SearchEngine:
-    def __init__(self, data_dir: str):
-        """Initialise le moteur et pré-calcule les index de recherche."""
-        self.drugs = load_drugs(data_dir)
-        # Index pour la recherche par substance : {nom_normalise: [liste_de_drugs]}
-        self.substance_index: Dict[str, List[Drug]] = {}
-        self._build_indexes()
+def search_drugs(query: str) -> List[Drug]:
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row 
+    cursor = conn.cursor()
 
-    def _build_indexes(self):
-        """Construit les index pour accélérer la recherche."""
-        for drug in self.drugs:
-            for sub in drug.substances:
-                # On utilise le nom normalisé pour l'index
-                sub_name_norm = normalize_string(sub.nom)
-                if sub_name_norm not in self.substance_index:
-                    self.substance_index[sub_name_norm] = []
-                self.substance_index[sub_name_norm].append(drug)
+    # On prépare le pattern de recherche
+    search_pattern = f"%{query.upper()}%"
 
-    def search(self, query: str) -> List[Drug]:
-        """
-        Recherche optimisée et insensible aux accents.
-        """
-        if not query:
-            return []
+    # NOUVELLE REQUÊTE : 
+    # On cherche dans 'drugs.name' OU dans 'substances.name'
+    cursor.execute('''
+        SELECT DISTINCT d.cis, d.name
+        FROM drugs d
+        LEFT JOIN drug_substances ds ON d.cis = ds.drug_cis
+        LEFT JOIN substances s ON ds.substance_code = s.substance_code
+        WHERE d.name LIKE ? OR s.name LIKE ?
+        GROUP BY d.name
+    ''', (search_pattern, search_pattern))
 
-        query_norm = normalize_string(query)
-        results_map = {}
+    drug_rows = cursor.fetchall()
+    results = []
 
-        # 1. Recherche dans les noms de marques (Marque)
-        for drug in self.drugs:
-            if query_norm in normalize_string(drug.nom):
-                results_map[drug.cis] = drug
-
-        # 2. Recherche dans l'index des substances
-        for sub_name_norm, associated_drugs in self.substance_index.items():
-            if query_norm in sub_name_norm:
-                for drug in associated_drugs:
-                    results_map[drug.cis] = drug
+    for row in drug_rows:
+        cis = row["cis"]
+        # Pour chaque médicament trouvé, on récupère TOUTES ses substances
+        cursor.execute('''
+            SELECT s.substance_code, s.name, ds.dose 
+            FROM substances s
+            JOIN drug_substances ds ON s.substance_code = ds.substance_code
+            WHERE ds.drug_cis = ?
+        ''', (cis,))
         
-        return list(results_map.values())
+        substance_rows = cursor.fetchall()
+        substances = [
+            Substance(
+                substance_code=s["substance_code"],
+                name=s["name"],
+                dose=s["dose"]
+            ) for s in substance_rows
+        ]
+
+        results.append(Drug(cis=cis, name=row["name"], substances=substances))
+
+    conn.close()
+    return results

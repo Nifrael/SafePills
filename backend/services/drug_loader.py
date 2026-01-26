@@ -1,6 +1,11 @@
 import os
+import sqlite3
+import re
 from typing import List, Dict
-from backend.core.models import Drug, Substance
+from backend.core.models import Drug, Substance, InteractionRule, SafePillsAnalysis
+
+# Chemin vers la base de données SQLite (un simple fichier sur ton disque)
+DB_PATH = "backend/safepills.db"
 
 # Notre liste de test (MVP)
 TARGET_DRUGS = [
@@ -9,99 +14,103 @@ TARGET_DRUGS = [
     "LASILIX", "INEXIUM", "PLAVIX", "LEVOTHYROX", "MILLEPERTUIS"
 ]
 
-def _load_all_substances(file_path: str) -> Dict[str, List[Substance]]:
-    """
-    Lit le fichier des compositions et regroupe les substances par code CIS.
-    """
-    substances_by_cis = {}
-    
-    if not os.path.exists(file_path):
-        return {}
+def setup_database():
 
-    with open(file_path, 'r', encoding='iso-8859-1') as f:
-        for line in f:
-            columns = line.strip().split('\t')
-            # Structure du fichier CIS_COMPO_bdpm.txt :
-            # 0: Code CIS
-            # 1: Désignation de l'élément pharmaceutique
-            # 2: Code substance
-            # 3: Nom substance
-            # 4: Dosage
-            if len(columns) >= 4:
-                cis = columns[0]
-                nom_substance = columns[3]
-                dosage = columns[4] if len(columns) > 4 else ""
-                code_substance = columns[2]
-
-                substance = Substance(
-                    code_substance=code_substance,
-                    nom=nom_substance,
-                    dosage=dosage
-                )
-
-                if cis not in substances_by_cis:
-                    substances_by_cis[cis] = []
-                substances_by_cis[cis].append(substance)
-            
-    return substances_by_cis
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS drugs (
+            cis TEXT PRIMARY KEY,
+            name TEXT NOT NULL
+        )
+    ''')
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS substances (
+            substance_code TEXT PRIMARY KEY,
+            name TEXT NOT NULL,
+            therapeutic_class TEXT
+        )
+    ''')
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS drug_substances (
+            drug_cis TEXT,
+            substance_code TEXT,
+            dose TEXT,
+            FOREIGN KEY(drug_cis) REFERENCES drugs(cis),
+            FOREIGN KEY(substance_code) REFERENCES substances(substance_code)
+        )
+    ''')
+    conn.commit()
+    return conn
 
 def _simplify_name(full_name: str) -> str:
     """
-    Simplifie le nom en utilisant notre liste de marques cibles.
-    Ex: 'DOLIPRANELIQUIZ' -> 'DOLIPRANE'
+    Simplifie le nom commercial pour faciliter la recherche utilisateur.
     """
-    # On trie par longueur décroissante pour matcher 'CODOLIPRANE' avant 'DOLIPRANE'
-    sorted_targets = sorted(TARGET_DRUGS, key=len, reverse=True)
-    
     full_name_upper = full_name.upper()
-    for target in sorted_targets:
+    
+    # On cherche si l'un de nos mots-clés est présent
+    for target in sorted(TARGET_DRUGS, key=len, reverse=True):
         if target in full_name_upper:
             return target
             
-    # Si rien n'est trouvé, on garde le premier mot par défaut
-    import re
-    match = re.search(r'[^a-zA-ZÀ-ÿ]', full_name)
-    if match:
-        return full_name[:match.start()].strip().upper()
-    return full_name.upper().strip()
+    # Sinon, on prend le premier mot (souvent la marque)
+    return re.split(r'[^a-zA-ZÀ-ÿ]', full_name)[0].upper()
 
-def load_drugs(data_dir: str) -> List[Drug]:
+def load_data_into_db(data_dir: str):
     """
-    Charge les médicaments en les regroupant par marque pour éviter les doublons.
+    Lit les fichiers TXT de l'ANSM et injecte les données dans SQLite.
     """
+    conn = setup_database()
+    cursor = conn.cursor()
+    
     cis_path = os.path.join(data_dir, "CIS_bdpm.txt")
     compo_path = os.path.join(data_dir, "CIS_COMPO_bdpm.txt")
 
-    substances_map = _load_all_substances(compo_path)
-    
-    unique_drugs = {} # Clé: (NomSimplifié, SubstancesIds)
-    
-    if not os.path.exists(cis_path):
-        return []
+    # 1. On traite d'abord les substances et les dosages
+    with open(compo_path, 'r', encoding='iso-8859-1') as f:
+        for line in f:
+            cols = line.strip().split('\t')
+            if len(cols) >= 4:
+                cis, sub_code, sub_name, dose = cols[0], cols[2], cols[3], cols[4]
+                
+                # Insertion de la substance (on ignore si elle existe déjà)
+                cursor.execute(
+                    "INSERT OR IGNORE INTO substances (substance_code, name) VALUES (?, ?)", 
+                    (sub_code, sub_name)
+                )
+                
+                # Création du lien entre le médicament (CIS) et la substance
+                cursor.execute(
+                    "INSERT INTO drug_substances (drug_cis, substance_code, dose) VALUES (?, ?, ?)",
+                    (cis, sub_code, dose)
+                )
 
+    # 2. On traite les noms de médicaments avec notre filtre MVP
     with open(cis_path, 'r', encoding='iso-8859-1') as f:
         for line in f:
-            columns = line.strip().split('\t')
-            if len(columns) >= 2:
-                cis = columns[0]
-                nom_complet = columns[1]
+            cols = line.strip().split('\t')
+            if len(cols) >= 2:
+                cis, full_name = cols[0], cols[1]
                 
-                # Filtrage sur nos 15 princeps
-                if any(target in nom_complet.upper() for target in TARGET_DRUGS):
-                    nom_simplifie = _simplify_name(nom_complet)
-                    drug_substances = substances_map.get(cis, [])
-                    
-                    # On crée une clé unique basée sur le nom et les codes des substances
-                    # pour être sûr de ne pas fusionner deux médicaments différents 
-                    # qui auraient le même nom (rare mais possible)
-                    sub_ids = "-".join(sorted([s.code_substance for s in drug_substances]))
-                    key = f"{nom_simplifie}_{sub_ids}"
-                    
-                    if key not in unique_drugs:
-                        unique_drugs[key] = Drug(
-                            cis=cis, # On garde un CIS arbitraire parmi les doublons
-                            nom=nom_simplifie,
-                            substances=drug_substances
-                        )
-                    
-    return list(unique_drugs.values())
+                # On ne garde que ce qui nous intéresse pour le TFM
+                if any(target in full_name.upper() for target in TARGET_DRUGS):
+                    clean_name = _simplify_name(full_name)
+                    cursor.execute(
+                        "INSERT OR IGNORE INTO drugs (cis, name) VALUES (?, ?)", 
+                        (cis, clean_name)
+                    )
+
+    conn.commit()
+    conn.close()
+    print("Base de données initialisée avec succès !")
+
+if __name__ == "__main__":
+    # On définit où se trouvent tes fichiers textes ANSM
+    # Par défaut, on cherche un dossier 'data' à la racine
+    DATA_DIRECTORY = "data/raw" 
+    
+    if os.path.exists(DATA_DIRECTORY):
+        load_data_into_db(DATA_DIRECTORY)
+    else:
+        print(f"❌ Erreur : Le dossier '{DATA_DIRECTORY}' est introuvable.")
