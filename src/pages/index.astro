@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { SearchDrug } from "../components/features/SearchDrug";
-import SelectedDrugsList from "../components/features/SelectedDrugsList";
+import { SelectedDrugsList } from "../components/features/SelectedDrugsList";
 import { addDrug } from "../lib/stores/medicationStore";
 import type { Drug } from "../components/features/SearchDrug";
 
@@ -248,10 +248,189 @@ const handleAddDrug = (drug: Drug) => {
     }
   }
 
+  // --- Styles pour l'Analyse ---
+  .action-area {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #fbfbfb;
+    border-radius: 20px;
+    border: 1px solid #f1f2f6;
+
+    &__button {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(52, 152, 219, 0.2);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      margin-bottom: 1rem;
+
+      &:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
+      }
+
+      &:active:not(:disabled) {
+        transform: translateY(0);
+      }
+
+      &:disabled {
+        background: #ced6e0;
+        cursor: not-allowed;
+        box-shadow: none;
+        opacity: 0.7;
+      }
+    }
+
+    &__hint {
+      color: #747d8c;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+
+      &--warning {
+        color: #f39c12;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .analysis-result {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 24px;
+    border-left: 6px solid #ccc;
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    animation: slideIn 0.5s ease;
+
+    &--rouge {
+      background: #fff5f5;
+      border-color: #ff7675;
+    }
+    &--orange {
+      background: #fffaf0;
+      border-color: #f39c12;
+    }
+    &--jaune {
+      background: #fffdf0;
+      border-color: #f1c40f;
+    }
+    &--vert {
+      background: #f0fff4;
+      border-color: #2ecc71;
+    }
+
+    &__title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    &__expert {
+      margin-bottom: 2rem;
+
+      h4 {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #747d8c;
+        margin-bottom: 0.8rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 0.4rem;
+        display: inline-block;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #2d3436;
+        white-space: pre-line;
+      }
+    }
+
+    &__action {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+
+      h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #2d3436;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        color: #2d3436;
+        font-weight: 500;
+      }
+    }
+
+    &__technical {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px dashed rgba(0, 0, 0, 0.1);
+
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: #2d3436;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        margin-top: 1rem;
+        list-style: none;
+        padding: 0;
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      li {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        border: 1px solid rgba(0, 0, 0, 0.02);
+
+        strong {
+          color: #2d3436;
+        }
+        span {
+          color: #636e72;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .analysis-error {
+    background: #fff5f5;
+    color: #c0392b;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    font-weight: 500;
+    border: 1px solid #feb2b2;
+  }
+
   @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
