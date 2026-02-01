@@ -4,6 +4,13 @@ Ces objets représentent la structure des données stockées en base de données
 """
 from pydantic import BaseModel
 from typing import List, Optional
+from enum import Enum
+
+# Définition propre des niveaux de risque
+class RiskLevel(str, Enum):
+    RED = "RED"       # Contre-indication absolue
+    ORANGE = "ORANGE" # Précaution nécessaire
+    GREEN = "GREEN"   # Pas de signal
 
 # --- ENTITÉS STOCKÉES ---
 
@@ -11,7 +18,7 @@ class Substance(BaseModel):
     """Reflet de la table 'substances'"""
     code: str
     name: str
-    tags: List[str] = [] 
+    tags: List[str] = []
 
 class Drug(BaseModel):
     """Reflet de la table 'drugs'"""
@@ -24,7 +31,7 @@ class Drug(BaseModel):
 
 class Question(BaseModel):
     """Reflet de la table 'questions'"""
-    id: str           
-    text: str         
+    id: str
+    text: str
     trigger_tags: List[str] = [] # JSON stocké en base
-    risk_level: str
+    risk_level: RiskLevel
