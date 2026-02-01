@@ -1,51 +1,129 @@
+"""
+Service de Recherche Simplifié (KISS)
+Recherche dans la table 'drugs' et 'substances' SQLite.
+"""
 import sqlite3
+import os
+import unicodedata
 from typing import List
-from backend.core.models import Drug, Substance
+from ..core.schemas import SearchResult
+from ..core.models import Drug, Substance
 
-DB_PATH = "backend/safepills.db"
+# Chemin DB (à centraliser idéalement)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, '..', 'data', 'safepills.db')
 
-def search_drugs(query: str) -> List[Drug]:
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row 
-    cursor = conn.cursor()
+def normalize_text(text: str) -> str:
+    """Retire accents et met en minuscules pour la recherche"""
+    if not text: return ""
+    return ''.join(c for c in unicodedata.normalize('NFD', text)
+                   if unicodedata.category(c) != 'Mn').lower()
 
-    # On prépare le pattern de recherche
-    search_pattern = f"%{query.upper()}%"
+def search_medication(query: str) -> List[SearchResult]:
+    """
+    Recherche médicaments ET substances correspondant à la requête
+    """
+    clean_query = normalize_text(query)
+    if len(clean_query) < 2:
+        return []
 
-    # NOUVELLE REQUÊTE : 
-    # On cherche dans 'drugs.name' OU dans 'substances.name'
-    cursor.execute('''
-        SELECT DISTINCT d.cis, d.name
-        FROM drugs d
-        LEFT JOIN drug_substances ds ON d.cis = ds.drug_cis
-        LEFT JOIN substances s ON ds.substance_code = s.substance_code
-        WHERE d.name LIKE ? OR s.name LIKE ?
-        GROUP BY d.name
-    ''', (search_pattern, search_pattern))
-
-    drug_rows = cursor.fetchall()
     results = []
-
-    for row in drug_rows:
-        cis = row["cis"]
-        # Pour chaque médicament trouvé, on récupère TOUTES ses substances
-        cursor.execute('''
-            SELECT s.substance_code, s.name, ds.dose 
-            FROM substances s
-            JOIN drug_substances ds ON s.substance_code = ds.substance_code
-            WHERE ds.drug_cis = ?
-        ''', (cis,))
+    
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
         
-        substance_rows = cursor.fetchall()
-        substances = [
-            Substance(
-                substance_code=s["substance_code"],
-                name=s["name"],
-                dose=s["dose"]
-            ) for s in substance_rows
-        ]
+        # 1. Recherche Substances
+        # On cherche les substances qui matchent
+        cursor.execute(
+            "SELECT code, name FROM substances"
+        )
+        
+        # Filtrage Python (plus simple pour les accents avec SQLite par défaut)
+        # Mais pour la perf, on fera du SQL LIKE plus tard si besoin
+        # Ici on charge tout (133 substances c'est rien) et on filtre
+        all_subs = cursor.fetchall()
+        for sub in all_subs:
+            if clean_query in normalize_text(sub['name']):
+                results.append(SearchResult(
+                    type="substance",
+                    id=sub['code'],
+                    name=sub['name'],
+                    description="Substance active"
+                ))
+        
+        # 2. Recherche Médicaments OTC
+        cursor.execute(
+            "SELECT cis, name FROM drugs WHERE is_otc = 1"
+        )
+        all_drugs = cursor.fetchall()
+        for drug in all_drugs:
+            if clean_query in normalize_text(drug['name']):
+                results.append(SearchResult(
+                    type="drug",
+                    id=drug['cis'],
+                    name=drug['name'],
+                    description="Médicament"
+                ))
+                
+        conn.close()
+        
+    except Exception as e:
+        print(f"Erreur recherche SQLite: {e}")
+        return []
+        
+    return results[:20] # Limite à 20 résultats
 
-        results.append(Drug(cis=cis, name=row["name"], substances=substances))
-
-    conn.close()
-    return results
+def get_drug_details(cis: str) -> Drug:
+    """Récupère un médicament et ses substances"""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        
+        # Info Drug
+        cursor.execute("SELECT * FROM drugs WHERE cis = ?", (cis,))
+        row = cursor.fetchone()
+        if not row:
+            conn.close()
+            return None
+            
+        drug = Drug(
+            cis=row['cis'],
+            name=row['name'],
+            administration_route=row['administration_route'],
+            is_otc=bool(row['is_otc']),
+            substances=[]
+        )
+        
+        # Info Substances liées
+        cursor.execute("""
+            SELECT s.code, s.name, s.tags 
+            FROM substances s
+            JOIN drug_substances ds ON s.code = ds.substance_code
+            WHERE ds.drug_cis = ?
+        """, (cis,))
+        
+        sub_rows = cursor.fetchall()
+        import json
+        for s_row in sub_rows:
+            tags = []
+            if s_row['tags']:
+                try:
+                    tags = json.loads(s_row['tags'])
+                except:
+                    pass
+            
+            drug.substances.append(Substance(
+                code=s_row['code'],
+                name=s_row['name'],
+                tags=tags
+            ))
+            
+        conn.close()
+        return drug
+        
+    except Exception as e:
+        print(f"Erreur détails drug: {e}")
+        return None
