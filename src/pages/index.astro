@@ -1,42 +1,49 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { SearchDrug } from "../components/features/SearchDrug";
-import { SelectedDrugsList } from "../components/features/SelectedDrugsList";
-import { addDrug } from "../lib/stores/medicationStore";
-import type { Drug } from "../components/features/SearchDrug";
-
-const handleAddDrug = (drug: Drug) => {
-  addDrug(drug);
-};
 ---
 
 <Layout>
   <div class="page-header">
     <h1>SafePills</h1>
-    <p class="subtitle">Analyse instantanée des interactions médicamenteuses</p>
+    <p class="subtitle">Votre assistant de santé intelligent</p>
   </div>
 
-  <main class="checker-container">
+  <main class="home-container">
     <div class="glass-card">
-      <section class="search-section">
-        <h2>1. Recherchez vos médicaments</h2>
-        <p class="instruction">
-          Tapez le nom d'une marque (ex: Doliprane) ou d'une molécule (ex:
-          Ibuprofène).
+      <section class="hero-section">
+        <h2>🏥 Bienvenue sur SafePills</h2>
+        <p class="hero-text">
+          SafePills vous aide à évaluer la sécurité de l'automédication grâce à
+          un questionnaire personnalisé.
         </p>
-        <SearchDrug client:load />
+
+        <div class="cta-buttons">
+          <a href="/automedication" class="btn btn-primary">
+            🚀 Tester un médicament
+          </a>
+        </div>
       </section>
 
-      <section class="list-section">
-        <h2>2. Votre ordonnance virtuelle</h2>
-        <SelectedDrugsList client:load />
-      </section>
+      <section class="features-section">
+        <h3>Comment ça fonctionne ?</h3>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🔍</div>
+            <h4>1. Recherchez</h4>
+            <p>Cherchez le médicament que vous souhaitez prendre</p>
+          </div>
 
-      <section class="interaction-status">
-        <div class="status-placeholder">
-          <p>
-            Ajoutez au moins deux médicaments pour vérifier les interactions.
-          </p>
+          <div class="feature">
+            <div class="feature-icon">📋</div>
+            <h4>2. Répondez</h4>
+            <p>Répondez à quelques questions sur votre situation</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">✅</div>
+            <h4>3. Obtenez votre score</h4>
+            <p>Recevez une évaluation claire et des conseils adaptés</p>
+          </div>
         </div>
       </section>
     </div>
@@ -67,8 +74,8 @@ const handleAddDrug = (drug: Drug) => {
     }
   }
 
-  .checker-container {
-    max-width: 800px;
+  .home-container {
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 1rem 5rem;
   }
@@ -82,37 +89,95 @@ const handleAddDrug = (drug: Drug) => {
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  section {
+  .hero-section {
+    text-align: center;
     margin-bottom: 3rem;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
       color: #2d3436;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
-    .instruction {
-      font-size: 0.9rem;
-      color: #b2bec3;
-      margin-bottom: 1.5rem;
+    .hero-text {
+      font-size: 1.1rem;
+      color: #636e72;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      .btn {
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+
+        &.btn-primary {
+          background: linear-gradient(135deg, #2ecc71, #27ae60);
+          color: white;
+          box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+          }
+        }
+      }
     }
   }
 
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+  .features-section {
+    h3 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2d3436;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.5);
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #2d3436;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #636e72;
+        line-height: 1.5;
+      }
     }
   }
 </style>
