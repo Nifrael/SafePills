@@ -81,40 +81,82 @@ def get_questions_for_drug(identifier: str) -> List[Question]:
         
     return questions
 
-def evaluate_risk(answers: Dict[str, bool]) -> EvaluationResponse:
+from ..core.schemas import EvaluationResponse
+from ..core.models import Question, RiskLevel
+
+# ...
+
+def compute_risk_score(questions: List[Question], answers: Dict[str, bool]) -> EvaluationResponse:
     """
-    Calcule le score final basé sur les réponses OUI/NON.
-    answers = {"Q_FOIE": True, "Q_GROSSE": False}
+    Fonction PURE : Calcule le score basé uniquement sur les inputs.
+    Aucun accès DB ici. Testable unitairement.
     """
-    score = "GREEN"
+    score = RiskLevel.GREEN
     details = []
     
+    # On indexe les questions par ID pour accès rapide
+    questions_map = {q.id: q for q in questions}
+    
+    for q_id, is_yes in answers.items():
+        if is_yes and q_id in questions_map:
+            question = questions_map[q_id]
+            risk = question.risk_level
+            
+            # Logique de Max Risque : RED > ORANGE > GREEN
+            if risk == RiskLevel.RED:
+                score = RiskLevel.RED
+                details.append(f"ALERTE ROUGE : {question.text} (Contre-indication formelle)")
+            elif risk == RiskLevel.ORANGE and score != RiskLevel.RED:
+                score = RiskLevel.ORANGE
+                details.append(f"Attention : {question.text} (Précautions requises)")
+                
+    if score == RiskLevel.GREEN:
+        # On ne met un message positif que s'il n'y a pas d'alerte
+        pass 
+        
+    return EvaluationResponse(score=score, details=details)
+
+def evaluate_risk(answers: Dict[str, bool]) -> EvaluationResponse:
+    """
+    Orchestrateur : Récupère les données DB -> Appelle la logique pure.
+    """
     try:
         conn = sqlite3.connect(DB_PATH)
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
         
-        for q_id, response in answers.items():
-            if response is True: # Si l'utilisateur a répondu OUI -> Risque potentiel
-                cursor.execute("SELECT risk_level, text FROM questions WHERE id = ?", (q_id,))
-                row = cursor.fetchone()
-                if row:
-                    risk = row['risk_level']
-                    # Logique de Max Risque : RED > ORANGE > GREEN
-                    if risk == "RED":
-                        score = "RED"
-                        details.append(f"ALERTE ROUGE : {row['text']} (Contre-indication formelle)")
-                    elif risk == "ORANGE" and score != "RED":
-                        score = "ORANGE"
-                        details.append(f"Attention : {row['text']} (Précautions requises)")
-                        
+        answered_ids = list(answers.keys())
+        if not answered_ids:
+             return EvaluationResponse(score=RiskLevel.GREEN, details=[])
+
+        # Construction dynamique de la requête IN (?,?,?)
+        placeholders = ','.join('?' * len(answered_ids))
+        query = f"SELECT * FROM questions WHERE id IN ({placeholders})"
+        
+        cursor.execute(query, answered_ids)
+        rows = cursor.fetchall()
+        
+        questions = []
+        for r in rows:
+            # Conversion String (DB) -> Enum (Model)
+            # Si la DB contient une valeur inconnue, cela lèvera une erreur (sécurité)
+            try:
+                risk_enum = RiskLevel(r['risk_level'])
+            except ValueError:
+                risk_enum = RiskLevel.GREEN # Fallback safe ou log error
+                
+            questions.append(Question(
+                id=r['id'],
+                text=r['text'],
+                risk_level=risk_enum,
+                trigger_tags=[] 
+            ))
+            
         conn.close()
         
-        if score == "GREEN":
-            details.append("Aucune contre-indication détectée pour votre profil.")
+        # Appel de la logique Pure
+        return compute_risk_score(questions, answers)
             
     except Exception as e:
         print(f"Erreur evaluate_risk: {e}")
-        return EvaluationResponse(score="RED", details=["Erreur technique lors de l'analyse"])
-        
-    return EvaluationResponse(score=score, details=details)
+        return EvaluationResponse(score=RiskLevel.RED, details=["Erreur technique lors de l'analyse"])
