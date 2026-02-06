@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API_BASE_URL } from '../../../config';
 import type { UserProfile } from './UserProfileForm';
 
 interface Question {
@@ -30,7 +31,7 @@ export const AutomedicationQuiz: React.FC<Props> = ({ id, molecule, userProfile,
         if (userProfile.age) params.append('age', userProfile.age.toString());
         params.append('has_other_meds', userProfile.hasOtherMeds.toString());
 
-        const url = `http://127.0.0.1:8000/api/automedication/questions/${id}?${params.toString()}`;
+        const url = `${API_BASE_URL}/api/automedication/questions/${id}?${params.toString()}`;
         const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
@@ -60,7 +61,7 @@ export const AutomedicationQuiz: React.FC<Props> = ({ id, molecule, userProfile,
   const submitAnswers = async (finalAnswers: Record<string, boolean>) => {
     try {
       setIsLoading(true);
-      const response = await fetch('http://127.0.0.1:8000/api/automedication/evaluate', {
+      const response = await fetch(`${API_BASE_URL}/api/automedication/evaluate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE_URL } from '../../../config';
 
 interface SearchResult {
   id: string;
@@ -25,7 +26,7 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
 
       setIsLoading(true);
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/search?q=${query}`);
+        const response = await fetch(`${API_BASE_URL}/api/search?q=${query}`);
         if (response.ok) {
           const data = await response.json();
           setResults(data);
