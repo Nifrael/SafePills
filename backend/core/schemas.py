@@ -18,3 +18,5 @@ class EvaluationResponse(BaseModel):
     """Résultat du calcul/algorithme d'analyse"""
     score: RiskLevel  # Utilisation de l'Enum
     details: List[str] # Messages explicatifs générés dynamiquement
+    ai_explanation: Optional[str] = None # Explication pédagogique générée par IA
+    answered_questions_context: Optional[List[dict]] = None # Contexte enrichi pour l'IA
