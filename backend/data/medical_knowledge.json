@@ -2,51 +2,56 @@
   "_comment": "BASE DE CONNAISSANCES MÉDICALES - MODELE 'PROFIL DE RISQUE'",
   
   "questions_catalog": {
-    "Q_GROSSESSE_FORMELLE": "Êtes-vous enceinte (6ème mois ou plus) ?",
-    "Q_GROSSESSE_PRUDENCE": "Êtes-vous enceinte (quel que soit le terme) ou allaitez-vous ?",
+    "Q_PREGNANCY": "Êtes-vous enceinte ou allaitez-vous (si vous êtes un homme, répondez 'non') ?",
     "Q_ULCERE": "Avez-vous déjà eu un ulcère à l'estomac ou souffrez-vous de brûlures d'estomac fréquentes ?",
-    "Q_FOIE_GRAVE": "Souffrez-vous d'une maladie grave du foie ?",
-    "Q_INFECTION_DIGESTIVE": "Votre diarrhée est-elle accompagnée de fièvre élevée (>38.5°C) ou de sang dans les selles ?",
-    "Q_CONFUSION_AGE": "Avez-vous récemment eu des épisodes de confusion ou des troubles de la mémoire ?",
-    "Q_POLYMEDICAMENTATION": "Prenez-vous actuellement d'autres médicaments de façon régulière ?",
-    "Q_COEUR": "Souffrez-vous de problèmes cardiaques (angine de poitrine, troubles du rythme) ?",
-    "Q_REINS": "Avez-vous une insuffisance rénale sévère ?",
-    "Q_SOLEIL": "Comptez-vous exposer la zone traitée au soleil ?",
-    "Q_SOMNOLENCE": "Conduisez-vous un véhicule ou utilisez-vous des machines dangereuses ?",
-    "Q_TOUX_GRASSE": "Votre toux est-elle grasse (avec des expectorations) ?"
+    "Q_LIVER": "Souffrez-vous d'une maladie du foie ou d'une insuffisance hépatique ?",
+    "Q_DIARRHEA": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
+    "Q_CONFUSION": "Avez-vous récemment eu des épisodes de confusion ou des troubles de la mémoire ?",
+    "Q_POLYMEDICATION": "Prenez-vous actuellement d'autres médicaments de façon régulière ?",
+    "Q_HEART": "Souffrez-vous de problèmes cardiaques quelconques (hypertension artérielle, troubles du rythme, etc...) ?",
+    "Q_KIDNEY": "Souffrez-vous d'une insuffisance rénale ?",
+    "Q_SUN": "Comptez-vous exposer la zone traitée au soleil ?",
+    "Q_SLEEP": "Conduisez-vous un véhicule ou utilisez-vous des machines dangereuses ?",
+    "Q_FALL": "Avez-vous eu dernièrement des épisodes de chute, de perte d'équilibre ?",
+    "Q_SICK": "Votre toux est-elle grasse (avec des expectorations) ?",
+    "Q_HIGH_PERFORMANCE": "Êtes-vous sportif de haut niveau ?"
   },
 
   "risk_profiles": {
     "AINS_ORAL": [
-      { "id": "Q_GROSSESSE_FORMELLE", "risk": "RED", "gender": "F" },
+      { "id": "Q_PREGNANCY", "risk": "RED", "gender": "F" },
       { "id": "Q_ULCERE", "risk": "RED", "routes": ["orale", "rectale", "sublinguale"] },
-      { "id": "Q_REINS", "risk": "ORANGE", "age_min": 65 },
-      { "id": "Q_POLYMEDICAMENTATION", "risk": "ORANGE", "requires_other_meds": true },
-      { "id": "Q_SOMNOLENCE", "risk": "GREEN" }
+      { "id": "Q_KIDNEY", "risk": "RED" },
+      { "id": "Q_POLYMEDICATION", "risk": "ORANGE", "requires_other_meds": true },
+      { "id": "Q_SLEEP", "risk": "GREEN" }
     ],
     "AINS_CUTANE": [
-       { "id": "Q_GROSSESSE_FORMELLE", "risk": "ORANGE", "gender": "F" },
-       { "id": "Q_SOLEIL", "risk": "ORANGE", "routes": ["cutanee"] }
+       { "id": "Q_PREGNANCY", "risk": "ORANGE", "gender": "F" },
+       { "id": "Q_SUN", "risk": "ORANGE", "routes": ["cutanee"] }
     ],
     "PARACETAMOL": [
-      { "id": "Q_FOIE_GRAVE", "risk": "ORANGE" }
+      { "id": "Q_LIVER", "risk": "ORANGE" },
+      { "id": "Q_POLYMEDICATION", "risk": "ORANGE", "requires_other_meds": true }
+
     ],
     "ANTIDIARRHEIQUE": [
-      { "id": "Q_INFECTION_DIGESTIVE", "risk": "RED" },
-      { "id": "Q_GROSSESSE_PRUDENCE", "risk": "ORANGE" }
+      { "id": "Q_DIARRHEA", "risk": "RED" },
+      { "id": "Q_PREGNANCY", "risk": "ORANGE" }
     ],
     "ANTIHISTAMINIQUE": [
-      { "id": "Q_SOMNOLENCE", "risk": "ORANGE" },
-      { "id": "Q_GROSSESSE_PRUDENCE", "risk": "GREEN" }
+      { "id": "Q_SLEEP", "risk": "ORANGE" },
+      { "id": "Q_FALL", "risk": "ORANGE" },
+      { "id": "Q_PREGNANCY", "risk": "GREEN" }
     ],
     "MINOXIDIL_TOPICAL": [
-      { "id": "Q_COEUR", "risk": "RED" },
-      { "id": "Q_GROSSESSE_FORMELLE", "risk": "RED" }
+      { "id": "Q_HEART", "risk": "RED" },
+      { "id": "Q_PREGNANCY", "risk": "RED" }
     ],
     "DOXYLAMINE": [
-      { "id": "Q_CONFUSION_AGE", "risk": "ORANGE", "age_min": 65 },
-      { "id": "Q_POLYMEDICAMENTATION", "risk": "RED", "requires_other_meds": true },
-      { "id": "Q_GROSSESSE_PRUDENCE", "risk": "ORANGE" }
+      { "id": "Q_CONFUSION", "risk": "ORANGE" },
+      { "id": "Q_FALL", "risk": "RED" },
+      { "id": "Q_POLYMEDICATION", "risk": "RED", "requires_other_meds": true },
+      { "id": "Q_PREGNANCY", "risk": "ORANGE" }
     ],
     "FLUIDIFIANT": [
        { "id": "Q_ULCERE", "risk": "ORANGE" }
