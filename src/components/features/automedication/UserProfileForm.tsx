@@ -8,9 +8,10 @@ export interface UserProfile {
 
 interface Props {
   onComplete: (profile: UserProfile) => void;
+  onBack: () => void;
 }
 
-export const UserProfileForm: React.FC<Props> = ({ onComplete }) => {
+export const UserProfileForm: React.FC<Props> = ({ onComplete, onBack }) => {
   const [gender, setGender] = useState<'M' | 'F' | null>(null);
   const [age, setAge] = useState<string>('');
   const [hasOtherMeds, setHasOtherMeds] = useState<boolean | null>(null);
@@ -83,13 +84,21 @@ export const UserProfileForm: React.FC<Props> = ({ onComplete }) => {
         </div>
       </div>
 
-      <button
-        className="btn-continue"
-        onClick={handleSubmit}
-        disabled={!isValid}
-      >
-        Continuer →
-      </button>
+      <div className="form-actions">
+        <button
+          className="btn-back"
+          onClick={onBack}
+        >
+          ← Retour
+        </button>
+        <button
+          className="btn-continue"
+          onClick={handleSubmit}
+          disabled={!isValid}
+        >
+          Continuer →
+        </button>
+      </div>
     </div>
   );
 };
