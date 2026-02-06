@@ -13,3 +13,7 @@ venv/
 backend/data/raw/
 
 Thumbs.db
+
+scripts_data/
+
+docs/

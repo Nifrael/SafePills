@@ -1,0 +1,73 @@
+{
+  "_comment": "BASE DE CONNAISSANCES MÉDICALES - MODELE 'PROFIL DE RISQUE'",
+  
+  "questions_catalog": {
+    "Q_PREGNANCY": "Êtes-vous enceinte ou allaitez-vous (si vous êtes un homme, répondez 'non') ?",
+    "Q_ULCERE": "Avez-vous déjà eu un ulcère à l'estomac ou souffrez-vous de brûlures d'estomac fréquentes ?",
+    "Q_LIVER": "Souffrez-vous d'une maladie du foie ou d'une insuffisance hépatique ?",
+    "Q_DIARRHEA": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
+    "Q_CONFUSION": "Avez-vous récemment eu des épisodes de confusion ou des troubles de la mémoire ?",
+    "Q_POLYMEDICATION": "Prenez-vous actuellement d'autres médicaments de façon régulière ?",
+    "Q_HEART": "Souffrez-vous de problèmes cardiaques quelconques (hypertension artérielle, troubles du rythme, etc...) ?",
+    "Q_KIDNEY": "Souffrez-vous d'une insuffisance rénale ?",
+    "Q_SUN": "Comptez-vous exposer la zone traitée au soleil ?",
+    "Q_SLEEP": "Conduisez-vous un véhicule ou utilisez-vous des machines dangereuses ?",
+    "Q_FALL": "Avez-vous eu dernièrement des épisodes de chute, de perte d'équilibre ?",
+    "Q_SICK": "Votre toux est-elle grasse (avec des expectorations) ?",
+    "Q_HIGH_PERFORMANCE": "Êtes-vous sportif de haut niveau ?"
+  },
+
+  "risk_profiles": {
+    "AINS_ORAL": [
+      { "id": "Q_PREGNANCY", "risk": "RED", "gender": "F" },
+      { "id": "Q_ULCERE", "risk": "RED", "routes": ["orale", "rectale", "sublinguale"] },
+      { "id": "Q_KIDNEY", "risk": "RED" },
+      { "id": "Q_POLYMEDICATION", "risk": "ORANGE", "requires_other_meds": true },
+      { "id": "Q_SLEEP", "risk": "GREEN" }
+    ],
+    "AINS_CUTANE": [
+       { "id": "Q_PREGNANCY", "risk": "ORANGE", "gender": "F" },
+       { "id": "Q_SUN", "risk": "ORANGE", "routes": ["cutanee"] }
+    ],
+    "PARACETAMOL": [
+      { "id": "Q_LIVER", "risk": "ORANGE" },
+      { "id": "Q_POLYMEDICATION", "risk": "ORANGE", "requires_other_meds": true }
+
+    ],
+    "ANTIDIARRHEIQUE": [
+      { "id": "Q_DIARRHEA", "risk": "RED" },
+      { "id": "Q_PREGNANCY", "risk": "ORANGE" }
+    ],
+    "ANTIHISTAMINIQUE": [
+      { "id": "Q_SLEEP", "risk": "ORANGE" },
+      { "id": "Q_FALL", "risk": "ORANGE" },
+      { "id": "Q_PREGNANCY", "risk": "GREEN" }
+    ],
+    "MINOXIDIL_TOPICAL": [
+      { "id": "Q_HEART", "risk": "RED" },
+      { "id": "Q_PREGNANCY", "risk": "RED" }
+    ],
+    "DOXYLAMINE": [
+      { "id": "Q_CONFUSION", "risk": "ORANGE" },
+      { "id": "Q_FALL", "risk": "RED" },
+      { "id": "Q_POLYMEDICATION", "risk": "RED", "requires_other_meds": true },
+      { "id": "Q_PREGNANCY", "risk": "ORANGE" }
+    ],
+    "FLUIDIFIANT": [
+       { "id": "Q_ULCERE", "risk": "ORANGE" }
+    ]
+  },
+
+  "substances_classification": {
+    "IBUPROFÈNE": ["AINS_ORAL"],
+    "ASPIRINE": ["AINS_ORAL", "FLUIDIFIANT"],
+    "DICLOFÉNAC DE DIÉTHYLAMINE": ["AINS_CUTANE"],
+    "PARACÉTAMOL": ["PARACETAMOL"],
+    "CHLORHYDRATE DE LOPÉRAMIDE": ["ANTIDIARRHEIQUE"],
+    "DICHLORHYDRATE DE CÉTIRIZINE": ["ANTIHISTAMINIQUE"],
+    "LORATADINE": ["ANTIHISTAMINIQUE"],
+    "MINOXIDIL": ["MINOXIDIL_TOPICAL"],
+    "SUCCINATE DE DOXYLAMINE": ["DOXYLAMINE"],
+    "CARBOCISTÉINE": ["FLUIDIFIANT"]
+  }
+}

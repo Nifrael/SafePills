@@ -1,100 +1,120 @@
 ## 1. VISION ET OBJECTIF
+
 Développement d'une application web ("Pharma-Checker") destinée à simplifier la compréhension des interactions médicamenteuses et des conseils associés pour les patients.
-* **Public cible :** Grand public (vulgarisation) et professionnels de santé (vérification rapide).
-* **Approche :** Hybride (Site statique performant + Application dynamique).
-* **Source de vérité :** Uniquement les données officielles (Thésaurus ANSM, BDPM). Pas d'hallucination médicale tolérée.
+
+- **Public cible :** Grand public (vulgarisation) et professionnels de santé (vérification rapide).
+- **Approche :** Hybride (Site statique performant + Application dynamique).
+- **Source de vérité :** Uniquement les données officielles (Thésaurus ANSM, BDPM). Pas d'hallucination médicale tolérée.
 
 ## 2. STACK TECHNIQUE
 
 ### Frontend (L'Application - Racine du projet)
-* **Framework Principal :** Astro (v5+).
-* **Moteur de Rendu :** Static Site Generation (SSG) par défaut.
-* **Interactivité ("Îlots") :** React.
-* **Langage :** TypeScript (Strict mode requis).
-* **Styling :** SCSS (Sass). Pas de frameworks CSS utilitaires (Tailwind). Utilisation méthodologie BEM ou modulaire recommandée.
-* **State Management :** Nano Stores (natif Astro) pour le partage d'état entre îles.
+
+- **Framework Principal :** Astro (v5+).
+- **Moteur de Rendu :** Static Site Generation (SSG) par défaut.
+- **Interactivité ("Îlots") :** React.
+- **Langage :** TypeScript (Strict mode requis).
+- **Styling :** SCSS (Sass). Pas de frameworks CSS utilitaires (Tailwind). Utilisation méthodologie BEM ou modulaire recommandée.
+- **State Management :** Nano Stores (natif Astro) pour le partage d'état entre îles.
 
 ### Backend (L'Intelligence - Dossier /backend)
-* **API :** Python avec FastAPI.
-* **Typage :** Pydantic (validation stricte des entrées/sorties).
-* **IA / RAG :**
-    * Ingestion de PDF (Thésaurus ANSM).
-    * Vector Store : ChromaDB ou FAISS (local).
-    * LLM Orchestration : LangChain ou LlamaIndex.
+
+- **API :** Python avec FastAPI.
+- **Base de Données :** SQLite (Stockage structuré des médicaments, DCI, Classes et règles du Thésaurus).
+- **IA / RAG Hybride :**
+  - **Moteur :** SDK Google Generative AI (Gemini).
+  - **Flux :** Requête SQL exacte -> Injection des résultats dans le prompt -> Génération pédagogique.
+  - **Contrainte :** Structured Output obligatoire via Pydantic.
 
 ## 3. ARCHITECTURE DU CODE
 
 ### Structure des dossiers (Convention)
+
 /pharma-tools
-  /src             # <--- ZONE FRONTEND
-    /components
-      /ui          # Composants atomiques (Boutons, Inputs)
-      /features    # Composants métier (React: SearchDrug, InteractionList)
-    /layouts       # Layouts Astro (MainLayout)
-    /pages         # Routes Astro (index, about, checker)
-    /styles        # Fichiers SCSS globaux (variables, mixins, reset)
-    /lib           # Logique partagée Frontend, helpers TS
-  /backend         # <--- ZONE BACKEND
-    /api           # Endpoints FastAPI
-    /core          # Configuration (LLM, DB, Settings)
-    /services      # Logique métier (RAG, Parsing PDF)
-    /tests         # Tests Backend
-  /docs            # Documentation technique
+/src # <--- ZONE FRONTEND
+/components
+/ui # Composants atomiques (Boutons, Inputs)
+/features # Composants métier (React: SearchDrug, InteractionList)
+/layouts # Layouts Astro (MainLayout)
+/pages # Routes Astro (index, about, checker)
+/styles # Fichiers SCSS globaux (variables, mixins, reset)
+/lib # Logique partagée Frontend, helpers TS
+/backend # <--- ZONE BACKEND
+/api # Endpoints FastAPI
+/core # Configuration (LLM, DB, Settings)
+/services # Logique métier (RAG, Parsing PDF)
+/tests # Tests Backend
+/docs # Documentation technique
 
 ### Principes d'Architecture
+
 1.  **Architecture "Islands" :** Le JS est chargé uniquement pour les composants interactifs (`client:load`).
 2.  **Séparation des responsabilités :** Frontend (Affichage) vs Backend (Logique métier/IA).
 3.  **Sécurité des Secrets :** Utilisation stricte de fichiers `.env` (jamais commités).
 
 ### Stratégie de Gestion des Erreurs
-* **Frontend :** Utilisation de `Error Boundaries` React. Message utilisateur clair en cas d'échec API.
-* **Backend :** Gestion des exceptions typées. Aucune stacktrace exposée au client.
+
+- **Frontend :** Utilisation de `Error Boundaries` React. Message utilisateur clair en cas d'échec API.
+- **Backend :** Gestion des exceptions typées. Aucune stacktrace exposée au client.
 
 ## 4. STANDARDS DE DÉVELOPPEMENT
 
 ### Qualité de Code
-* **Langue :** Commentaires et documentation en FRANÇAIS.
-* **Noms de variables :** Anglais explicite (ex: `drugList`).
-* **Sécurité :** Aucune donnée de santé personnelle stockée. Requêtes LLM anonymisées.
+
+- **Noms de variables :** Anglais explicite (ex: `drugList`).
+- **Sécurité :** Aucune donnée de santé personnelle stockée. Requêtes LLM anonymisées.
+
+### Langues
+
+- **Langue de dev :** Commentaires et logs en FRANÇAIS.
+- **Documentation (Livrables) :** Bilingue FRANÇAIS / ESPAGNOL (Dossiers `/docs/fr` et `/docs/es`).
+- **Sortie Application :** Format standardisé par l'IA, capable de s'adapter à la langue de l'utilisateur.
 
 ### Git & Versionning (Conventional Commits)
-* **Format :** `type(scope): description` (ex: `feat(search): ajout input`)
-* **Types :** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`.
+
+- **Format :** `type(scope): description` (ex: `feat(search): ajout input`)
+- **Types :** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`.
 
 ### Accessibilité (Health First)
-* **Standard :** WCAG 2.1 AA.
-* **Focus :** Contraste, navigation clavier, sémantique HTML (`<button>` pas `<div>`), attributs `alt`.
+
+- **Standard :** WCAG 2.1 AA.
+- **Focus :** Contraste, navigation clavier, sémantique HTML (`<button>` pas `<div>`), attributs `alt`.
 
 ### Documentation (Living Documentation)
-* **Principe :** Pas de doc obsolète.
-* **Fichiers clés :** `CHANGELOG.md`, `README.md`, Docstrings Python.
+
+- **Principe :** Pas de doc obsolète.
+- **Fichiers clés :** `CHANGELOG.md`, `README.md`, Docstrings Python.
 
 ## 5. STRATÉGIE DE TESTS (TDD & E2E)
 
 **Approche globale : Pyramide de tests**
 
 1.  **Tests Unitaires & Intégration (Vitest + React Testing Library)**
-    * **Cible :** Composants React complexes, Nano Stores, Libs.
-    * **Workflow :** TDD obligatoire (Red-Green-Refactor).
+    - **Cible :** Composants React complexes, Nano Stores, Libs.
+    - **Workflow :** TDD obligatoire (Red-Green-Refactor).
 
 2.  **Tests de Bout en Bout / E2E (Playwright)**
-    * **Cible :** Pages Astro, Hydratation, Routing, Scénarios complets.
-    * **Objectif :** Vérifier que l'utilisateur peut faire une recherche complète.
+    - **Cible :** Pages Astro, Hydratation, Routing, Scénarios complets.
+    - **Objectif :** Vérifier que l'utilisateur peut faire une recherche complète.
 
 3.  **Tests Backend (Pytest)**
-    * **Cible :** API FastAPI, Logique d'extraction.
-    * **Workflow :** TDD. Mock des appels LLM externes.
+    - **Cible :** API FastAPI, Logique d'extraction.
+    - **Workflow :** TDD. Mock des appels LLM externes.
 
 ### Cas critiques à tester
-* **Logique métier :** Une interaction majeure (ex: AVK + Aspirine) DOIT déclencher une alerte.
-* **UI :** L'interface doit rester utilisable sur mobile.
+
+- **Logique métier :** Une interaction majeure (ex: AVK + Aspirine) DOIT déclencher une alerte.
+- **UI :** L'interface doit rester utilisable sur mobile.
 
 ## 6. INSTRUCTIONS POUR L'AGENT
+
 Tu agis en tant que **Senior Fullstack Developer** et **Docteur en Pharmacie**.
+
 1.  **Workflow TDD+D :**
-    * Étape 1 : Propose le Test (RED).
-    * Étape 2 : Une fois validé/fail, propose le Code (GREEN).
-    * Étape 3 : Propose le Refactor si nécessaire (REFACTOR).
-    * Étape 4 : **Check Documentation** -> Demande si on met à jour le CHANGELOG.
+    - Étape 1 : Propose le Test (RED).
+    - Étape 2 : Une fois validé/fail, propose le Code (GREEN).
+    - Étape 3 : Propose le Refactor si nécessaire (REFACTOR).
+    - Étape 4 : **Check Documentation** -> Demande si on met à jour le CHANGELOG.
 2.  **Rigueur :** Si une interaction est incertaine, indique-le.
 3.  **Pédagogie :** Explique tes choix simplement.
+4.  **Bilinguisme :** Pour chaque fonctionnalité majeure ou instruction d'utilisation, propose une version en Français et sa traduction en Espagnol pour les livrables du TFM.

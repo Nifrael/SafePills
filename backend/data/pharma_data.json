@@ -1,0 +1,3053 @@
+{
+  "metadata": {
+    "source": "Liste-OTC.xls",
+    "count": 251,
+    "generated_at": "2026-02-01"
+  },
+  "drugs": [
+    {
+      "cis": "62555172",
+      "name": "DERMOFENAC DEMANGEAISONS 0,5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "HYDROCORTISONE"
+      ]
+    },
+    {
+      "cis": "60089427",
+      "name": "CEMAUKOR 1%, gel pour application locale",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "CHLORHYDRATE DE PRAMOCAÏNE"
+      ]
+    },
+    {
+      "cis": "61371447",
+      "name": "HEXASPRAY FRUITS EXOTIQUES, collutoire en flacon pressurisé",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "BICLOTYMOL"
+      ]
+    },
+    {
+      "cis": "65768745",
+      "name": "LORATADINE SANDOZ CONSEIL 10 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "LORATADINE"
+      ]
+    },
+    {
+      "cis": "66156605",
+      "name": "DIOSMINE SANDOZ CONSEIL 600 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMINE"
+      ]
+    },
+    {
+      "cis": "64626892",
+      "name": "DRILL SANS SUCRE, pastille édulcorée à l'aspartam et à l'isomalt",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORHYDRATE DE TÉTRACAÏNE",
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "64944934",
+      "name": "DICLOFENAC URGO 1 %, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DICLOFÉNAC DE DIÉTHYLAMINE"
+      ]
+    },
+    {
+      "cis": "64700264",
+      "name": "MAGNESIUM/VITAMINE B6 BIOGARAN CONSEIL 48 mg/5 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE PYRIDOXINE",
+        "LACTATE DE MAGNÉSIUM DIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "67270558",
+      "name": "DICLOFENAC SANDOZ CONSEIL 1 %, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DICLOFÉNAC DE DIÉTHYLAMINE"
+      ]
+    },
+    {
+      "cis": "60139257",
+      "name": "RACECADOTRIL BIOGARAN CONSEIL 100 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "RACÉCADOTRIL"
+      ]
+    },
+    {
+      "cis": "67096723",
+      "name": "FLUIMUCIL 2 % ADULTE, solution buvable édulcorée à la saccharine sodique, au cyclamate de sodium et au sucralose",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACÉTYLCYSTÉINE"
+      ]
+    },
+    {
+      "cis": "64912776",
+      "name": "TITANOREINE, suppositoire",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "TITANE (DIOXYDE DE)",
+        "ZINC (OXYDE DE)",
+        "CARRAGAHEEN (EXTRAIT DE)"
+      ]
+    },
+    {
+      "cis": "64939766",
+      "name": "REACTINE 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CÉTIRIZINE (DICHLORHYDRATE DE)"
+      ]
+    },
+    {
+      "cis": "66684969",
+      "name": "DUOFILM, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACIDE LACTIQUE",
+        "ACIDE SALICYLIQUE"
+      ]
+    },
+    {
+      "cis": "62867371",
+      "name": "MEGAMAG 45 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ASPARTATE DE MAGNÉSIUM DIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "66192398",
+      "name": "MINOXIDIL SANDOZ CONSEIL 2 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "65831028",
+      "name": "ALGINATE DE SODIUM/BICARBONATE DE SODIUM ARROW CONSEIL 500 mg/267 mg pour 10 mL sans sucre, suspension buvable en sachet édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "68001621",
+      "name": "MYCOHYDRALIN 500 mg, comprimé vaginal",
+      "is_otc": true,
+      "admin_route": "vaginale",
+      "substances": [
+        "CLOTRIMAZOLE"
+      ]
+    },
+    {
+      "cis": "64451731",
+      "name": "CETAVLON, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "CÉTRIMIDE"
+      ]
+    },
+    {
+      "cis": "67971107",
+      "name": "MAGNESIUM ARROW CONSEIL 150 mg, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "OXYDE DE MAGNÉSIUM LÉGER"
+      ]
+    },
+    {
+      "cis": "63331572",
+      "name": "VITASCORBOL 1 g, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ASCORBIQUE (ACIDE)"
+      ]
+    },
+    {
+      "cis": "69301899",
+      "name": "ALOPEXY 50 mg/ml, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "65444451",
+      "name": "LAROSCORBINE SANS SUCRE 1 g, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE"
+      ]
+    },
+    {
+      "cis": "63690162",
+      "name": "CARBOCISTEINE CLARIX 5 % ADULTES, solution buvable édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "63548095",
+      "name": "TROLAMINE BIOGARAN CONSEIL 0,67 %, émulsion pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "TROLAMINE"
+      ]
+    },
+    {
+      "cis": "68888543",
+      "name": "LYSORYNX, comprimé à sucer édulcoré au sorbitol et à la saccharine",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORURE DE CÉTYLPYRIDINIUM",
+        "CHLORHYDRATE DE LYSOZYME"
+      ]
+    },
+    {
+      "cis": "62128850",
+      "name": "LAMISILATE 1 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "CHLORHYDRATE DE TERBINAFINE"
+      ]
+    },
+    {
+      "cis": "63314886",
+      "name": "CARBOCISTEINE BIOGARAN CONSEIL 5 POUR CENT SANS SUCRE, solution buvable en flacon édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "68474955",
+      "name": "ACICLOVIR TEVA SANTE 5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "64424727",
+      "name": "PERUBORE INHALATION, capsule pour inhalation par vapeur",
+      "is_otc": true,
+      "admin_route": "inhalée",
+      "substances": [
+        "THYM ROUGE (HUILE ESSENTIELLE DE)",
+        "THYMOL",
+        "HUILE ESSENTIELLE DE LAVANDE",
+        "HUILE ESSENTIELLE DE ROMARIN"
+      ]
+    },
+    {
+      "cis": "68139273",
+      "name": "STREPSILS LIDOCAINE, pastille",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE",
+        "CHLORHYDRATE DE LIDOCAÏNE"
+      ]
+    },
+    {
+      "cis": "69635009",
+      "name": "DRILL, pastille à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORHYDRATE DE TÉTRACAÏNE",
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "64858307",
+      "name": "ACICLOVIR ARROW CONSEIL 5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "63063448",
+      "name": "DIOSMINE ARROW CONSEIL 600 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMINE"
+      ]
+    },
+    {
+      "cis": "67851645",
+      "name": "SORBITOL DELALANDE 5 g, poudre pour solution buvable en sachet-dose",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "SORBITOL"
+      ]
+    },
+    {
+      "cis": "61662513",
+      "name": "DEXPANTHENOL EG LABO CONSEIL 5 %, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DEXPANTHÉNOL"
+      ]
+    },
+    {
+      "cis": "63036376",
+      "name": "CYCLO 3 FORT, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HESPÉRIDINE MÉTHYLCHALCONE",
+        "ACIDE ASCORBIQUE",
+        "PETIT HOUX (EXTRAIT SEC DE)"
+      ]
+    },
+    {
+      "cis": "68525862",
+      "name": "MERCRYLSPRAY, solution pour application cutanée en flacon pressurisé",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "SOLUTION DE CHLORURE DE BENZALKONIUM",
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "60226897",
+      "name": "MINOXIDIL COOPER 2 %, solution pour application cutanée en flacon",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "62794329",
+      "name": "HEXALYSE, comprimé à sucer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICLOTYMOL",
+        "CHLORHYDRATE DE LYSOZYME",
+        "ÉNOXOLONE"
+      ]
+    },
+    {
+      "cis": "68276279",
+      "name": "DIASTROLIB 2 mg, lyophilisat oral",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "63247409",
+      "name": "VIRPAX 50 mg, comprimé buccogingival muco adhésif",
+      "is_otc": true,
+      "admin_route": "gingivale",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "67768847",
+      "name": "HEXTRIL MENTHE 0,1 POUR CENT, solution pour bain de bouche",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "HEXÉTIDINE"
+      ]
+    },
+    {
+      "cis": "68370337",
+      "name": "DEXPANTHENOL VIATRIS 5 %, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DEXPANTHÉNOL"
+      ]
+    },
+    {
+      "cis": "64216427",
+      "name": "MAALOX MAUX D'ESTOMAC HYDROXYDE D'ALUMINIUM/HYDROXYDE DE MAGNESIUM 400 mg/400 mg SANS SUCRE FRUITS ROUGES, comprimé à croquer édulcoré à la saccharine sodique, au sorbitol et au maltitol",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROXYDE D'ALUMINIUM",
+        "HYDROXYDE DE MAGNÉSIUM"
+      ]
+    },
+    {
+      "cis": "64728712",
+      "name": "ABUFENE 400 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ALANINE"
+      ]
+    },
+    {
+      "cis": "62245483",
+      "name": "MAALOX MAUX D'ESTOMAC HYDROXYDE D'ALUMINIUM/HYDROXYDE DE MAGNESIUM 400 mg/400 mg, comprimé à croquer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROXYDE D'ALUMINIUM",
+        "HYDROXYDE DE MAGNÉSIUM"
+      ]
+    },
+    {
+      "cis": "65846076",
+      "name": "VICKS INHALER, tampon imprégné pour inhalation par fumigation",
+      "is_otc": true,
+      "admin_route": "inhalée",
+      "substances": [
+        "CAMPHRE RACÉMIQUE",
+        "LÉVOMENTHOL"
+      ]
+    },
+    {
+      "cis": "64487688",
+      "name": "CETIRIZINE ARROW CONSEIL 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "67981927",
+      "name": "CORTAPAISYL 0,5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACÉTATE D'HYDROCORTISONE"
+      ]
+    },
+    {
+      "cis": "67546088",
+      "name": "DRILL MIEL CITRON SANS SUCRE, pastille édulcorée à l'isomalt et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORHYDRATE DE TÉTRACAÏNE",
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "66507470",
+      "name": "BRONCHOKOD ADULTES, sirop",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "67758027",
+      "name": "LAMISILATE MONODOSE 1 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "TERBINAFINE (CHLORHYDRATE DE)"
+      ]
+    },
+    {
+      "cis": "66778233",
+      "name": "DEXPANTHENOL BAILLEUL 5 %, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DEXPANTHÉNOL"
+      ]
+    },
+    {
+      "cis": "61938584",
+      "name": "ACICLOVIR CRISTERS CONSEIL 5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "68906735",
+      "name": "EXOMUC 200 mg, granulés pour usage oral en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACÉTYLCYSTÉINE"
+      ]
+    },
+    {
+      "cis": "62633767",
+      "name": "PREXIDINE 0,12 POUR CENT, solution pour bain de bouche",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "60330700",
+      "name": "MAALOX MAUX D'ESTOMAC HYDROXYDE D'ALUMINIUM/HYDROXYDE DE MAGNESIUM 400 mg/400 mg SANS SUCRE, comprimé à croquer édulcoré à la saccharine sodique, au sorbitol et au maltitol",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROXYDE D'ALUMINIUM",
+        "HYDROXYDE DE MAGNÉSIUM"
+      ]
+    },
+    {
+      "cis": "60851678",
+      "name": "VOLTARENACTIGO 1 POUR CENT, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DICLOFÉNAC DE DIÉTHYLAMINE"
+      ]
+    },
+    {
+      "cis": "62475527",
+      "name": "CETIRIZINE SANDOZ CONSEIL 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "69537045",
+      "name": "LOPERAMIDE ARROW CONSEIL 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "64653964",
+      "name": "STREPSILSPRAY à la lidocaïne, collutoire",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE",
+        "LIDOCAÏNE"
+      ]
+    },
+    {
+      "cis": "64949486",
+      "name": "ZYRTECSET 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CÉTIRIZINE (DICHLORHYDRATE DE)"
+      ]
+    },
+    {
+      "cis": "68085562",
+      "name": "NICOTINELL FRUIT 2 mg SANS SUCRE, gomme à mâcher médicamenteuse",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE POLACRILEX"
+      ]
+    },
+    {
+      "cis": "61026771",
+      "name": "CITRATE DE BETAINE CITRON UPSA 2 g SANS SUCRE, comprimé effervescent édulcoré à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CITRATE DE BÉTAÏNE ANHYDRE"
+      ]
+    },
+    {
+      "cis": "66426495",
+      "name": "SEDORRHOIDE CRISE HEMORROIDAIRE, suppositoire",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "BENZOCAÏNE",
+        "DODÉCLONIUM (BROMURE DE)",
+        "ÉNOXOLONE",
+        "ESCULOSIDE SESQUIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "69546553",
+      "name": "NICORETTESPRAY 1 mg/dose, solution pour pulvérisation buccale",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE"
+      ]
+    },
+    {
+      "cis": "68246097",
+      "name": "VITAMINE C PRODILAB 1000 mg, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ASCORBIQUE (ACIDE)"
+      ]
+    },
+    {
+      "cis": "68938811",
+      "name": "DIOSMINE ARROW 600 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMINE"
+      ]
+    },
+    {
+      "cis": "63225003",
+      "name": "FLUIMUCIL 200 mg ADULTES, granulés pour solution buvable en sachet édulcorés au sorbitol et à l'aspartam",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACÉTYLCYSTÉINE"
+      ]
+    },
+    {
+      "cis": "60226915",
+      "name": "CARBOCISTEINE SANDOZ CONSEIL 5 % ADULTES SANS SUCRE, solution buvable édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "60070359",
+      "name": "MYCOHYDRALIN 500 mg, capsule vaginale",
+      "is_otc": true,
+      "admin_route": "vaginale",
+      "substances": [
+        "CLOTRIMAZOLE"
+      ]
+    },
+    {
+      "cis": "62229155",
+      "name": "DIASEPTYL 0,5 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "CHLORHEXIDINE (DIGLUCONATE DE)"
+      ]
+    },
+    {
+      "cis": "68909329",
+      "name": "MAALOX REFLUX ALGINATE DE SODIUM/BICARBONATE DE SODIUM MENTHE 500 mg/267 mg SANS SUCRE, suspension buvable en sachet, édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "63732750",
+      "name": "SMECTALIA 3 g, poudre pour suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMECTITE"
+      ]
+    },
+    {
+      "cis": "63165015",
+      "name": "BORAX/ACIDE BORIQUE ARROW CONSEIL 12 mg/18 mg/par mL, solution pour lavage ophtalmique en récipient unidose",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "ACIDE BORIQUE",
+        "BORAX"
+      ]
+    },
+    {
+      "cis": "61365825",
+      "name": "BORAX/ACIDE BORIQUE BIOGARAN CONSEIL 12 mg/18 mg par mL, solution pour lavage ophtalmique en récipient unidose",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "ACIDE BORIQUE",
+        "BORAX"
+      ]
+    },
+    {
+      "cis": "60568235",
+      "name": "ALAIRGIX RHINITE ALLERGIQUE CROMOGLICATE DE SODIUM 2 %, solution pour pulvérisation nasale",
+      "is_otc": true,
+      "admin_route": "nasale",
+      "substances": [
+        "CROMOGLICATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "62679978",
+      "name": "LANSOYL SANS SUCRE 78,23 g %, gel oral en pot édulcoré à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARAFFINE LIQUIDE"
+      ]
+    },
+    {
+      "cis": "67376038",
+      "name": "HEXTRIL 0,1 POUR CENT, bain de bouche, flacon",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "HEXÉTIDINE"
+      ]
+    },
+    {
+      "cis": "60406856",
+      "name": "CANTALENE, comprimé à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "ACÉTATE DE CHLORHEXIDINE",
+        "CHLORHYDRATE DE LYSOZYME",
+        "CHLORHYDRATE DE TÉTRACAÏNE"
+      ]
+    },
+    {
+      "cis": "62182563",
+      "name": "MINOXIDIL BAILLEUL 5 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "65004263",
+      "name": "DICLOFENAC TEVA CONSEIL 1 %, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DICLOFÉNAC DE DIÉTHYLAMINE"
+      ]
+    },
+    {
+      "cis": "63317213",
+      "name": "LORATADINE COOPER 10 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "LORATADINE"
+      ]
+    },
+    {
+      "cis": "60980954",
+      "name": "DOSISEPTINE 0,05 %, solution pour application cutanée en flacon pressurisé",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "CHLORHEXIDINE (GLUCONATE DE)"
+      ]
+    },
+    {
+      "cis": "69884932",
+      "name": "CITRATE DE BETAINE UPSA 2 g MENTHE SANS SUCRE, comprimé effervescent édulcoré à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CITRATE DE BÉTAÏNE ANHYDRE"
+      ]
+    },
+    {
+      "cis": "66383154",
+      "name": "MAGNEVIE B6 100 mg/10 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE PYRIDOXINE",
+        "MAGNÉSIUM (CITRATE DE) ANHYDRE"
+      ]
+    },
+    {
+      "cis": "62877102",
+      "name": "NICORETTE 2 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au sorbitol",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE (CATIORÉSINE CARBOXYLATE DE)"
+      ]
+    },
+    {
+      "cis": "65678867",
+      "name": "LOPERAMIDE BGR CONSEIL 2 mg, comprimé orodispersible",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "69628395",
+      "name": "RENNIE ORANGE, comprimé à croquer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBONATE DE CALCIUM",
+        "MAGNÉSIUM (CARBONATE DE) LOURD"
+      ]
+    },
+    {
+      "cis": "65707226",
+      "name": "VASELINE OFFICINALE COOPER, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "VASELINE"
+      ]
+    },
+    {
+      "cis": "69871657",
+      "name": "UNIPEXIL 2 POUR CENT, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "69841984",
+      "name": "HUMEX MAL DE GORGE LIDOCAINE/ALCOOL DICHLOROBENZYLIQUE/AMYLMETACRESOL 2 mg/1,2 mg/0,6 mg MIEL CITRON, pastille",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE",
+        "CHLORHYDRATE DE LIDOCAÏNE"
+      ]
+    },
+    {
+      "cis": "69948153",
+      "name": "OPHTACALMFREE 2 %, collyre en solution",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "CROMOGLICATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "69200761",
+      "name": "HEMOCLAR 0,5 POUR CENT, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "PENTOSANNE (POLYESTER SULFURIQUE DE) SODIQUE"
+      ]
+    },
+    {
+      "cis": "65323026",
+      "name": "RENNIE, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBONATE DE CALCIUM",
+        "MAGNÉSIUM (CARBONATE DE) LOURD"
+      ]
+    },
+    {
+      "cis": "67185182",
+      "name": "NICOPASS MENTHE FRAICHEUR 2,5 mg SANS SUCRE, pastille édulcorée à l'aspartam et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "RÉSINATE DE NICOTINE"
+      ]
+    },
+    {
+      "cis": "61183406",
+      "name": "FLECTOREFFIGEL 1 %, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ÉPOLAMINE DE DICLOFÉNAC"
+      ]
+    },
+    {
+      "cis": "69221111",
+      "name": "MAALOX MAUX D'ESTOMAC HYDROXYDE D'ALUMINIUM/HYDROXYDE DE MAGNESIUM 525 mg/600 mg, suspension buvable en flacon",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROXYDE D'ALUMINIUM",
+        "HYDROXYDE DE MAGNÉSIUM"
+      ]
+    },
+    {
+      "cis": "68892755",
+      "name": "CETIRIZINE EG LABO CONSEIL 10 mg, comprimé à sucer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "64779557",
+      "name": "BIAFINEACT, émulsion pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "TROLAMINE"
+      ]
+    },
+    {
+      "cis": "62144356",
+      "name": "LOPERAMIDE ZENTIVA CONSEIL 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "68668013",
+      "name": "LOPERAMIDE VIATRIS CONSEIL 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "66160639",
+      "name": "GCFORM, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CAFÉINE",
+        "ACIDE ASCORBIQUE",
+        "GLUCURONAMIDE"
+      ]
+    },
+    {
+      "cis": "69896201",
+      "name": "LOBAMINE CYSTEINE, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE CYSTÉINE ANHYDRE",
+        "DL-MÉTHIONINE"
+      ]
+    },
+    {
+      "cis": "67288307",
+      "name": "CYSTINE / VITAMINE B6 BIOGARAN CONSEIL 500 mg/50 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE PYRIDOXINE",
+        "L-CYSTINE"
+      ]
+    },
+    {
+      "cis": "62003149",
+      "name": "CETYLPYRIDINIUM/LYSOZYME ARROW CONSEIL 1,5 mg/20 mg SANS SUCRE, comprimé à sucer édulcoré au sorbitol et à la saccharine",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORURE DE CÉTYLPYRIDINIUM",
+        "CHLORHYDRATE DE LYSOZYME"
+      ]
+    },
+    {
+      "cis": "64835212",
+      "name": "BEPANTHEN 5 %, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DEXPANTHÉNOL"
+      ]
+    },
+    {
+      "cis": "61587822",
+      "name": "FLUOCARIL BI-FLUORE 250 mg MENTHE, pâte dentifrice",
+      "is_otc": true,
+      "admin_route": "dentaire",
+      "substances": [
+        "FLUORURE DE SODIUM",
+        "MONOFLUOROPHOSPHATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "61203061",
+      "name": "IMODIUMCAPS 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "LOPÉRAMIDE (CHLORHYDRATE DE)"
+      ]
+    },
+    {
+      "cis": "63660735",
+      "name": "SILIGAZ, capsule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "SIMÉTICONE"
+      ]
+    },
+    {
+      "cis": "68728738",
+      "name": "HUMEX ALLERGIE LORATADINE 10 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "LORATADINE"
+      ]
+    },
+    {
+      "cis": "66866523",
+      "name": "HUMEX CONJONCTIVITE ALLERGIQUE 2 %, collyre en solution en récipient unidose",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "CROMOGLICATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "62999615",
+      "name": "SARGENOR A LA VITAMINE C, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "ARGININE (ASPARTATE D')"
+      ]
+    },
+    {
+      "cis": "64283632",
+      "name": "NIQUITINMINIS MENTHE FRAÎCHE 1,5 mg SANS SUCRE, comprimé à sucer édulcoré à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "RÉSINATE DE NICOTINE"
+      ]
+    },
+    {
+      "cis": "62725176",
+      "name": "ALOPEXY 2 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "61966199",
+      "name": "STREPSILS FRAISE SANS SUCRE, pastille édulcorée à l'isomalt, au maltitol et à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE"
+      ]
+    },
+    {
+      "cis": "63329735",
+      "name": "NICOTINELL MENTHE FRAICHEUR 2 mg SANS SUCRE, gomme à mâcher médicamenteuse",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE POLACRILEX"
+      ]
+    },
+    {
+      "cis": "62009928",
+      "name": "STREPSILS MIEL CITRON, pastille à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE"
+      ]
+    },
+    {
+      "cis": "67679220",
+      "name": "SYNTHOL, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "LÉVOMENTHOL",
+        "ACIDE SALICYLIQUE",
+        "VÉRATROLE",
+        "RÉSORCINOL"
+      ]
+    },
+    {
+      "cis": "67777579",
+      "name": "MYCOHYDRALIN, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "CLOTRIMAZOLE"
+      ]
+    },
+    {
+      "cis": "67301480",
+      "name": "MYCOHYDRALIN 200 mg, comprimé vaginal",
+      "is_otc": true,
+      "admin_route": "vaginale",
+      "substances": [
+        "CLOTRIMAZOLE"
+      ]
+    },
+    {
+      "cis": "64057409",
+      "name": "VITASCORBOL SANS SUCRE TAMPONNE 500 mg, comprimé à croquer édulcoré au sorbitol et à l'aspartam",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "ASCORBATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "68102563",
+      "name": "ACICLOVIR BIOGARAN CONSEIL 5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "62223316",
+      "name": "SYNTHOL, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "LÉVOMENTHOL",
+        "ACIDE SALICYLIQUE",
+        "VÉRATROLE",
+        "RÉSORCINOL"
+      ]
+    },
+    {
+      "cis": "63530827",
+      "name": "STREPSILS ORANGE VITAMINE C, pastille",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "ASCORBATE DE SODIUM",
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE"
+      ]
+    },
+    {
+      "cis": "66146187",
+      "name": "DIARETYL 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "62906059",
+      "name": "HEXETIDINE BIOGARAN CONSEIL 0,1 %, solution pour bain de bouche",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "HEXÉTIDINE"
+      ]
+    },
+    {
+      "cis": "65272215",
+      "name": "IMODIUMLINGUAL 2 mg, lyophilisat oral",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "63421272",
+      "name": "LYSOPAÏNE MAUX DE GORGE CETYLPYRIDINIUM LYSOZYME SANS SUCRE, comprimé à sucer édulcoré au sorbitol et à la saccharine",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORURE DE CÉTYLPYRIDINIUM",
+        "CHLORHYDRATE DE LYSOZYME"
+      ]
+    },
+    {
+      "cis": "67351394",
+      "name": "ALGINATE DE SODIUM/BICARBONATE DE SODIUM VIATRIS CONSEIL 500 mg/267 mg MENTHE SANS SUCRE, suspension buvable en sachet édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "67183929",
+      "name": "DEXPANTHENOL BIOGARAN CONSEIL 5 %, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DEXPANTHÉNOL"
+      ]
+    },
+    {
+      "cis": "69269362",
+      "name": "LOPERAMIDE ARROW CONSEIL 2 mg, comprimé orodispersible",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "63148172",
+      "name": "CETIRIZINE BIOGARAN CONSEIL 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "61165034",
+      "name": "TITANOREINE A LA LIDOCAINE 2 POUR CENT, crème",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "DIOXYDE DE TITANE",
+        "OXYDE DE ZINC",
+        "LIDOCAÏNE",
+        "CARRAGHÉNATES"
+      ]
+    },
+    {
+      "cis": "67609631",
+      "name": "SARGENOR A LA VITAMINE C, solution buvable en ampoule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "ASPARTATE D'ARGININE"
+      ]
+    },
+    {
+      "cis": "65946710",
+      "name": "CHARBON DE BELLOC 125 mg, capsule molle",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHARBON ACTIVÉ"
+      ]
+    },
+    {
+      "cis": "62471347",
+      "name": "HUMEX MAL DE GORGE LIDOCAINE/ALCOOL DICHLOROBENZYLIQUE/AMYLMETACRESOL 2 mg/1,2 mg/0,6 mg MIEL CITRON SANS SUCRE, pastille édulcorée à la saccharine sodique, au maltitol et à l'isomalt",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE",
+        "CHLORHYDRATE DE LIDOCAÏNE"
+      ]
+    },
+    {
+      "cis": "64334824",
+      "name": "NICOTINELL MENTHE FRAICHEUR 4 mg SANS SUCRE, gomme à mâcher médicamenteuse",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE POLACRILEX"
+      ]
+    },
+    {
+      "cis": "67175398",
+      "name": "CETYLPYRIDINIUM / LYSOZYME BIOGARAN CONSEIL 1,5 mg/20 mg SANS SUCRE, comprimé à sucer édulcoré au sorbitol et à la saccharine",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORURE DE CÉTYLPYRIDINIUM",
+        "CHLORHYDRATE DE LYSOZYME"
+      ]
+    },
+    {
+      "cis": "66400454",
+      "name": "SEDORRHOIDE CRISE HEMORROIDAIRE, crème rectale",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "BENZOCAÏNE",
+        "DODÉCLONIUM (BROMURE DE)",
+        "ÉNOXOLONE",
+        "ESCULOSIDE SESQUIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "61878361",
+      "name": "BAUME SAINT BERNARD, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "CAMPHRE RACÉMIQUE",
+        "LÉVOMENTHOL",
+        "CAPSICUM (OLÉORÉSINE DE)",
+        "SALICYLATE D'ISOAMYLE"
+      ]
+    },
+    {
+      "cis": "62154681",
+      "name": "ISALIA 7,5 mg SANS SUCRE, comprimé orodispersible édulcoré à laspartam",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "MÉTOPIMAZINE"
+      ]
+    },
+    {
+      "cis": "63830290",
+      "name": "GAVISCONPRO MENTHE, suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE POTASSIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "65631860",
+      "name": "DACRYUM, solution pour lavage ophtalmique en récipient unidose",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "ACIDE BORIQUE",
+        "BORAX"
+      ]
+    },
+    {
+      "cis": "64873825",
+      "name": "CETIRIZINE TEVA SANTE CONSEIL 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "65118886",
+      "name": "SMECTALIA 3 g, suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMECTITE"
+      ]
+    },
+    {
+      "cis": "61889660",
+      "name": "GURONSAN, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CAFÉINE",
+        "ACIDE ASCORBIQUE",
+        "GLUCURONAMIDE"
+      ]
+    },
+    {
+      "cis": "60665912",
+      "name": "DRILL SANS SUCRE ANIS MENTHE, pastille édulcorée à l'isomalt et à l'acésulfame de potassium",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORHYDRATE DE TÉTRACAÏNE",
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "62437067",
+      "name": "CETIRIZINE VIATRIS CONSEIL 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "65043451",
+      "name": "NICORETTE 2 mg, comprimé à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "RÉSINATE DE NICOTINE"
+      ]
+    },
+    {
+      "cis": "64367347",
+      "name": "ALAIRGIX ALLERGIE CETIRIZINE 10 mg, comprimé à sucer sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "64182868",
+      "name": "SPASMAG, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "SACCHAROMYCES CEREVISIAE",
+        "MAGNÉSIUM (SULFATE DE) TRIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "67509104",
+      "name": "ALGINATE DE SODIUM/BICARBONATE DE SODIUM EG LABO CONSEIL 500 mg/267 mg pour 10 mL, suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "65841346",
+      "name": "NICOTINELL MENTHE 2 mg, comprimé à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "BITARTRATE DE NICOTINE DIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "62091544",
+      "name": "LORATADINE BIOGARAN CONSEIL 10 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "LORATADINE"
+      ]
+    },
+    {
+      "cis": "61683322",
+      "name": "NICORETTE FRUITS 2 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au xylitol et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE (RÉSINATE DE)"
+      ]
+    },
+    {
+      "cis": "67757295",
+      "name": "MUCOMYST 200 mg, poudre pour solution buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACÉTYLCYSTÉINE"
+      ]
+    },
+    {
+      "cis": "62466236",
+      "name": "LYSOPAÏNE CETYLPYRIDINIUM LYSOZYME CITRON GINGEMBRE SANS SUCRE, comprimé à sucer édulcoré au sorbitol et à la saccharine",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORURE DE CÉTYLPYRIDINIUM",
+        "CHLORHYDRATE DE LYSOZYME"
+      ]
+    },
+    {
+      "cis": "63158775",
+      "name": "PERCUTAFEINE, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "CAFÉINE"
+      ]
+    },
+    {
+      "cis": "60095056",
+      "name": "HEXTRIL 0,1 POUR CENT, pâte dentifrice",
+      "is_otc": true,
+      "admin_route": "dentaire;gingivale",
+      "substances": [
+        "HEXÉTIDINE"
+      ]
+    },
+    {
+      "cis": "69669723",
+      "name": "OSMOGEL, gel pour application locale",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "SULFATE DE MAGNÉSIUM HEPTAHYDRATÉ",
+        "CHLORHYDRATE DE LIDOCAÏNE"
+      ]
+    },
+    {
+      "cis": "61019983",
+      "name": "NICOTINELL MENTHE 1 mg, comprimé à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "BITARTRATE DE NICOTINE DIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "66166122",
+      "name": "AMYLMETACRESOL/ALCOOL DICHLOROBENZYLIQUE BIOGARAN CONSEIL 0,6 mg/1,2 mg MIEL ET CITRON, pastille édulcorée à la saccharine sodique, au maltitol et à l'isomalt",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLOROBENZYLIQUE"
+      ]
+    },
+    {
+      "cis": "60772526",
+      "name": "NICORETTE INHALEUR 10 mg, cartouche pour inhalation buccale",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE"
+      ]
+    },
+    {
+      "cis": "62860793",
+      "name": "NICORETTE MENTHE FRAICHE 2 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au xylitol et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE (RÉSINATE DE)"
+      ]
+    },
+    {
+      "cis": "67591507",
+      "name": "STREPSILS MENTHE GLACIALE, pastille à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "DICHLOROBENZYLIQUE (ALCOOL)"
+      ]
+    },
+    {
+      "cis": "66472432",
+      "name": "EOSINE COOPER 2 POUR CENT, solution pour application cutanée en récipient unidose",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ÉOSINE DISODIQUE"
+      ]
+    },
+    {
+      "cis": "61197765",
+      "name": "VITAMINE C UPSA 500 mg, comprimé à croquer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "ASCORBATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "61430002",
+      "name": "NICORETTE MENTHE FRAICHE 4 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au xylitol et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE (RÉSINATE DE)"
+      ]
+    },
+    {
+      "cis": "64181200",
+      "name": "MUCOPLEXIL 5 % ADULTES SANS SUCRE, sirop édulcoré à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "61235109",
+      "name": "OXYBOLDINE, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "SULFATE DE SODIUM ANHYDRE",
+        "BOLDINE",
+        "DIHYDROGÉNOPHOSPHATE DE SODIUM ANHYDRE"
+      ]
+    },
+    {
+      "cis": "62972454",
+      "name": "CROMOGLICATE DE SODIUM SANDOZ CONSEIL 2 %, collyre en solution en récipient unidose",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "CROMOGLICATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "63088070",
+      "name": "LOPERAMIDE REF 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "67504559",
+      "name": "LOPERAMIDE SANDOZ CONSEIL 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "61658002",
+      "name": "VICKS SIROP PECTORAL 0,15 %, sirop",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CITRATE DE PENTOXYVÉRINE"
+      ]
+    },
+    {
+      "cis": "63672883",
+      "name": "INDIARAL 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "64801822",
+      "name": "MINOXIDIL VIATRIS CONSEIL 5 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "68284564",
+      "name": "NIQUITIN MENTHE GLACIALE 2 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au sorbitol et au xylitol",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "RÉSINATE DE NICOTINE"
+      ]
+    },
+    {
+      "cis": "63456907",
+      "name": "ZAGRAPA 0,25 mg/ml, collyre en solution",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE"
+      ]
+    },
+    {
+      "cis": "65068102",
+      "name": "ALOSTIL 5 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "61955893",
+      "name": "MERCRYL, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "SOLUTION DE CHLORURE DE BENZALKONIUM",
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "69941714",
+      "name": "DIOSMINE BIOGARAN CONSEIL 600 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMINE"
+      ]
+    },
+    {
+      "cis": "68406840",
+      "name": "CHLORHEXIDINE/BENZALKONIUM/ALCOOL BENZYLIQUE VIATRIS CONSEIL 0,25 g/0,025 g/4 mL pour 100 mL, solution pour application locale",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ALCOOL BENZYLIQUE",
+        "GLUCONATE DE CHLORHEXIDINE",
+        "CHLORURE DE BENZALKONIUM"
+      ]
+    },
+    {
+      "cis": "62158929",
+      "name": "LAROSCORBINE 500 mg SANS SUCRE, comprimé à croquer édulcoré à l'aspartam",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "ASCORBATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "60994733",
+      "name": "ALOSTIL 2 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "68852892",
+      "name": "NICOPASS 1,5 mg SANS SUCRE MENTHE FRAICHEUR, pastille édulcorée à l'aspartam et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "RÉSINATE DE NICOTINE"
+      ]
+    },
+    {
+      "cis": "63674254",
+      "name": "RENNIE DEFLATINE SANS SUCRE, comprimé à croquer édulcoré au sorbitol",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CALCIUM (CARBONATE DE)",
+        "DIMÉTICONE SILICE",
+        "MAGNÉSIUM (CARBONATE DE) LOURD"
+      ]
+    },
+    {
+      "cis": "67094067",
+      "name": "HUMEX 5 % ADULTES EXPECTORANT SANS SUCRE, solution buvable édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "69540696",
+      "name": "ACICLOVIR VIATRIS CONSEIL 5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "64863635",
+      "name": "CARBOCISTEINE VIATRIS CONSEIL 5 POUR CENT ADULTES, sirop",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "64556465",
+      "name": "SARGENOR 1 g/5 ml, solution buvable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ARGININE (ASPARTATE D')"
+      ]
+    },
+    {
+      "cis": "62008580",
+      "name": "ERYTHEDERMYL 5 %, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DEXPANTHÉNOL"
+      ]
+    },
+    {
+      "cis": "66326694",
+      "name": "ERAZABAN 100 mg/g, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DOCOSANOL"
+      ]
+    },
+    {
+      "cis": "63327481",
+      "name": "HUMEX RHUME DES FOINS A LA BECLOMETASONE 50 microgrammes/dose, suspension pour pulvérisation nasale en flacon",
+      "is_otc": true,
+      "admin_route": "nasale",
+      "substances": [
+        "BÉCLOMÉTASONE (DIPROPIONATE DE)"
+      ]
+    },
+    {
+      "cis": "67979189",
+      "name": "RENNIELIQUO SANS SUCRE, suspension buvable édulcorée à la saccharine sodique en sachet-dose",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROTALCITE"
+      ]
+    },
+    {
+      "cis": "63802533",
+      "name": "TITANOREINE, crème",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "DIOXYDE DE TITANE",
+        "OXYDE DE ZINC",
+        "CARRAGHÉNATES"
+      ]
+    },
+    {
+      "cis": "66196012",
+      "name": "NICORETTE MENTHE GLACIALE 4 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au xylitol et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE (RÉSINATE DE)"
+      ]
+    },
+    {
+      "cis": "62292134",
+      "name": "GAVISCONELL MENTHE SANS SUCRE, suspension buvable en sachet-dose édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "67569927",
+      "name": "HUMEX MAL DE GORGE LIDOCAINE/ALCOOL DICHLOROBENZYLIQUE/AMYLMETACRESOL 2 mg/1,2 mg/0,6 mg MENTHE GLACIALE SANS SUCRE, pastille édulcorée à la saccharine sodique, au maltitol et à l'isomalt",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "ALCOOL DICHLORO-2,4 BENZYLIQUE",
+        "CHLORHYDRATE DE LIDOCAÏNE"
+      ]
+    },
+    {
+      "cis": "66019460",
+      "name": "DIOSMINE ZENTIVA CONSEIL 600 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMINE"
+      ]
+    },
+    {
+      "cis": "60799637",
+      "name": "ACICLOVIR SANDOZ CONSEIL 5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "61408707",
+      "name": "TRANSIPEGLIB 5,9 g, poudre pour solution buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "MACROGOL 3350"
+      ]
+    },
+    {
+      "cis": "69016462",
+      "name": "BRONCATHIOL EXPECTORANT ADULTES, solution buvable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "67897322",
+      "name": "RENNIE SANS SUCRE, comprimé à croquer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CALCIUM (CARBONATE DE)",
+        "MAGNÉSIUM (CARBONATE DE) LOURD"
+      ]
+    },
+    {
+      "cis": "69545939",
+      "name": "MAALOX MAUX D'ESTOMAC HYDROXYDE D'ALUMINIUM/HYDROXYDE DE MAGNESIUM 460 mg/400 mg FRUITS ROUGES, suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROXYDE D'ALUMINIUM",
+        "HYDROXYDE DE MAGNÉSIUM"
+      ]
+    },
+    {
+      "cis": "68633852",
+      "name": "MAG 2 100 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBONATE DE MAGNÉSIUM"
+      ]
+    },
+    {
+      "cis": "66929112",
+      "name": "HEXETIDINE VIATRIS CONSEIL 0,1 %, solution pour bain de bouche",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "HEXÉTIDINE"
+      ]
+    },
+    {
+      "cis": "64072763",
+      "name": "VICKS VAPORUB, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée;inhalée",
+      "substances": [
+        "HUILE ESSENTIELLE D'EUCALYPTUS",
+        "TÉRÉBENTHINE (ESSENCE DE)",
+        "CAMPHRE",
+        "LÉVOMENTHOL",
+        "THYMOL"
+      ]
+    },
+    {
+      "cis": "69207994",
+      "name": "VOLTARENACTIGO 1 %, gel en flacon pressurisé",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DICLOFÉNAC DE DIÉTHYLAMINE"
+      ]
+    },
+    {
+      "cis": "69979597",
+      "name": "DICLOFENAC ARROW CONSEIL 1 %, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DICLOFÉNAC DE DIÉTHYLAMINE"
+      ]
+    },
+    {
+      "cis": "60635449",
+      "name": "FLUOCARIL BI FLUORE 250 mg MENTHE, gel dentifrice",
+      "is_otc": true,
+      "admin_route": "dentaire",
+      "substances": [
+        "FLUORURE DE SODIUM",
+        "MONOFLUOROPHOSPHATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "64473959",
+      "name": "MINOXIDIL SANDOZ CONSEIL 5 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "68466734",
+      "name": "STREPSILS CITRON SANS SUCRE, pastille édulcorée à l'isomalt, au maltitol et à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "AMYLMÉTACRÉSOL",
+        "DICHLOROBENZYLIQUE (ALCOOL)"
+      ]
+    },
+    {
+      "cis": "69835020",
+      "name": "HUMEX ALLERGIE CETIRIZINE 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "60295320",
+      "name": "NICORETTE MENTHE GLACIALE 2 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au xylitol et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "NICOTINE (RÉSINATE DE)"
+      ]
+    },
+    {
+      "cis": "66172278",
+      "name": "DEXPANTHENOL ZENTIVA CONSEIL 5 %, pommade",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "DEXPANTHÉNOL"
+      ]
+    },
+    {
+      "cis": "65527000",
+      "name": "PRAMOCAINE CHLORHYDRATE ARROW CONSEIL 1%, gel pour application locale",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "CHLORHYDRATE DE PRAMOCAÏNE"
+      ]
+    },
+    {
+      "cis": "67634570",
+      "name": "LORATADINE ARROW CONSEIL 10 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "LORATADINE"
+      ]
+    },
+    {
+      "cis": "67993502",
+      "name": "VITAMINE C ARROW 1 g, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE"
+      ]
+    },
+    {
+      "cis": "67240376",
+      "name": "CORTISEDERMYL 0,5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "HYDROCORTISONE"
+      ]
+    },
+    {
+      "cis": "62593867",
+      "name": "BISEPTINESPRAID, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ALCOOL BENZYLIQUE",
+        "CHLORHEXIDINE (DIGLUCONATE DE)",
+        "BENZALKONIUM (CHLORURE DE)"
+      ]
+    },
+    {
+      "cis": "62564068",
+      "name": "DRILL ALLERGIE CETIRIZINE 10 mg, comprimé à sucer sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "69160822",
+      "name": "LYSOPAÏNE CETYLPYRIDINIUM LYSOZYME MIEL CITRON SANS SUCRE, comprimé à sucer édulcoré au sorbitol et à la saccharine",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORURE DE CÉTYLPYRIDINIUM",
+        "CHLORHYDRATE DE LYSOZYME"
+      ]
+    },
+    {
+      "cis": "69548668",
+      "name": "ALGINATE DE SODIUM/BICARBONATE DE SODIUM SANDOZ CONSEIL 500 mg/267 mg MENTHE SANS SUCRE, suspension buvable en sachet édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "61405814",
+      "name": "NIQUITIN MENTHE GLACIALE 4 mg SANS SUCRE, gomme à mâcher médicamenteuse édulcorée au sorbitol et au xylitol",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "RÉSINATE DE NICOTINE"
+      ]
+    },
+    {
+      "cis": "69764662",
+      "name": "CROMORHINOL 2 %, solution pour pulvérisation nasale",
+      "is_otc": true,
+      "admin_route": "nasale",
+      "substances": [
+        "CROMOGLICATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "60264410",
+      "name": "HERPESEDERMYL 5 %, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "60539301",
+      "name": "DRILL MIEL ROSAT, pastille à sucer",
+      "is_otc": true,
+      "admin_route": "voie buccale autre",
+      "substances": [
+        "CHLORHYDRATE DE TÉTRACAÏNE",
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "68933636",
+      "name": "ACTIVIR 5 % crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "62708942",
+      "name": "VITAMINE C UPSA 500 mg fruit exotique, comprimé à croquer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "ASCORBATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "63735593",
+      "name": "KENDIX 5 POUR CENT, crème",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ACICLOVIR"
+      ]
+    },
+    {
+      "cis": "60095095",
+      "name": "IMODIUMLIQUICAPS 2 mg, capsule molle",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "63374716",
+      "name": "BORAX / ACIDE BORIQUE ARROW 12 mg/18 mg/ml, solution pour lavage ophtalmique en récipient unidose",
+      "is_otc": true,
+      "admin_route": "ophtalmique",
+      "substances": [
+        "ACIDE BORIQUE",
+        "BORAX"
+      ]
+    },
+    {
+      "cis": "66680020",
+      "name": "LOPERAMIDE TEVA CONSEIL 2 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "68477734",
+      "name": "MINOXIDIL BAILLEUL 2 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "68040364",
+      "name": "CARBOCISTEINE VIATRIS CONSEIL 5 % ADULTES SANS SUCRE, solution buvable édulcorée au maltitol liquide et au sorbitol",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "67853176",
+      "name": "ALCOOL MODIFIE COOPER, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "ÉTHANOL À 70 POUR CENT"
+      ]
+    },
+    {
+      "cis": "69435752",
+      "name": "LAROSCORBINE 1 g, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE"
+      ]
+    },
+    {
+      "cis": "67189387",
+      "name": "MAALOX MAUX D'ESTOMAC HYDROXYDE D'ALUMINIUM/HYDROXYDE DE MAGNESIUM 460 mg/400 mg, suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROXYDE D'ALUMINIUM",
+        "HYDROXYDE DE MAGNÉSIUM"
+      ]
+    },
+    {
+      "cis": "67904304",
+      "name": "MICROLAX SORBITOL CITRATE ET LAURILSULFOACETATE DE SODIUM, solution rectale en récipient unidose",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "CITRATE DE SODIUM",
+        "SODIUM (LAURILSULFOACÉTATE DE)",
+        "SORBITOL À 70 POUR CENT CRISTALLISABLE"
+      ]
+    },
+    {
+      "cis": "61183089",
+      "name": "VOGALIB 7,5 mg SANS SUCRE, lyophilisat oral édulcoré à l'aspartam",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "MÉTOPIMAZINE"
+      ]
+    },
+    {
+      "cis": "69250554",
+      "name": "ALOSTIL 5 %, mousse pour application cutanée en flacon pressurisé",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "63509669",
+      "name": "VITAMINE C UPSA EFFERVESCENTE 1000 mg, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE"
+      ]
+    },
+    {
+      "cis": "67342541",
+      "name": "CLIPTOL, gel",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "LÉVOMENTHOL",
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "63183351",
+      "name": "CARBOCISTEINE CLARIX 750 mg/10 ml ADULTES, solution buvable en sachet édulcorée à la saccharine sodique, au sorbitol et au maltitol liquide",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    },
+    {
+      "cis": "61743335",
+      "name": "CHLORHEXIDINE ARROW CONSEIL 0,05 %, solution pour application locale en récipient unidose",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE"
+      ]
+    },
+    {
+      "cis": "67692513",
+      "name": "TIORFAST 100 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "RACÉCADOTRIL"
+      ]
+    },
+    {
+      "cis": "63531587",
+      "name": "SOLUTRICINE MAUX DE GORGE TETRACAÏNE 0,2 mg, comprimé à sucer",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE TÉTRACAÏNE"
+      ]
+    },
+    {
+      "cis": "69791937",
+      "name": "MINOXIDIL VIATRIS CONSEIL 2 %, solution pour application cutanée",
+      "is_otc": true,
+      "admin_route": "cutanée",
+      "substances": [
+        "MINOXIDIL"
+      ]
+    },
+    {
+      "cis": "65282490",
+      "name": "CARBOCISTEINE ARROW 5 % ADULTES SANS SUCRE, solution buvable édulcorée à la saccharine sodique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBOCISTÉINE"
+      ]
+    }
+  ],
+  "substances": [
+    {
+      "code": "HYDROCORTISONE",
+      "name": "HYDROCORTISONE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE PRAMOCAÏNE",
+      "name": "CHLORHYDRATE DE PRAMOCAÏNE",
+      "tags": []
+    },
+    {
+      "code": "BICLOTYMOL",
+      "name": "BICLOTYMOL",
+      "tags": []
+    },
+    {
+      "code": "LORATADINE",
+      "name": "LORATADINE",
+      "tags": []
+    },
+    {
+      "code": "DIOSMINE",
+      "name": "DIOSMINE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE TÉTRACAÏNE",
+      "name": "CHLORHYDRATE DE TÉTRACAÏNE",
+      "tags": []
+    },
+    {
+      "code": "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE",
+      "name": "SOLUTION DE DIGLUCONATE DE CHLORHEXIDINE",
+      "tags": []
+    },
+    {
+      "code": "DICLOFÉNAC DE DIÉTHYLAMINE",
+      "name": "DICLOFÉNAC DE DIÉTHYLAMINE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE PYRIDOXINE",
+      "name": "CHLORHYDRATE DE PYRIDOXINE",
+      "tags": []
+    },
+    {
+      "code": "LACTATE DE MAGNÉSIUM DIHYDRATÉ",
+      "name": "LACTATE DE MAGNÉSIUM DIHYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "RACÉCADOTRIL",
+      "name": "RACÉCADOTRIL",
+      "tags": []
+    },
+    {
+      "code": "ACÉTYLCYSTÉINE",
+      "name": "ACÉTYLCYSTÉINE",
+      "tags": []
+    },
+    {
+      "code": "TITANE (DIOXYDE DE)",
+      "name": "TITANE (DIOXYDE DE)",
+      "tags": []
+    },
+    {
+      "code": "ZINC (OXYDE DE)",
+      "name": "ZINC (OXYDE DE)",
+      "tags": []
+    },
+    {
+      "code": "CARRAGAHEEN (EXTRAIT DE)",
+      "name": "CARRAGAHEEN (EXTRAIT DE)",
+      "tags": []
+    },
+    {
+      "code": "CÉTIRIZINE (DICHLORHYDRATE DE)",
+      "name": "CÉTIRIZINE (DICHLORHYDRATE DE)",
+      "tags": []
+    },
+    {
+      "code": "ACIDE LACTIQUE",
+      "name": "ACIDE LACTIQUE",
+      "tags": []
+    },
+    {
+      "code": "ACIDE SALICYLIQUE",
+      "name": "ACIDE SALICYLIQUE",
+      "tags": []
+    },
+    {
+      "code": "ASPARTATE DE MAGNÉSIUM DIHYDRATÉ",
+      "name": "ASPARTATE DE MAGNÉSIUM DIHYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "MINOXIDIL",
+      "name": "MINOXIDIL",
+      "tags": []
+    },
+    {
+      "code": "BICARBONATE DE SODIUM",
+      "name": "BICARBONATE DE SODIUM",
+      "tags": []
+    },
+    {
+      "code": "ALGINATE DE SODIUM",
+      "name": "ALGINATE DE SODIUM",
+      "tags": []
+    },
+    {
+      "code": "CLOTRIMAZOLE",
+      "name": "CLOTRIMAZOLE",
+      "tags": []
+    },
+    {
+      "code": "CÉTRIMIDE",
+      "name": "CÉTRIMIDE",
+      "tags": []
+    },
+    {
+      "code": "OXYDE DE MAGNÉSIUM LÉGER",
+      "name": "OXYDE DE MAGNÉSIUM LÉGER",
+      "tags": []
+    },
+    {
+      "code": "ASCORBIQUE (ACIDE)",
+      "name": "ASCORBIQUE (ACIDE)",
+      "tags": []
+    },
+    {
+      "code": "ACIDE ASCORBIQUE",
+      "name": "ACIDE ASCORBIQUE",
+      "tags": []
+    },
+    {
+      "code": "CARBOCISTÉINE",
+      "name": "CARBOCISTÉINE",
+      "tags": []
+    },
+    {
+      "code": "TROLAMINE",
+      "name": "TROLAMINE",
+      "tags": []
+    },
+    {
+      "code": "CHLORURE DE CÉTYLPYRIDINIUM",
+      "name": "CHLORURE DE CÉTYLPYRIDINIUM",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE LYSOZYME",
+      "name": "CHLORHYDRATE DE LYSOZYME",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE TERBINAFINE",
+      "name": "CHLORHYDRATE DE TERBINAFINE",
+      "tags": []
+    },
+    {
+      "code": "ACICLOVIR",
+      "name": "ACICLOVIR",
+      "tags": []
+    },
+    {
+      "code": "THYM ROUGE (HUILE ESSENTIELLE DE)",
+      "name": "THYM ROUGE (HUILE ESSENTIELLE DE)",
+      "tags": []
+    },
+    {
+      "code": "THYMOL",
+      "name": "THYMOL",
+      "tags": []
+    },
+    {
+      "code": "HUILE ESSENTIELLE DE LAVANDE",
+      "name": "HUILE ESSENTIELLE DE LAVANDE",
+      "tags": []
+    },
+    {
+      "code": "HUILE ESSENTIELLE DE ROMARIN",
+      "name": "HUILE ESSENTIELLE DE ROMARIN",
+      "tags": []
+    },
+    {
+      "code": "AMYLMÉTACRÉSOL",
+      "name": "AMYLMÉTACRÉSOL",
+      "tags": []
+    },
+    {
+      "code": "ALCOOL DICHLORO-2,4 BENZYLIQUE",
+      "name": "ALCOOL DICHLORO-2,4 BENZYLIQUE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE LIDOCAÏNE",
+      "name": "CHLORHYDRATE DE LIDOCAÏNE",
+      "tags": []
+    },
+    {
+      "code": "SORBITOL",
+      "name": "SORBITOL",
+      "tags": []
+    },
+    {
+      "code": "DEXPANTHÉNOL",
+      "name": "DEXPANTHÉNOL",
+      "tags": []
+    },
+    {
+      "code": "HESPÉRIDINE MÉTHYLCHALCONE",
+      "name": "HESPÉRIDINE MÉTHYLCHALCONE",
+      "tags": []
+    },
+    {
+      "code": "PETIT HOUX (EXTRAIT SEC DE)",
+      "name": "PETIT HOUX (EXTRAIT SEC DE)",
+      "tags": []
+    },
+    {
+      "code": "SOLUTION DE CHLORURE DE BENZALKONIUM",
+      "name": "SOLUTION DE CHLORURE DE BENZALKONIUM",
+      "tags": []
+    },
+    {
+      "code": "ÉNOXOLONE",
+      "name": "ÉNOXOLONE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE LOPÉRAMIDE",
+      "name": "CHLORHYDRATE DE LOPÉRAMIDE",
+      "tags": []
+    },
+    {
+      "code": "HEXÉTIDINE",
+      "name": "HEXÉTIDINE",
+      "tags": []
+    },
+    {
+      "code": "HYDROXYDE D'ALUMINIUM",
+      "name": "HYDROXYDE D'ALUMINIUM",
+      "tags": []
+    },
+    {
+      "code": "HYDROXYDE DE MAGNÉSIUM",
+      "name": "HYDROXYDE DE MAGNÉSIUM",
+      "tags": []
+    },
+    {
+      "code": "ALANINE",
+      "name": "ALANINE",
+      "tags": []
+    },
+    {
+      "code": "CAMPHRE RACÉMIQUE",
+      "name": "CAMPHRE RACÉMIQUE",
+      "tags": []
+    },
+    {
+      "code": "LÉVOMENTHOL",
+      "name": "LÉVOMENTHOL",
+      "tags": []
+    },
+    {
+      "code": "DICHLORHYDRATE DE CÉTIRIZINE",
+      "name": "DICHLORHYDRATE DE CÉTIRIZINE",
+      "tags": []
+    },
+    {
+      "code": "ACÉTATE D'HYDROCORTISONE",
+      "name": "ACÉTATE D'HYDROCORTISONE",
+      "tags": []
+    },
+    {
+      "code": "TERBINAFINE (CHLORHYDRATE DE)",
+      "name": "TERBINAFINE (CHLORHYDRATE DE)",
+      "tags": []
+    },
+    {
+      "code": "LIDOCAÏNE",
+      "name": "LIDOCAÏNE",
+      "tags": []
+    },
+    {
+      "code": "NICOTINE POLACRILEX",
+      "name": "NICOTINE POLACRILEX",
+      "tags": []
+    },
+    {
+      "code": "CITRATE DE BÉTAÏNE ANHYDRE",
+      "name": "CITRATE DE BÉTAÏNE ANHYDRE",
+      "tags": []
+    },
+    {
+      "code": "BENZOCAÏNE",
+      "name": "BENZOCAÏNE",
+      "tags": []
+    },
+    {
+      "code": "DODÉCLONIUM (BROMURE DE)",
+      "name": "DODÉCLONIUM (BROMURE DE)",
+      "tags": []
+    },
+    {
+      "code": "ESCULOSIDE SESQUIHYDRATÉ",
+      "name": "ESCULOSIDE SESQUIHYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "NICOTINE",
+      "name": "NICOTINE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHEXIDINE (DIGLUCONATE DE)",
+      "name": "CHLORHEXIDINE (DIGLUCONATE DE)",
+      "tags": []
+    },
+    {
+      "code": "DIOSMECTITE",
+      "name": "DIOSMECTITE",
+      "tags": []
+    },
+    {
+      "code": "ACIDE BORIQUE",
+      "name": "ACIDE BORIQUE",
+      "tags": []
+    },
+    {
+      "code": "BORAX",
+      "name": "BORAX",
+      "tags": []
+    },
+    {
+      "code": "CROMOGLICATE DE SODIUM",
+      "name": "CROMOGLICATE DE SODIUM",
+      "tags": []
+    },
+    {
+      "code": "PARAFFINE LIQUIDE",
+      "name": "PARAFFINE LIQUIDE",
+      "tags": []
+    },
+    {
+      "code": "ACÉTATE DE CHLORHEXIDINE",
+      "name": "ACÉTATE DE CHLORHEXIDINE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHEXIDINE (GLUCONATE DE)",
+      "name": "CHLORHEXIDINE (GLUCONATE DE)",
+      "tags": []
+    },
+    {
+      "code": "MAGNÉSIUM (CITRATE DE) ANHYDRE",
+      "name": "MAGNÉSIUM (CITRATE DE) ANHYDRE",
+      "tags": []
+    },
+    {
+      "code": "NICOTINE (CATIORÉSINE CARBOXYLATE DE)",
+      "name": "NICOTINE (CATIORÉSINE CARBOXYLATE DE)",
+      "tags": []
+    },
+    {
+      "code": "CARBONATE DE CALCIUM",
+      "name": "CARBONATE DE CALCIUM",
+      "tags": []
+    },
+    {
+      "code": "MAGNÉSIUM (CARBONATE DE) LOURD",
+      "name": "MAGNÉSIUM (CARBONATE DE) LOURD",
+      "tags": []
+    },
+    {
+      "code": "VASELINE",
+      "name": "VASELINE",
+      "tags": []
+    },
+    {
+      "code": "PENTOSANNE (POLYESTER SULFURIQUE DE) SODIQUE",
+      "name": "PENTOSANNE (POLYESTER SULFURIQUE DE) SODIQUE",
+      "tags": []
+    },
+    {
+      "code": "RÉSINATE DE NICOTINE",
+      "name": "RÉSINATE DE NICOTINE",
+      "tags": []
+    },
+    {
+      "code": "ÉPOLAMINE DE DICLOFÉNAC",
+      "name": "ÉPOLAMINE DE DICLOFÉNAC",
+      "tags": []
+    },
+    {
+      "code": "CAFÉINE",
+      "name": "CAFÉINE",
+      "tags": []
+    },
+    {
+      "code": "GLUCURONAMIDE",
+      "name": "GLUCURONAMIDE",
+      "tags": []
+    },
+    {
+      "code": "CHLORHYDRATE DE CYSTÉINE ANHYDRE",
+      "name": "CHLORHYDRATE DE CYSTÉINE ANHYDRE",
+      "tags": []
+    },
+    {
+      "code": "DL-MÉTHIONINE",
+      "name": "DL-MÉTHIONINE",
+      "tags": []
+    },
+    {
+      "code": "L-CYSTINE",
+      "name": "L-CYSTINE",
+      "tags": []
+    },
+    {
+      "code": "FLUORURE DE SODIUM",
+      "name": "FLUORURE DE SODIUM",
+      "tags": []
+    },
+    {
+      "code": "MONOFLUOROPHOSPHATE DE SODIUM",
+      "name": "MONOFLUOROPHOSPHATE DE SODIUM",
+      "tags": []
+    },
+    {
+      "code": "LOPÉRAMIDE (CHLORHYDRATE DE)",
+      "name": "LOPÉRAMIDE (CHLORHYDRATE DE)",
+      "tags": []
+    },
+    {
+      "code": "SIMÉTICONE",
+      "name": "SIMÉTICONE",
+      "tags": []
+    },
+    {
+      "code": "ARGININE (ASPARTATE D')",
+      "name": "ARGININE (ASPARTATE D')",
+      "tags": []
+    },
+    {
+      "code": "VÉRATROLE",
+      "name": "VÉRATROLE",
+      "tags": []
+    },
+    {
+      "code": "RÉSORCINOL",
+      "name": "RÉSORCINOL",
+      "tags": []
+    },
+    {
+      "code": "ASCORBATE DE SODIUM",
+      "name": "ASCORBATE DE SODIUM",
+      "tags": []
+    },
+    {
+      "code": "DIOXYDE DE TITANE",
+      "name": "DIOXYDE DE TITANE",
+      "tags": []
+    },
+    {
+      "code": "OXYDE DE ZINC",
+      "name": "OXYDE DE ZINC",
+      "tags": []
+    },
+    {
+      "code": "CARRAGHÉNATES",
+      "name": "CARRAGHÉNATES",
+      "tags": []
+    },
+    {
+      "code": "ASPARTATE D'ARGININE",
+      "name": "ASPARTATE D'ARGININE",
+      "tags": []
+    },
+    {
+      "code": "CHARBON ACTIVÉ",
+      "name": "CHARBON ACTIVÉ",
+      "tags": []
+    },
+    {
+      "code": "CAPSICUM (OLÉORÉSINE DE)",
+      "name": "CAPSICUM (OLÉORÉSINE DE)",
+      "tags": []
+    },
+    {
+      "code": "SALICYLATE D'ISOAMYLE",
+      "name": "SALICYLATE D'ISOAMYLE",
+      "tags": []
+    },
+    {
+      "code": "MÉTOPIMAZINE",
+      "name": "MÉTOPIMAZINE",
+      "tags": []
+    },
+    {
+      "code": "BICARBONATE DE POTASSIUM",
+      "name": "BICARBONATE DE POTASSIUM",
+      "tags": []
+    },
+    {
+      "code": "SACCHAROMYCES CEREVISIAE",
+      "name": "SACCHAROMYCES CEREVISIAE",
+      "tags": []
+    },
+    {
+      "code": "MAGNÉSIUM (SULFATE DE) TRIHYDRATÉ",
+      "name": "MAGNÉSIUM (SULFATE DE) TRIHYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "BITARTRATE DE NICOTINE DIHYDRATÉ",
+      "name": "BITARTRATE DE NICOTINE DIHYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "NICOTINE (RÉSINATE DE)",
+      "name": "NICOTINE (RÉSINATE DE)",
+      "tags": []
+    },
+    {
+      "code": "SULFATE DE MAGNÉSIUM HEPTAHYDRATÉ",
+      "name": "SULFATE DE MAGNÉSIUM HEPTAHYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "ALCOOL DICHLOROBENZYLIQUE",
+      "name": "ALCOOL DICHLOROBENZYLIQUE",
+      "tags": []
+    },
+    {
+      "code": "DICHLOROBENZYLIQUE (ALCOOL)",
+      "name": "DICHLOROBENZYLIQUE (ALCOOL)",
+      "tags": []
+    },
+    {
+      "code": "ÉOSINE DISODIQUE",
+      "name": "ÉOSINE DISODIQUE",
+      "tags": []
+    },
+    {
+      "code": "SULFATE DE SODIUM ANHYDRE",
+      "name": "SULFATE DE SODIUM ANHYDRE",
+      "tags": []
+    },
+    {
+      "code": "BOLDINE",
+      "name": "BOLDINE",
+      "tags": []
+    },
+    {
+      "code": "DIHYDROGÉNOPHOSPHATE DE SODIUM ANHYDRE",
+      "name": "DIHYDROGÉNOPHOSPHATE DE SODIUM ANHYDRE",
+      "tags": []
+    },
+    {
+      "code": "CITRATE DE PENTOXYVÉRINE",
+      "name": "CITRATE DE PENTOXYVÉRINE",
+      "tags": []
+    },
+    {
+      "code": "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+      "name": "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+      "tags": []
+    },
+    {
+      "code": "ALCOOL BENZYLIQUE",
+      "name": "ALCOOL BENZYLIQUE",
+      "tags": []
+    },
+    {
+      "code": "GLUCONATE DE CHLORHEXIDINE",
+      "name": "GLUCONATE DE CHLORHEXIDINE",
+      "tags": []
+    },
+    {
+      "code": "CHLORURE DE BENZALKONIUM",
+      "name": "CHLORURE DE BENZALKONIUM",
+      "tags": []
+    },
+    {
+      "code": "CALCIUM (CARBONATE DE)",
+      "name": "CALCIUM (CARBONATE DE)",
+      "tags": []
+    },
+    {
+      "code": "DIMÉTICONE SILICE",
+      "name": "DIMÉTICONE SILICE",
+      "tags": []
+    },
+    {
+      "code": "DOCOSANOL",
+      "name": "DOCOSANOL",
+      "tags": []
+    },
+    {
+      "code": "BÉCLOMÉTASONE (DIPROPIONATE DE)",
+      "name": "BÉCLOMÉTASONE (DIPROPIONATE DE)",
+      "tags": []
+    },
+    {
+      "code": "HYDROTALCITE",
+      "name": "HYDROTALCITE",
+      "tags": []
+    },
+    {
+      "code": "MACROGOL 3350",
+      "name": "MACROGOL 3350",
+      "tags": []
+    },
+    {
+      "code": "CARBONATE DE MAGNÉSIUM",
+      "name": "CARBONATE DE MAGNÉSIUM",
+      "tags": []
+    },
+    {
+      "code": "HUILE ESSENTIELLE D'EUCALYPTUS",
+      "name": "HUILE ESSENTIELLE D'EUCALYPTUS",
+      "tags": []
+    },
+    {
+      "code": "TÉRÉBENTHINE (ESSENCE DE)",
+      "name": "TÉRÉBENTHINE (ESSENCE DE)",
+      "tags": []
+    },
+    {
+      "code": "CAMPHRE",
+      "name": "CAMPHRE",
+      "tags": []
+    },
+    {
+      "code": "BENZALKONIUM (CHLORURE DE)",
+      "name": "BENZALKONIUM (CHLORURE DE)",
+      "tags": []
+    },
+    {
+      "code": "ÉTHANOL À 70 POUR CENT",
+      "name": "ÉTHANOL À 70 POUR CENT",
+      "tags": []
+    },
+    {
+      "code": "CITRATE DE SODIUM",
+      "name": "CITRATE DE SODIUM",
+      "tags": []
+    },
+    {
+      "code": "SODIUM (LAURILSULFOACÉTATE DE)",
+      "name": "SODIUM (LAURILSULFOACÉTATE DE)",
+      "tags": []
+    },
+    {
+      "code": "SORBITOL À 70 POUR CENT CRISTALLISABLE",
+      "name": "SORBITOL À 70 POUR CENT CRISTALLISABLE",
+      "tags": []
+    },
+    {
+      "code": "IBUPROFÈNE",
+      "name": "IBUPROFÈNE",
+      "tags": []
+    }
+  ],
+  "questions": []
+}

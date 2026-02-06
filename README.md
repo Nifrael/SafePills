@@ -4,18 +4,20 @@ Application web destinée à simplifier la compréhension des interactions médi
 
 ## Architecture
 
-* **Frontend :** Astro, React, Nano Stores.
-* **Backend :** FastAPI, Python, LangChain.
+- **Frontend :** Astro, React, Nano Stores.
+- **Backend :** FastAPI, Python.
 
 ## Installation
 
 ### Frontend
+
 ```bash
 npm install
 npm run dev
 ```
 
 ### Backend
+
 ```bash
 cd backend
 pip install -r requirements.txt

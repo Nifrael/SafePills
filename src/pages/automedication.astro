@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { AutomedicationContainer } from "../components/features/automedication/AutomedicationContainer";
+---
+
+<Layout title="Score d'Automédication - Pharma-Tools">
+  <main class="page-automedication">
+    <div class="container">
+      <header class="page-header">
+        <h1>Score d'Automédication</h1>
+        <p>
+          Vérifiez si l'automédication est sûre pour vous en quelques questions.
+        </p>
+      </header>
+
+      <div class="app-container">
+        <AutomedicationContainer client:load />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  .page-automedication {
+    padding: 2rem 0;
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      h1 {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: var(--color-text-light);
+      }
+    }
+
+    .app-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+    }
+  }
+</style>

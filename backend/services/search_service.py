@@ -1,54 +1,129 @@
+"""
+Service de Recherche Simplifié (KISS)
+Recherche dans la table 'drugs' et 'substances' SQLite.
+"""
+import sqlite3
+import os
 import unicodedata
-from typing import List, Dict
-from backend.services.drug_loader import load_drugs
-from backend.core.models import Drug
+from typing import List
+from ..core.schemas import SearchResult
+from ..core.models import Drug, Substance
 
-def normalize_string(s: str) -> str:
-    """Enlève les accents et met en majuscules pour une recherche robuste."""
-    if not s:
-        return ""
-    # Normalise les caractères (ex: É -> E)
-    s = unicodedata.normalize('NFD', s)
-    s = "".join([c for c in s if unicodedata.category(c) != 'Mn'])
-    return s.upper().strip()
+# Chemin DB (à centraliser idéalement)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, '..', 'data', 'safepills.db')
 
-class SearchEngine:
-    def __init__(self, data_dir: str):
-        """Initialise le moteur et pré-calcule les index de recherche."""
-        self.drugs = load_drugs(data_dir)
-        # Index pour la recherche par substance : {nom_normalise: [liste_de_drugs]}
-        self.substance_index: Dict[str, List[Drug]] = {}
-        self._build_indexes()
+def normalize_text(text: str) -> str:
+    """Retire accents et met en minuscules pour la recherche"""
+    if not text: return ""
+    return ''.join(c for c in unicodedata.normalize('NFD', text)
+                   if unicodedata.category(c) != 'Mn').lower()
 
-    def _build_indexes(self):
-        """Construit les index pour accélérer la recherche."""
-        for drug in self.drugs:
-            for sub in drug.substances:
-                # On utilise le nom normalisé pour l'index
-                sub_name_norm = normalize_string(sub.nom)
-                if sub_name_norm not in self.substance_index:
-                    self.substance_index[sub_name_norm] = []
-                self.substance_index[sub_name_norm].append(drug)
+def search_medication(query: str) -> List[SearchResult]:
+    """
+    Recherche médicaments ET substances correspondant à la requête
+    """
+    clean_query = normalize_text(query)
+    if len(clean_query) < 2:
+        return []
 
-    def search(self, query: str) -> List[Drug]:
-        """
-        Recherche optimisée et insensible aux accents.
-        """
-        if not query:
-            return []
-
-        query_norm = normalize_string(query)
-        results_map = {}
-
-        # 1. Recherche dans les noms de marques (Marque)
-        for drug in self.drugs:
-            if query_norm in normalize_string(drug.nom):
-                results_map[drug.cis] = drug
-
-        # 2. Recherche dans l'index des substances
-        for sub_name_norm, associated_drugs in self.substance_index.items():
-            if query_norm in sub_name_norm:
-                for drug in associated_drugs:
-                    results_map[drug.cis] = drug
+    results = []
+    
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
         
-        return list(results_map.values())
+        # 1. Recherche Substances
+        # On cherche les substances qui matchent
+        cursor.execute(
+            "SELECT code, name FROM substances"
+        )
+        
+        # Filtrage Python (plus simple pour les accents avec SQLite par défaut)
+        # Mais pour la perf, on fera du SQL LIKE plus tard si besoin
+        # Ici on charge tout (133 substances c'est rien) et on filtre
+        all_subs = cursor.fetchall()
+        for sub in all_subs:
+            if clean_query in normalize_text(sub['name']):
+                results.append(SearchResult(
+                    type="substance",
+                    id=sub['code'],
+                    name=sub['name'],
+                    description="Substance active"
+                ))
+        
+        # 2. Recherche Médicaments OTC
+        cursor.execute(
+            "SELECT cis, name FROM drugs WHERE is_otc = 1"
+        )
+        all_drugs = cursor.fetchall()
+        for drug in all_drugs:
+            if clean_query in normalize_text(drug['name']):
+                results.append(SearchResult(
+                    type="drug",
+                    id=drug['cis'],
+                    name=drug['name'],
+                    description="Médicament"
+                ))
+                
+        conn.close()
+        
+    except Exception as e:
+        print(f"Erreur recherche SQLite: {e}")
+        return []
+        
+    return results[:20] # Limite à 20 résultats
+
+def get_drug_details(cis: str) -> Drug:
+    """Récupère un médicament et ses substances"""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        
+        # Info Drug
+        cursor.execute("SELECT * FROM drugs WHERE cis = ?", (cis,))
+        row = cursor.fetchone()
+        if not row:
+            conn.close()
+            return None
+            
+        drug = Drug(
+            cis=row['cis'],
+            name=row['name'],
+            administration_route=row['administration_route'],
+            is_otc=bool(row['is_otc']),
+            substances=[]
+        )
+        
+        # Info Substances liées
+        cursor.execute("""
+            SELECT s.code, s.name, s.tags 
+            FROM substances s
+            JOIN drug_substances ds ON s.code = ds.substance_code
+            WHERE ds.drug_cis = ?
+        """, (cis,))
+        
+        sub_rows = cursor.fetchall()
+        import json
+        for s_row in sub_rows:
+            tags = []
+            if s_row['tags']:
+                try:
+                    tags = json.loads(s_row['tags'])
+                except:
+                    pass
+            
+            drug.substances.append(Substance(
+                code=s_row['code'],
+                name=s_row['name'],
+                tags=tags
+            ))
+            
+        conn.close()
+        return drug
+        
+    except Exception as e:
+        print(f"Erreur détails drug: {e}")
+        return None
