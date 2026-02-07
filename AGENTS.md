@@ -1,6 +1,6 @@
 ## 1. VISION ET OBJECTIF
 
-Développement d'une application web ("Pharma-Checker") destinée à simplifier la compréhension des interactions médicamenteuses et des conseils associés pour les patients.
+Développement d'une application web ("SafePills") destinée à savoir si l'automédication peut être dangereuse dans un contexte précis.
 
 - **Public cible :** Grand public (vulgarisation) et professionnels de santé (vérification rapide).
 - **Approche :** Hybride (Site statique performant + Application dynamique).
@@ -22,9 +22,16 @@ Développement d'une application web ("Pharma-Checker") destinée à simplifier 
 - **API :** Python avec FastAPI.
 - **Base de Données :** SQLite (Stockage structuré des médicaments, DCI, Classes et règles du Thésaurus).
 - **IA / RAG Hybride :**
-  - **Moteur :** SDK Google Generative AI (Gemini).
-  - **Flux :** Requête SQL exacte -> Injection des résultats dans le prompt -> Génération pédagogique.
-  - **Contrainte :** Structured Output obligatoire via Pydantic.
+  - **Moteur :** SDK Google GenAI (`google-genai`).
+  - **Modèle :** `gemini-3-flash-preview` (pour la vitesse et les explications pédagogiques).
+  - **Flux :** Contexte structuré (questions/réponses) -> Injection dans le prompt -> Génération pédagogique vulgarisée.
+  - **Contrainte :** Structured Output souhaité pour les futurs composants.
+
+### Déploiement & DevOps (Infrastructure)
+
+- **Backend (API) :** Containerisé avec **Docker** et hébergé sur **Render** (Web Service).
+- **Frontend (Application) :** Déployé sur **Vercel** (Optimisation Astro).
+- **CI/CD :** Génération automatique de la base SQLite lors du build Docker à partir des sources JSON (`medical_knowledge.json`).
 
 ## 3. ARCHITECTURE DU CODE
 
@@ -40,11 +47,13 @@ Développement d'une application web ("Pharma-Checker") destinée à simplifier 
 /styles # Fichiers SCSS globaux (variables, mixins, reset)
 /lib # Logique partagée Frontend, helpers TS
 /backend # <--- ZONE BACKEND
-/api # Endpoints FastAPI
-/core # Configuration (LLM, DB, Settings)
-/services # Logique métier (RAG, Parsing PDF)
-/tests # Tests Backend
-/docs # Documentation technique
+/api # Endpoints FastAPI (Routing)
+/core # Modèles de données (Pydantic) et Schémas
+/data # DB SQLite (safepills.db) et sources JSON
+/services # Logique métier (AI, Recherche)
+/automedication # Logique modulaire (Filters, Calculator, Repository)
+/tests # Tests Backend (unitaires et intégration)
+/scripts # Scripts de migration et d'import (ETL)
 
 ### Principes d'Architecture
 
@@ -103,7 +112,7 @@ Développement d'une application web ("Pharma-Checker") destinée à simplifier 
 
 ### Cas critiques à tester
 
-- **Logique métier :** Une interaction majeure (ex: AVK + Aspirine) DOIT déclencher une alerte.
+- **Logique métier :** Une automédication dangereuse (ex: AINS + Femme enceinte) DOIT déclencher une alerte.
 - **UI :** L'interface doit rester utilisable sur mobile.
 
 ## 6. INSTRUCTIONS POUR L'AGENT
