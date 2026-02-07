@@ -2,26 +2,19 @@
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout>
+<Layout title="SafePills">
   <div class="page-header">
     <h1>SafePills</h1>
-    <p class="subtitle">Votre assistant de santé intelligent</p>
+    <p class="subtitle">Votre assistant d'automédication.</p>
   </div>
 
   <main class="home-container">
     <div class="glass-card">
       <section class="hero-section">
-        <h2>🏥 Bienvenue sur SafePills</h2>
-        <p class="hero-text">
+        <p>
           SafePills vous aide à évaluer la sécurité de l'automédication grâce à
           un questionnaire personnalisé.
         </p>
-
-        <div class="cta-buttons">
-          <a href="/automedication" class="btn btn-primary">
-            🚀 Tester un médicament
-          </a>
-        </div>
       </section>
 
       <section class="features-section">
@@ -45,24 +38,29 @@ import Layout from "@layouts/Layout.astro";
             <p>Recevez une évaluation claire et des conseils adaptés</p>
           </div>
         </div>
+
+        <div class="cta-buttons">
+          <a href="/automedication" class="btn btn-primary">
+            Tester un médicament 💊
+          </a>
+        </div>
       </section>
     </div>
   </main>
 </Layout>
 
-<style lang="scss" is:global>
-  @use "../styles/config/variables" as vars;
-  @use "../styles/config/mixins" as mixins;
+<style lang="scss">
+  @use "../styles/config/variables" as *;
+  @use "../styles/config/mixins" as *;
 
   .page-header {
     text-align: center;
-    margin-bottom: 3rem;
     padding-top: 2rem;
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      background: linear-gradient(135deg, #3cb56f, #60fca1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 0.5rem;
@@ -70,7 +68,7 @@ import Layout from "@layouts/Layout.astro";
 
     .subtitle {
       font-size: 1.2rem;
-      color: #636e72;
+      color: var(--paragraph-color);
     }
   }
 
@@ -104,32 +102,6 @@ import Layout from "@layouts/Layout.astro";
       color: #636e72;
       margin-bottom: 2rem;
       line-height: 1.6;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-
-      .btn {
-        padding: 1rem 2rem;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: all 0.3s;
-
-        &.btn-primary {
-          background: linear-gradient(135deg, #2ecc71, #27ae60);
-          color: white;
-          box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
-
-          &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
-          }
-        }
-      }
     }
   }
 
