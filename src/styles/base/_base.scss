@@ -17,3 +17,10 @@ body {
 main {
   flex: 1;
 }
+
+#logo {
+  font-size: var(--h4);
+  font-family: var(--font-title);
+  z-index: 20;
+  font-weight: bold;
+}
