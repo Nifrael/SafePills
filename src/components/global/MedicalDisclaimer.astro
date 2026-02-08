@@ -1,0 +1,59 @@
+---
+
+---
+
+<section class="medical-disclaimer">
+  <div class="content">
+    <div class="icon">⚠️</div>
+    <h3>Avertissement Important</h3>
+    <p>
+      Cet outil est une aide à la décision et ne remplace pas un avis médical
+      professionnel. Consultez toujours votre médecin ou pharmacien en cas de
+      doute.
+    </p>
+  </div>
+</section>
+
+<style lang="scss">
+  @use "../../styles/config/variables" as *;
+  @use "../../styles/config/mixins" as *;
+
+  .medical-disclaimer {
+    background-color: #f0f7ff;
+    padding: 4rem 1rem;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+    color: #2ecc71;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin: 0;
+    font-family: var(--font-title);
+  }
+
+  p {
+    color: #636e72;
+    line-height: 1.6;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0;
+  }
+</style>
