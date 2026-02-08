@@ -1,0 +1,117 @@
+---
+
+---
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="brand">
+        <h1 id="logo">💊 SafePills</h1>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/confidentialite">Politique de confidentialité</a>
+        <a href="/cookies">Cookies</a>
+      </nav>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p>
+        © {new Date().getFullYear()}. Tous droits réservés.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style lang="scss">
+  @use "../../styles/config/variables" as *;
+  @use "../../styles/config/mixins" as *;
+
+  .site-footer {
+    padding: 3rem 2rem;
+    border-top: 1px solid #dfe6e9;
+    width: 100%;
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .brand {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3436;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    h1 {
+      margin: 0;
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
+    a {
+      color: #636e72;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #2ecc71;
+      }
+    }
+  }
+
+  @include breakpoint-up($breakpoint-tablet) {
+    .footer-top {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .footer-nav {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .footer-divider {
+    height: 1px;
+    background-color: #f1f2f6;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+
+    p {
+      margin: 0;
+      color: var(--tertiary-color);
+    }
+  }
+</style>
