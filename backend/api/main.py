@@ -7,6 +7,7 @@ from ..services.search_service import search_medication, get_drug_details
 from ..core.schemas import SearchResult
 from ..core.models import Drug
 from .automedication import router as automedication_router
+from .flow_endpoint import router as flow_router
 
 app = FastAPI(
     title="SafePills API",
@@ -44,6 +45,9 @@ async def get_details(cis: str):
 
 # 3. Router Automédication (Questions & Score)
 app.include_router(automedication_router)
+
+# 4. Router Flux unifié (Nouveau parcours)
+app.include_router(flow_router)
 
 @app.get("/")
 def read_root():
