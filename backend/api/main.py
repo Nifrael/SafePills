@@ -35,34 +35,37 @@ app.state.limiter = limiter
 # Quand quelqu'un dépasse la limite → erreur 429 "Too Many Requests"
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
-# Configuration CORS — restreint aux origines autorisées
-import logging as _logging
-_cors_logger = _logging.getLogger("safepills.cors")
-ALLOWED_ORIGINS = [
+# Configuration CORS
+# On autorise :
+# 1. La liste explicite (localhost, etc.)
+# 2. TOUS les sous-domaines vercel.app via regex (plus robuste)
+ALLOWED_ORIGINS_LIST = [
     origin.strip() 
     for origin in os.getenv(
         "ALLOWED_ORIGINS", 
         "http://localhost:4321,http://127.0.0.1:4321,https://pharma-tools-ten.vercel.app"
     ).split(",")
 ]
-_cors_logger.info(f"CORS — Origines autorisées : {ALLOWED_ORIGINS}")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
+    allow_origins=ALLOWED_ORIGINS_LIST,
+    allow_origin_regex=r"https://.*\.vercel\.app",  # Autorise tout *.vercel.app
     allow_credentials=False,
     allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type"],
+    allow_headers=["*"],  # On autorise tous les headers pour éviter les blocages bêtes
 )
 
 # --- Middleware "panneaux de sécurité" ---
-# À chaque réponse, on colle des consignes de sécurité pour le navigateur.
-# C'est comme mettre des panneaux à la sortie de la pharmacie.
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):
-    # 1. On laisse la requête passer normalement et on récupère la réponse
+    # Debug CORS : on affiche l'origine reçue
+    origin = request.headers.get("origin")
+    if origin:
+        print(f"📡 CORS Debug - Incoming Origin: {origin}")
+
     response = await call_next(request)
-    # 2. On ajoute nos "panneaux" à la réponse avant de l'envoyer au navigateur
+    
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
     response.headers["X-XSS-Protection"] = "1; mode=block"
