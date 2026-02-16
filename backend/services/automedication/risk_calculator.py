@@ -32,6 +32,7 @@ class RiskCalculator:
             if answer:  # Le patient a répondu OUI
                 # Construire le contexte pour l'IA
                 answered_questions_context.append({
+                    'question_id': q.id,
                     'question_text': q.text,
                     'answer': 'OUI',
                     'risk_level': q.risk_level.value,

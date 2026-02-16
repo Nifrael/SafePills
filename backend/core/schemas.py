@@ -19,4 +19,19 @@ class EvaluationResponse(BaseModel):
     score: RiskLevel  # Utilisation de l'Enum
     details: List[str] # Messages explicatifs générés dynamiquement
     ai_explanation: Optional[str] = None # Explication pédagogique générée par IA
-    answered_questions_context: Optional[List[dict]] = None # Contexte enrichi pour l'IA
+    general_advice: List[str] = []  # Conseils généraux de la substance (affichés même en GREEN)
+    has_coverage: bool = True  # False si aucune question n'est associée au médicament
+    # Ce champ est utilisé EN INTERNE pour passer le contexte à l'IA.
+    # Il ne doit PAS apparaître dans la réponse JSON envoyée au client.
+    answered_questions_context: Optional[List[dict]] = None
+
+    model_config = {
+        # On exclut answered_questions_context du JSON de réponse
+        "json_schema_extra": {"exclude": ["answered_questions_context"]}
+    }
+
+    def model_dump(self, **kwargs):
+        """On exclut les champs internes de la sérialisation par défaut"""
+        kwargs.setdefault("exclude", set())
+        kwargs["exclude"] = set(kwargs["exclude"]) | {"answered_questions_context"}
+        return super().model_dump(**kwargs)

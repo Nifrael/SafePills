@@ -2,7 +2,7 @@
   "_comment": "BASE DE CONNAISSANCES MÉDICALES - MODELE 'PROFIL DE RISQUE'",
   
   "questions_catalog": {
-    "Q_PREGNANCY": "Êtes-vous enceinte ou allaitez-vous (si vous êtes un homme, répondez 'non') ?",
+    "Q_PREGNANCY": "Êtes-vous enceinte ou allaitez-vous ?",
     "Q_ULCERE": "Avez-vous déjà eu un ulcère à l'estomac ou souffrez-vous de brûlures d'estomac fréquentes ?",
     "Q_LIVER": "Souffrez-vous d'une maladie du foie ou d'une insuffisance hépatique ?",
     "Q_DIARRHEA": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
@@ -69,5 +69,76 @@
     "MINOXIDIL": ["MINOXIDIL_TOPICAL"],
     "SUCCINATE DE DOXYLAMINE": ["DOXYLAMINE"],
     "CARBOCISTÉINE": ["FLUIDIFIANT"]
+  },
+
+  "substance_advice": {
+    "_comment": "Conseils pharmaceutiques validés, injectés dans le prompt IA. Clé 'general' = toujours affiché. Clé 'Q_xxx' = affiché uniquement si cette question a déclenché un risque.",
+
+    "PARACÉTAMOL": {
+      "general": [
+        "Ne jamais dépasser 1g par prise et 3g par jour chez l'adulte.",
+        "Espacer les prises d'au moins 6 heures."
+      ],
+      "Q_POLYMEDICATION": [
+        "De nombreux médicaments contiennent du paracétamol sans que le patient le sache : Fervex, Humex Rhume, Dolirhume, Actifed, etc. Il faut vérifier la composition de tous ses traitements pour éviter un surdosage involontaire.",
+        "Le surdosage en paracétamol est la première cause de greffe hépatique d'origine médicamenteuse en France."
+      ],
+      "Q_LIVER": [
+        "En cas d'insuffisance hépatique, la dose maximale doit être réduite à 2g par jour.",
+        "La consommation d'alcool augmente fortement la toxicité hépatique du paracétamol. En cas de consommation régulière d'alcool, la prise de paracétamol est déconseillée."
+      ]
+    },
+
+    "IBUPROFÈNE": {
+      "general": [
+        "À prendre au milieu d'un repas pour protéger l'estomac.",
+        "Durée maximale recommandée sans avis médical : 5 jours pour la douleur, 3 jours pour la fièvre."
+      ],
+      "Q_PREGNANCY": [
+        "Les AINS sont formellement contre-indiqués à partir du 6ème mois de grossesse (risque de fermeture prématurée du canal artériel chez le fœtus).",
+        "En début de grossesse, le paracétamol est l'alternative de choix pour la douleur et la fièvre."
+      ],
+      "Q_ULCERE": [
+        "Les AINS comme l'ibuprofène augmentent le risque de saignement digestif et peuvent aggraver un ulcère existant.",
+        "Alternative possible : le paracétamol, qui n'a pas d'effet sur l'estomac."
+      ],
+      "Q_KIDNEY": [
+        "Les AINS diminuent le flux sanguin rénal et peuvent aggraver une insuffisance rénale.",
+        "En cas de problème rénal, privilégiez le paracétamol après avis médical."
+      ]
+    },
+
+    "CHLORHYDRATE DE LOPÉRAMIDE": {
+      "general": [
+        "Le lopéramide ne traite pas la cause de la diarrhée, il ralentit le transit.",
+        "Bien s'hydrater pendant un épisode de diarrhée (eau, bouillons, solutions de réhydratation)."
+      ],
+      "Q_DIARRHEA": [
+        "Une diarrhée avec fièvre ou sang dans les selles peut être le signe d'une infection bactérienne. Dans ce cas, le lopéramide est contre-indiqué car il empêche l'élimination du germe.",
+        "Consultez un médecin rapidement si la diarrhée dure plus de 2 jours ou s'accompagne de fièvre."
+      ]
+    },
+
+    "DICHLORHYDRATE DE CÉTIRIZINE": {
+      "general": [
+        "La cétirizine peut provoquer une somnolence chez certains patients, même s'il s'agit d'un antihistaminique de 2ème génération (moins sédatif que les anciens)."
+      ],
+      "Q_SLEEP": [
+        "Si vous devez conduire ou manipuler des machines, testez d'abord votre réaction au médicament à la maison avant de prendre le volant."
+      ]
+    },
+
+    "DICLOFÉNAC DE DIÉTHYLAMINE": {
+      "general": [
+        "Appliquer en couche fine sur la zone douloureuse, 3 à 4 fois par jour maximum.",
+        "Se laver les mains après application."
+      ],
+      "Q_SUN": [
+        "Le diclofénac en gel peut provoquer des réactions de photosensibilisation. Ne pas exposer la zone traitée au soleil pendant toute la durée du traitement et les 2 semaines suivantes."
+      ],
+      "Q_PREGNANCY": [
+        "L'utilisation cutanée des AINS est déconseillée pendant la grossesse, surtout au 3ème trimestre. Demandez conseil à votre pharmacien ou médecin."
+      ]
+    }
   }
 }

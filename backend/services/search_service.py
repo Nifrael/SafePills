@@ -5,9 +5,12 @@ Recherche dans la table 'drugs' et 'substances' SQLite.
 import sqlite3
 import os
 import unicodedata
+import logging
 from typing import List
 from ..core.schemas import SearchResult
 from ..core.models import Drug, Substance
+
+logger = logging.getLogger(__name__)
 
 # Chemin DB (à centraliser idéalement)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -70,7 +73,7 @@ def search_medication(query: str) -> List[SearchResult]:
         conn.close()
         
     except Exception as e:
-        print(f"Erreur recherche SQLite: {e}")
+        logger.error(f"Erreur recherche SQLite: {e}", exc_info=True)
         return []
         
     return results[:20] # Limite à 20 résultats
@@ -125,5 +128,5 @@ def get_drug_details(cis: str) -> Drug:
         return drug
         
     except Exception as e:
-        print(f"Erreur détails drug: {e}")
+        logger.error(f"Erreur détails drug: {e}", exc_info=True)
         return None

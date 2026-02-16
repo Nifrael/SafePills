@@ -2,6 +2,39 @@
 
 Toutes les modifications notables de ce projet seront documentées dans ce fichier.
 
+## [0.5.0] - 2026-02-14
+
+### 🎨 Refonte Frontend (Nouvelle Identité Visuelle)
+
+- **Nouvelle Page d'Accueil** : Refonte complète de `index.astro` avec une architecture modulaire basée sur des composants dédiés (`Hero.astro`, `Features.astro`).
+- **Section Hero** : Nouveau composant plein écran avec image SafePills, badge de confiance « FIABILITÉ MÉDICALE », description d'alerte sur l'automédication, et double CTA (Démarrer l'analyse / En savoir plus).
+- **Section Features** : Composant « Comment ça marche ? » présentant les 3 étapes (Recherchez, Répondez, Recevez nos conseils) avec des cartes animées au survol.
+- **Branding SafePills** : Identité visuelle cohérente avec gradient vert (#3cb56f → #60fca1) sur le titre principal.
+
+### 🧩 Bibliothèque d'Icônes SVG
+
+- **Remplacement des Emojis** : Les emojis (🔍, 📋, ✅, 🏥, 🚀) sont remplacés par des composants SVG Astro réutilisables et stylables.
+- **6 Composants Icônes** : Création de `ActivityIcon`, `AlertIcon`, `DocumentIcon`, `PillIcon`, `SearchIcon`, `ShieldIcon` dans `src/components/icons/`.
+- **Props Configurables** : Chaque icône accepte une prop `size` pour un dimensionnement flexible.
+- **Couleurs via CSS** : Les icônes utilisent `currentColor` et les variables CSS (`--tertiary-color`) pour une cohérence visuelle.
+
+### 🏗️ Nouveaux Composants Globaux
+
+- **Footer** (`Footer.astro`) : Pied de page complet avec logo SafePills (icône PillIcon), liens de navigation (Mentions légales, Confidentialité, Cookies), et copyright dynamique.
+- **Avertissement Médical** (`MedicalDisclaimer.astro`) : Bandeau dédié rappelant que l'outil ne remplace pas un avis médical professionnel.
+- **Intégration Layout** : Le Footer est désormais intégré au layout global de l'application.
+
+### 🎛️ Système de Design (SCSS)
+
+- **Composant Boutons** (`_buttons.scss`) : Nouveau fichier SCSS réutilisable avec les variantes `.btn-primary`, `.btn-outline`, gestion des états `:hover`, `:active`, `:disabled`, et focus clavier accessible.
+- **Styles Globaux** : Ajout du `scroll-behavior: smooth`, styles du logo `#logo` centralisés, et couleur des icônes `.icon` globalisée.
+- **Navbar Enrichie** : Intégration de l'icône PillIcon dans le logo, bouton CTA « Testez ! » dans la navigation desktop et mobile.
+
+### 🐛 Corrections & Ajustements
+
+- **Page Automédication** : Correction du padding et de la couleur du titre (`--color-primary` → `--tertiary-color`).
+- **Nettoyage** : Suppression de ~170 lignes de styles inline dans `index.astro` au profit de composants modulaires.
+
 ## [0.4.0] - 2026-02-07
 
 ### 🧠 Intelligence Artificielle & Pédagogie

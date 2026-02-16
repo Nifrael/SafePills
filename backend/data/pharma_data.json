@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "Liste-OTC.xls",
-    "count": 251,
+    "count": 305,
     "generated_at": "2026-02-01"
   },
   "drugs": [
@@ -2380,6 +2380,511 @@
       "substances": [
         "CARBOCISTÉINE"
       ]
+    },
+    {
+      "cis": "60234100",
+      "name": "DOLIPRANE 1000 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "63368332",
+      "name": "DOLIPRANE 500 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "67747372",
+      "name": "DOLIPRANEORODOZ 500 mg, comprimé orodispersible",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "60641854",
+      "name": "DOLIPRANETABS 1000 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "66185425",
+      "name": "DOLIPRANETABS 500 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "69172447",
+      "name": "EFFERALGAN 500 mg, comprimé orodispersible",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "60025403",
+      "name": "EFFERALGANMED 1000 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "66826710",
+      "name": "EFFERALGANMED 250 mg, comprimé dispersible",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "67326925",
+      "name": "EFFERALGANMED 500 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "61574554",
+      "name": "EFFERALGAN 1000 mg, comprimé effervescent",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "62887947",
+      "name": "DAFALGAN 1000 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "67721153",
+      "name": "DAFALGAN 500 mg, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "66745016",
+      "name": "DAFALGANTABS 1000 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "67154532",
+      "name": "DAFALGAN 1000 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "65609611",
+      "name": "DAFALGAN 500 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL"
+      ]
+    },
+    {
+      "cis": "68634000",
+      "name": "ADVIL 200 mg, comprimé enrobé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "63646874",
+      "name": "ADVIL 400 mg, comprimé enrobé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "63040606",
+      "name": "ADVILMED 400 mg, comprimé enrobé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "67848097",
+      "name": "ADVILCAPS 200 mg, capsule molle",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "61959735",
+      "name": "ADVILCAPS 400 mg, capsule molle",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "60305960",
+      "name": "NUROFEN 200 mg, comprimé enrobé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "63005402",
+      "name": "NUROFEN 200 mg, comprimé orodispersible",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "64911902",
+      "name": "NUROFEN 400 mg, comprimé enrobé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "65477024",
+      "name": "NUROFEN 400 mg, comprimé enrobé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "69457752",
+      "name": "NUROFENFLASH 200 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "LYSINATE D'IBUPROFÈNE"
+      ]
+    },
+    {
+      "cis": "68144352",
+      "name": "HUMEXLIB PARACETAMOL CHLORPHENAMINE 500 mg/4 mg, gélule",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL",
+        "MALÉATE DE CHLORPHÉNAMINE"
+      ]
+    },
+    {
+      "cis": "60082023",
+      "name": "FERVEXRHUME, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PARACÉTAMOL",
+        "MALÉATE DE CHLORPHÉNAMINE"
+      ]
+    },
+    {
+      "cis": "69738404",
+      "name": "FERVEX ADULTES FRAMBOISE, granulés pour solution buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "PARACÉTAMOL",
+        "MALÉATE DE PHÉNIRAMINE"
+      ]
+    },
+    {
+      "cis": "66947007",
+      "name": "FERVEX ADULTES SANS SUCRE, granulés pour solution buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "PARACÉTAMOL",
+        "MALÉATE DE PHÉNIRAMINE"
+      ]
+    },
+    {
+      "cis": "69329731",
+      "name": "FERVEX ADULTES, granulés pour solution buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "PARACÉTAMOL",
+        "MALÉATE DE PHÉNIRAMINE"
+      ]
+    },
+    {
+      "cis": "66418648",
+      "name": "FERVEX ENFANTS SANS SUCRE, granulés pour solution buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "ACIDE ASCORBIQUE",
+        "PARACÉTAMOL",
+        "MALÉATE DE PHÉNIRAMINE"
+      ]
+    },
+    {
+      "cis": "65777274",
+      "name": "GAVISCONELL SANS SUCRE MENTHE, comprimé à croquer édulcoré à l'aspartam et à l'acésulfame potassique",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CARBONATE DE CALCIUM",
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "66711455",
+      "name": "GAVISCON NOURRISSONS, suspension buvable en flacon",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "BICARBONATE DE SODIUM",
+        "ALGINATE DE SODIUM"
+      ]
+    },
+    {
+      "cis": "63636264",
+      "name": "GAVISCON, suspension buvable en flacon",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "SODIUM (BICARBONATE DE)",
+        "SODIUM (ALGINATE DE)"
+      ]
+    },
+    {
+      "cis": "66116589",
+      "name": "GAVISCON, suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "SODIUM (BICARBONATE DE)",
+        "SODIUM (ALGINATE DE)"
+      ]
+    },
+    {
+      "cis": "67275135",
+      "name": "IMODIUMDUO, comprimé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE",
+        "SIMÉTICONE"
+      ]
+    },
+    {
+      "cis": "65619769",
+      "name": "IMODIUMLINGUAL 2 mg, lyophilisat oral",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CHLORHYDRATE DE LOPÉRAMIDE"
+      ]
+    },
+    {
+      "cis": "68081368",
+      "name": "SPASFON, comprimé enrobé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "PHLOROGLUCINOL HYDRATÉ",
+        "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)"
+      ]
+    },
+    {
+      "cis": "65923640",
+      "name": "SPASFON, suppositoire",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "PHLOROGLUCINOL DIHYDRATÉ",
+        "TRIMÉTHYLPHLOROGLUCINOL"
+      ]
+    },
+    {
+      "cis": "64970338",
+      "name": "SPASFON LYOC 160 mg, lyophilisat oral",
+      "is_otc": true,
+      "admin_route": "orale;sublinguale",
+      "substances": [
+        "PHLOROGLUCINOL DIHYDRATÉ"
+      ]
+    },
+    {
+      "cis": "62944693",
+      "name": "SPASFON LYOC 80 mg, lyophilisat oral",
+      "is_otc": true,
+      "admin_route": "orale;sublinguale",
+      "substances": [
+        "PHLOROGLUCINOL HYDRATÉ"
+      ]
+    },
+    {
+      "cis": "64450063",
+      "name": "SMECTA 3 g FRAISE, poudre pour suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMECTITE"
+      ]
+    },
+    {
+      "cis": "69584073",
+      "name": "SMECTA 3 g ORANGE-VANILLE, poudre pour suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMECTITE"
+      ]
+    },
+    {
+      "cis": "64008771",
+      "name": "SMECTALIA 3 g CITRON-MENTHE, suspension buvable en sachet",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DIOSMECTITE"
+      ]
+    },
+    {
+      "cis": "61833327",
+      "name": "AERIUS 5 mg, comprimé pelliculé",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DESLORATADINE"
+      ]
+    },
+    {
+      "cis": "69643760",
+      "name": "AERIUS 0,5 mg/ml, solution buvable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DESLORATADINE"
+      ]
+    },
+    {
+      "cis": "62636293",
+      "name": "ZYRTECSET 10 mg, comprimé pelliculé sécable",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "CÉTIRIZINE (DICHLORHYDRATE DE)"
+      ]
+    },
+    {
+      "cis": "65016707",
+      "name": "ZYRTEC 10 mg/ml, solution buvable en gouttes",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICHLORHYDRATE DE CÉTIRIZINE"
+      ]
+    },
+    {
+      "cis": "62431527",
+      "name": "VOLTARENE 50 mg, comprimé enrobé gastro-résistant",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICLOFÉNAC SODIQUE"
+      ]
+    },
+    {
+      "cis": "63225081",
+      "name": "VOLTARENE L.P. 100 mg, comprimé enrobé à libération prolongée",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICLOFÉNAC SODIQUE"
+      ]
+    },
+    {
+      "cis": "60980979",
+      "name": "VOLTARENE L.P. 75 mg, comprimé enrobé à libération prolongée",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICLOFÉNAC SODIQUE"
+      ]
+    },
+    {
+      "cis": "68344335",
+      "name": "VOLTARENE LP 75 mg, comprimé enrobé à libération prolongée",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "DICLOFÉNAC SODIQUE"
+      ]
+    },
+    {
+      "cis": "66691390",
+      "name": "VOLTARENE 100 mg, suppositoire",
+      "is_otc": true,
+      "admin_route": "rectale",
+      "substances": [
+        "DICLOFÉNAC SODIQUE"
+      ]
+    },
+    {
+      "cis": "61539037",
+      "name": "MAALOX MAUX D'ESTOMAC HYDROXYDE D'ALUMINIUM/HYDROXYDE DE MAGNESIUM 400 mg/400 mg SANS SUCRE, comprimé à croquer édulcoré à la saccharine sodique, au sorbitol et au maltitol",
+      "is_otc": true,
+      "admin_route": "orale",
+      "substances": [
+        "HYDROXYDE D'ALUMINIUM",
+        "HYDROXYDE DE MAGNÉSIUM"
+      ]
     }
   ],
   "substances": [
@@ -3046,6 +3551,71 @@
     {
       "code": "IBUPROFÈNE",
       "name": "IBUPROFÈNE",
+      "tags": []
+    },
+    {
+      "code": "PARACÉTAMOL",
+      "name": "PARACÉTAMOL",
+      "tags": [
+        "TRIGGER_Q_LIVER_ORANGE",
+        "TRIGGER_Q_POLYMEDICATION_ORANGE"
+      ]
+    },
+    {
+      "code": "LYSINATE D'IBUPROFÈNE",
+      "name": "LYSINATE D'IBUPROFÈNE",
+      "tags": []
+    },
+    {
+      "code": "MALÉATE DE CHLORPHÉNAMINE",
+      "name": "MALÉATE DE CHLORPHÉNAMINE",
+      "tags": []
+    },
+    {
+      "code": "MALÉATE DE PHÉNIRAMINE",
+      "name": "MALÉATE DE PHÉNIRAMINE",
+      "tags": []
+    },
+    {
+      "code": "SODIUM (BICARBONATE DE)",
+      "name": "SODIUM (BICARBONATE DE)",
+      "tags": []
+    },
+    {
+      "code": "SODIUM (ALGINATE DE)",
+      "name": "SODIUM (ALGINATE DE)",
+      "tags": []
+    },
+    {
+      "code": "PHLOROGLUCINOL HYDRATÉ",
+      "name": "PHLOROGLUCINOL HYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)",
+      "name": "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)",
+      "tags": []
+    },
+    {
+      "code": "PHLOROGLUCINOL DIHYDRATÉ",
+      "name": "PHLOROGLUCINOL DIHYDRATÉ",
+      "tags": []
+    },
+    {
+      "code": "TRIMÉTHYLPHLOROGLUCINOL",
+      "name": "TRIMÉTHYLPHLOROGLUCINOL",
+      "tags": []
+    },
+    {
+      "code": "DESLORATADINE",
+      "name": "DESLORATADINE",
+      "tags": [
+        "TRIGGER_Q_SLEEP_ORANGE"
+      ]
+    },
+    {
+      "code": "DICLOFÉNAC SODIQUE",
+      "name": "DICLOFÉNAC SODIQUE",
       "tags": []
     }
   ],

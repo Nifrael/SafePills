@@ -21,6 +21,8 @@ Développement d'une application web ("SafePills") destinée à savoir si l'auto
 
 - **API :** Python avec FastAPI.
 - **Base de Données :** SQLite (Stockage structuré des médicaments, DCI, Classes et règles du Thésaurus).
+- **Sécurité API :** `slowapi` (Rate Limiting), CORS restreint, headers de sécurité HTTP, validation Pydantic stricte.
+- **Logging :** Module `logging` Python (remplace `print()`). Niveaux `debug`/`info`/`warning`/`error`.
 - **IA / RAG Hybride :**
   - **Moteur :** SDK Google GenAI (`google-genai`).
   - **Modèle :** `gemini-3-flash-preview` (pour la vitesse et les explications pédagogiques).
@@ -41,15 +43,19 @@ Développement d'une application web ("SafePills") destinée à savoir si l'auto
 /src # <--- ZONE FRONTEND
 /components
 /ui # Composants atomiques (Boutons, Inputs)
-/features # Composants métier (React: SearchDrug, InteractionList)
+/features # Composants métier React
+/automedication # AutomedicationContainer, Search, Score, UnifiedQuestionnaire
+/global # Composants globaux Astro (Navbar, Footer, MedicalDisclaimer)
+/home # Composants page d'accueil (Hero, Features)
+/icons # Composants SVG (PillIcon, ShieldIcon, SearchIcon, etc.)
 /layouts # Layouts Astro (MainLayout)
-/pages # Routes Astro (index, about, checker)
+/pages # Routes Astro (index, automedication)
 /styles # Fichiers SCSS globaux (variables, mixins, reset)
-/lib # Logique partagée Frontend, helpers TS
+/config.ts # Configuration globale (API_BASE_URL)
 /backend # <--- ZONE BACKEND
-/api # Endpoints FastAPI (Routing)
+/api # Endpoints FastAPI (Routing + Rate Limiting)
 /core # Modèles de données (Pydantic) et Schémas
-/data # DB SQLite (safepills.db) et sources JSON
+/data # DB SQLite (safepills.db), medical_knowledge.json
 /services # Logique métier (AI, Recherche)
 /automedication # Logique modulaire (Filters, Calculator, Repository)
 /tests # Tests Backend (unitaires et intégration)
@@ -59,12 +65,20 @@ Développement d'une application web ("SafePills") destinée à savoir si l'auto
 
 1.  **Architecture "Islands" :** Le JS est chargé uniquement pour les composants interactifs (`client:load`).
 2.  **Séparation des responsabilités :** Frontend (Affichage) vs Backend (Logique métier/IA).
-3.  **Sécurité des Secrets :** Utilisation stricte de fichiers `.env` (jamais commités).
+3.  **Sécurité des Secrets :** Utilisation stricte de fichiers `.env` (jamais commités). `.env.example` documenté.
+
+### Sécurité de l'API
+
+- **CORS :** Restreint aux origines autorisées via variable d'environnement `ALLOWED_ORIGINS`.
+- **Rate Limiting :** Via `slowapi` — 30 req/min pour la recherche, 60 req/min par défaut, protection contre l'abus des crédits IA.
+- **Headers HTTP :** `X-Content-Type-Options`, `X-Frame-Options`, `X-XSS-Protection`, `Referrer-Policy` sur chaque réponse.
+- **Validation des entrées :** Pydantic `Field` avec contraintes (âge 0-150, genre M/F, taille max des réponses).
+- **Documentation API :** `/docs` et `/openapi.json` désactivés en production (`ENV=production`).
 
 ### Stratégie de Gestion des Erreurs
 
 - **Frontend :** Utilisation de `Error Boundaries` React. Message utilisateur clair en cas d'échec API.
-- **Backend :** Gestion des exceptions typées. Aucune stacktrace exposée au client.
+- **Backend :** Module `logging` Python avec niveaux (debug/info/warning/error). Aucune stacktrace exposée au client. Les messages debug sont silencieux en production.
 
 ## 4. STANDARDS DE DÉVELOPPEMENT
 
