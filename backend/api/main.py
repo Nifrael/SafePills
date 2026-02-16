@@ -36,7 +36,16 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Configuration CORS — restreint aux origines autorisées
-ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:4321,http://127.0.0.1:4321").split(",")
+import logging as _logging
+_cors_logger = _logging.getLogger("safepills.cors")
+ALLOWED_ORIGINS = [
+    origin.strip() 
+    for origin in os.getenv(
+        "ALLOWED_ORIGINS", 
+        "http://localhost:4321,http://127.0.0.1:4321,https://pharma-tools-ten.vercel.app"
+    ).split(",")
+]
+_cors_logger.info(f"CORS — Origines autorisées : {ALLOWED_ORIGINS}")
 
 app.add_middleware(
     CORSMiddleware,
