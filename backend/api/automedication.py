@@ -2,9 +2,9 @@
 Endpoints API pour le système de Score d'Automédication (KISS).
 Connecté aux services simplifiés et à la base SQLite nettoyée.
 """
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from typing import Dict, List, Optional
+from fastapi import APIRouter, HTTPException, Request
+from pydantic import BaseModel, Field, field_validator
+from typing import Dict, List, Optional, Literal
 from ..services.automedication import get_questions_for_drug, evaluate_risk
 from ..core.schemas import EvaluationResponse
 from ..core.models import Question
@@ -12,17 +12,28 @@ from ..core.models import Question
 router = APIRouter(prefix="/api/automedication", tags=["automedication"])
 
 class AnswersRequest(BaseModel):
-    """Payload pour envoyer les réponses"""
-    # Identifier (CIS ou code substance) pour vérifier les risques de polymédication
-    cis: Optional[str] = None
-    answers: Dict[str, bool]  # {"Q_GROSSESSE": true}
-    # Indique si le patient prend d'autres médicaments (pour le risque polymédication automatique)
+    """Payload pour envoyer les réponses — avec des garde-fous !"""
+    # CIS : on accepte max 50 caractères, que des lettres/chiffres/accents/espaces
+    cis: Optional[str] = Field(None, max_length=50)
+    # Réponses : max 50 entrées (on n'a jamais autant de questions)
+    answers: Dict[str, bool] = Field(default_factory=dict)
     has_other_meds: Optional[bool] = False
-    gender: Optional[str] = None
-    age: Optional[int] = None
+    # Genre : uniquement "M" ou "F", rien d'autre
+    gender: Optional[Literal["M", "F"]] = None
+    # Âge : entre 0 et 150 ans (personne ne vit plus longtemps !)
+    age: Optional[int] = Field(None, ge=0, le=150)
+
+    @field_validator('answers')
+    @classmethod
+    def limit_answers_size(cls, v):
+        """Empêche d'envoyer un dictionnaire géant pour surcharger le serveur"""
+        if len(v) > 50:
+            raise ValueError("Trop de réponses envoyées (max 50)")
+        return v
 
 @router.get("/questions/{cis}", response_model=List[Question])
 async def get_questions(
+    request: Request,
     cis: str,
     gender: Optional[str] = None,
     age: Optional[int] = None,
@@ -45,25 +56,27 @@ async def get_questions(
     )
     return questions
 
+# Limite stricte : 10/minute — C'est l'endpoint LE PLUS cher
+# car il appelle Google Gemini (IA payante) quand le score n'est pas GREEN
 @router.post("/evaluate", response_model=EvaluationResponse)
-async def evaluate(request: AnswersRequest):
+async def evaluate(request: Request, body: AnswersRequest):
     """
     Calcule le score final basé sur les réponses OUI (True).
     Si cis et has_other_meds sont fournis, applique automatiquement
     le risque de polymédication (sans reposer la question).
     """
     result = evaluate_risk(
-        answers=request.answers,
-        identifier=request.cis,
-        has_other_meds=request.has_other_meds or False
+        answers=body.answers,
+        identifier=body.cis,
+        has_other_meds=body.has_other_meds or False
     )
 
     # Récupérer les infos du médicament (substances)
     from ..services.search_service import get_drug_details
     drug_name = "ce médicament"
     substance_names = []
-    if request.cis:
-        drug_info = get_drug_details(request.cis)
+    if body.cis:
+        drug_info = get_drug_details(body.cis)
         if drug_info:
             drug_name = drug_info.name
             substance_names = [s.name for s in drug_info.substances]
@@ -91,7 +104,7 @@ async def evaluate(request: AnswersRequest):
     # Si le patient n'a répondu à aucune question médicale, c'est un faux GREEN
     has_medical_questions = any(
         not q_id.startswith(('GENDER', 'AGE', 'HAS_OTHER'))
-        for q_id in request.answers.keys()
+        for q_id in body.answers.keys()
     )
     result.has_coverage = has_medical_questions
 
@@ -104,9 +117,9 @@ async def evaluate(request: AnswersRequest):
             score=result.score.value,
             details=result.details,
             user_profile={
-                "gender": request.gender,
-                "age": request.age,
-                "has_other_meds": request.has_other_meds,
+                "gender": body.gender,
+                "age": body.age,
+                "has_other_meds": body.has_other_meds,
                 "substances": substance_names
             },
             answered_questions=result.answered_questions_context or []

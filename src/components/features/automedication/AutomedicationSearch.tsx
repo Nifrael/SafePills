@@ -27,7 +27,7 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
 
       setIsLoading(true);
       try {
-        const response = await fetch(`${API_BASE_URL}/api/search?q=${query}`);
+        const response = await fetch(`${API_BASE_URL}/api/search?q=${encodeURIComponent(query)}`);
         if (response.ok) {
           const data = await response.json();
           setResults(data);

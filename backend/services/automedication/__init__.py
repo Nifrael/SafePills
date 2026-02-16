@@ -5,11 +5,14 @@ Architecture en couches avec séparation des responsabilités.
 API publique compatible avec l'ancien automedication_service.py
 """
 from typing import List, Dict
+import logging
 from backend.core.models import Question, RiskLevel
 from backend.core.schemas import EvaluationResponse
 from .question_filters import QuestionFilterService
 from .risk_calculator import RiskCalculator
 from .db_repository import AutomedicationRepository
+
+logger = logging.getLogger(__name__)
 
 
 # Instance partagée du repository
@@ -38,19 +41,19 @@ def get_questions_for_drug(
     tags = _repository.get_substance_tags(identifier)
     
     if not tags:
-        print(f"DEBUG: Aucun tag trouvé pour {identifier}")
+        logger.debug(f"Aucun tag trouvé pour {identifier}")
         return []
     
-    print(f"DEBUG: Tags trouvés pour {identifier}: {tags}")
+    logger.debug(f"Tags trouvés pour {identifier}: {tags}")
     
     # 2. Récupérer toutes les questions correspondant aux tags
     all_questions = _repository.get_questions_by_tags(tags)
     
     if not all_questions:
-        print(f"DEBUG: Aucune question trouvée pour les tags {tags}")
+        logger.debug(f"Aucune question trouvée pour les tags {tags}")
         return []
     
-    print(f"DEBUG: {len(all_questions)} questions trouvées avant filtrage")
+    logger.debug(f"{len(all_questions)} questions trouvées avant filtrage")
     
     # 3. Récupérer la route d'administration si c'est un médicament
     route = _repository.get_drug_route(identifier)
@@ -64,7 +67,7 @@ def get_questions_for_drug(
         has_other_meds=has_other_meds
     )
     
-    print(f"DEBUG: {len(filtered_questions)} questions après filtrage")
+    logger.debug(f"{len(filtered_questions)} questions après filtrage")
     
     return filtered_questions
 
@@ -124,7 +127,7 @@ def evaluate_risk(
         return result
         
     except Exception as e:
-        print(f"Erreur evaluate_risk: {e}")
+        logger.error(f"Erreur evaluate_risk: {e}", exc_info=True)
         return EvaluationResponse(
             score=RiskLevel.RED, 
             details=["Erreur technique lors de l'analyse"],

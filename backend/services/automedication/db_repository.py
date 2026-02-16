@@ -4,8 +4,11 @@ Responsabilité unique : communiquer avec SQLite.
 """
 import sqlite3
 import os
+import logging
 from typing import List, Optional
 from backend.core.models import Question, RiskLevel
+
+logger = logging.getLogger(__name__)
 
 
 # Configuration de la base de données
@@ -85,7 +88,7 @@ class AutomedicationRepository:
             return questions
             
         except Exception as e:
-            print(f"Erreur get_questions_by_ids: {e}")
+            logger.error(f"Erreur get_questions_by_ids: {e}", exc_info=True)
             return []
     
     def get_substance_tags(self, identifier: str) -> List[str]:
@@ -133,7 +136,7 @@ class AutomedicationRepository:
             return list(set(all_tags))  # Dédupliquer
             
         except Exception as e:
-            print(f"Erreur get_substance_tags: {e}")
+            logger.error(f"Erreur get_substance_tags: {e}", exc_info=True)
             return []
     
     def get_questions_by_tags(self, tags: List[str]) -> List[Question]:
@@ -198,7 +201,7 @@ class AutomedicationRepository:
             return questions
             
         except Exception as e:
-            print(f"Erreur get_questions_by_tags: {e}")
+            logger.error(f"Erreur get_questions_by_tags: {e}", exc_info=True)
             return []
     
     def get_drug_route(self, cis: str) -> Optional[str]:
@@ -223,5 +226,5 @@ class AutomedicationRepository:
             return row['administration_route'] if row else None
             
         except Exception as e:
-            print(f"Erreur get_drug_route: {e}")
+            logger.error(f"Erreur get_drug_route: {e}", exc_info=True)
             return None

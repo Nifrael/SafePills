@@ -10,10 +10,13 @@ LOGIQUE RAG (Retrieval-Augmented Generation) :
 """
 import os
 import json
+import logging
 from typing import List, Dict
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+
+logger = logging.getLogger(__name__)
 
 # Chargement explicite du .env à la racine du projet
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -29,7 +32,7 @@ if GOOGLE_API_KEY:
     try:
         client = genai.Client(api_key=GOOGLE_API_KEY)
     except Exception as e:
-        print(f"Erreur configuration Gemini: {e}")
+        logger.error(f"Erreur configuration Gemini: {e}")
 
 # -----------------------------------------------------------
 # CHARGEMENT DES CONSEILS (une seule fois au démarrage)
@@ -46,9 +49,9 @@ try:
     with open(KNOWLEDGE_PATH, 'r', encoding='utf-8') as f:
         knowledge = json.load(f)
         SUBSTANCE_ADVICE = knowledge.get('substance_advice', {})
-    print(f"✅ Conseils pharmaceutiques chargés ({len(SUBSTANCE_ADVICE)} substances)")
+    logger.info(f"Conseils pharmaceutiques chargés ({len(SUBSTANCE_ADVICE)} substances)")
 except Exception as e:
-    print(f"⚠️ Impossible de charger les conseils: {e}")
+    logger.warning(f"Impossible de charger les conseils: {e}")
 
 
 def _collect_advice(
@@ -134,9 +137,9 @@ async def generate_risk_explanation(
         validated_advice = _collect_advice(substance_names, triggered_ids)
         
         # Debug log (visible dans la console du serveur)
-        print(f"🧠 RAG — Substances: {substance_names}")
-        print(f"🧠 RAG — Questions déclenchées: {triggered_ids}")
-        print(f"🧠 RAG — Conseils trouvés: {len(validated_advice.splitlines())} lignes")
+        logger.debug(f"RAG — Substances: {substance_names}")
+        logger.debug(f"RAG — Questions déclenchées: {triggered_ids}")
+        logger.debug(f"RAG — Conseils trouvés: {len(validated_advice.splitlines())} lignes")
 
         # --- 3. Construction du prompt (modifié) ---
         system_instruction = """Tu es un pharmacien expérimenté, bienveillant et pédagogique.
@@ -188,5 +191,5 @@ Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant fac
         return response.text
 
     except Exception as e:
-        print(f"Erreur génération IA: {e}")
+        logger.error(f"Erreur génération IA: {e}", exc_info=True)
         return "Désolé, je n'ai pas pu générer d'explication personnalisée pour le moment."
