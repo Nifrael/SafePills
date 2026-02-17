@@ -19,59 +19,6 @@ logger = logging.getLogger(__name__)
 _repository = AutomedicationRepository()
 
 
-def get_questions_for_drug(
-    identifier: str, 
-    patient_gender: str = None,
-    patient_age: int = None,
-    has_other_meds: bool = False
-) -> List[Question]:
-    """
-    Récupère les questions pertinentes pour un médicament/substance.
-    
-    Args:
-        identifier: CIS (médicament) ou Code Substance
-        patient_gender: 'M', 'F' ou None
-        patient_age: Âge du patient ou None
-        has_other_meds: Le patient prend-il d'autres médicaments ?
-        
-    Returns:
-        Liste des questions filtrées et pertinentes
-    """
-    # 1. Récupérer les tags de la substance/médicament
-    tags = _repository.get_substance_tags(identifier)
-    
-    if not tags:
-        logger.debug(f"Aucun tag trouvé pour {identifier}")
-        return []
-    
-    logger.debug(f"Tags trouvés pour {identifier}: {tags}")
-    
-    # 2. Récupérer toutes les questions correspondant aux tags
-    all_questions = _repository.get_questions_by_tags(tags)
-    
-    if not all_questions:
-        logger.debug(f"Aucune question trouvée pour les tags {tags}")
-        return []
-    
-    logger.debug(f"{len(all_questions)} questions trouvées avant filtrage")
-    
-    # 3. Récupérer la route d'administration si c'est un médicament
-    route = _repository.get_drug_route(identifier)
-    
-    # 4. Appliquer tous les filtres
-    filtered_questions = QuestionFilterService.apply_all_filters(
-        all_questions,
-        route=route,
-        gender=patient_gender,
-        age=patient_age,
-        has_other_meds=has_other_meds
-    )
-    
-    logger.debug(f"{len(filtered_questions)} questions après filtrage")
-    
-    return filtered_questions
-
-
 def evaluate_risk(
     answers: Dict[str, bool], 
     identifier: str = None, 
@@ -149,9 +96,6 @@ def get_polymedicamentation_risk(identifier: str) -> RiskLevel | None:
     return RiskCalculator.get_polymeds_risk_from_tags(tags)
 
 
-# Ré-exporter les fonctions de filtrage pour compatibilité avec les tests
-filter_questions_by_route = QuestionFilterService.filter_by_route
-filter_questions_by_gender = QuestionFilterService.filter_by_gender
-filter_questions_by_age = QuestionFilterService.filter_by_age
-filter_questions_by_polymedicamentation = QuestionFilterService.filter_by_polymedicamentation
+# Ré-exporter les fonctions de calcul de risque
 compute_risk_score = RiskCalculator.compute_score
+filter_questions_by_route = QuestionFilterService.filter_by_route
