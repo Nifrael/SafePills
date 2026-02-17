@@ -31,7 +31,7 @@ class AnswersRequest(BaseModel):
 
 @router.post("/evaluate", response_model=EvaluationResponse)
 @limiter.limit("10/minute")
-async def evaluate(request: Request, body: AnswersRequest):
+async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
     """
     Calcule le score final basé sur les réponses OUI (True).
     Si cis et has_other_meds sont fournis, applique automatiquement
@@ -40,11 +40,12 @@ async def evaluate(request: Request, body: AnswersRequest):
     result = evaluate_risk(
         answers=body.answers,
         identifier=body.cis,
-        has_other_meds=body.has_other_meds or False
+        has_other_meds=body.has_other_meds or False,
+        lang=lang
     )
 
     from backend.services.search import get_drug_details
-    drug_name = "ce médicament"
+    drug_name = "ce médicament" if lang == "fr" else "este medicamento"
     substance_names = []
     if body.cis:
         drug_info = get_drug_details(body.cis)
@@ -54,7 +55,7 @@ async def evaluate(request: Request, body: AnswersRequest):
 
     try:
         from ..services.ai_service import get_general_advice
-        result.general_advice = get_general_advice(substance_names)
+        result.general_advice = get_general_advice(substance_names, lang)
     except Exception:
         result.general_advice = []
 
@@ -77,7 +78,8 @@ async def evaluate(request: Request, body: AnswersRequest):
                 "has_other_meds": body.has_other_meds,
                 "substances": substance_names
             },
-            answered_questions=result.answered_questions_context or []
+            answered_questions=result.answered_questions_context or [],
+            lang=lang
         )
         result.ai_explanation = explanation
 

@@ -11,8 +11,8 @@ router = APIRouter(prefix="/api", tags=["drugs"])
 @router.get("/search", response_model=List[SearchResult])
 @limiter.limit("30/minute")
 
-async def search(request: Request, q: str = Query(..., min_length=2)):
-    return search_medication(q)
+async def search(request: Request, q: str = Query(..., min_length=2), lang: str = Query("fr")):
+    return search_medication(q, lang)
 
 @router.get("/drugs/{cis}", response_model=Drug)
 @limiter.limit("30/minute")

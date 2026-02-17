@@ -19,10 +19,15 @@ logger = logging.getLogger(__name__)
 _repository = AutomedicationRepository()
 
 
+from backend.core.i18n import i18n
+
+# ... (existing imports)
+
 def evaluate_risk(
     answers: Dict[str, bool], 
     identifier: str = None, 
-    has_other_meds: bool = False
+    has_other_meds: bool = False,
+    lang: str = "fr"
 ) -> EvaluationResponse:
     """
     Évalue le risque d'automédication basé sur les réponses du patient.
@@ -31,6 +36,7 @@ def evaluate_risk(
         answers: Dictionnaire {question_id: bool}
         identifier: Identifiant du médicament/substance (optionnel)
         has_other_meds: Le patient prend-il d'autres médicaments ?
+        lang: Langue pour les messages de retour
         
     Returns:
         EvaluationResponse avec score, details et contexte pour l'IA
@@ -51,7 +57,7 @@ def evaluate_risk(
             if polymeds_risk:
                 # Ajouter le contexte polymédication pour l'IA
                 polymeds_context = {
-                    'question_text': 'Prenez-vous d\'autres médicaments de façon régulière ?',
+                    'question_text': i18n.get('HAS_OTHER_MEDS', lang, 'questions') or 'Prenez-vous d\'autres médicaments de façon régulière ?',
                     'answer': 'OUI',
                     'risk_level': polymeds_risk.value,
                     'triggers_alert': True
@@ -60,14 +66,14 @@ def evaluate_risk(
                 if polymeds_risk == RiskLevel.RED:
                     result.score = RiskLevel.RED
                     result.details.append(
-                        "ALERTE ROUGE : Vous prenez d'autres médicaments de façon régulière (Risque d'interactions)"
+                        i18n.get('red_alert_polymedication', lang, 'risks') or "ALERTE ROUGE : Vous prenez d'autres médicaments de façon régulière (Risque d'interactions)"
                     )
                     result.answered_questions_context.append(polymeds_context)
                     
                 elif polymeds_risk == RiskLevel.ORANGE and result.score != RiskLevel.RED:
                     result.score = RiskLevel.ORANGE
                     result.details.append(
-                        "Attention : Vous prenez d'autres médicaments de façon régulière (Précautions requises)"
+                        i18n.get('orange_warning_polymedication', lang, 'risks') or "Attention : Vous prenez d'autres médicaments de façon régulière (Précautions requises)"
                     )
                     result.answered_questions_context.append(polymeds_context)
         
@@ -77,7 +83,7 @@ def evaluate_risk(
         logger.error(f"Erreur evaluate_risk: {e}", exc_info=True)
         return EvaluationResponse(
             score=RiskLevel.RED, 
-            details=["Erreur technique lors de l'analyse"],
+            details=[i18n.get('error_analysis', lang, 'risks') or "Erreur technique lors de l'analyse"],
             answered_questions_context=[]
         )
 

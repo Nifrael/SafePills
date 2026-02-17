@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { API_BASE_URL } from '../../../config';
 import './UnifiedQuestionnaire.scss';
+import { ui } from '../../../i18n/ui';
 
 // --- Types ---
 
@@ -17,19 +18,6 @@ interface FlowQuestion {
   risk_level?: string;
   show_if?: Record<string, any>;
   is_profile: boolean;
-}
-
-interface Props {
-  substanceId: string;
-  substanceName: string;
-  onComplete: (
-    result: 'green' | 'orange' | 'red',
-    explanation?: string,
-    answers?: Record<string, any>,
-    generalAdvice?: string[],
-    hasCoverage?: boolean
-  ) => void;
-  onBack: () => void;
 }
 
 // --- Helpers ---
@@ -57,13 +45,28 @@ function shouldShow(question: FlowQuestion, answers: Record<string, any>): boole
   return true;
 }
 
-// --- Component ---
+interface Props {
+  substanceId: string;
+  substanceName: string;
+  onComplete: (
+    result: 'green' | 'orange' | 'red',
+    explanation?: string,
+    answers?: Record<string, any>,
+    generalAdvice?: string[],
+    hasCoverage?: boolean
+  ) => void;
+  onBack: () => void;
+  lang: keyof typeof ui;
+}
+
+// ... (existing helpers)
 
 export const UnifiedQuestionnaire: React.FC<Props> = ({
   substanceId,
   substanceName,
   onComplete,
   onBack,
+  lang,
 }) => {
   const [allQuestions, setAllQuestions] = useState<FlowQuestion[]>([]);
   const [answers, setAnswers] = useState<Record<string, any>>({});
@@ -73,12 +76,16 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
   const [ageInput, setAgeInput] = useState('');
   const [redInterrupt, setRedInterrupt] = useState<string | null>(null);
 
+  const t = (key: keyof typeof ui['fr']) => {
+    return ui[lang][key] || ui['fr'][key];
+  };
+
   // Charger le flux de questions au montage
   useEffect(() => {
     const fetchFlow = async () => {
       try {
         const response = await fetch(
-          `${API_BASE_URL}/api/automedication/flow/${substanceId}`
+          `${API_BASE_URL}/api/automedication/flow/${substanceId}?lang=${lang}`
         );
         if (response.ok) {
           const data: FlowQuestion[] = await response.json();
@@ -97,7 +104,7 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
       }
     };
     fetchFlow();
-  }, [substanceId]);
+  }, [substanceId, lang]);
 
   // Questions visibles selon les réponses données
   const visibleQuestions = useMemo(() => {
@@ -121,7 +128,7 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
         }
       }
 
-      const response = await fetch(`${API_BASE_URL}/api/automedication/evaluate`, {
+      const response = await fetch(`${API_BASE_URL}/api/automedication/evaluate?lang=${lang}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -149,7 +156,7 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
     }
   };
 
-  // --- Handler de réponse ---
+  // ... (existing handleAnswer)
   const handleAnswer = (value: any) => {
     if (!currentQuestion) return;
 
@@ -187,12 +194,13 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
     }
   };
 
+
   // --- Rendu : États spéciaux ---
 
   if (isLoading) {
     return (
       <div className="unified-questionnaire">
-        <div className="loader">Préparation du questionnaire...</div>
+        <div className="loader">{t('questionnaire.loading')}</div>
       </div>
     );
   }
@@ -204,18 +212,17 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
           {redInterrupt ? (
             <>
               <div className="interrupt-icon">⛔</div>
-              <h2>Risque important détecté</h2>
+              <h2>{t('score.risk.high')}</h2>
               <p>
-                Nous avons identifié une contre-indication potentielle. Il n'est pas
-                nécessaire de poursuivre le questionnaire.
+                {t('score.risk.high.text').replace('{molecule}', substanceName)}
               </p>
-              <div className="loader">Analyse en cours...</div>
+              <div className="loader">{t('search.loading')}</div>
             </>
           ) : (
             <>
               <div className="interrupt-icon">🔍</div>
-              <h2>Analyse en cours</h2>
-              <div className="loader">Calcul du résultat...</div>
+              <h2>{t('search.loading')}</h2>
+              <div className="loader">{t('search.loading')}</div>
             </>
           )}
         </div>
@@ -314,7 +321,7 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
       {/* Navigation */}
       <div className="navigation">
         <button className="btn-back" onClick={handleBack}>
-          ← Retour
+          ← {t('questionnaire.back')}
         </button>
       </div>
     </div>

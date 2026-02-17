@@ -8,14 +8,14 @@ class SearchService:
     def __init__(self, repository: DrugRepository = None):
         self.repository = repository or DrugRepository()
 
-    def search_medication(self, query: str) -> List[SearchResult]:
+    def search_medication(self, query: str, lang: str = "fr") -> List[SearchResult]:
         clean_query = normalize_text(query)
         if len(clean_query) < 3:
             return []
 
-        substances = self.repository.search_substances(clean_query)
+        substances = self.repository.search_substances(clean_query, lang)
         
-        drugs = self.repository.search_drugs(clean_query)
+        drugs = self.repository.search_drugs(clean_query, lang)
         
         results = substances + drugs
         

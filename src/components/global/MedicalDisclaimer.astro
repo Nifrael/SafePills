@@ -1,15 +1,17 @@
 ---
 import AlertIcon from "../icons/AlertIcon.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="medical-disclaimer">
   <div class="content">
     <div class="icon"><AlertIcon size={32} /></div>
-    <h3>Avertissement Important</h3>
+    <h3>{t("disclaimer.title")}</h3>
     <p>
-      Cet outil est une aide à la décision et ne remplace pas un avis médical
-      professionnel. Consultez toujours votre médecin ou pharmacien en cas de
-      doute.
+      {t("disclaimer.text")}
     </p>
   </div>
 </section>

@@ -1,16 +1,19 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import SearchIcon from "../icons/SearchIcon.astro";
 import ActivityIcon from "../icons/ActivityIcon.astro";
 import DocumentIcon from "../icons/DocumentIcon.astro";
 import PillIcon from "../icons/PillIcon.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="en-savoir-plus" class="features-section">
   <div class="features-header">
-    <h3>Comment ça marche ?</h3>
+    <h3>{t("features.title")}</h3>
     <p>
-      Un processus simple et rapide en trois étapes pour garantir votre sécurité
-      médicamenteuse.
+      {t("features.subtitle")}
     </p>
   </div>
 
@@ -19,18 +22,17 @@ import PillIcon from "../icons/PillIcon.astro";
       <div class="icon">
         <SearchIcon />
       </div>
-      <h3>1. Recherchez</h3>
-      <p>Saisissez le nom du médicament que vous souhaitez prendre.</p>
+      <h3>{t("features.step1.title")}</h3>
+      <p>{t("features.step1.text")}</p>
     </div>
 
     <div class="feature-card">
       <div class="icon">
         <ActivityIcon />
       </div>
-      <h3>2. Répondez</h3>
+      <h3>{t("features.step2.title")}</h3>
       <p>
-        Répondez à quelques questions sur votre situation médicale et vos
-        habitudes de vie.
+        {t("features.step2.text")}
       </p>
     </div>
 
@@ -38,13 +40,18 @@ import PillIcon from "../icons/PillIcon.astro";
       <div class="icon">
         <DocumentIcon />
       </div>
-      <h3>3. Recevez nos conseils</h3>
-      <p>Recevez une évaluation claire et des conseils adaptés.</p>
+      <h3>{t("features.step3.title")}</h3>
+      <p>{t("features.step3.text")}</p>
     </div>
   </div>
 
   <div class="cta-buttons">
-    <a href="/automedication" class="btn btn-primary"> Tester un médicament </a>
+    <a
+      href={`/${lang === "fr" ? "" : lang + "/"}automedication`}
+      class="btn btn-primary"
+    >
+      {t("features.cta")}
+    </a>
   </div>
 </section>
 

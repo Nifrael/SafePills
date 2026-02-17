@@ -1,5 +1,9 @@
 ---
 import PillIcon from "../icons/PillIcon.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="site-footer">
@@ -12,9 +16,9 @@ import PillIcon from "../icons/PillIcon.astro";
       </div>
 
       <nav class="footer-nav">
-        <a href="/mentions-legales">Mentions légales</a>
-        <a href="/confidentialite">Politique de confidentialité</a>
-        <a href="/cookies">Cookies</a>
+        <a href="/mentions-legales">{t("footer.legal")}</a>
+        <a href="/confidentialite">{t("footer.privacy")}</a>
+        <a href="/cookies">{t("footer.cookies")}</a>
       </nav>
     </div>
 
@@ -22,7 +26,7 @@ import PillIcon from "../icons/PillIcon.astro";
 
     <div class="footer-bottom">
       <p>
-        © {new Date().getFullYear()}. Tous droits réservés.
+        © {new Date().getFullYear()}. {t("footer.rights")}
       </p>
     </div>
   </div>

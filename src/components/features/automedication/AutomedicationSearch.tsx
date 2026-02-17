@@ -9,14 +9,21 @@ interface SearchResult {
   description?: string;
 }
 
+import { ui } from '../../../i18n/ui';
+
 interface Props {
   onSelect: (id: string, name: string) => void;
+  lang: keyof typeof ui;
 }
 
-export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
+export const AutomedicationSearch: React.FC<Props> = ({ onSelect, lang }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  const t = (key: keyof typeof ui['fr']) => {
+    return ui[lang][key] || ui['fr'][key];
+  };
 
   useEffect(() => {
     const searchDrugs = async () => {
@@ -27,7 +34,7 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
 
       setIsLoading(true);
       try {
-        const response = await fetch(`${API_BASE_URL}/api/search?q=${encodeURIComponent(query)}`);
+        const response = await fetch(`${API_BASE_URL}/api/search?q=${encodeURIComponent(query)}&lang=${lang}`);
         if (response.ok) {
           const data = await response.json();
           setResults(data);
@@ -41,7 +48,7 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
 
     const timer = setTimeout(searchDrugs, 300);
     return () => clearTimeout(timer);
-  }, [query]);
+  }, [query, lang]);
 
   const handleSelect = (item: SearchResult) => {
     onSelect(item.id, item.name);
@@ -51,16 +58,16 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
 
   return (
     <div className="automedication-search">
-      <h3>Quel médicament souhaitez-vous prendre ?</h3>
+      <h3>{t('search.title')}</h3>
       <div className="search-input-wrapper">
         <input 
           type="text" 
-          placeholder="Ex: Doliprane, Nurofen, Paracétamol..." 
+          placeholder={t('search.placeholder.full')} 
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
         
-        {isLoading && <div className="loader">Recherche...</div>}
+        {isLoading && <div className="loader">{t('search.loading')}</div>}
         
         {results.length > 0 && (
           <ul className="suggestions-list">
@@ -68,7 +75,7 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
               <li key={item.id} onClick={() => handleSelect(item)}>
                 <div className="drug-name">{item.name}</div>
                 <div className="substance-name">
-                  {item.description || (item.type === 'drug' ? 'Médicament' : 'Substance')}
+                  {item.description || (item.type === 'drug' ? t('search.type.drug') : t('search.type.substance'))}
                 </div>
               </li>
             ))}
@@ -77,7 +84,7 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect }) => {
         
         {query.length >= 2 && !isLoading && results.length === 0 && (
           <div className="no-results">
-            Aucun médicament trouvé pour "{query}"
+            {t('search.no_results').replace('{query}', query)}
           </div>
         )}
       </div>

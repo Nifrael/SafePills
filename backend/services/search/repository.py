@@ -18,7 +18,8 @@ class DrugRepository:
         conn.row_factory = sqlite3.Row
         return conn
 
-    def search_substances(self, normalized_query: str) -> List[SearchResult]:
+    def search_substances(self, normalized_query: str, lang: str = "fr") -> List[SearchResult]:
+        from backend.core.i18n import i18n
         results = []
         try:
             with self._get_connection() as conn:
@@ -34,14 +35,15 @@ class DrugRepository:
                             type="substance",
                             id=sub['code'],
                             name=sub['name'],
-                            description="Substance active"
+                            description=i18n.get("type_substance", lang, "search") or "Substance active"
                         ))
         except Exception as e:
             logger.error(f"Error searching substances: {e}", exc_info=True)
             
         return results
 
-    def search_drugs(self, normalized_query: str) -> List[SearchResult]:
+    def search_drugs(self, normalized_query: str, lang: str = "fr") -> List[SearchResult]:
+        from backend.core.i18n import i18n
         results = []
         try:
             with self._get_connection() as conn:
@@ -57,7 +59,7 @@ class DrugRepository:
                             type="drug",
                             id=drug['cis'],
                             name=drug['name'],
-                            description="Médicament"
+                            description=i18n.get("type_drug", lang, "search") or "Médicament"
                         ))
         except Exception as e:
             logger.error(f"Error searching drugs: {e}", exc_info=True)

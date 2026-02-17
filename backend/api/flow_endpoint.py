@@ -1,28 +1,28 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Request, Query
 from typing import List, Optional, Dict, Any
 from backend.core.limiter import limiter
 
 from backend.core.schemas import FlowQuestion, FlowOption
 from ..services.automedication.db_repository import AutomedicationRepository
 from ..services.automedication.question_filters import QuestionFilterService
+from backend.core.i18n import i18n
 
 router = APIRouter(prefix="/api/automedication", tags=["automedication-flow"])
 
 _repository = AutomedicationRepository()
 
 
-
-def _build_profile_questions(has_gender_questions: bool, has_age_questions: bool) -> List[FlowQuestion]:
+def _build_profile_questions(has_gender_questions: bool, has_age_questions: bool, lang: str = "fr") -> List[FlowQuestion]:
     profile = []
     
     if has_gender_questions:
         profile.append(FlowQuestion(
             id="GENDER",
-            text="Quel est votre sexe ?",
+            text=i18n.get("GENDER", lang, "questions") or "Quel est votre sexe ?",
             type="choice",
             options=[
-                FlowOption(value="M", label="Un homme"),
-                FlowOption(value="F", label="Une femme")
+                FlowOption(value="M", label=i18n.get("gender_male", lang, "options") or "Un homme"),
+                FlowOption(value="F", label=i18n.get("gender_female", lang, "options") or "Une femme")
             ],
             is_profile=True
         ))
@@ -30,14 +30,14 @@ def _build_profile_questions(has_gender_questions: bool, has_age_questions: bool
     if has_age_questions:
         profile.append(FlowQuestion(
             id="AGE",
-            text="Quel âge avez-vous ?",
+            text=i18n.get("AGE", lang, "questions") or "Quel âge avez-vous ?",
             type="number",
             is_profile=True
         ))
     
     profile.append(FlowQuestion(
         id="HAS_OTHER_MEDS",
-        text="Prenez-vous d'autres médicaments au quotidien ?",
+        text=i18n.get("HAS_OTHER_MEDS", lang, "questions") or "Prenez-vous d'autres médicaments au quotidien ?",
         type="boolean",
         is_profile=True
     ))
@@ -45,7 +45,7 @@ def _build_profile_questions(has_gender_questions: bool, has_age_questions: bool
     return profile
 
 
-def _convert_medical_questions(questions, route: str = None) -> List[FlowQuestion]:
+def _convert_medical_questions(questions, route: str = None, lang: str = "fr") -> List[FlowQuestion]:
     if route:
         questions = QuestionFilterService.filter_by_route(questions, route)
     
@@ -68,9 +68,11 @@ def _convert_medical_questions(questions, route: str = None) -> List[FlowQuestio
         if q.requires_other_meds:
             show_if["HAS_OTHER_MEDS"] = True
         
+        translated_text = i18n.translate_question(q.id, q.text, lang)
+        
         flow_questions.append(FlowQuestion(
             id=q.id,
-            text=q.text,
+            text=translated_text,
             type="boolean",
             risk_level=q.risk_level.value,
             show_if=show_if if show_if else None,
@@ -82,8 +84,7 @@ def _convert_medical_questions(questions, route: str = None) -> List[FlowQuestio
 
 @router.get("/flow/{identifier}", response_model=List[FlowQuestion])
 @limiter.limit("30/minute")
-
-async def get_flow(request: Request, identifier: str):
+async def get_flow(request: Request, identifier: str, lang: str = Query("fr")):
     tags = _repository.get_substance_tags(identifier)
     
     if not tags:
@@ -93,7 +94,7 @@ async def get_flow(request: Request, identifier: str):
     
     route = _repository.get_drug_route(identifier)
     
-    medical_flow = _convert_medical_questions(all_medical_questions, route)
+    medical_flow = _convert_medical_questions(all_medical_questions, route, lang)
     
     has_gender_questions = any(q.target_gender is not None for q in all_medical_questions)
     has_age_questions = any(
@@ -101,6 +102,6 @@ async def get_flow(request: Request, identifier: str):
         for q in all_medical_questions
     )
     
-    profile_flow = _build_profile_questions(has_gender_questions, has_age_questions)
+    profile_flow = _build_profile_questions(has_gender_questions, has_age_questions, lang)
     
     return profile_flow + medical_flow
