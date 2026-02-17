@@ -48,13 +48,12 @@ def _collect_advice(
              advice_lines.append(f"- {tip}")
 
         for q_id in triggered_question_ids:
-
             base_id = q_id
             for suffix in ['_RED_F', '_ORANGE_F', '_GREEN_F', '_RED', '_ORANGE', '_GREEN']:
                 if q_id.endswith(suffix):
                     base_id = q_id[:-len(suffix)]
                     break
-
+            
             # Get specific advice via i18n
             for tip in i18n.get_advice(substance, base_id, lang):
                 if f"- {tip}" not in advice_lines:  
@@ -186,7 +185,7 @@ Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant fac
 """
         
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-flash-latest',
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
@@ -197,5 +196,10 @@ Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant fac
         return response.text
 
     except Exception as e:
+        error_msg = str(e)
+        if "429" in error_msg:
+            logger.warning(f"Quota IA dépassé: {e}")
+            return "Le service d'analyse par IA est temporairement surchargé. Veuillez réessayer dans quelques instants." if lang == "fr" else "El servicio de análisis por IA está temporalmente sobrecargado. Por favor, inténtelo de nuevo en unos momentos."
+        
         logger.error(f"Erreur génération IA: {e}", exc_info=True)
-        return "Désolé, je n'ai pas pu générer d'explication personnalisée pour le moment."
+        return "Désolé, je n'ai pas pu générer d'explication personnalisée pour le moment." if lang == "fr" else "Lo siento, no pude generar una explicación personalizada en este momento."

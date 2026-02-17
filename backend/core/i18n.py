@@ -30,8 +30,24 @@ class I18nService:
             return None
 
     def translate_question(self, question_id: str, default_text: str, lang: str) -> str:
+        # Try exact match first
         translated = self.get(question_id, lang, "questions")
-        return translated if translated else default_text
+        if translated:
+            return translated
+
+        # Try stripping suffixes to find base ID (e.g., Q_PREGNANCY_RED -> Q_PREGNANCY)
+        base_id = question_id
+        for suffix in ['_RED_F', '_ORANGE_F', '_GREEN_F', '_RED', '_ORANGE', '_GREEN']:
+            if question_id.endswith(suffix):
+                base_id = question_id[:-len(suffix)]
+                break
+        
+        if base_id != question_id:
+            translated = self.get(base_id, lang, "questions")
+            if translated:
+                return translated
+
+        return default_text
 
     def translate_option(self, option_label_key: str, default_label: str, lang: str) -> str:
         translated = self.get(option_label_key, lang, "options")
