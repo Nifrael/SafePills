@@ -4,7 +4,7 @@ Ce sont les objets qui transitent via l'API (Entrées/Sorties),
 mais qui ne sont PAS stockés tels quels en base de données.
 """
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from .models import RiskLevel
 
 class SearchResult(BaseModel):
@@ -13,6 +13,21 @@ class SearchResult(BaseModel):
     id: str           # CIS ou Code Substance
     name: str
     description: Optional[str] = None
+
+class FlowOption(BaseModel):
+    """Option pour une question de type 'choice'"""
+    value: str
+    label: str
+
+class FlowQuestion(BaseModel):
+    """Question unifiée pour le flux frontend"""
+    id: str
+    text: str
+    type: str  # "choice" | "number" | "boolean"
+    options: Optional[List[FlowOption]] = None
+    risk_level: Optional[str] = None  # Uniquement pour les questions médicales
+    show_if: Optional[Dict[str, Any]] = None  # Condition d'affichage
+    is_profile: bool = False  # True si c'est une question de profil (pas médicale)
 
 class EvaluationResponse(BaseModel):
     """Résultat du calcul/algorithme d'analyse"""
