@@ -2,6 +2,26 @@
 
 Todos los cambios notables de este proyecto se documentarán en este archivo.
 
+## [0.6.0] - 2026-02-18
+
+### 🧠 Mejoras en el Sistema RAG e IA
+
+- **Base de Conocimientos Médicos**: Implementación de un sistema RAG (Retrieval-Augmented Generation) con `medical_knowledge.json` para asignar sustancias a consejos validados.
+- **Consejos Estructurados**: La IA recibe ahora contextos de consejos estructurados para una mayor precisión, reduciendo el riesgo de alucinaciones.
+- **Visualización de Riesgos "Verdes"**: Los medicamentos sin riesgos identificados muestran ahora consejos generales pertinentes en lugar de una sección vacía.
+- **Lógica de Riesgos**: Refinamiento de la lógica para asegurar que se formulen todas las preguntas de riesgo pertinentes.
+
+### 🌐 Internacionalización (i18n) y UX
+
+- **Corrección de Traducciones**: Resolución de problemas con preguntas que mezclaban idiomas (Francés/Español) y mejora en la generación de prompts.
+- **Navegación**: Añadido un botón de "volver" en el flujo del cuestionario para una mejor experiencia de usuario.
+
+### 🛠️ Correcciones y Optimizaciones
+
+- **Resolución de Módulos**: Corrección de errores de importación `@i18n` que bloqueaban la compilación de Astro.
+- **Limpieza del Backend**: Eliminación de código muerto en `automedication_service.py` y archivos de prueba obsoletos.
+- **Rendimiento**: Optimización de la carga de archivos JSON y centralización de la configuración de Rate Limiting.
+
 ## [0.5.0] - 2026-02-14
 
 ### 🎨 Rediseño Frontend (Nueva Identidad Visual)
