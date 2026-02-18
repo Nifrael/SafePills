@@ -1,0 +1,97 @@
+{
+  "questions": {
+    "GENDER": "¿Cuál es su género?",
+    "AGE": "¿Qué edad tiene?",
+    "HAS_OTHER_MEDS": "¿Toma otros medicamentos diariamente?",
+    "Q_PREGNANCY": "¿Está embarazada o amamantando?",
+    "Q_ULCERE": "¿Ha tenido alguna vez una úlcera estomacal o sufre de acidez frecuente?",
+    "Q_LIVER": "¿Sufre de alguna enfermedad hepática o insuficiencia hepática?",
+    "Q_DIARRHEA": "¿Su diarrea está acompañada de fiebre o sangre en las heces?",
+    "Q_CONFUSION": "¿Ha tenido recientemente episodios de confusión o problemas de memoria?",
+    "Q_POLYMEDICATION": "¿Toma actualmente otros medicamentos de forma regular?",
+    "Q_HEART": "¿Sufre de problemas cardíacos (hipertensión arterial, trastornos del ritmo, etc.)?",
+    "Q_KIDNEY": "¿Sufre de insuficiencia renal?",
+    "Q_SUN": "¿Planea exponer la zona tratada al sol?",
+    "Q_SLEEP": "¿Conduce un vehículo o utiliza máquinas peligrosas?",
+    "Q_FALL": "¿Ha tenido recientemente episodios de caídas o pérdida de equilibrio?",
+    "Q_SICK": "¿Su tos es productiva (con expectoración)?",
+    "Q_HIGH_PERFORMANCE": "¿Es usted deportista de alto nivel?"
+  },
+  "options": {
+    "gender_male": "Un hombre",
+    "gender_female": "Una mujer"
+  },
+  "risks": {
+    "red_alert_polymedication": "ALERTA ROJA: Usted toma otros medicamentos regularmente (Riesgo de interacciones)",
+    "orange_warning_polymedication": "Atención: Usted toma otros medicamentos regularmente (Se requieren precauciones)",
+    "error_analysis": "Error técnico durante el análisis"
+  },
+  "search": {
+    "type_drug": "Medicamento",
+    "type_substance": "Sustancia activa"
+  },
+  "advice": {
+    "PARACÉTAMOL": {
+      "general": [
+        "Nunca exceder 1g por toma y 3g por día en adultos.",
+        "Espaciar las tomas al menos 6 horas."
+      ],
+      "Q_POLYMEDICATION": [
+        "Muchos medicamentos contienen paracetamol sin que se sepa. Verifique la composición de todos sus tratamientos para evitar una sobredosis involuntaria.",
+        "La sobredosis de paracetamol es una causa grave de daño hepático."
+      ],
+      "Q_LIVER": [
+        "En caso de insuficiencia hepática, la dosis máxima debe reducirse a 2g por día.",
+        "El consumo de alcohol aumenta fuertemente la toxicidad hepática del paracetamol. Está desaconsejado si consume alcohol regularmente."
+      ]
+    },
+    "IBUPROFÈNE": {
+      "general": [
+        "Tomar en medio de una comida para proteger el estómago.",
+        "Duración máxima recomendada sin consulta médica: 5 días para dolor, 3 días para fiebre."
+      ],
+      "Q_PREGNANCY": [
+        "Los AINEs están formalmente contraindicados a partir del 6º mes de embarazo (riesgo grave para el feto).",
+        "Al inicio del embarazo, el paracetamol es la alternativa de elección."
+      ],
+      "Q_ULCERE": [
+        "Los AINEs como el ibuprofeno aumentan el riesgo de sangrado digestivo y pueden agravar una úlcera.",
+        "Alternativa posible: el paracetamol, que no afecta el estómago."
+      ],
+      "Q_KIDNEY": [
+        "Los AINEs pueden agravar una insuficiencia renal.",
+        "En caso de problema renal, privilegie el paracetamol tras consejo médico."
+      ]
+    },
+    "CHLORHYDRATE DE LOPÉRAMIDE": {
+      "general": [
+        "La loperamida no trata la causa de la diarrea, solo ralentiza el tránsito.",
+        "Hidrátese bien durante un episodio de diarrea (agua, caldos, suero de rehidratación)."
+      ],
+      "Q_DIARRHEA": [
+        "Una diarrea con fiebre o sangre puede indicar una infección. En este caso, la loperamida está contraindicada.",
+        "Consulte a un médico rápidamente si la diarrea dura más de 2 días."
+      ]
+    },
+    "DICHLORHYDRATE DE CÉTIRIZINE": {
+      "general": [
+        "La cetirizina puede provocar somnolencia en algunos pacientes."
+      ],
+      "Q_SLEEP": [
+        "Si debe conducir o manejar máquinas, pruebe primero su reacción al medicamento en casa."
+      ]
+    },
+    "DICLOFÉNAC DE DIÉTHYLAMINE": {
+      "general": [
+        "Aplicar una capa fina sobre la zona dolorida, 3 a 4 veces al día máximo.",
+        "Lavarse las manos después de la aplicación."
+      ],
+      "Q_SUN": [
+        "El diclofenaco en gel puede provocar reacciones de fotosensibilización. No exponer la zona tratada al sol durante el tratamiento y las 2 semanas siguientes."
+      ],
+      "Q_PREGNANCY": [
+        "El uso cutáneo de AINEs está desaconsejado durante el embarazo. Consulte a su farmacéutico o médico."
+      ]
+    }
+  }
+}

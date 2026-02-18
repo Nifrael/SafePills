@@ -2,31 +2,39 @@
 import { Image } from "astro:assets";
 import HeroImage from "../../assets/images/SafePills.png";
 import ShieldIcon from "../icons/ShieldIcon.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="hero-container">
   <div class="hero-content">
     <div class="hero-left">
       <div class="page-header">
-        <h1>SafePills</h1>
-        <p class="subtitle">Votre assistant d'automédication.</p>
+        <h1>{t("hero.title")}</h1>
+        <p class="subtitle">{t("hero.subtitle")}</p>
       </div>
 
       <div class="trust-badge">
         <span class="icon"><ShieldIcon size={16} /></span>
-        <span class="text">FIABILITÉ MÉDICALE</span>
+        <span class="text">{t("hero.trust")}</span>
       </div>
 
       <p class="description">
-        L'automédication peut être dangeureuse. Vérifiez si le médicament vous
-        est adapté, avec SafePills.
+        {t("hero.description")}
       </p>
 
       <div class="hero-actions">
-        <a href="/automedication" class="btn btn-primary">
-          Démarrer l'analyse
+        <a
+          href={`/${lang === "fr" ? "" : lang + "/"}automedication`}
+          class="btn btn-primary"
+        >
+          {t("hero.start")}
         </a>
-        <a href="#en-savoir-plus" class="btn btn-secondary"> En savoir plus </a>
+        <a href="#en-savoir-plus" class="btn btn-secondary">
+          {t("hero.more")}
+        </a>
       </div>
     </div>
 

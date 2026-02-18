@@ -1,27 +1,45 @@
 ---
 import PillIcon from "../icons/PillIcon.astro";
 
-const menuItems = [
-  { href: "/about", text: "A Propos" },
-  { href: "/contact", text: "Contact" },
-  { href: "/automedication", text: "Testez !" },
-];
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const currentPath = Astro.url.pathname;
+
+const menuItems = [{ href: "/automedication", text: t("nav.test") }];
+
+let frPath = currentPath;
+let esPath = currentPath;
+
+if (lang === "es") {
+  frPath = currentPath.replace(/^\/es/, "") || "/";
+} else {
+  const path = currentPath === "/" ? "" : currentPath;
+  esPath = "/es" + path;
+}
+const homePath = lang === "es" ? "/es" : "/";
 ---
 
 <header>
   <nav aria-label="Navigation principale">
     <div class="nav-container">
-      <a href="/" id="logo"
+      <a href={homePath} id="logo"
         ><span class="icon"><PillIcon size={20} /></span> SafePills</a
       >
       <ul class="desktop-menu">
+        <li class="lang-switch">
+          <a href={frPath} class={lang === "fr" ? "active-lang" : ""}>FR</a>
+          <span class="separator">|</span>
+          <a href={esPath} class={lang === "es" ? "active-lang" : ""}>ES</a>
+        </li>
         {
           menuItems.map((item) => (
             <li>
               <a
-                href={item.href}
+                href={lang === "es" ? `/es${item.href}` : item.href}
                 class={
-                  item.text === "Testez !" ? "btn btn-primary nav-btn" : ""
+                  item.text === t("nav.test") ? "btn btn-primary nav-btn" : ""
                 }
               >
                 {item.text}
@@ -31,6 +49,11 @@ const menuItems = [
         }
       </ul>
       <div class="mobile-menu">
+        <div class="lang-switch-mobile-header">
+          <a href={frPath} class={lang === "fr" ? "active-lang" : ""}>FR</a>
+          <span class="separator">|</span>
+          <a href={esPath} class={lang === "es" ? "active-lang" : ""}>ES</a>
+        </div>
         <button
           class="menu-button"
           aria-expanded="false"
@@ -46,8 +69,8 @@ const menuItems = [
             menuItems.map((item) => (
               <li>
                 <a
-                  href={item.href}
-                  class={item.text === "Testez !" ? "btn btn-primary" : ""}
+                  href={lang === "es" ? `/es${item.href}` : item.href}
+                  class={item.text === t("nav.test") ? "btn btn-primary" : ""}
                 >
                   {item.text}
                 </a>
@@ -130,6 +153,61 @@ const menuItems = [
 
     @include breakpoint-up($breakpoint-desktop) {
       display: flex;
+    }
+  }
+
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+
+    a {
+      font-size: 0.9rem;
+      padding: 0;
+      color: var(--primary-color);
+      opacity: 0.6;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active-lang {
+        opacity: 1;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+
+    .separator {
+      color: var(--tertiary-color);
+      opacity: 0.4;
+    }
+  }
+
+  .lang-switch-mobile-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1.5rem;
+
+    a {
+      font-size: 0.9rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      opacity: 0.7;
+
+      &.active-lang {
+        font-weight: 700;
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+
+    .separator {
+      color: var(--tertiary-color);
+      opacity: 0.4;
     }
   }
 
@@ -238,6 +316,9 @@ const menuItems = [
   }
 
   .mobile-menu {
+    display: flex;
+    align-items: center;
+
     @include breakpoint-up($breakpoint-desktop) {
       display: none;
     }

@@ -4,7 +4,13 @@ import { UnifiedQuestionnaire } from './UnifiedQuestionnaire';
 import { AutomedicationScore } from './AutomedicationScore';
 import './Automedication.scss';
 
-export const AutomedicationContainer: React.FC = () => {
+import { languages, defaultLang, ui } from '../../../i18n/ui';
+
+interface Props {
+  lang: keyof typeof ui;
+}
+
+export const AutomedicationContainer: React.FC<Props> = ({ lang = defaultLang }) => {
   const [step, setStep] = useState<'search' | 'questionnaire' | 'score'>('search');
   const [selectedSubstance, setSelectedSubstance] = useState<{
     code: string;
@@ -46,7 +52,7 @@ export const AutomedicationContainer: React.FC = () => {
   return (
     <div className="automedication-flow">
       {step === 'search' && (
-        <AutomedicationSearch onSelect={handleSelectMolecule} />
+        <AutomedicationSearch onSelect={handleSelectMolecule} lang={lang} />
       )}
 
       {step === 'questionnaire' && selectedSubstance && (
@@ -55,6 +61,7 @@ export const AutomedicationContainer: React.FC = () => {
           substanceName={selectedSubstance.name}
           onComplete={handleQuestionnaireComplete}
           onBack={() => setStep('search')}
+          lang={lang}
         />
       )}
 
@@ -66,6 +73,7 @@ export const AutomedicationContainer: React.FC = () => {
           generalAdvice={generalAdvice}
           hasCoverage={hasCoverage}
           onReset={handleReset}
+          lang={lang}
         />
       )}
     </div>

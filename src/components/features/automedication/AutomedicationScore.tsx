@@ -1,5 +1,6 @@
 import React from 'react';
 import './AutomedicationScore.scss';
+import { ui } from '../../../i18n/ui';
 
 interface Props {
   score: 'green' | 'orange' | 'red';
@@ -8,29 +9,34 @@ interface Props {
   generalAdvice: string[];
   hasCoverage: boolean;
   onReset: () => void;
+  lang: keyof typeof ui;
 }
 
 export const AutomedicationScore: React.FC<Props> = ({
-  score, molecule, aiExplanation, generalAdvice, hasCoverage, onReset
+  score, molecule, aiExplanation, generalAdvice, hasCoverage, onReset, lang
 }) => {
+  const t = (key: keyof typeof ui['fr']) => {
+    return ui[lang][key] || ui['fr'][key];
+  };
+
   const getScoreData = () => {
     switch (score) {
       case 'green':
         return {
-          label: 'FAIBLE RISQUE',
-          text: `La prise de ${molecule} semble sûre dans votre situation. Respectez toujours les doses prescrites.`,
+          label: t('score.risk.low'),
+          text: t('score.risk.low.text').replace('{molecule}', molecule || ''),
           class: 'score-green'
         };
       case 'orange':
         return {
-          label: 'ATTENTION',
-          text: `La prise de ${molecule} nécessite une vigilance particulière. Il est recommandé de demander l'avis de votre pharmacien.`,
+          label: t('score.risk.medium'),
+          text: t('score.risk.medium.text').replace('{molecule}', molecule || ''),
           class: 'score-orange'
         };
       case 'red':
         return {
-          label: 'DÉCONSEILLÉ',
-          text: `La prise de ${molecule} est fortement déconseillée ou contre-indiquée dans votre situation. Consultez votre pharmacien ou médecin pour une alternative.`,
+          label: t('score.risk.high'),
+          text: t('score.risk.high.text').replace('{molecule}', molecule || ''),
           class: 'score-red'
         };
     }
@@ -50,17 +56,14 @@ export const AutomedicationScore: React.FC<Props> = ({
       {!hasCoverage && (
         <div className="no-coverage-warning">
           <span className="warning-icon">ℹ️</span>
-          <p>
-            Notre base ne couvre pas encore spécifiquement ce médicament.
-            Ce résultat est indicatif. <strong>Demandez toujours conseil à votre pharmacien.</strong>
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: t('score.no_coverage').replace('**', '<strong>').replace('**', '</strong>') }} />
         </div>
       )}
 
       {/* P1-A : Conseils généraux (affichés pour TOUS les scores) */}
       {generalAdvice.length > 0 && (
         <div className="general-advice-card">
-          <h4>💊 Bon à savoir</h4>
+          <h4>{t('score.general_advice')}</h4>
           <ul>
             {generalAdvice.map((tip, i) => (
               <li key={i}>{tip}</li>
@@ -73,18 +76,16 @@ export const AutomedicationScore: React.FC<Props> = ({
       {aiExplanation && (
         <div className="ai-explanation-card">
           <h4>
-            <span role="img" aria-label="pharmacist">👨‍⚕️</span> 
-            L'analyse personnalisée de SafePills
+            {t('score.ai_explanation.title')}
           </h4>
           <p>{aiExplanation}</p>
           <small className="disclaimer">
-            Explication générée par Intelligence Artificielle à titre indicatif. 
-            Ne remplace pas l'avis d'un professionnel de santé.
+            {t('score.ai_explanation.disclaimer')}
           </small>
         </div>
       )}
 
-      <button className="btn-reset" onClick={onReset}>Faire une autre évaluation</button>
+      <button className="btn-reset" onClick={onReset}>{t('score.reset')}</button>
     </div>
   );
 };

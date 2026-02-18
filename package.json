@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
     "@astrojs/react": "^4.0.0",
     "@fontsource-variable/karla": "^5.2.8",
     "@fontsource-variable/ysabeau": "^5.2.8",
@@ -29,7 +30,7 @@
     "@types/react-dom": "^18.2.0",
     "jsdom": "^27.4.0",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.3.0",
+    "typescript": "^5.9.3",
     "vitest": "^4.0.18"
   }
 }
