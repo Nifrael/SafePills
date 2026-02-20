@@ -1,7 +1,6 @@
 import os
 import sqlite3
 import json
-import pandas as pd
 import re
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -10,9 +9,6 @@ SCRIPTS_DATA_DIR = os.path.join(BASE_DIR, '..', '..', 'scripts_data')
 
 DB_PATH = os.path.join(DATA_DIR, 'safepills.db')
 WHITELIST_PATH = os.path.join(DATA_DIR, 'whitelist.json')
-OTC_PATH = os.path.join(SCRIPTS_DATA_DIR, 'Liste-OTC.xls')
-CIS_PATH = os.path.join(SCRIPTS_DATA_DIR, 'CIS_bdpm.txt')
-COMPO_PATH = os.path.join(SCRIPTS_DATA_DIR, 'CIS_COMPO_bdpm.txt')
 
 def init_db(cursor):
     cursor.executescript("""
@@ -93,17 +89,6 @@ def normalize_name(name):
     n = n.replace('-', '')
     return n
 
-def load_otc_names():
-    otc_names = set()
-    try:
-        df = pd.read_excel(OTC_PATH, header=2)
-        for val in df['Nom du médicament'].dropna():
-            base_name = str(val).split(',')[0].strip()
-            otc_names.add(normalize_name(base_name))
-        print(f"📦 {len(otc_names)} noms OTC chargés.")
-    except Exception as e:
-        print(f"❌ Erreur lecture OTC : {e}")
-    return otc_names
 
 def build_database():
     print("🚀 Début de l'intégration dans SafePills (SQLite)...")

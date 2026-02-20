@@ -21,7 +21,7 @@ COPY backend/ ./backend/
 
 # Création du dossier data si nécessaire et génération de la DB
 RUN mkdir -p backend/data && \
-    python backend/scripts/import_json_to_sqlite.py
+    python backend/scripts/build_db.py
 
 # Port exposé par FastAPI (par défaut 8000)
 EXPOSE 8000
