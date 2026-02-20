@@ -4,8 +4,8 @@ from backend.core.limiter import limiter
 
 from backend.core.schemas import FlowQuestion, FlowOption
 from ..services.automedication.db_repository import AutomedicationRepository
-from ..services.automedication.question_filters import QuestionFilterService
 from backend.core.i18n import i18n
+from backend.core.models import Rule
 
 router = APIRouter(prefix="/api/automedication", tags=["automedication-flow"])
 
@@ -45,62 +45,58 @@ def _build_profile_questions(has_gender_questions: bool, has_age_questions: bool
     return profile
 
 
-def _convert_medical_questions(questions, route: str = None, lang: str = "fr") -> List[FlowQuestion]:
-    if route:
-        questions = QuestionFilterService.filter_by_route(questions, route)
+def _convert_rules_to_questions(rules: List[Rule], route: str = None, lang: str = "fr") -> List[FlowQuestion]:
+    flow_questions_dict = {}
     
-    flow_questions = []
-    for q in questions:
-        if q.id.startswith("Q_POLYMEDICATION"):
+    for rule in rules:
+        if rule.question_code == "GENERAL" or rule.question_code.startswith("Q_POLYMEDICATION") or rule.filter_polymedication:
             continue
-        
-        show_if = {}
-        
-        if q.target_gender:
-            show_if["GENDER"] = q.target_gender
-        
-        if q.age_min is not None:
-            show_if["AGE_MIN"] = q.age_min
-        
-        if q.age_max is not None:
-            show_if["AGE_MAX"] = q.age_max
-        
-        if q.requires_other_meds:
-            show_if["HAS_OTHER_MEDS"] = True
-        
-        translated_text = i18n.translate_question(q.id, q.text, lang)
-        
-        flow_questions.append(FlowQuestion(
-            id=q.id,
-            text=translated_text,
-            type="boolean",
-            risk_level=q.risk_level.value,
-            show_if=show_if if show_if else None,
-            is_profile=False
-        ))
-    
-    return flow_questions
+            
+        if rule.filter_route and route:
+            if rule.filter_route.lower() not in route.lower():
+                continue
+
+        if rule.question_code not in flow_questions_dict:
+            show_if = {}
+            
+            if rule.filter_gender:
+                show_if["GENDER"] = rule.filter_gender
+            
+            if rule.age_min is not None:
+                show_if["AGE_MIN"] = rule.age_min
+                
+            translated_text = i18n.translate_question(rule.question_code, rule.question_code, lang)
+            
+            flow_questions_dict[rule.question_code] = FlowQuestion(
+                id=rule.question_code,
+                text=translated_text,
+                type="boolean",
+                risk_level=rule.risk_level.value,
+                show_if=show_if if show_if else None,
+                is_profile=False
+            )
+        else:
+            q = flow_questions_dict[rule.question_code]
+            if rule.risk_level.value > q.risk_level:
+                q.risk_level = rule.risk_level.value
+
+    return list(flow_questions_dict.values())
 
 
 @router.get("/flow/{identifier}", response_model=List[FlowQuestion])
 @limiter.limit("30/minute")
 async def get_flow(request: Request, identifier: str, lang: str = Query("fr")):
-    tags = _repository.get_substance_tags(identifier)
+    rules = _repository.get_rules_for_brand(identifier)
     
-    if not tags:
-        return []
-    
-    all_medical_questions = _repository.get_questions_by_tags(tags)
+    if not rules:
+        return _build_profile_questions(False, False, lang)
     
     route = _repository.get_drug_route(identifier)
     
-    medical_flow = _convert_medical_questions(all_medical_questions, route, lang)
+    medical_flow = _convert_rules_to_questions(rules, route, lang)
     
-    has_gender_questions = any(q.target_gender is not None for q in all_medical_questions)
-    has_age_questions = any(
-        q.age_min is not None or q.age_max is not None 
-        for q in all_medical_questions
-    )
+    has_gender_questions = any(r.filter_gender is not None for r in rules)
+    has_age_questions = any(r.age_min is not None for r in rules)
     
     profile_flow = _build_profile_questions(has_gender_questions, has_age_questions, lang)
     

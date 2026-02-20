@@ -47,17 +47,24 @@ async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
     from backend.services.search import get_drug_details
     drug_name = "ce médicament" if lang == "fr" else "este medicamento"
     substance_names = []
+    is_otc = True
     if body.cis:
         drug_info = get_drug_details(body.cis)
         if drug_info:
             drug_name = drug_info.name
-            substance_names = [s.name for s in drug_info.substances]
+            is_otc = drug_info.is_otc
+            substance_names = [bs.substance.name for bs in drug_info.composition]
 
     try:
         from ..services.ai_service import get_general_advice
         result.general_advice = get_general_advice(substance_names, lang)
     except Exception:
         result.general_advice = []
+        
+    if not is_otc:
+        warning_msg = "⚠️ Ce médicament nécessite normalement une prescription médicale."
+        if warning_msg not in result.details:
+            result.details.insert(0, warning_msg)
 
     has_medical_questions = any(
         not q_id.startswith(('GENDER', 'AGE', 'HAS_OTHER'))
