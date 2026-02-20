@@ -36,7 +36,14 @@ async def generate_risk_explanation(
 
     try:
         if lang == "es":
-            gender_text = "una mujer" if user_profile.get('gender') == 'F' else "un hombre"
+            gender = user_profile.get('gender')
+            if gender == 'F':
+                gender_text = "una mujer"
+            elif gender == 'M':
+                gender_text = "un hombre"
+            else:
+                gender_text = "una persona"
+                
             age_text = f"{user_profile.get('age', '?')} años"
             patient_context = f"El paciente es {gender_text} de {age_text}.\n"
             
@@ -46,7 +53,14 @@ async def generate_risk_explanation(
                     risk_emoji = "🔴" if q['risk_level'] == 'RED' else "🟠"
                     patient_context += f"{risk_emoji} {q['question_text']} → {q['answer']}\n"
         else:
-            gender_text = "une femme" if user_profile.get('gender') == 'F' else "un homme"
+            gender = user_profile.get('gender')
+            if gender == 'F':
+                gender_text = "une femme"
+            elif gender == 'M':
+                gender_text = "un homme"
+            else:
+                gender_text = "une personne"
+                
             age_text = f"{user_profile.get('age', '?')} ans"
             patient_context = f"Le patient est {gender_text} de {age_text}.\n"
             
@@ -76,6 +90,7 @@ REGLAS STRICTAS:
 - Explica concretamente los riesgos en lenguaje sencillo
 - Termina con un consejo de acción claro (consultar a un farmacéutico, un médico, etc.)
 - NUNCA digas "según la base de datos" o "el sistema ha detectado"
+- NUNCA uses saludos como "Hola", "Buenos días", "Señor" o "Señora". Comienza directamente con la explicación.
 - Sé tranquilizador pero firme sobre las contraindicaciones
 - RESPONDE EN ESPAÑOL
 - Máximo 5 frases cortas y claras"""
@@ -111,6 +126,7 @@ RÈGLES STRICTES :
 - Explique concrètement les risques en langage simple
 - Termine par un conseil d'action clair (consulter un pharmacien, un médecin, etc.)
 - Ne dis JAMAIS "selon la base de données" ou "le système a détecté"
+- N'utilise JAMAIS de formule de salutation (pas de "Bonjour", "Monsieur", ni "Madame"). Commence ton explication directement.
 - Sois rassurant mais ferme sur les contre-indications
 - Maximum 5 phrases courtes et claires"""
 

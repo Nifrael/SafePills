@@ -34,7 +34,7 @@
       },
       {
         "question_code": "Q_ULCERE",
-        "risk_level": 4,
+        "risk_level": 3,
         "filter_route": "orale",
         "advice": "Les AINS comme l'ibuprofène augmentent le risque de saignement digestif et peuvent aggraver un ulcère existant."
       },
@@ -72,14 +72,14 @@
         "target_substance": "paracetamol",
         "question_code": "Q_LIVER",
         "risk_level": 3,
-        "advice": "En cas d'insuffisance hépatique, la dose maximale doit être réduite à 2g/jour. L'alcool augmente fortement la toxicité du paracétamol."
+        "advice": "En cas d'insuffisance hépatique, le dose de paracétamol doit être réduite. Contactez votre pharmacien ou médecin."
       },
       {
         "target_substance": "paracetamol",
         "question_code": "Q_POLYMEDICATION",
         "risk_level": 2,
         "filter_polymedication": true,
-        "advice": "De nombreux médicaments contiennent du paracétamol caché (Fervex, Humex...). Vérifiez pour éviter le surdosage (maximum 3g à 4g par jour)."
+        "advice": "De nombreux médicaments contiennent du paracétamol caché (Fervex, Ixprim, Lamaline, Humex...). Vérifiez pour éviter le surdosage (maximum 3g à 4g par jour)."
       }
     ],
     "GASTRO_ANTIDIARRHEIQUES": [
@@ -89,12 +89,25 @@
         "advice": "Consultez un médecin rapidement si la diarrhée s'accompagne de fièvre ou de sang, car cela peut être le signe d'une infection."
       }
     ],
+    "GASTRO_ANTIACIDES_ALGINATES": [
+      {
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 2,
+        "advice": "ATTENTION : Les antacides alginiques peuvent empêcher l'absorption de votre traitement habituel. Prenez-le à distance de votre traitement d'au minimum deux heures."
+      }
+    ],
     "GLOBAL": [
       {
         "target_substance": "loperamide",
         "question_code": "Q_DIARRHEA_FIEVRE",
         "risk_level": 4,
         "advice": "CONTRE-INDICATION ABSOLUE : Le lopéramide (Imodium) est formellement interdit en cas de diarrhée avec fièvre ou sang, car il empêche l'élimination de la bactérie intestinale."
+      },
+      {
+        "target_substance": "diosmectite",
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 2,
+        "advice": "ATTENTION : Le diosmectite (Smecta) peut empêcher l'absorption de votre traitement habituel. Prenez-le à distance de votre traitement d'au minimum deux heures."
       }
     ],
     "HYPNOTIQUES_ANXIOLYTIQUES": [
@@ -104,9 +117,24 @@
         "advice": "Risque majeur de somnolence. Il est dangereux et formellement déconseillé de conduire un véhicule ou d'utiliser des machines."
       },
       {
+        "question_code": "Q_FALL",
+        "risk_level": 4,
+        "advice": "Si vous avez des problèmes d'équilibre, ne prenez pas de tels médicaments par vous-mêmes. Le risque de chute est augmenté!"
+      },
+      {
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 4,
+        "advice": "Les hypnotiques ou anxiolytiques augmentent le risque de somnolence et donc de chute. Si vous prenez des anticoagulants, les chutes peuvent avoir de graves conséquences. Avec des antihypertenseurs, elles peuvent être plus fréquentes."
+      },
+      {
         "question_code": "GENERAL",
         "risk_level": 3,
         "advice": "L'usage prolongé et non encadré de ces médicaments expose à un risque important de dépendance physique et psychologique."
+      },
+      {
+        "question_code": "GENERAL",
+        "risk_level": 3,
+        "advice": "Bien que ces médicaments soient fréquemment prescrits, leur délivrance est conditionné à une ordonnance et donc un examen médical."
       }
     ],
     "SEDATIFS_LEGERS_PHYTO": [
@@ -114,6 +142,16 @@
         "question_code": "Q_SLEEP",
         "risk_level": 2,
         "advice": "Bien que léger, ce traitement peut induire une baisse de vigilance. Soyez prudent au volant."
+      },
+      {
+        "question_code": "Q_FALL",
+        "risk_level": 2,
+        "advice": "Bien que la phytothérapie soit généralement plus légère en terme d'action, soyez prudent si vous avez tendance à avoir des pertes d'équilibre, car la somnolence qui peut accompagner ces traitements peut augmenter le risque de chute."
+      },
+      {
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 2,
+        "advice": "ATTENTION : Certaines plantes augmentent ou diminuent les effets de vos traitements habituels. Faites le point avec votre pharmacien."
       }
     ],
     "ANTIHISTAMINIQUES": [
