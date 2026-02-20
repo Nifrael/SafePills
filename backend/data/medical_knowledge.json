@@ -13,116 +13,134 @@
     "Q_SUN": "Comptez-vous exposer la zone traitée au soleil ?",
     "Q_SLEEP": "Conduisez-vous un véhicule ou utilisez-vous des machines dangereuses ?",
     "Q_FALL": "Avez-vous eu dernièrement des épisodes de chute, de perte d'équilibre ?",
-    "Q_SICK": "Votre toux est-elle grasse (avec des expectorations) ?"
+    "Q_SICK": "Votre toux est-elle grasse (avec des expectorations) ?",
+    "Q_SPORT": "Êtes-vous sportif de haut niveau ?"
   },
-  "rules": [
-    {
-      "target_family": "ANTIBIOTIQUES",
-      "question_code": "GENERAL",
-      "risk_level": 4,
-      "advice": "DANGER : Les antibiotiques ne doivent jamais être pris en automédication avec des restes de traitements précédents. L'usage inadapté provoque des résistances bactériennes et des complications."
-    },
-    {
-      "target_family": "AINS_ORAUX",
-      "question_code": "Q_PREGNANCY",
-      "risk_level": 4,
-      "filter_route": "orale",
-      "filter_gender": "F",
-      "advice": "CONTRE-INDICATION ABSOLUE : Les AINS sont formellement interdits à partir du 6ème mois de grossesse (risque de fermeture prématurée du canal artériel). Le paracétamol est l'alternative de choix."
-    },
-    {
-      "target_family": "AINS_ORAUX",
-      "question_code": "Q_ULCERE",
-      "risk_level": 4,
-      "filter_route": "orale",
-      "advice": "Les AINS comme l'ibuprofène augmentent le risque de saignement digestif et peuvent aggraver un ulcère existant."
-    },
-    {
-      "target_family": "AINS_ORAUX",
-      "question_code": "Q_KIDNEY",
-      "risk_level": 4,
-      "filter_route": "orale",
-      "advice": "Les AINS diminuent le flux sanguin rénal et peuvent aggraver une insuffisance rénale pré-existante."
-    },
-    {
-      "target_family": "AINS_ORAUX",
-      "question_code": "Q_POLYMEDICATION",
-      "risk_level": 3,
-      "filter_route": "orale",
-      "filter_polymedication": true,
-      "advice": "Prudence : Les AINS interagissent avec de nombreux médicaments (antihypertenseurs, anticoagulants). Prenez l'avis de votre pharmacien."
-    },
-    {
-      "target_family": "AINS_CUTANES",
-      "question_code": "Q_PREGNANCY",
-      "risk_level": 3,
-      "filter_route": "cutanée",
-      "filter_gender": "F",
-      "advice": "L'utilisation cutanée des AINS est déconseillée pendant la grossesse, surtout au 3ème trimestre."
-    },
-    {
-      "target_family": "AINS_CUTANES",
-      "question_code": "Q_SUN",
-      "risk_level": 3,
-      "filter_route": "cutanée",
-      "advice": "Les AINS en gel peuvent provoquer des réactions de photosensibilisation graves. Ne pas exposer la zone traitée au soleil."
-    },
-    {
-      "target_family": "ANTALGIQUES_ANTIPYRETIQUES",
-      "target_substance": "paracetamol",
-      "question_code": "Q_LIVER",
-      "risk_level": 3,
-      "advice": "En cas d'insuffisance hépatique, la dose maximale doit être réduite à 2g/jour. L'alcool augmente fortement la toxicité du paracétamol."
-    },
-    {
-      "target_family": "ANTALGIQUES_ANTIPYRETIQUES",
-      "target_substance": "paracetamol",
-      "question_code": "Q_POLYMEDICATION",
-      "risk_level": 2,
-      "filter_polymedication": true,
-      "advice": "De nombreux médicaments contiennent du paracétamol caché (Fervex, Humex...). Vérifiez pour éviter le surdosage (maximum 3g à 4g par jour)."
-    },
-    {
-      "target_family": "GASTRO_ANTIDIARRHEIQUES",
-      "question_code": "Q_DIARRHEA_FIEVRE",
-      "risk_level": 2,
-      "advice": "Consultez un médecin rapidement si la diarrhée s'accompagne de fièvre ou de sang, car cela peut être le signe d'une infection."
-    },
-    {
-      "target_substance": "loperamide",
-      "question_code": "Q_DIARRHEA_FIEVRE",
-      "risk_level": 4,
-      "advice": "CONTRE-INDICATION ABSOLUE : Le lopéramide (Imodium) est formellement interdit en cas de diarrhée avec fièvre ou sang, car il empêche l'élimination de la bactérie intestinale."
-    },
-    {
-      "target_family": "HYPNOTIQUES_ANXIOLYTIQUES",
-      "question_code": "Q_SLEEP",
-      "risk_level": 4,
-      "advice": "Risque majeur de somnolence. Il est dangereux et formellement déconseillé de conduire un véhicule ou d'utiliser des machines."
-    },
-    {
-      "target_family": "HYPNOTIQUES_ANXIOLYTIQUES",
-      "question_code": "GENERAL",
-      "risk_level": 3,
-      "advice": "L'usage prolongé et non encadré de ces médicaments expose à un risque important de dépendance physique et psychologique."
-    },
-    {
-      "target_family": "SEDATIFS_LEGERS_PHYTO",
-      "question_code": "Q_SLEEP",
-      "risk_level": 2,
-      "advice": "Bien que léger, ce traitement peut induire une baisse de vigilance. Soyez prudent au volant."
-    },
-    {
-      "target_family": "ANTIHISTAMINIQUES",
-      "question_code": "Q_SLEEP",
-      "risk_level": 2,
-      "advice": "Les antihistaminiques peuvent provoquer des somnolences paradoxales. Testez votre réaction avant de conduire."
-    },
-    {
-      "target_family": "TOUX_SECHE",
-      "question_code": "Q_SICK",
-      "risk_level": 4,
-      "advice": "Absolument contre-indiqué : Un antitussif (toux sèche) ne doit jamais être pris pour une toux grasse, car il empêche l'évacuation naturelle des sécrétions pulmonaires."
-    }
-  ]
+  "rules": {
+    "ANTIBIOTIQUES": [
+      {
+        "question_code": "GENERAL",
+        "risk_level": 4,
+        "advice": "DANGER : Les antibiotiques ne doivent jamais être pris en automédication avec des restes de traitements précédents. L'usage inadapté provoque des résistances bactériennes et des complications."
+      }
+    ],
+    "AINS_ORAUX": [
+      {
+        "question_code": "Q_PREGNANCY",
+        "risk_level": 4,
+        "filter_route": "orale",
+        "filter_gender": "F",
+        "advice": "CONTRE-INDICATION ABSOLUE : Les AINS sont formellement interdits à partir du 6ème mois de grossesse (risque de fermeture prématurée du canal artériel). Le paracétamol est l'alternative de choix."
+      },
+      {
+        "question_code": "Q_ULCERE",
+        "risk_level": 4,
+        "filter_route": "orale",
+        "advice": "Les AINS comme l'ibuprofène augmentent le risque de saignement digestif et peuvent aggraver un ulcère existant."
+      },
+      {
+        "question_code": "Q_KIDNEY",
+        "risk_level": 4,
+        "filter_route": "orale",
+        "advice": "Les AINS diminuent le flux sanguin rénal et peuvent aggraver une insuffisance rénale pré-existante."
+      },
+      {
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 3,
+        "filter_route": "orale",
+        "filter_polymedication": true,
+        "advice": "Prudence : Les AINS interagissent avec de nombreux médicaments (antihypertenseurs, anticoagulants). Prenez l'avis de votre pharmacien."
+      }
+    ],
+    "AINS_CUTANES": [
+      {
+        "question_code": "Q_PREGNANCY",
+        "risk_level": 3,
+        "filter_route": "cutanée",
+        "filter_gender": "F",
+        "advice": "L'utilisation cutanée des AINS est déconseillée pendant la grossesse, surtout au 3ème trimestre."
+      },
+      {
+        "question_code": "Q_SUN",
+        "risk_level": 3,
+        "filter_route": "cutanée",
+        "advice": "Les AINS en gel peuvent provoquer des réactions de photosensibilisation graves. Ne pas exposer la zone traitée au soleil."
+      }
+    ],
+    "ANTALGIQUES_ANTIPYRETIQUES": [
+      {
+        "target_substance": "paracetamol",
+        "question_code": "Q_LIVER",
+        "risk_level": 3,
+        "advice": "En cas d'insuffisance hépatique, la dose maximale doit être réduite à 2g/jour. L'alcool augmente fortement la toxicité du paracétamol."
+      },
+      {
+        "target_substance": "paracetamol",
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 2,
+        "filter_polymedication": true,
+        "advice": "De nombreux médicaments contiennent du paracétamol caché (Fervex, Humex...). Vérifiez pour éviter le surdosage (maximum 3g à 4g par jour)."
+      }
+    ],
+    "GASTRO_ANTIDIARRHEIQUES": [
+      {
+        "question_code": "Q_DIARRHEA_FIEVRE",
+        "risk_level": 2,
+        "advice": "Consultez un médecin rapidement si la diarrhée s'accompagne de fièvre ou de sang, car cela peut être le signe d'une infection."
+      }
+    ],
+    "GLOBAL": [
+      {
+        "target_substance": "loperamide",
+        "question_code": "Q_DIARRHEA_FIEVRE",
+        "risk_level": 4,
+        "advice": "CONTRE-INDICATION ABSOLUE : Le lopéramide (Imodium) est formellement interdit en cas de diarrhée avec fièvre ou sang, car il empêche l'élimination de la bactérie intestinale."
+      }
+    ],
+    "HYPNOTIQUES_ANXIOLYTIQUES": [
+      {
+        "question_code": "Q_SLEEP",
+        "risk_level": 4,
+        "advice": "Risque majeur de somnolence. Il est dangereux et formellement déconseillé de conduire un véhicule ou d'utiliser des machines."
+      },
+      {
+        "question_code": "GENERAL",
+        "risk_level": 3,
+        "advice": "L'usage prolongé et non encadré de ces médicaments expose à un risque important de dépendance physique et psychologique."
+      }
+    ],
+    "SEDATIFS_LEGERS_PHYTO": [
+      {
+        "question_code": "Q_SLEEP",
+        "risk_level": 2,
+        "advice": "Bien que léger, ce traitement peut induire une baisse de vigilance. Soyez prudent au volant."
+      }
+    ],
+    "ANTIHISTAMINIQUES": [
+      {
+        "question_code": "Q_SLEEP",
+        "risk_level": 2,
+        "advice": "Les antihistaminiques peuvent provoquer des somnolences paradoxales. Testez votre réaction avant de conduire."
+      }
+    ],
+    "TOUX_SECHE": [
+      {
+        "question_code": "Q_SICK",
+        "risk_level": 4,
+        "advice": "Absolument contre-indiqué : Un antitussif (toux sèche) ne doit jamais être pris pour une toux grasse, car il empêche l'évacuation naturelle des sécrétions pulmonaires."
+      }
+    ],
+    "RHUME_DECONGESTIONNANTS_ORAUX": [
+      {
+        "question_code": "Q_HEART",
+        "risk_level": 4,
+        "advice": "Les décongestionnants oraux sont contre-indiqués en cas de problèmes cardiaques car ils provoquent une augmentation de la tension artérielle et du rythme cardiaque."
+      },
+      {
+        "question_code": "Q_SPORT",
+        "risk_level": 4,
+        "advice": "Les décongestionnants oraux comme la pseudoéphédrine sont interdits aux sportifs de haut niveau car ils sont considérés comme du dopage."
+      }
+    ]
+  }
 }

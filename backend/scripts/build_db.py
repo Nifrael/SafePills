@@ -173,44 +173,46 @@ def build_database():
             med_knowledge = json.load(f)
             
         rules_inserted = 0
-        for rule in med_knowledge.get('rules', []):
-            family_id = None
-            if 'target_family' in rule:
-                fam_name = rule['target_family']
-                family_id = family_ids.get(fam_name)
-                if not family_id:
-                    print(f"⚠️ Famille '{fam_name}' inconnue pour la règle {rule['question_code']}. Ignorée.")
-                    continue
+        rules_data = med_knowledge.get('rules', {})
+        
+        for fam_name, rules_list in rules_data.items():
+            for rule in rules_list:
+                family_id = None
+                if fam_name != "GLOBAL":
+                    family_id = family_ids.get(fam_name)
+                    if not family_id:
+                        print(f"⚠️ Famille '{fam_name}' inconnue pour la règle {rule['question_code']}. Ignorée.")
+                        continue
+                        
+                substance_id = None
+                if 'target_substance' in rule:
+                    sub_norm = normalize_name(rule['target_substance'])
+                    for s_name, s_id in substance_ids.items():
+                        if sub_norm in normalize_name(s_name):
+                            substance_id = s_id
+                            break
                     
-            substance_id = None
-            if 'target_substance' in rule:
-                sub_norm = normalize_name(rule['target_substance'])
-                for s_name, s_id in substance_ids.items():
-                    if normalize_name(s_name) == sub_norm:
-                        substance_id = s_id
-                        break
-                
-                if not substance_id:
-                    print(f"⚠️ Substance '{rule['target_substance']}' inconnue pour la règle {rule['question_code']}. Ignorée.")
-                    continue
+                    if not substance_id:
+                        print(f"⚠️ Substance '{rule['target_substance']}' inconnue pour la règle {rule['question_code']}. Ignorée.")
+                        continue
 
-            cursor.execute("""
-                INSERT INTO rules (
-                    question_code, risk_level, advice, family_id, substance_id,
-                    filter_route, filter_polymedication, filter_gender, age_min
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                rule['question_code'],
-                rule['risk_level'],
-                rule['advice'],
-                family_id,
-                substance_id,
-                rule.get('filter_route'),
-                rule.get('filter_polymedication', 0),
-                rule.get('filter_gender'),
-                rule.get('age_min')
-            ))
-            rules_inserted += 1
+                cursor.execute("""
+                    INSERT INTO rules (
+                        question_code, risk_level, advice, family_id, substance_id,
+                        filter_route, filter_polymedication, filter_gender, age_min
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    rule['question_code'],
+                    rule['risk_level'],
+                    rule['advice'],
+                    family_id,
+                    substance_id,
+                    rule.get('filter_route'),
+                    rule.get('filter_polymedication', 0),
+                    rule.get('filter_gender'),
+                    rule.get('age_min')
+                ))
+                rules_inserted += 1
             
         conn.commit()
         print(f"✅ {rules_inserted} règles insérées avec succès.")
