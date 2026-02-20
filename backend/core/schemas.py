@@ -22,7 +22,7 @@ class FlowQuestion(BaseModel):
     is_profile: bool = False 
 
 class EvaluationResponse(BaseModel):
-    score: RiskLevel 
+    score: str 
     details: List[str]
     ai_explanation: Optional[str] = None 
     general_advice: List[str] = [] 

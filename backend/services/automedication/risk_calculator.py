@@ -32,8 +32,16 @@ class RiskCalculator:
                     if rule.advice not in details:
                         details.append(rule.advice)
         
+        score_str = "GREEN"
+        if score == RiskLevel.LEVEL_2:
+            score_str = "YELLOW"
+        elif score == RiskLevel.LEVEL_3:
+            score_str = "ORANGE"
+        elif score >= RiskLevel.LEVEL_4:
+            score_str = "RED"
+            
         return EvaluationResponse(
-            score=score,
+            score=score_str,
             details=details,
             answered_questions_context=answered_questions_context
         )
