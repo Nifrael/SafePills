@@ -225,25 +225,48 @@ def forge_database():
         route = brand["route"]
         substances = [c["norm_substance"] for c in brand["composition"]]
         
+        vip_found = None
+        for vip in specific_brands:
+            if vip in norm_name:
+                vip_found = vip.upper()
+                break
+                
         import re
         match = re.match(r"^([^\d,]+)", brand["name"])
         clean_name = match.group(1).strip().upper() if match else brand["name"].upper()
         
+        if vip_found:
+            clean_name = vip_found
+            
         is_generic = False
-        for sub in sorted(substances, key=len, reverse=True):
-            if norm_name.startswith(sub):
-                is_generic = True
-                clean_name = " + ".join(s.upper() for s in substances[:2])
-                break
+        if not vip_found:
+            for sub in substances:
+                # Get the core substantive word of the substance, ignoring common chemical salts
+                ignore = {'chlorhydrate', 'sulfate', 'sodium', 'potassium', 'acide', 'dihydrate', 'hemihydrate', 'de'}
+                core_words = [w for w in sub.replace("'", " ").split() if len(w) > 3 and w not in ignore]
                 
-        group_key = (clean_name, route, frozenset(substances))
+                brand_words = norm_name.replace("'", " ").replace("-", " ").replace("/", " ").split()
+                if brand_words and any(cw in brand_words[:3] for cw in core_words):
+                    is_generic = True
+                    break
+                    
+            if is_generic:
+                clean_name = " + ".join(s.upper() for s in sorted(substances))
+                
+        group_key = (clean_name, route)
         
         if group_key not in grouped_brands:
             brand["name"] = f"{clean_name} ({route.capitalize()})"
             grouped_brands[group_key] = brand
+            grouped_brands[group_key]["all_substances"] = set(substances)
         else:
             if brand["is_otc"]:
                 grouped_brands[group_key]["is_otc"] = True
+            grouped_brands[group_key]["all_substances"].update(substances)
+            
+    for brand in grouped_brands.values():
+        all_subs = brand.pop("all_substances")
+        brand["composition"] = [{"substance": s.upper(), "norm_substance": s, "dosage": ""} for s in all_subs]
 
     final_brands = list(grouped_brands.values())
     print(f"📉 Après dé-duplication : {len(final_brands)} médicaments uniques conservés.")

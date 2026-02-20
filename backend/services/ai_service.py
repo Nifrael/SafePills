@@ -150,11 +150,11 @@ Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant fac
 """
         
         response = await client.aio.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3-flash-preview',
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
-                temperature=0.3
+                temperature=0.2
             )
         )
         

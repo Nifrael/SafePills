@@ -51,11 +51,13 @@ async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
         if warning_msg not in result.details:
             result.details.insert(0, warning_msg)
 
-    has_medical_questions = any(
-        not q_id.startswith(('GENDER', 'AGE', 'HAS_OTHER'))
-        for q_id in body.answers.keys()
-    )
-    result.has_coverage = has_medical_questions
+    from backend.services.automedication.db_repository import AutomedicationRepository
+    _repo = AutomedicationRepository()
+    if body.cis:
+        rules = _repo.get_rules_for_brand(body.cis)
+        result.has_coverage = len(rules) > 0
+    else:
+        result.has_coverage = False
 
     if result.score != "GREEN":
         from ..services.ai_service import generate_risk_explanation

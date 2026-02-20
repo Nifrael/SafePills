@@ -29,7 +29,7 @@ def evaluate_risk(
         
         if has_other_meds:
             for r in rules:
-                if r.filter_polymedication:
+                if r.filter_polymedication or r.question_code == 'Q_POLYMEDICATION':
                     answers[r.question_code] = True
         
         result = RiskCalculator.compute_score(rules, answers)

@@ -25,14 +25,19 @@
       color: #2ecc71;
     }
 
+    &.score-yellow {
+      border-color: #f1c40f;
+      color: #f1c40f;
+    }
+
     &.score-orange {
       border-color: #f39c12;
       color: #f39c12;
     }
 
     &.score-red {
-      border-color: #e74c3c;
-      color: #e74c3c;
+      border-color: #c0392b; /* Rouge foncé */
+      color: #c0392b;
     }
 
     .score-value {
@@ -137,7 +142,7 @@
         font-size: 1rem;
 
         &::before {
-          content: '•';
+          content: "•";
           position: absolute;
           left: 0;
           color: #2e7d32;

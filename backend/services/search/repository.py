@@ -55,10 +55,7 @@ class DrugRepository:
                 for drug in all_drugs:
                     if normalized_query in normalize_text(drug['name']):
                         is_otc = bool(drug['is_otc'])
-                        if is_otc:
-                            desc = i18n.get("type_drug", lang, "search") or "Médicament (Accès libre)"
-                        else:
-                            desc = i18n.get("type_drug_prescription", lang, "search") or "💊 Sous prescription médicale"
+                        desc = i18n.get("type_drug", lang, "search") or "Médicament"
                             
                         results.append(SearchResult(
                             type="drug",
