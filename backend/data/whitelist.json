@@ -1,0 +1,205 @@
+{
+  "_comment": "Définition de la 'Whitelist' étendue. Seules les boîtes (brands) qui matchent ces critères seront importées dans l'application SafePills.",
+  "allowed_routes": [
+    "orale",
+    "cutanee",
+    "nasale",
+    "ophtalmique",
+    "auriculaire",
+    "rectale",
+    "sublinguale"
+  ],
+  "families": {
+    "ANTALGIQUES_ANTIPYRETIQUES": [
+      "paracetamol",
+      "acide acetylsalicylique",
+      "aspirine"
+    ],
+    "ANTALGIQUES_OPIACES_FAIBLES": [
+      "codeine",
+      "tramadol",
+      "poudre d'opium"
+    ],
+    "AINS_ORAUX": [
+      "ibuprofene",
+      "ketoprofene",
+      "naproxene",
+      "diclofenac",
+      "celecoxib",
+      "acide niflumique",
+      "flurbiprofene"
+    ],
+    "AINS_CUTANES": [
+      "diclofenac de diethylamine",
+      "ibuprofene",
+      "ketoprofene",
+      "acide niflumique"
+    ],
+    "ANTIBIOTIQUES": [
+      "amoxicilline",
+      "amoxicilline trihydratee",
+      "clavulanate de potassium",
+      "acide clavulanique",
+      "oxacilline",
+      "cloxacilline",
+      "azithromycine",
+      "clarithromycine",
+      "josamycine",
+      "spiramycine",
+      "roxithromycine",
+      "erythromycine",
+      "cefixime",
+      "cefuroxime",
+      "cefadroxil",
+      "cefpodoxime",
+      "doxycycline",
+      "pristinamycine",
+      "fosfomycine",
+      "nitrofurantoine",
+      "ciprofloxacine",
+      "ofloxacine",
+      "levofloxacine"
+    ],
+    "CORTICOIDES_SYSTEMIQUES": [
+      "prednisolone",
+      "prednisone",
+      "betamethasone",
+      "dexamethasone",
+      "methylprednisolone"
+    ],
+    "CORTICOIDES_INHALES_NASAUX": [
+      "budesonide",
+      "fluticasone",
+      "beclometasone",
+      "mometasone"
+    ],
+    "ANTIHISTAMINIQUES": [
+      "cetirizine",
+      "dichlorhydrate de cetirizine",
+      "loratadine",
+      "desloratadine",
+      "bilastine",
+      "fexofenadine",
+      "mizolastine",
+      "doxylamine",
+      "pheniramine"
+    ],
+    "GASTRO_ANTISECRETOIRES_IPP": [
+      "omeprazole",
+      "pantoprazole",
+      "esomeprazole",
+      "rabeprazole",
+      "lansoprazole"
+    ],
+    "GASTRO_ANTIACIDES_ALGINATES": [
+      "alginate de sodium",
+      "bicarbonate de sodium",
+      "hydroxyde d'aluminium",
+      "hydroxyde de magnesium",
+      "carbonate de calcium"
+    ],
+    "GASTRO_ANTIDIARRHEIQUES": [
+      "loperamide",
+      "chlorhydrate de loperamide",
+      "diosmectite",
+      "racecadotril",
+      "saccharomyces boulardii",
+      "tifuroxazide"
+    ],
+    "GASTRO_ANTISPASMODIQUES": [
+      "phloroglucinol",
+      "trimethylphloroglucinol",
+      "mebeverine",
+      "trimebutine",
+      "meteospasmyl"
+    ],
+    "GASTRO_ANTIEMETIQUES": [
+      "metoclopramide",
+      "domperidone",
+      "metopimazine",
+      "ondansetron"
+    ],
+    "RHUME_DECONGESTIONNANTS_ORAUX": [
+      "pseudoephedrine",
+      "chlorhydrate de pseudoephedrine",
+      "phenylephrine"
+    ],
+    "TOUX_SECHE": [
+      "dextromethorphane",
+      "pholcodine",
+      "helicidine",
+      "oxomemazine",
+      "clobutinol"
+    ],
+    "TOUX_GRASSE": [
+      "carbocisteine",
+      "acetylcysteine",
+      "ambroxol",
+      "bromhexine"
+    ],
+    "MYORELAXANTS": [
+      "thiocolchicoside",
+      "methocarbamol"
+    ],
+    "HYPNOTIQUES_ANXIOLYTIQUES": [
+      "alprazolam",
+      "bromazepam",
+      "diazepam",
+      "oxazepam",
+      "zolpidem",
+      "zopiclone",
+      "doxylamine"
+    ],
+    "SEDATIFS_LEGERS_PHYTO": [
+      "melatonine",
+      "passiflore",
+      "valeriane"
+    ],
+    "ANTIVIRAUX_LOCAUX": [
+      "aciclovir",
+      "valaciclovir"
+    ],
+    "ALLERGIE_OPHTALMIQUE": [
+      "cromoglicate de sodium",
+      "ketotifene",
+      "acide spaglumique"
+    ]
+  },
+  "specific_brands_allowed": [
+    "FERVEX",
+    "HUMEX",
+    "ACTIFED",
+    "DOLIRHUME",
+    "RHUMAGRIP",
+    "GAVISCON",
+    "MAALOX",
+    "SMECTA",
+    "IMODIUM",
+    "ERCEFURYL",
+    "VOGALENE",
+    "MOTILIUM",
+    "PRIMALAN",
+    "AERIUS",
+    "ZYRTEC",
+    "CLARITINE",
+    "DONORMYL",
+    "STRESAM",
+    "EUPHYTOSE",
+    "SPASFON",
+    "DEBRIDAT",
+    "VOLTARENE",
+    "NUROFEN",
+    "ADVIL",
+    "SPEDIFEN",
+    "DAFALGAN",
+    "DOLIPRANE",
+    "EFFERALGAN",
+    "BACTRIM",
+    "MONURIL",
+    "ZOVIRAX",
+    "ACTIVIR",
+    "BISEPTINE",
+    "BETADINE",
+    "HEXOMEDINE"
+  ]
+}

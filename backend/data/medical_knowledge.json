@@ -1,11 +1,11 @@
 {
-  "_comment": "BASE DE CONNAISSANCES MÉDICALES - MODELE 'PROFIL DE RISQUE'",
-  
+  "_comment": "Base de connaissances experte - Règles et Conseils",
   "questions_catalog": {
+    "GENERAL": "Conseil Général (Ne correspond à aucune question visible)",
     "Q_PREGNANCY": "Êtes-vous enceinte ou allaitez-vous ?",
     "Q_ULCERE": "Avez-vous déjà eu un ulcère à l'estomac ou souffrez-vous de brûlures d'estomac fréquentes ?",
     "Q_LIVER": "Souffrez-vous d'une maladie du foie ou d'une insuffisance hépatique ?",
-    "Q_DIARRHEA": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
+    "Q_DIARRHEA_FIEVRE": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
     "Q_CONFUSION": "Avez-vous récemment eu des épisodes de confusion ou des troubles de la mémoire ?",
     "Q_POLYMEDICATION": "Prenez-vous actuellement d'autres médicaments de façon régulière ?",
     "Q_HEART": "Souffrez-vous de problèmes cardiaques quelconques (hypertension artérielle, troubles du rythme, etc...) ?",
@@ -13,132 +13,110 @@
     "Q_SUN": "Comptez-vous exposer la zone traitée au soleil ?",
     "Q_SLEEP": "Conduisez-vous un véhicule ou utilisez-vous des machines dangereuses ?",
     "Q_FALL": "Avez-vous eu dernièrement des épisodes de chute, de perte d'équilibre ?",
-    "Q_SICK": "Votre toux est-elle grasse (avec des expectorations) ?",
-    "Q_HIGH_PERFORMANCE": "Êtes-vous sportif de haut niveau ?"
+    "Q_SICK": "Votre toux est-elle grasse (avec des expectorations) ?"
   },
-
-  "risk_profiles": {
-    "AINS_ORAL": [
-      { "id": "Q_PREGNANCY", "risk": "RED", "gender": "F" },
-      { "id": "Q_ULCERE", "risk": "RED", "routes": ["orale", "rectale", "sublinguale"] },
-      { "id": "Q_KIDNEY", "risk": "RED" },
-      { "id": "Q_POLYMEDICATION", "risk": "ORANGE", "requires_other_meds": true },
-      { "id": "Q_SLEEP", "risk": "GREEN" }
-    ],
-    "AINS_CUTANE": [
-       { "id": "Q_PREGNANCY", "risk": "ORANGE", "gender": "F" },
-       { "id": "Q_SUN", "risk": "ORANGE", "routes": ["cutanee"] }
-    ],
-    "PARACETAMOL": [
-      { "id": "Q_LIVER", "risk": "ORANGE" },
-      { "id": "Q_POLYMEDICATION", "risk": "ORANGE", "requires_other_meds": true }
-
-    ],
-    "ANTIDIARRHEIQUE": [
-      { "id": "Q_DIARRHEA", "risk": "RED" },
-      { "id": "Q_PREGNANCY", "risk": "ORANGE" }
-    ],
-    "ANTIHISTAMINIQUE": [
-      { "id": "Q_SLEEP", "risk": "ORANGE" },
-      { "id": "Q_FALL", "risk": "ORANGE" },
-      { "id": "Q_PREGNANCY", "risk": "GREEN" }
-    ],
-    "MINOXIDIL_TOPICAL": [
-      { "id": "Q_HEART", "risk": "RED" },
-      { "id": "Q_PREGNANCY", "risk": "RED" }
-    ],
-    "DOXYLAMINE": [
-      { "id": "Q_CONFUSION", "risk": "ORANGE" },
-      { "id": "Q_FALL", "risk": "RED" },
-      { "id": "Q_POLYMEDICATION", "risk": "RED", "requires_other_meds": true },
-      { "id": "Q_PREGNANCY", "risk": "ORANGE" }
-    ],
-    "FLUIDIFIANT": [
-       { "id": "Q_ULCERE", "risk": "ORANGE" }
-    ]
-  },
-
-  "substances_classification": {
-    "IBUPROFÈNE": ["AINS_ORAL"],
-    "ASPIRINE": ["AINS_ORAL", "FLUIDIFIANT"],
-    "DICLOFÉNAC DE DIÉTHYLAMINE": ["AINS_CUTANE"],
-    "PARACÉTAMOL": ["PARACETAMOL"],
-    "CHLORHYDRATE DE LOPÉRAMIDE": ["ANTIDIARRHEIQUE"],
-    "DICHLORHYDRATE DE CÉTIRIZINE": ["ANTIHISTAMINIQUE"],
-    "LORATADINE": ["ANTIHISTAMINIQUE"],
-    "MINOXIDIL": ["MINOXIDIL_TOPICAL"],
-    "SUCCINATE DE DOXYLAMINE": ["DOXYLAMINE"],
-    "CARBOCISTÉINE": ["FLUIDIFIANT"]
-  },
-
-  "substance_advice": {
-    "_comment": "Conseils pharmaceutiques validés, injectés dans le prompt IA. Clé 'general' = toujours affiché. Clé 'Q_xxx' = affiché uniquement si cette question a déclenché un risque.",
-
-    "PARACÉTAMOL": {
-      "general": [
-        "Ne jamais dépasser 1g par prise et 3g par jour chez l'adulte.",
-        "Espacer les prises d'au moins 6 heures."
-      ],
-      "Q_POLYMEDICATION": [
-        "De nombreux médicaments contiennent du paracétamol sans que le patient le sache : Fervex, Humex Rhume, Dolirhume, Actifed, etc. Il faut vérifier la composition de tous ses traitements pour éviter un surdosage involontaire.",
-        "Le surdosage en paracétamol est la première cause de greffe hépatique d'origine médicamenteuse en France."
-      ],
-      "Q_LIVER": [
-        "En cas d'insuffisance hépatique, la dose maximale doit être réduite à 2g par jour.",
-        "La consommation d'alcool augmente fortement la toxicité hépatique du paracétamol. En cas de consommation régulière d'alcool, la prise de paracétamol est déconseillée."
-      ]
+  "rules": [
+    {
+      "target_family": "ANTIBIOTIQUES",
+      "question_code": "GENERAL",
+      "risk_level": 4,
+      "advice": "DANGER : Les antibiotiques ne doivent jamais être pris en automédication avec des restes de traitements précédents. L'usage inadapté provoque des résistances bactériennes et des complications."
     },
-
-    "IBUPROFÈNE": {
-      "general": [
-        "À prendre au milieu d'un repas pour protéger l'estomac.",
-        "Durée maximale recommandée sans avis médical : 5 jours pour la douleur, 3 jours pour la fièvre."
-      ],
-      "Q_PREGNANCY": [
-        "Les AINS sont formellement contre-indiqués à partir du 6ème mois de grossesse (risque de fermeture prématurée du canal artériel chez le fœtus).",
-        "En début de grossesse, le paracétamol est l'alternative de choix pour la douleur et la fièvre."
-      ],
-      "Q_ULCERE": [
-        "Les AINS comme l'ibuprofène augmentent le risque de saignement digestif et peuvent aggraver un ulcère existant.",
-        "Alternative possible : le paracétamol, qui n'a pas d'effet sur l'estomac."
-      ],
-      "Q_KIDNEY": [
-        "Les AINS diminuent le flux sanguin rénal et peuvent aggraver une insuffisance rénale.",
-        "En cas de problème rénal, privilégiez le paracétamol après avis médical."
-      ]
+    {
+      "target_family": "AINS_ORAUX",
+      "question_code": "Q_PREGNANCY",
+      "risk_level": 4,
+      "filter_gender": "F",
+      "advice": "CONTRE-INDICATION ABSOLUE : Les AINS sont formellement interdits à partir du 6ème mois de grossesse (risque de fermeture prématurée du canal artériel). Le paracétamol est l'alternative de choix."
     },
-
-    "CHLORHYDRATE DE LOPÉRAMIDE": {
-      "general": [
-        "Le lopéramide ne traite pas la cause de la diarrhée, il ralentit le transit.",
-        "Bien s'hydrater pendant un épisode de diarrhée (eau, bouillons, solutions de réhydratation)."
-      ],
-      "Q_DIARRHEA": [
-        "Une diarrhée avec fièvre ou sang dans les selles peut être le signe d'une infection bactérienne. Dans ce cas, le lopéramide est contre-indiqué car il empêche l'élimination du germe.",
-        "Consultez un médecin rapidement si la diarrhée dure plus de 2 jours ou s'accompagne de fièvre."
-      ]
+    {
+      "target_family": "AINS_ORAUX",
+      "question_code": "Q_ULCERE",
+      "risk_level": 4,
+      "advice": "Les AINS comme l'ibuprofène augmentent le risque de saignement digestif et peuvent aggraver un ulcère existant."
     },
-
-    "DICHLORHYDRATE DE CÉTIRIZINE": {
-      "general": [
-        "La cétirizine peut provoquer une somnolence chez certains patients, même s'il s'agit d'un antihistaminique de 2ème génération (moins sédatif que les anciens)."
-      ],
-      "Q_SLEEP": [
-        "Si vous devez conduire ou manipuler des machines, testez d'abord votre réaction au médicament à la maison avant de prendre le volant."
-      ]
+    {
+      "target_family": "AINS_ORAUX",
+      "question_code": "Q_KIDNEY",
+      "risk_level": 4,
+      "advice": "Les AINS diminuent le flux sanguin rénal et peuvent aggraver une insuffisance rénale pré-existante."
     },
-
-    "DICLOFÉNAC DE DIÉTHYLAMINE": {
-      "general": [
-        "Appliquer en couche fine sur la zone douloureuse, 3 à 4 fois par jour maximum.",
-        "Se laver les mains après application."
-      ],
-      "Q_SUN": [
-        "Le diclofénac en gel peut provoquer des réactions de photosensibilisation. Ne pas exposer la zone traitée au soleil pendant toute la durée du traitement et les 2 semaines suivantes."
-      ],
-      "Q_PREGNANCY": [
-        "L'utilisation cutanée des AINS est déconseillée pendant la grossesse, surtout au 3ème trimestre. Demandez conseil à votre pharmacien ou médecin."
-      ]
+    {
+      "target_family": "AINS_ORAUX",
+      "question_code": "Q_POLYMEDICATION",
+      "risk_level": 3,
+      "filter_polymedication": true,
+      "advice": "Prudence : Les AINS interagissent avec de nombreux médicaments (antihypertenseurs, anticoagulants). Prenez l'avis de votre pharmacien."
+    },
+    {
+      "target_family": "AINS_CUTANES",
+      "question_code": "Q_PREGNANCY",
+      "risk_level": 3,
+      "filter_gender": "F",
+      "advice": "L'utilisation cutanée des AINS est déconseillée pendant la grossesse, surtout au 3ème trimestre."
+    },
+    {
+      "target_family": "AINS_CUTANES",
+      "question_code": "Q_SUN",
+      "risk_level": 3,
+      "advice": "Les AINS en gel peuvent provoquer des réactions de photosensibilisation graves. Ne pas exposer la zone traitée au soleil."
+    },
+    {
+      "target_family": "ANTALGIQUES_ANTIPYRETIQUES",
+      "target_substance": "paracetamol",
+      "question_code": "Q_LIVER",
+      "risk_level": 3,
+      "advice": "En cas d'insuffisance hépatique, la dose maximale doit être réduite à 2g/jour. L'alcool augmente fortement la toxicité du paracétamol."
+    },
+    {
+      "target_family": "ANTALGIQUES_ANTIPYRETIQUES",
+      "target_substance": "paracetamol",
+      "question_code": "Q_POLYMEDICATION",
+      "risk_level": 2,
+      "filter_polymedication": true,
+      "advice": "De nombreux médicaments contiennent du paracétamol caché (Fervex, Humex...). Vérifiez pour éviter le surdosage (maximum 3g à 4g par jour)."
+    },
+    {
+      "target_family": "GASTRO_ANTIDIARRHEIQUES",
+      "question_code": "Q_DIARRHEA_FIEVRE",
+      "risk_level": 2,
+      "advice": "Consultez un médecin rapidement si la diarrhée s'accompagne de fièvre ou de sang, car cela peut être le signe d'une infection."
+    },
+    {
+      "target_substance": "loperamide",
+      "question_code": "Q_DIARRHEA_FIEVRE",
+      "risk_level": 4,
+      "advice": "CONTRE-INDICATION ABSOLUE : Le lopéramide (Imodium) est formellement interdit en cas de diarrhée avec fièvre ou sang, car il empêche l'élimination de la bactérie intestinale."
+    },
+    {
+      "target_family": "HYPNOTIQUES_ANXIOLYTIQUES",
+      "question_code": "Q_SLEEP",
+      "risk_level": 4,
+      "advice": "Risque majeur de somnolence. Il est dangereux et formellement déconseillé de conduire un véhicule ou d'utiliser des machines."
+    },
+    {
+      "target_family": "HYPNOTIQUES_ANXIOLYTIQUES",
+      "question_code": "GENERAL",
+      "risk_level": 3,
+      "advice": "L'usage prolongé et non encadré de ces médicaments expose à un risque important de dépendance physique et psychologique."
+    },
+    {
+      "target_family": "SEDATIFS_LEGERS_PHYTO",
+      "question_code": "Q_SLEEP",
+      "risk_level": 2,
+      "advice": "Bien que léger, ce traitement peut induire une baisse de vigilance. Soyez prudent au volant."
+    },
+    {
+      "target_family": "ANTIHISTAMINIQUES",
+      "question_code": "Q_SLEEP",
+      "risk_level": 2,
+      "advice": "Les antihistaminiques peuvent provoquer des somnolences paradoxales. Testez votre réaction avant de conduire."
+    },
+    {
+      "target_family": "TOUX_SECHE",
+      "question_code": "Q_SICK",
+      "risk_level": 4,
+      "advice": "Absolument contre-indiqué : Un antitussif (toux sèche) ne doit jamais être pris pour une toux grasse, car il empêche l'évacuation naturelle des sécrétions pulmonaires."
     }
-  }
+  ]
 }
