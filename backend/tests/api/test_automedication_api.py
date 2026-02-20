@@ -8,7 +8,7 @@ Couvre:
 from fastapi.testclient import TestClient
 from unittest.mock import patch, MagicMock
 from backend.api.main import app
-from backend.core.models import RiskLevel, Question
+from backend.core.models import RiskLevel, Rule
 from backend.core.schemas import EvaluationResponse, FlowQuestion, SearchResult
 
 client = TestClient(app)
@@ -25,7 +25,7 @@ MOCK_FLOW_QUESTIONS = [
 ]
 
 MOCK_EVALUATION = EvaluationResponse(
-    score=RiskLevel.RED,
+    score="RED",
     details=["DANGER SIMULÉ"],
     answered_questions_context=[]
 )
@@ -44,20 +44,13 @@ def test_search_endpoint():
 
 def test_flow_endpoint():
     """Vérifie que /flow renvoie bien la liste de questions unifiée"""
-    # On mocke DEUX choses : les tags et les questions par tags
-    # Car get_flow appelle le repository
-    
-    # Stratégie plus simple : on mocke carrément la fonction get_flow si on veut tester le routeur
-    # MAIS ici on veut tester l'intégration. Donc on va mocker le Repository.
     
     with patch("backend.api.flow_endpoint._repository") as mock_repo:
-        # 1. Mock: Tags trouvés
-        mock_repo.get_substance_tags.return_value = ["TAG_TEST"]
-        # 2. Mock: Questions trouvées
-        mock_repo.get_questions_by_tags.return_value = [
-            Question(id="Q1", text="Test Q", risk_level=RiskLevel.GREEN, trigger_tags=["TAG_TEST"])
+        # Mock: Rules found
+        mock_repo.get_rules_for_brand.return_value = [
+            Rule(id=1, question_code="Q1", risk_level=RiskLevel.LEVEL_1, advice="Test Q")
         ]
-        # 3. Mock: Route
+        # Mock: Route
         mock_repo.get_drug_route.return_value = "ORALE"
         
         response = client.get("/api/automedication/flow/123")

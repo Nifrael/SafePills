@@ -26,6 +26,7 @@
       "target_family": "AINS_ORAUX",
       "question_code": "Q_PREGNANCY",
       "risk_level": 4,
+      "filter_route": "orale",
       "filter_gender": "F",
       "advice": "CONTRE-INDICATION ABSOLUE : Les AINS sont formellement interdits à partir du 6ème mois de grossesse (risque de fermeture prématurée du canal artériel). Le paracétamol est l'alternative de choix."
     },
@@ -33,18 +34,21 @@
       "target_family": "AINS_ORAUX",
       "question_code": "Q_ULCERE",
       "risk_level": 4,
+      "filter_route": "orale",
       "advice": "Les AINS comme l'ibuprofène augmentent le risque de saignement digestif et peuvent aggraver un ulcère existant."
     },
     {
       "target_family": "AINS_ORAUX",
       "question_code": "Q_KIDNEY",
       "risk_level": 4,
+      "filter_route": "orale",
       "advice": "Les AINS diminuent le flux sanguin rénal et peuvent aggraver une insuffisance rénale pré-existante."
     },
     {
       "target_family": "AINS_ORAUX",
       "question_code": "Q_POLYMEDICATION",
       "risk_level": 3,
+      "filter_route": "orale",
       "filter_polymedication": true,
       "advice": "Prudence : Les AINS interagissent avec de nombreux médicaments (antihypertenseurs, anticoagulants). Prenez l'avis de votre pharmacien."
     },
@@ -52,6 +56,7 @@
       "target_family": "AINS_CUTANES",
       "question_code": "Q_PREGNANCY",
       "risk_level": 3,
+      "filter_route": "cutanée",
       "filter_gender": "F",
       "advice": "L'utilisation cutanée des AINS est déconseillée pendant la grossesse, surtout au 3ème trimestre."
     },
@@ -59,6 +64,7 @@
       "target_family": "AINS_CUTANES",
       "question_code": "Q_SUN",
       "risk_level": 3,
+      "filter_route": "cutanée",
       "advice": "Les AINS en gel peuvent provoquer des réactions de photosensibilisation graves. Ne pas exposer la zone traitée au soleil."
     },
     {

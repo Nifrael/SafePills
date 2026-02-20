@@ -58,21 +58,29 @@ class AutomedicationRepository:
             logger.error(f"Erreur get_rules_by_codes: {e}", exc_info=True)
             return []
     
-    def get_rules_for_brand(self, cis: str) -> List[Rule]:
+    def get_rules_for_brand(self, identifier: str) -> List[Rule]:
         try:
             conn = sqlite3.connect(self.db_path)
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            cursor.execute("""
-                SELECT s.id 
-                FROM substances s
-                JOIN brand_substances bs ON s.id = bs.substance_id
-                JOIN brands b ON bs.brand_id = b.id
-                WHERE b.cis = ?
-            """, (cis,))
-            substance_rows = cursor.fetchall()
-            substance_ids = [row['id'] for row in substance_rows]
+            substance_ids = []
+            
+            if len(identifier) == 8 and identifier.isdigit():
+                cursor.execute("""
+                    SELECT s.id 
+                    FROM substances s
+                    JOIN brand_substances bs ON s.id = bs.substance_id
+                    JOIN brands b ON bs.brand_id = b.id
+                    WHERE b.cis = ?
+                """, (identifier,))
+                substance_rows = cursor.fetchall()
+                substance_ids = [row['id'] for row in substance_rows]
+            else:
+                cursor.execute("SELECT id FROM substances WHERE id = ?", (identifier,))
+                row = cursor.fetchone()
+                if row:
+                    substance_ids = [row['id']]
             
             if not substance_ids:
                 conn.close()
@@ -116,13 +124,16 @@ class AutomedicationRepository:
             logger.error(f"Erreur get_rules_for_brand: {e}", exc_info=True)
             return []
             
-    def get_drug_route(self, cis: str) -> Optional[str]:
+    def get_drug_route(self, identifier: str) -> Optional[str]:
         try:
+            if len(identifier) < 8:
+                return None 
+                
             conn = sqlite3.connect(self.db_path)
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            cursor.execute("SELECT administration_route FROM brands WHERE cis = ?", (cis,))
+            cursor.execute("SELECT administration_route FROM brands WHERE cis = ?", (identifier,))
             row = cursor.fetchone()
             
             conn.close()
