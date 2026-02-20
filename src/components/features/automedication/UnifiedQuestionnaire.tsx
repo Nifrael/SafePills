@@ -49,7 +49,7 @@ interface Props {
   substanceId: string;
   substanceName: string;
   onComplete: (
-    result: 'green' | 'orange' | 'red',
+    result: 'green' | 'yellow' | 'orange' | 'red',
     explanation?: string,
     answers?: Record<string, any>,
     generalAdvice?: string[],
@@ -143,7 +143,7 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
       if (response.ok) {
         const result = await response.json();
         onComplete(
-          result.score.toLowerCase() as 'green' | 'orange' | 'red',
+          result.score.toLowerCase() as 'green' | 'yellow' | 'orange' | 'red',
           result.ai_explanation,
           finalAnswers,
           result.general_advice || [],

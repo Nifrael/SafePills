@@ -3,7 +3,7 @@ import './AutomedicationScore.scss';
 import { ui } from '../../../i18n/ui';
 
 interface Props {
-  score: 'green' | 'orange' | 'red';
+  score: 'green' | 'yellow' | 'orange' | 'red';
   molecule: string | null;
   aiExplanation?: string;
   generalAdvice: string[];
@@ -26,6 +26,12 @@ export const AutomedicationScore: React.FC<Props> = ({
           label: t('score.risk.low'),
           text: t('score.risk.low.text').replace('{molecule}', molecule || ''),
           class: 'score-green'
+        };
+      case 'yellow':
+        return {
+          label: t('score.risk.yellow'),
+          text: t('score.risk.yellow.text').replace('{molecule}', molecule || ''),
+          class: 'score-yellow'
         };
       case 'orange':
         return {

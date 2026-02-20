@@ -1,7 +1,3 @@
-"""
-Point d'entrée de l'API SafePills.
-Configuration, Middlewares et Routing.
-"""
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import _rate_limit_exceeded_handler
@@ -14,11 +10,9 @@ from backend.api.drugs import router as drugs_router
 from backend.api.automedication import router as automedication_router
 from backend.api.flow_endpoint import router as flow_router
 
-# --- Logger ---
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("safepills")
 
-# --- App Definition ---
 app = FastAPI(
     title=settings.PROJECT_NAME,
     description="API pour l'automédication sécurisée",
@@ -28,11 +22,9 @@ app = FastAPI(
     openapi_url=None if settings.IS_PRODUCTION else "/openapi.json"
 )
 
-# On attache le vigile à l'application
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
-# --- CORS ---
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.ALLOWED_ORIGINS,
@@ -42,13 +34,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Security Headers Middleware ---
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):
-    # Debug pour Vercel (optionnel, peut être retiré en prod pure)
-    # origin = request.headers.get("origin")
-    # if origin:
-    #     logger.debug(f"CORS Debug - Incoming Origin: {origin}")
         
     response = await call_next(request)
     
@@ -58,8 +45,6 @@ async def add_security_headers(request: Request, call_next):
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
     return response
 
-# --- Routing ---
-# Les endpoints sont maintenant organisés par domaine métier
 app.include_router(drugs_router)
 app.include_router(automedication_router)
 app.include_router(flow_router)

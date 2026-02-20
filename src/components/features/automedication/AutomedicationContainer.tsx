@@ -16,7 +16,7 @@ export const AutomedicationContainer: React.FC<Props> = ({ lang = defaultLang })
     code: string;
     name: string;
   } | null>(null);
-  const [score, setScore] = useState<'green' | 'orange' | 'red' | null>(null);
+  const [score, setScore] = useState<'green' | 'yellow' | 'orange' | 'red' | null>(null);
   const [aiExplanation, setAiExplanation] = useState<string | undefined>(undefined);
   const [generalAdvice, setGeneralAdvice] = useState<string[]>([]);
   const [hasCoverage, setHasCoverage] = useState<boolean>(true);
@@ -27,7 +27,7 @@ export const AutomedicationContainer: React.FC<Props> = ({ lang = defaultLang })
   };
 
   const handleQuestionnaireComplete = (
-    result: 'green' | 'orange' | 'red',
+    result: 'green' | 'yellow' | 'orange' | 'red',
     explanation?: string,
     answers?: Record<string, any>,
     advice?: string[],

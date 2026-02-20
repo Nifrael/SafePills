@@ -15,7 +15,7 @@
     "Q_SLEEP": "Conduisez-vous un véhicule ou utilisez-vous des machines dangereuses ?",
     "Q_FALL": "Avez-vous eu dernièrement des épisodes de chute, de perte d'équilibre ?",
     "Q_SICK": "Votre toux est-elle grasse (avec des expectorations) ?",
-    "Q_HIGH_PERFORMANCE": "Êtes-vous sportif de haut niveau ?"
+    "Q_SPORT": "Êtes-vous sportif de haut niveau ?"
   },
   "options": {
     "gender_male": "Un homme",

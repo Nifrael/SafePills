@@ -2,7 +2,7 @@ import sqlite3
 import os
 import logging
 from typing import List, Optional
-from backend.core.models import Question, RiskLevel
+from backend.core.models import Rule, RiskLevel
 
 logger = logging.getLogger(__name__)
 
@@ -15,41 +15,27 @@ class AutomedicationRepository:
     def __init__(self, db_path: str = None):
         self.db_path = db_path or DB_PATH
     
-    def _map_row_to_question(self, row) -> Question:
-        """Helper: Transforme une ligne SQLite en objet Question"""
-        import json
-        
+    def _map_row_to_rule(self, row) -> Rule:
         try:
             risk_enum = RiskLevel(row['risk_level'])
         except ValueError:
-            risk_enum = RiskLevel.GREEN
+            risk_enum = RiskLevel.LEVEL_1
         
-        try:
-            applicable_routes_raw = row['applicable_routes'] if 'applicable_routes' in row.keys() else None
-            applicable_routes = json.loads(applicable_routes_raw) if applicable_routes_raw else []
-        except (json.JSONDecodeError, TypeError):
-            applicable_routes = []
-        
-        try:
-            trigger_tags_raw = row['trigger_tags'] if 'trigger_tags' in row.keys() else None
-            trigger_tags = json.loads(trigger_tags_raw) if trigger_tags_raw else []
-        except (json.JSONDecodeError, TypeError):
-            trigger_tags = []
-        
-        return Question(
+        return Rule(
             id=row['id'],
-            text=row['text'],
+            question_code=row['question_code'],
             risk_level=risk_enum,
-            trigger_tags=trigger_tags,
-            applicable_routes=applicable_routes,
-            target_gender=row['target_gender'] if 'target_gender' in row.keys() else None,
-            age_min=row['age_min'] if 'age_min' in row.keys() else None,
-            age_max=row['age_max'] if 'age_max' in row.keys() else None,
-            requires_other_meds=bool(row['requires_other_meds']) if 'requires_other_meds' in row.keys() else False
+            advice=row['advice'],
+            family_id=row['family_id'],
+            substance_id=row['substance_id'],
+            filter_route=row['filter_route'],
+            filter_polymedication=bool(row['filter_polymedication']),
+            filter_gender=row['filter_gender'],
+            age_min=row['age_min']
         )
 
-    def get_questions_by_ids(self, question_ids: List[str]) -> List[Question]:
-        if not question_ids:
+    def get_rules_by_codes(self, question_codes: List[str]) -> List[Rule]:
+        if not question_codes:
             return []
         
         try:
@@ -57,91 +43,97 @@ class AutomedicationRepository:
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            placeholders = ','.join('?' * len(question_ids))
-            query = f"SELECT * FROM questions WHERE id IN ({placeholders})"
+            placeholders = ','.join('?' * len(question_codes))
+            query = f"SELECT * FROM rules WHERE question_code IN ({placeholders})"
             
-            cursor.execute(query, question_ids)
+            cursor.execute(query, question_codes)
             rows = cursor.fetchall()
             
-            questions = [self._map_row_to_question(row) for row in rows]
+            rules = [self._map_row_to_rule(row) for row in rows]
             
             conn.close()
-            return questions
+            return rules
             
         except Exception as e:
-            logger.error(f"Erreur get_questions_by_ids: {e}", exc_info=True)
+            logger.error(f"Erreur get_rules_by_codes: {e}", exc_info=True)
             return []
     
-    def get_substance_tags(self, identifier: str) -> List[str]:
+    def get_rules_for_brand(self, identifier: str) -> List[Rule]:
         try:
             conn = sqlite3.connect(self.db_path)
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            import json
+            substance_ids = []
             
-            cursor.execute("SELECT tags FROM substances WHERE code = ?", (identifier,))
-            row = cursor.fetchone()
+            if len(identifier) == 8 and identifier.isdigit():
+                cursor.execute("""
+                    SELECT s.id 
+                    FROM substances s
+                    JOIN brand_substances bs ON s.id = bs.substance_id
+                    JOIN brands b ON bs.brand_id = b.id
+                    WHERE b.cis = ?
+                """, (identifier,))
+                substance_rows = cursor.fetchall()
+                substance_ids = [row['id'] for row in substance_rows]
+            else:
+                cursor.execute("SELECT id FROM substances WHERE id = ?", (identifier,))
+                row = cursor.fetchone()
+                if row:
+                    substance_ids = [row['id']]
             
-            if row and row['tags']:
+            if not substance_ids:
                 conn.close()
-                return json.loads(row['tags']) if isinstance(row['tags'], str) else row['tags']
-
-            query = """
-                SELECT s.tags
-                FROM substances s
-                JOIN drug_substances ds ON s.code = ds.substance_code
-                WHERE ds.drug_cis = ?
-            """
-            cursor.execute(query, (identifier,))
-            rows = cursor.fetchall()
-            
-            all_tags = []
-            for r in rows:
-                if r['tags']:
-                    tags = json.loads(r['tags']) if isinstance(r['tags'], str) else r['tags']
-                    all_tags.extend(tags)
-            
-            conn.close()
-            return list(set(all_tags))  # Dédupliquer
-            
-        except Exception as e:
-            logger.error(f"Erreur get_substance_tags: {e}", exc_info=True)
-            return []
-    
-    def get_questions_by_tags(self, tags: List[str]) -> List[Question]:
-        if not tags:
-            return []
-        
-        try:
-            conn = sqlite3.connect(self.db_path)
-            conn.row_factory = sqlite3.Row
-            cursor = conn.cursor()
-            
-            cursor.execute("SELECT * FROM questions")
-            rows = cursor.fetchall()
-            
-            questions = []
-            for row in rows:
-                question = self._map_row_to_question(row)
+                return []
                 
-                if any(tag in tags for tag in question.trigger_tags):
-                    questions.append(question)
+            placeholders = ','.join('?' * len(substance_ids))
+            cursor.execute(f"""
+                SELECT DISTINCT family_id 
+                FROM substance_families 
+                WHERE substance_id IN ({placeholders})
+            """, substance_ids)
+            family_rows = cursor.fetchall()
+            family_ids = [row['family_id'] for row in family_rows]
+            
+            rules_query = """
+                SELECT * FROM rules
+                WHERE 
+                    (substance_id IN ({sub_ph}))
+                    OR 
+                    (family_id IN ({fam_ph}))
+            """
+            
+            sub_ph = placeholders
+            fam_ph = ','.join('?' * len(family_ids)) if family_ids else 'NULL'
+            
+            params = []
+            params.extend(substance_ids)
+            if family_ids:
+                params.extend(family_ids)
+                
+            final_query = rules_query.format(sub_ph=sub_ph, fam_ph=fam_ph)
+            cursor.execute(final_query, params)
+            
+            rules_rows = cursor.fetchall()
+            rules = [self._map_row_to_rule(row) for row in rules_rows]
             
             conn.close()
-            return questions
+            return rules
             
         except Exception as e:
-            logger.error(f"Erreur get_questions_by_tags: {e}", exc_info=True)
+            logger.error(f"Erreur get_rules_for_brand: {e}", exc_info=True)
             return []
-    
-    def get_drug_route(self, cis: str) -> Optional[str]:
+            
+    def get_drug_route(self, identifier: str) -> Optional[str]:
         try:
+            if len(identifier) < 8:
+                return None 
+                
             conn = sqlite3.connect(self.db_path)
             conn.row_factory = sqlite3.Row
             cursor = conn.cursor()
             
-            cursor.execute("SELECT administration_route FROM drugs WHERE cis = ?", (cis,))
+            cursor.execute("SELECT administration_route FROM brands WHERE cis = ?", (identifier,))
             row = cursor.fetchone()
             
             conn.close()

@@ -1,20 +1,14 @@
-"""
-Endpoints API pour le système de Score d'Automédication (KISS).
-Connecté aux services simplifiés et à la base SQLite nettoyée.
-"""
 from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel, Field, field_validator
 from typing import Dict, List, Optional, Literal
 from ..services.automedication import evaluate_risk
 from ..core.schemas import EvaluationResponse
-from ..core.models import Question
 
 from backend.core.limiter import limiter
 
 router = APIRouter(prefix="/api/automedication", tags=["automedication"])
 
 class AnswersRequest(BaseModel):
-    """Payload pour envoyer les réponses — avec des garde-fous !"""
     cis: Optional[str] = Field(None, max_length=50)
     answers: Dict[str, bool] = Field(default_factory=dict)
     has_other_meds: Optional[bool] = False
@@ -32,11 +26,6 @@ class AnswersRequest(BaseModel):
 @router.post("/evaluate", response_model=EvaluationResponse)
 @limiter.limit("10/minute")
 async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
-    """
-    Calcule le score final basé sur les réponses OUI (True).
-    Si cis et has_other_meds sont fournis, applique automatiquement
-    le risque de polymédication (sans reposer la question).
-    """
     result = evaluate_risk(
         answers=body.answers,
         identifier=body.cis,
@@ -47,30 +36,35 @@ async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
     from backend.services.search import get_drug_details
     drug_name = "ce médicament" if lang == "fr" else "este medicamento"
     substance_names = []
+    is_otc = True
     if body.cis:
         drug_info = get_drug_details(body.cis)
         if drug_info:
             drug_name = drug_info.name
-            substance_names = [s.name for s in drug_info.substances]
+            is_otc = drug_info.is_otc
+            substance_names = [bs.substance.name for bs in drug_info.composition]
 
-    try:
-        from ..services.ai_service import get_general_advice
-        result.general_advice = get_general_advice(substance_names, lang)
-    except Exception:
-        result.general_advice = []
+    result.general_advice = []
+        
+    if not is_otc:
+        warning_msg = "⚠️ Ce médicament nécessite normalement une prescription médicale."
+        if warning_msg not in result.details:
+            result.details.insert(0, warning_msg)
 
-    has_medical_questions = any(
-        not q_id.startswith(('GENDER', 'AGE', 'HAS_OTHER'))
-        for q_id in body.answers.keys()
-    )
-    result.has_coverage = has_medical_questions
+    from backend.services.automedication.db_repository import AutomedicationRepository
+    _repo = AutomedicationRepository()
+    if body.cis:
+        rules = _repo.get_rules_for_brand(body.cis)
+        result.has_coverage = len(rules) > 0
+    else:
+        result.has_coverage = False
 
-    if result.score.value != "GREEN":
+    if result.score != "GREEN":
         from ..services.ai_service import generate_risk_explanation
         
         explanation = await generate_risk_explanation(
             drug_name=drug_name,
-            score=result.score.value,
+            score=result.score,
             details=result.details,
             user_profile={
                 "gender": body.gender,

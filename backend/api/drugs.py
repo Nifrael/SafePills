@@ -3,7 +3,7 @@ from typing import List
 from backend.core.limiter import limiter
 
 from backend.core.schemas import SearchResult
-from backend.core.models import Drug
+from backend.core.models import Brand
 from backend.services.search import search_medication, get_drug_details
 
 router = APIRouter(prefix="/api", tags=["drugs"])
@@ -14,7 +14,7 @@ router = APIRouter(prefix="/api", tags=["drugs"])
 async def search(request: Request, q: str = Query(..., min_length=2), lang: str = Query("fr")):
     return search_medication(q, lang)
 
-@router.get("/drugs/{cis}", response_model=Drug)
+@router.get("/drugs/{cis}", response_model=Brand)
 @limiter.limit("30/minute")
 
 async def get_details(request: Request, cis: str):

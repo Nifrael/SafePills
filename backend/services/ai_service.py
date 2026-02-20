@@ -23,55 +23,6 @@ if GOOGLE_API_KEY:
     except Exception as e:
         logger.error(f"Erreur configuration Gemini: {e}")
 
-KNOWLEDGE_PATH = os.path.join(BASE_DIR, '..', 'data', 'medical_knowledge.json')
-SUBSTANCE_ADVICE: Dict = {}
-
-try:
-    with open(KNOWLEDGE_PATH, 'r', encoding='utf-8') as f:
-        knowledge = json.load(f)
-        SUBSTANCE_ADVICE = knowledge.get('substance_advice', {})
-    logger.info(f"Conseils pharmaceutiques chargés ({len(SUBSTANCE_ADVICE)} substances)")
-except Exception as e:
-    logger.warning(f"Impossible de charger les conseils: {e}")
-
-
-def _collect_advice(
-    substance_names: List[str],
-    triggered_question_ids: List[str],
-    lang: str = "fr"
-) -> str:
-    advice_lines = []
-
-    for substance in substance_names:
-        # Get general advice via i18n
-        for tip in i18n.get_advice(substance, "general", lang):
-             advice_lines.append(f"- {tip}")
-
-        for q_id in triggered_question_ids:
-            base_id = q_id
-            for suffix in ['_RED_F', '_ORANGE_F', '_GREEN_F', '_RED', '_ORANGE', '_GREEN']:
-                if q_id.endswith(suffix):
-                    base_id = q_id[:-len(suffix)]
-                    break
-            
-            # Get specific advice via i18n
-            for tip in i18n.get_advice(substance, base_id, lang):
-                if f"- {tip}" not in advice_lines:  
-                    advice_lines.append(f"- {tip}")
-
-    return '\n'.join(advice_lines)
-
-
-def get_general_advice(substance_names: List[str], lang: str = "fr") -> List[str]:
-    general_tips = []
-    for sub in substance_names:
-        tips = i18n.get_advice(sub, "general", lang)
-        for tip in tips:
-            if tip not in general_tips:
-                general_tips.append(tip)
-    return general_tips
-
-
 async def generate_risk_explanation(
     drug_name: str,
     score: str,
@@ -84,9 +35,15 @@ async def generate_risk_explanation(
         return "Service d'assistance virtuelle indisponible pour le moment." if lang == "fr" else "Servicio de asistencia virtual no disponible por el momento."
 
     try:
-        # Profile context
         if lang == "es":
-            gender_text = "una mujer" if user_profile.get('gender') == 'F' else "un hombre"
+            gender = user_profile.get('gender')
+            if gender == 'F':
+                gender_text = "una mujer"
+            elif gender == 'M':
+                gender_text = "un hombre"
+            else:
+                gender_text = "una persona"
+                
             age_text = f"{user_profile.get('age', '?')} años"
             patient_context = f"El paciente es {gender_text} de {age_text}.\n"
             
@@ -96,7 +53,14 @@ async def generate_risk_explanation(
                     risk_emoji = "🔴" if q['risk_level'] == 'RED' else "🟠"
                     patient_context += f"{risk_emoji} {q['question_text']} → {q['answer']}\n"
         else:
-            gender_text = "une femme" if user_profile.get('gender') == 'F' else "un homme"
+            gender = user_profile.get('gender')
+            if gender == 'F':
+                gender_text = "une femme"
+            elif gender == 'M':
+                gender_text = "un homme"
+            else:
+                gender_text = "une personne"
+                
             age_text = f"{user_profile.get('age', '?')} ans"
             patient_context = f"Le patient est {gender_text} de {age_text}.\n"
             
@@ -109,11 +73,10 @@ async def generate_risk_explanation(
         substance_names = user_profile.get('substances', [])
         triggered_ids = [q['question_id'] for q in answered_questions if q.get('question_id')]
         
-        validated_advice = _collect_advice(substance_names, triggered_ids, lang)
+        validated_advice = "\n".join([f"- {d}" for d in details]) if details else ""
         
         logger.debug(f"RAG — Substances: {substance_names}")
-        logger.debug(f"RAG — Questions déclenchées: {triggered_ids}")
-        logger.debug(f"RAG — Conseils trouvés: {len(validated_advice.splitlines())} lignes")
+        logger.debug(f"RAG — Conseils transmis: {len(details)} lignes")
 
         if lang == "es":
             system_instruction = """Eres un farmacéutico experimentado, amable y pedagógico.
@@ -127,6 +90,7 @@ REGLAS STRICTAS:
 - Explica concretamente los riesgos en lenguaje sencillo
 - Termina con un consejo de acción claro (consultar a un farmacéutico, un médico, etc.)
 - NUNCA digas "según la base de datos" o "el sistema ha detectado"
+- NUNCA uses saludos como "Hola", "Buenos días", "Señor" o "Señora". Comienza directamente con la explicación.
 - Sé tranquilizador pero firme sobre las contraindicaciones
 - RESPONDE EN ESPAÑOL
 - Máximo 5 frases cortas y claras"""
@@ -162,6 +126,7 @@ RÈGLES STRICTES :
 - Explique concrètement les risques en langage simple
 - Termine par un conseil d'action clair (consulter un pharmacien, un médecin, etc.)
 - Ne dis JAMAIS "selon la base de données" ou "le système a détecté"
+- N'utilise JAMAIS de formule de salutation (pas de "Bonjour", "Monsieur", ni "Madame"). Commence ton explication directement.
 - Sois rassurant mais ferme sur les contre-indications
 - Maximum 5 phrases courtes et claires"""
 
@@ -184,12 +149,12 @@ Reformule ces éléments en une explication personnalisée pour ce patient, en t
 Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant factuel et bienveillant.
 """
         
-        response = client.models.generate_content(
-            model='gemini-flash-latest',
+        response = await client.aio.models.generate_content(
+            model='gemini-3-flash-preview',
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
-                temperature=0.3
+                temperature=0.2
             )
         )
         
@@ -197,8 +162,8 @@ Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant fac
 
     except Exception as e:
         error_msg = str(e)
-        if "429" in error_msg:
-            logger.warning(f"Quota IA dépassé: {e}")
+        if "429" in error_msg or "503" in error_msg:
+            logger.warning(f"Quota ou surcharge IA: {e}")
             return "Le service d'analyse par IA est temporairement surchargé. Veuillez réessayer dans quelques instants." if lang == "fr" else "El servicio de análisis por IA está temporalmente sobrecargado. Por favor, inténtelo de nuevo en unos momentos."
         
         logger.error(f"Erreur génération IA: {e}", exc_info=True)
