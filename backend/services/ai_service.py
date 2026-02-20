@@ -133,8 +133,8 @@ Reformule ces éléments en une explication personnalisée pour ce patient, en t
 Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant factuel et bienveillant.
 """
         
-        response = client.models.generate_content(
-            model='gemini-flash-latest',
+        response = await client.aio.models.generate_content(
+            model='gemini-2.5-flash',
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
