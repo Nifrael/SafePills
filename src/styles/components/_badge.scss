@@ -1,0 +1,14 @@
+.beta-badge {
+  display: inline-block;
+  background-color: var(--tertiary-color);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  vertical-align: top;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transform: translateY(-2px);
+}
