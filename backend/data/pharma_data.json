@@ -156,149 +156,276 @@
     ]
   },
   "substances": [
-    "PREDNISONE",
-    "BÉTAMÉTHASONE",
-    "TRAMADOL",
-    "DOXYCYCLINE",
-    "BÉCLOMÉTASONE (DIPROPIONATE DE)",
-    "ZOPICLONE",
-    "LORATADINE",
-    "DICLOFÉNAC",
-    "NAPROXÈNE",
-    "SODIUM (BICARBONATE DE)",
-    "RABÉPRAZOLE",
-    "LOPÉRAMIDE",
-    "CÉFADROXIL",
-    "CHLORHYDRATE DE LOPÉRAMIDE",
-    "PHLOROGLUCINOL HYDRATÉ",
-    "ACIDE ACÉTYLSALICYLIQUE",
-    "DESLORATADINE",
-    "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
-    "AZITHROMYCINE",
-    "CODÉINE",
-    "KETOTIFÈNE",
-    "OMÉPRAZOLE",
-    "HYDROXYDE DE MAGNÉSIUM",
-    "PHLOROGLUCINOL ANHYDRE",
-    "LÉVOFLOXACINE",
-    "PHOLCODINE",
-    "OFLOXACINE",
-    "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
-    "POUDRE D'OPIUM",
-    "BUDÉSONIDE",
-    "LYSINATE D'IBUPROFÈNE",
-    "DICLOFÉNAC SODIQUE",
-    "HYDROXYDE D'ALUMINIUM",
-    "ACIDE NIFLUMIQUE",
-    "PSEUDOÉPHÉDRINE",
-    "ÉTIFOXINE (CHLORHYDRATE D')",
-    "AMOXICILLINE",
-    "MÉTOPIMAZINE",
-    "CODÉINE (PHOSPHATE DE)",
-    "DICHLORHYDRATE DE CÉTIRIZINE",
-    "CARBOCISTÉINE",
-    "EXTRAIT SEC DE PARTIE AERIENNE DE PASSIFLORE",
-    "SIMÉTICONE",
-    "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)",
-    "DIMÉTICONE",
-    "FOSFOMYCINE",
-    "MÉTHYLPREDNISOLONE",
-    "DEXAMÉTHASONE",
-    "POVIDONE IODÉE",
-    "TRIMÉTHYLPHLOROGLUCINOL",
-    "BILASTINE",
-    "BALLOTE (EXTRAIT SEC DE SOMMITÉ FLEURIE DE)",
-    "DIOSMECTITE",
-    "CÉTIRIZINE (DICHLORHYDRATE DE)",
-    "CÉLÉCOXIB",
-    "BICARBONATE DE POTASSIUM",
-    "CARBONATE DE CALCIUM",
-    "EXTRAIT SEC DE SOMMITÉ FLEURIE D'AUBÉPINE",
-    "AMOXICILLINE TRIHYDRATÉE",
-    "ONDANSÉTRON",
-    "CHLORURE DE BENZALKONIUM",
-    "FLURBIPROFÈNE",
-    "TRIMÉBUTINE",
-    "TRIMÉTHOPRIME",
-    "MALÉATE DE CHLORPHÉNAMINE",
-    "ACIDE CLAVULANIQUE",
-    "CROMOGLICATE DE SODIUM",
-    "MÉLATONINE",
-    "OXAZÉPAM",
-    "ÉSOMÉPRAZOLE",
-    "CHLORHYDRATE DE TRIPROLIDINE",
     "MIZOLASTINE",
-    "RACÉCADOTRIL",
-    "SUCCINATE DE DOXYLAMINE",
-    "MALÉATE DE TRIMÉBUTINE",
-    "KÉTOPROFÈNE",
-    "MALÉATE DE PHÉNIRAMINE",
-    "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
-    "LANSOPRAZOLE",
-    "PHLOROGLUCINOL DIHYDRATÉ",
-    "DIAZÉPAM",
-    "THIOCOLCHICOSIDE",
-    "MÉQUITAZINE",
-    "PREDNISOLONE",
-    "FEXOFENADINE",
-    "BROMAZÉPAM",
-    "JOSAMYCINE",
-    "ACICLOVIR",
-    "ACIDE ASCORBIQUE",
-    "CHLORHYDRATE DE DIPHÉNHYDRAMINE",
-    "PRISTINAMYCINE",
-    "NITROFURANTOÏNE",
-    "CÉFUROXIME",
+    "DESLORATADINE",
+    "DEXAMÉTHASONE (MÉTASULFOBENZOATE SODIQUE DE)",
     "DOMPÉRIDONE",
+    "BALLOTE (EXTRAIT SEC DE SOMMITÉ FLEURIE DE)",
+    "BICARBONATE DE POTASSIUM",
+    "POVIDONE IODÉE",
+    "MALÉATE DE CHLORPHÉNAMINE",
+    "CARBOCISTÉINE",
+    "LYSINATE D'IBUPROFÈNE",
+    "JOSAMYCINE (PROPIONATE DE)",
+    "MÉTHYLPREDNISOLONE",
+    "PROPIONATE DE FLUTICASONE",
+    "FOSFOMYCINE",
+    "FUMARATE DE KETOTIFÈNE",
+    "JOSAMYCINE",
     "CEFPODOXIME",
-    "PSEUDO-ÉPHÉDRINE",
-    "ALPRAZOLAM",
+    "ZOPICLONE",
+    "DEXAMÉTHASONE (PHOSPHATE SODIQUE DE)",
+    "PHLOROGLUCINOL ANHYDRE",
+    "ÉSOMÉPRAZOLE",
+    "TRAMADOL",
     "FOSFOMYCINE TROMÉTAMOL",
-    "LOPÉRAMIDE (CHLORHYDRATE DE)",
-    "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
-    "SULFAMÉTHOXAZOLE",
-    "IBUPROFÈNE",
+    "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
+    "OMÉPRAZOLE MAGNÉSIUM",
+    "CHLORHYDRATE DE TRIPROLIDINE",
+    "PHOLCODINE MONOHYDRATÉE",
+    "ÉRYTHROMYCINE BASE",
+    "RABÉPRAZOLE SODIQUE MONOHYDRATÉ",
+    "PREDNISOLONE (MÉTASULFOBENZOATE SODIQUE DE)",
+    "AZITHROMYCINE ANHYDRE",
+    "PASSIFLORE (POUDRE DES PARTIES AÉRIENNES DE)",
+    "MALÉATE DE TRIMÉBUTINE",
+    "CHLORHYDRATE D'ONDANSÉTRON DIHYDRATÉ",
+    "CÉFADROXIL",
     "OXYDE D'ALUMINIUM",
-    "CLAVULANATE DE POTASSIUM",
-    "PSEUDOÉPHÉDRINE (CHLORHYDRATE DE)",
-    "OXOMÉMAZINE",
-    "ALGINATE DE SODIUM",
-    "MÉTHOCARBAMOL",
-    "PARACÉTAMOL",
-    "LOPÉRAMIDE BASE",
-    "MÉTOCLOPRAMIDE",
-    "CLOXACILLINE",
-    "EXTRAIT SEC DE FEUILLE DE LIERRE GRIMPANT",
-    "ACÉTYLCYSTÉINE",
-    "PANTOPRAZOLE",
-    "ROXITHROMYCINE",
-    "CLARITHROMYCINE",
-    "CIPROFLOXACINE",
-    "SPIRAMYCINE",
-    "VALACICLOVIR",
+    "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
+    "JOSAMYCINE BASE",
+    "IBUPROFÈNE",
+    "CHLORHYDRATE DE PHÉNYLÉPHRINE",
+    "FLURBIPROFÈNE",
+    "PREDNISOLONE",
+    "AZITHROMYCINE",
+    "CEFPODOXIME PROXÉTIL",
+    "FLURBIPROFÈNE SODIQUE DIHYDRATÉ",
+    "PHOSPHATE DE CODÉINE ANHYDRE",
+    "ACIDE NIFLUMIQUE",
     "SODIUM (ALGINATE DE)",
-    "EXTRAIT SEC DE RACINE DE VALÉRIANE",
+    "SODIUM (BICARBONATE DE)",
+    "CHLORURE DE BENZALKONIUM",
+    "CODÉINE (PHOSPHATE DE)",
+    "MÉTOPIMAZINE",
+    "BILASTINE",
+    "PHOSPHATE DE DEXAMÉTHASONE",
+    "SULFAMÉTHOXAZOLE",
+    "EXTRAIT SEC DE SOMMITÉ FLEURIE D'AUBÉPINE",
+    "CHLORHYDRATE DE BROMHEXINE",
+    "CHLORHYDRATE DE VALACICLOVIR MONOHYDRATÉ",
+    "PANTOPRAZOLE",
+    "LÉVOFLOXACINE",
+    "BÉTAMÉTHASONE",
+    "JUS PRESSÉ DÉSHYDRATÉ DES PARTIES AÉRIENNES FLEURIES FRAÎCHES D'ECHINACEA PURPUREA",
+    "PIVALATE DE PREDNISOLONE",
+    "MALÉATE DE PHÉNIRAMINE",
+    "DIMÉTICONE",
+    "OFLOXACINE",
+    "BUDÉSONIDE",
+    "CHLORHYDRATE DE MÉBÉVÉRINE",
+    "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+    "DEXKÉTOPROFÈNE",
+    "CROMOGLICATE DE SODIUM",
+    "CHLORHYDRATE DE FEXOFÉNADINE",
+    "SIMÉTICONE",
+    "CIPROFLOXACINE",
+    "CLOXACILLINE",
+    "CAMPHOSULFONATE DE CODÉINE",
+    "CHLORHYDRATE DE CIPROFLOXACINE",
+    "DIAZÉPAM",
+    "DICHLORHYDRATE DE CÉTIRIZINE",
+    "CARBONATE DE CALCIUM",
+    "TRAMADOL (CHLORHYDRATE DE)",
+    "CLOXACILLINE SODIQUE MONOHYDRATÉE",
+    "DEXTROMÉTHORPHANE (BROMHYDRATE DE)",
+    "GEL D'HYDROXYDE D'ALUMINIUM ET DE CARBONATE DE MAGNÉSIUM CODESSÉCHÉS",
+    "PHOSPHATE DISODIQUE DE BÉTAMÉTHASONE",
+    "MÉTASULFOBENZOATE SODIQUE DE PREDNISOLONE",
+    "DOXYCYCLINE HYDRATÉE",
+    "THIOCOLCHICOSIDE",
+    "BROMAZÉPAM",
+    "VALÉRIANE (RACINE DE) (EXTRAIT SEC DE)",
+    "FUROATE DE MOMÉTASONE",
+    "PSEUDOÉPHÉDRINE",
+    "EXTRAIT SEC DE FEUILLE DE LIERRE GRIMPANT",
+    "PSEUDOÉPHÉDRINE (CHLORHYDRATE DE)",
+    "RABÉPRAZOLE SODIQUE",
+    "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
+    "ACÉTYLCYSTÉINE",
+    "SACCHAROMYCES BOULARDII CNCM I-745",
     "BICARBONATE DE SODIUM",
+    "KÉTOTIFÈNE (HYDROGÉNOFUMARATE DE)",
+    "SUCCINATE DE DOXYLAMINE",
+    "LOPÉRAMIDE (CHLORHYDRATE DE)",
+    "HYDROXYDE D'ALUMINIUM",
+    "TRIMÉBUTINE",
+    "PARTIE AÉRIENNE DE PASSIFLORE",
+    "KETOTIFÈNE",
+    "ESZOPICLONE",
+    "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+    "ÉSOMÉPRAZOLE MAGNÉSIQUE TRIHYDRATÉ",
+    "OMÉPRAZOLE",
+    "CÉFADROXIL MONOHYDRATÉ",
+    "CLARITHROMYCINE",
+    "DOXYCYCLINE MONOHYDRATÉE",
+    "DIPROPIONATE DE BÉCLOMÉTASONE",
+    "IBUPROFÈNE (LYSINATE D')",
+    "EXTRAIT SEC DE RACINE DE VALÉRIANE",
+    "FEXOFÉNADINE BASE",
+    "OXAZÉPAM",
+    "NAPROXÈNE SODIQUE",
+    "KÉTOPROFÈNE",
+    "PSEUDO-ÉPHÉDRINE",
+    "FEXOFENADINE",
+    "ÉTIFOXINE (CHLORHYDRATE D')",
+    "DIPROPIONATE DE BÉCLOMÉTASONE MONOHYDRATÉ",
+    "TEINTURE DE RACINE DE VALÉRIANE",
+    "TARTRATE DE DIHYDROCODÉINE",
+    "ACÉTATE DE DEXAMÉTHASONE",
+    "VALERIANE (RHIZOME DE) (POUDRE DE)",
+    "NITROFURANTOÏNE",
+    "CLAVULANATE DE POTASSIUM",
+    "ÉSOMÉPRAZOLE MAGNÉSIQUE",
+    "TRIMÉBUTINE (MALÉATE DE)",
     "HÉLICIDINE",
-    "JUS PRESSÉ DÉSHYDRATÉ DES PARTIES AÉRIENNES FLEURIES FRAÎCHES D'ECHINACEA PURPUREA"
+    "OXOMÉMAZINE",
+    "HYDROXYDE DE MAGNÉSIUM",
+    "PREDNISONE",
+    "AZITHROMYCINE MONOHYDRATÉE",
+    "ONDANSÉTRON (CHLORHYDRATE D') DIHYDRATÉ",
+    "RACÉCADOTRIL",
+    "MÉLATONINE",
+    "MÉTHOCARBAMOL",
+    "AMOXICILLINE",
+    "ÉSOMÉPRAZOLE SODIQUE",
+    "DOXYCYCLINE ANHYDRE",
+    "PASSIFLORE (PARTIE AÉRIENNE DE) (EXTRAIT SEC DE)",
+    "DOXYCYCLINE",
+    "EXTRAIT SEC DE PARTIE AERIENNE DE PASSIFLORE",
+    "SPIRAMYCINE",
+    "CAPROATE DE PREDNISOLONE",
+    "ROXITHROMYCINE",
+    "ACIDE ASCORBIQUE",
+    "TEINTURE DE PARTIE AÉRIENNE DE PASSIFLORE",
+    "MÉBÉVÉRINE (CHLORHYDRATE DE)",
+    "ALGINATE DE SODIUM",
+    "CÉFUROXIME",
+    "ÉPOLAMINE DE DICLOFÉNAC",
+    "BÉTAMETHASONE (PHOSPHATE DE) ET DE DISODIUM",
+    "DICLOFÉNAC SODIQUE",
+    "LANSOPRAZOLE",
+    "CÉFUROXIME AXÉTIL",
+    "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+    "LOPÉRAMIDE BASE",
+    "AMBROXOL (CHLORHYDRATE D')",
+    "ACIDE ACÉTYLSALICYLIQUE",
+    "AMBROXOL BASE",
+    "HYCLATE DE DOXYCYCLINE",
+    "CODÉINE",
+    "DOXYCYCLINE BASE",
+    "TARTRATE DE ZOLPIDEM",
+    "CHLORHYDRATE DE VALACICLOVIR",
+    "RABÉPRAZOLE BASE",
+    "ÉRYTHROMYCINE (ÉTHYLSUCCINATE D')",
+    "ÉSOMÉPRAZOLE MAGNÉSIUM TRIHYDRATÉ",
+    "BILASTINE MONOHYDRATÉE",
+    "DIHYDROCODÉINE",
+    "KETOTIFÈNE (FUMARATE DE)",
+    "AMOXICILLINE BASE",
+    "VALACICLOVIR",
+    "PHOLCODINE",
+    "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+    "DIOSMECTITE",
+    "PREDNISOLONE (CAPROATE DE)",
+    "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
+    "CHLORHYDRATE DE TRAMADOL",
+    "AMOXICILLINE TRIHYDRATÉE",
+    "PHLOROGLUCINOL DIHYDRATÉ",
+    "DEXAMÉTHASONE",
+    "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+    "ÉSOMÉPRAZOLE MAGNÉSIQUE DIHYDRATÉ",
+    "BÉCLOMÉTASONE (DIPROPIONATE DE)",
+    "PASSIFLORE (EXTRAIT DE) (FLUIDE)",
+    "DICLOFÉNAC",
+    "PARACÉTAMOL",
+    "PHLOROGLUCINOL HYDRATÉ",
+    "CLAVULANATE DE POTASSIUM DILUÉ",
+    "CÉFIXIME ANHYDRE",
+    "TRIMÉTHOPRIME",
+    "TRIMÉTHYLPHLOROGLUCINOL",
+    "PHÉNYLÉPHRINE (CHLORHYDRATE DE)",
+    "ACIDE CLAVULANIQUE",
+    "MALÉATE DE DEXCHLORPHÉNIRAMINE",
+    "CÉFIXIME TRIHYDRATÉE",
+    "PRISTINAMYCINE",
+    "CHLORHYDRATE DIHYDRATÉ DE VALACICLOVIR",
+    "POUDRE D'OPIUM",
+    "PROPIONATE DE JOSAMYCINE",
+    "CHLORHYDRATE DE LOPÉRAMIDE",
+    "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
+    "AMOXICILLINE ANHYDRE",
+    "FUROATE DE FLUTICASONE",
+    "CÉLÉCOXIB",
+    "CHLORHYDRATE DE DIPHÉNHYDRAMINE",
+    "LÉVOFLOXACINE HÉMIHYDRATÉE",
+    "ACICLOVIR",
+    "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+    "PHOSPHATE DISODIQUE DE DEXAMÉTHASONE",
+    "ONDANSÉTRON",
+    "DEXKÉTOPROFÈNE TROMÉTAMOL",
+    "AZITHROMYCINE DIHYDRATÉE",
+    "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)",
+    "ALPRAZOLAM",
+    "CÉTIRIZINE (DICHLORHYDRATE DE)",
+    "BROMHYDRATE DE DEXTROMÉTHORPHANE",
+    "MÉTOCLOPRAMIDE",
+    "LÉVOCÉTIRIZINE",
+    "VALÉRIANE (RACINE DE) (EXTRAIT SEC AQUEUX DE)",
+    "PROPIONATE D'ÉRYTHROMYCINE",
+    "NAPROXÈNE",
+    "MÉQUITAZINE",
+    "RABÉPRAZOLE",
+    "CHLORHYDRATE D'AMBROXOL",
+    "LORATADINE",
+    "LOPÉRAMIDE",
+    "KETOTIFÈNE BASE"
   ],
   "brands": [
     {
-      "cis": "60009573",
-      "name": "PARACETAMOL (Orale)",
+      "cis": "60004487",
+      "name": "TRAMADOL EG L.P. (Orale)",
       "route": "orale",
-      "is_otc": true,
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60009573",
+      "name": "PARACETAMOL + PHOSPHATE DE CODEINE HEMIHYDRATE (Orale)",
+      "route": "orale",
+      "is_otc": false,
       "composition": [
         {
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
+          "dosage": "30 mg un comprimé"
         }
       ]
     },
     {
       "cis": "60010885",
-      "name": "CIPROFLOXACINE (Orale)",
+      "name": "CIPROFLOXACINE + CHLORHYDRATE DE CIPROFLOXACINE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -306,6 +433,11 @@
           "substance": "CIPROFLOXACINE",
           "norm_substance": "ciprofloxacine",
           "dosage": "250 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
+          "norm_substance": "chlorhydrate de ciprofloxacine",
+          "dosage": " "
         }
       ]
     },
@@ -319,6 +451,19 @@
           "substance": "CROMOGLICATE DE SODIUM",
           "norm_substance": "cromoglicate de sodium",
           "dosage": "2 g 100 ml"
+        }
+      ]
+    },
+    {
+      "cis": "60019329",
+      "name": "DOXYLAMINE CRISTERS (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
         }
       ]
     },
@@ -377,8 +522,34 @@
       ]
     },
     {
+      "cis": "60041560",
+      "name": "TRAMADOL CRISTERS LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "150 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60046529",
+      "name": "PHOLCODINE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHOLCODINE MONOHYDRATÉE",
+          "norm_substance": "pholcodine monohydratee",
+          "dosage": "131 mg 100 ml de sirop"
+        }
+      ]
+    },
+    {
       "cis": "60065294",
-      "name": "PANTOPRAZOLE (Orale)",
+      "name": "PANTOPRAZOLE + PANTOPRAZOLE SODIQUE SESQUIHYDRATE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -386,6 +557,29 @@
           "substance": "PANTOPRAZOLE",
           "norm_substance": "pantoprazole",
           "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
+          "norm_substance": "pantoprazole sodique sesquihydrate",
+          "dosage": "22,56 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60067562",
+      "name": "ZADITEN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "KETOTIFÈNE (FUMARATE DE)",
+          "norm_substance": "ketotifene (fumarate de)",
+          "dosage": "0,0276 g 100 ml"
+        },
+        {
+          "substance": "KETOTIFÈNE BASE",
+          "norm_substance": "ketotifene base",
+          "dosage": "0,02 g 100 ml"
         }
       ]
     },
@@ -399,6 +593,24 @@
           "substance": "PANTOPRAZOLE",
           "norm_substance": "pantoprazole",
           "dosage": "40,00 mg un comprimé"
+        },
+        {
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
+          "norm_substance": "pantoprazole sodique sesquihydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "60073608",
+      "name": "LEVOCETIRIZINE KRKA (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
         }
       ]
     },
@@ -434,6 +646,19 @@
       ]
     },
     {
+      "cis": "60091086",
+      "name": "PARACETAMOL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
+          "dosage": "500 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "60095095",
       "name": "IMODIUMLIQUICAPS (Orale)",
       "route": "orale",
@@ -457,6 +682,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -527,6 +757,19 @@
       ]
     },
     {
+      "cis": "60133432",
+      "name": "TUSSIDANE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BROMHYDRATE DE DEXTROMÉTHORPHANE",
+          "norm_substance": "bromhydrate de dextromethorphane",
+          "dosage": "30 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60139257",
       "name": "RACECADOTRIL (Orale)",
       "route": "orale",
@@ -545,6 +788,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "1000 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -580,6 +828,34 @@
           "substance": "TRAMADOL",
           "norm_substance": "tramadol",
           "dosage": "32,94 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60162494",
+      "name": "SKUDEXUM (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DEXKÉTOPROFÈNE",
+          "norm_substance": "dexketoprofene",
+          "dosage": "25 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "75 mg un comprimé"
+        },
+        {
+          "substance": "DEXKÉTOPROFÈNE TROMÉTAMOL",
+          "norm_substance": "dexketoprofene trometamol",
+          "dosage": " "
         }
       ]
     },
@@ -593,6 +869,11 @@
           "substance": "CIPROFLOXACINE",
           "norm_substance": "ciprofloxacine",
           "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
+          "norm_substance": "chlorhydrate de ciprofloxacine",
+          "dosage": " "
         }
       ]
     },
@@ -602,6 +883,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
+          "dosage": "100 mg 1 ml de suspension reconstituée"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -616,7 +902,7 @@
     },
     {
       "cis": "60202750",
-      "name": "BILASTINE (Orale)",
+      "name": "BILASTINE + BILASTINE MONOHYDRATEE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -624,6 +910,11 @@
           "substance": "BILASTINE",
           "norm_substance": "bilastine",
           "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "BILASTINE MONOHYDRATÉE",
+          "norm_substance": "bilastine monohydratee",
+          "dosage": " "
         }
       ]
     },
@@ -682,6 +973,24 @@
       ]
     },
     {
+      "cis": "60212424",
+      "name": "JOSACINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "JOSAMYCINE (PROPIONATE DE)",
+          "norm_substance": "josamycine (propionate de)",
+          "dosage": " "
+        },
+        {
+          "substance": "JOSAMYCINE BASE",
+          "norm_substance": "josamycine base",
+          "dosage": "1000,00 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60224316",
       "name": "MEDROL (Orale)",
       "route": "orale",
@@ -691,6 +1000,19 @@
           "substance": "MÉTHYLPREDNISOLONE",
           "norm_substance": "methylprednisolone",
           "dosage": "100,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60225681",
+      "name": "TRAMADOL ARROW L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "200,00 mg une gélule"
         }
       ]
     },
@@ -799,6 +1121,19 @@
       ]
     },
     {
+      "cis": "60304591",
+      "name": "TRAMADOL VIATRIS LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60305960",
       "name": "NUROFEN (Orale)",
       "route": "orale",
@@ -826,7 +1161,7 @@
     },
     {
       "cis": "60311269",
-      "name": "VALACICLOVIR (Orale)",
+      "name": "VALACICLOVIR + CHLORHYDRATE DE VALACICLOVIR (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -834,6 +1169,11 @@
           "substance": "VALACICLOVIR",
           "norm_substance": "valaciclovir",
           "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE VALACICLOVIR",
+          "norm_substance": "chlorhydrate de valaciclovir",
+          "dosage": " "
         }
       ]
     },
@@ -852,10 +1192,15 @@
     },
     {
       "cis": "60326538",
-      "name": "LEVOFLOXACINE (Orale)",
+      "name": "LEVOFLOXACINE HEMIHYDRATEE + LEVOFLOXACINE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "LÉVOFLOXACINE HÉMIHYDRATÉE",
+          "norm_substance": "levofloxacine hemihydratee",
+          "dosage": " "
+        },
         {
           "substance": "LÉVOFLOXACINE",
           "norm_substance": "levofloxacine",
@@ -867,12 +1212,17 @@
       "cis": "60327615",
       "name": "ZALDIAR (Orale)",
       "route": "orale",
-      "is_otc": true,
+      "is_otc": false,
       "composition": [
         {
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
         }
       ]
     },
@@ -900,6 +1250,37 @@
       ]
     },
     {
+      "cis": "60344529",
+      "name": "MONOCRIXO L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "150 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "60349519",
+      "name": "DOXYLIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60351986",
       "name": "SERESTA (Orale)",
       "route": "orale",
@@ -922,6 +1303,11 @@
           "substance": "ÉSOMÉPRAZOLE",
           "norm_substance": "esomeprazole",
           "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE TRIHYDRATÉ",
+          "norm_substance": "esomeprazole magnesique trihydrate",
+          "dosage": "22,30 mg un comprimé"
         }
       ]
     },
@@ -929,12 +1315,17 @@
       "cis": "60365078",
       "name": "IXPRIM (Orale)",
       "route": "orale",
-      "is_otc": true,
+      "is_otc": false,
       "composition": [
         {
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
         }
       ]
     },
@@ -1005,6 +1396,24 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60399956",
+      "name": "PHLOROGLUCINOL EG (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80 mg un comprimé"
         }
       ]
     },
@@ -1014,6 +1423,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -1032,11 +1446,29 @@
       ]
     },
     {
+      "cis": "60418221",
+      "name": "AZELASTINE CHLORHYDRATE / FLUTICASONE PROPIONATE BIOGARAN (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "365 microgrammes 1 mL de suspension"
+        }
+      ]
+    },
+    {
       "cis": "60424338",
       "name": "AMOXICILLINE VIATRIS (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500,00 mg une gélule"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -1050,6 +1482,16 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "100,00 mg 1 mL de suspension reconstituée"
+        },
+        {
+          "substance": "CLAVULANATE DE POTASSIUM DILUÉ",
+          "norm_substance": "clavulanate de potassium dilue",
+          "dosage": " "
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -1076,8 +1518,39 @@
       ]
     },
     {
+      "cis": "60443801",
+      "name": "RABEPRAZOLE ALMUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "18,85 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "20 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60443897",
+      "name": "BILASTINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BILASTINE",
+          "norm_substance": "bilastine",
+          "dosage": "20 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60454662",
-      "name": "ESOMEPRAZOLE (Orale)",
+      "name": "ESOMEPRAZOLE + ESOMEPRAZOLE MAGNESIQUE DIHYDRATE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -1085,6 +1558,24 @@
           "substance": "ÉSOMÉPRAZOLE",
           "norm_substance": "esomeprazole",
           "dosage": "20 mg une gélule"
+        },
+        {
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE DIHYDRATÉ",
+          "norm_substance": "esomeprazole magnesique dihydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "60477650",
+      "name": "CONTRAMAL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "100 mg 1 ml"
         }
       ]
     },
@@ -1115,11 +1606,42 @@
       ]
     },
     {
-      "cis": "60514878",
-      "name": "AZITHROMYCINE (Orale)",
+      "cis": "60494895",
+      "name": "RABEPRAZOLE ALTER (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "RABÉPRAZOLE SODIQUE MONOHYDRATÉ",
+          "norm_substance": "rabeprazole sodique monohydrate",
+          "dosage": "20 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60508697",
+      "name": "TRIMEBUTINE PFIZER (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60514878",
+      "name": "AZITHROMYCINE MONOHYDRATEE + AZITHROMYCINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE MONOHYDRATÉE",
+          "norm_substance": "azithromycine monohydratee",
+          "dosage": " "
+        },
         {
           "substance": "AZITHROMYCINE",
           "norm_substance": "azithromycine",
@@ -1133,6 +1655,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -1170,9 +1697,27 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "CHLORHYDRATE D'ONDANSÉTRON DIHYDRATÉ",
+          "norm_substance": "chlorhydrate d'ondansetron dihydrate",
+          "dosage": "5,00 mg un comprimé"
+        },
+        {
           "substance": "ONDANSÉTRON",
           "norm_substance": "ondansetron",
           "dosage": "4,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60564219",
+      "name": "FIXORINOX (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "50 microgrammes une dose"
         }
       ]
     },
@@ -1229,6 +1774,19 @@
       ]
     },
     {
+      "cis": "60613075",
+      "name": "TRAMADOL EVOLUGEN L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60618154",
       "name": "ZOVIRAX (Orale)",
       "route": "orale",
@@ -1243,10 +1801,15 @@
     },
     {
       "cis": "60618275",
-      "name": "CLOXACILLINE (Orale)",
+      "name": "CLOXACILLINE SODIQUE MONOHYDRATEE + CLOXACILLINE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "CLOXACILLINE SODIQUE MONOHYDRATÉE",
+          "norm_substance": "cloxacilline sodique monohydratee",
+          "dosage": " "
+        },
         {
           "substance": "CLOXACILLINE",
           "norm_substance": "cloxacilline",
@@ -1379,6 +1942,37 @@
       ]
     },
     {
+      "cis": "60705552",
+      "name": "OROKEN NOURRISSONS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "0,32 g 13,3 g"
+        }
+      ]
+    },
+    {
+      "cis": "60712486",
+      "name": "TRAMADOL HCS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "60712956",
       "name": "TRAMADOL/PARACETAMOL EVOLUGEN PHARMA (Orale)",
       "route": "orale",
@@ -1388,6 +1982,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
         }
       ]
     },
@@ -1401,6 +2000,24 @@
           "substance": "NAPROXÈNE",
           "norm_substance": "naproxene",
           "dosage": "1000 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60759678",
+      "name": "PARACETAMOL + MALEATE DE PHENIRAMINE (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
+          "dosage": "0,500 g un sachet de 5 g"
+        },
+        {
+          "substance": "MALÉATE DE PHÉNIRAMINE",
+          "norm_substance": "maleate de pheniramine",
+          "dosage": "0,025 g un sachet de 5 g"
         }
       ]
     },
@@ -1479,6 +2096,37 @@
           "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": "15,22 mg un comprimé"
+        },
+        {
+          "substance": "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
+          "norm_substance": "codeine (phosphate de) hemihydrate",
+          "dosage": "19,500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60814943",
+      "name": "FRAKIDEX (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DEXAMÉTHASONE (PHOSPHATE SODIQUE DE)",
+          "norm_substance": "dexamethasone (phosphate sodique de)",
+          "dosage": "0,10 g 100 mL de collyre"
+        }
+      ]
+    },
+    {
+      "cis": "60830011",
+      "name": "DYMISTA (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "365 microgrammes 1 g de suspension"
         }
       ]
     },
@@ -1496,6 +2144,24 @@
       ]
     },
     {
+      "cis": "60833559",
+      "name": "AFLAVIS (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": "1,093 mg 1 mL de solution"
+        },
+        {
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate de dexamethasone",
+          "dosage": "1 mg 1 mL de solution"
+        }
+      ]
+    },
+    {
       "cis": "60855840",
       "name": "THIOCOLCHICOSIDE (Orale)",
       "route": "orale",
@@ -1509,6 +2175,24 @@
       ]
     },
     {
+      "cis": "60877018",
+      "name": "MOMETASONE SUBSTIPHARM (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "60885246",
       "name": "MOVICOL (Orale)",
       "route": "orale",
@@ -1518,6 +2202,19 @@
           "substance": "BICARBONATE DE SODIUM",
           "norm_substance": "bicarbonate de sodium",
           "dosage": "0,1785 g un sachet de 13,8108 g"
+        }
+      ]
+    },
+    {
+      "cis": "60895831",
+      "name": "VOLTARENOPHTABAK (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "1 mg 1 ml"
         }
       ]
     },
@@ -1559,6 +2256,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -1576,6 +2278,32 @@
       ]
     },
     {
+      "cis": "60947025",
+      "name": "NAPROXENE SODIQUE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "NAPROXÈNE SODIQUE",
+          "norm_substance": "naproxene sodique",
+          "dosage": "550 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "60955940",
+      "name": "TRIMEBUTINE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60980979",
       "name": "VOLTARENE L.P. (Orale)",
       "route": "orale",
@@ -1589,11 +2317,52 @@
       ]
     },
     {
+      "cis": "60981771",
+      "name": "FLECTOR (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "50 mg un sachet-dose"
+        },
+        {
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
+          "norm_substance": "epolamine de diclofenac",
+          "dosage": "65 mg un sachet-dose"
+        }
+      ]
+    },
+    {
+      "cis": "60982364",
+      "name": "DOXYCYCLINE SANDOZ (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": "104,10 mg un comprimé"
+        },
+        {
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "60998361",
       "name": "AMOXICILLINE/ACIDE CLAVULANIQUE VIATRIS (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "1000 mg un sachet-dose"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -1714,6 +2483,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -1750,6 +2524,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "CÉFUROXIME AXÉTIL",
+          "norm_substance": "cefuroxime axetil",
+          "dosage": "150 mg 5 ml de suspension reconstituée"
+        },
+        {
           "substance": "CÉFUROXIME",
           "norm_substance": "cefuroxime",
           "dosage": "125 mg 5 ml de suspension reconstituée"
@@ -1766,6 +2545,19 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61082446",
+      "name": "AZELASTINE CHLORHYDRATE/FLUTICASONE PROPIONATE VIATRIS (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "50 microgrammes une pulvérisation (0,14 g)"
         }
       ]
     },
@@ -1792,6 +2584,24 @@
           "substance": "ONDANSÉTRON",
           "norm_substance": "ondansetron",
           "dosage": "8,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61100467",
+      "name": "MOMETASONE CRISTERS (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
         }
       ]
     },
@@ -1840,6 +2650,32 @@
       ]
     },
     {
+      "cis": "61119097",
+      "name": "LEVOCETIRIZINE TEVA (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61119492",
+      "name": "AMBROXOL VIATRIS CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "0,6 g 100 ml de solution buvable"
+        }
+      ]
+    },
+    {
       "cis": "61143618",
       "name": "ACIDE ACETYLSALICYLIQUE (Orale)",
       "route": "orale",
@@ -1849,6 +2685,19 @@
           "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": "75 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61146920",
+      "name": "NEOSYNEPHRINE (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE PHÉNYLÉPHRINE",
+          "norm_substance": "chlorhydrate de phenylephrine",
+          "dosage": "10 mg un récipient unidose"
         }
       ]
     },
@@ -1949,6 +2798,19 @@
       ]
     },
     {
+      "cis": "61187301",
+      "name": "ZOPHREN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ONDANSÉTRON",
+          "norm_substance": "ondansetron",
+          "dosage": "4,0000 mg un lyophilisat"
+        }
+      ]
+    },
+    {
       "cis": "61203061",
       "name": "IMODIUMCAPS (Orale)",
       "route": "orale",
@@ -1968,7 +2830,7 @@
     },
     {
       "cis": "61212982",
-      "name": "RABEPRAZOLE (Orale)",
+      "name": "RABEPRAZOLE + RABEPRAZOLE SODIQUE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -1976,12 +2838,17 @@
           "substance": "RABÉPRAZOLE",
           "norm_substance": "rabeprazole",
           "dosage": "9,42 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
     {
       "cis": "61228659",
-      "name": "CEFPODOXIME (Orale)",
+      "name": "CEFPODOXIME + CEFPODOXIME PROXETIL (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -1989,6 +2856,24 @@
           "substance": "CEFPODOXIME",
           "norm_substance": "cefpodoxime",
           "dosage": "100 mg un comprimé"
+        },
+        {
+          "substance": "CEFPODOXIME PROXÉTIL",
+          "norm_substance": "cefpodoxime proxetil",
+          "dosage": "130,45 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61243903",
+      "name": "AMBROXOL EG LABO CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "30 mg un comprimé"
         }
       ]
     },
@@ -2002,6 +2887,11 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
         }
       ]
     },
@@ -2032,6 +2922,19 @@
       ]
     },
     {
+      "cis": "61328015",
+      "name": "NOXIBEN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ESZOPICLONE",
+          "norm_substance": "eszopiclone",
+          "dosage": "3 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61331730",
       "name": "COLCHIMAX (Orale)",
       "route": "orale",
@@ -2046,10 +2949,15 @@
     },
     {
       "cis": "61334559",
-      "name": "FOSFOMYCINE (Orale)",
+      "name": "FOSFOMYCINE TROMETAMOL + FOSFOMYCINE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "FOSFOMYCINE TROMÉTAMOL",
+          "norm_substance": "fosfomycine trometamol",
+          "dosage": "5,631 g un sachet"
+        },
         {
           "substance": "FOSFOMYCINE",
           "norm_substance": "fosfomycine",
@@ -2059,7 +2967,7 @@
     },
     {
       "cis": "61335351",
-      "name": "PREDNISOLONE (Orale)",
+      "name": "PREDNISOLONE + METASULFOBENZOATE SODIQUE DE PREDNISOLONE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -2067,6 +2975,11 @@
           "substance": "PREDNISOLONE",
           "norm_substance": "prednisolone",
           "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "MÉTASULFOBENZOATE SODIQUE DE PREDNISOLONE",
+          "norm_substance": "metasulfobenzoate sodique de prednisolone",
+          "dosage": " "
         }
       ]
     },
@@ -2093,6 +3006,24 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61360073",
+      "name": "BISOLVON (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE BROMHEXINE",
+          "norm_substance": "chlorhydrate de bromhexine",
+          "dosage": "8,0 mg un comprimé"
         }
       ]
     },
@@ -2111,6 +3042,19 @@
           "substance": "LOPÉRAMIDE",
           "norm_substance": "loperamide",
           "dosage": "1,86 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "61380528",
+      "name": "AMBROXOL BIOGARAN CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "0,6 g 100 ml de solution buvable"
         }
       ]
     },
@@ -2176,6 +3120,42 @@
           "substance": "PANTOPRAZOLE",
           "norm_substance": "pantoprazole",
           "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
+          "norm_substance": "pantoprazole sodique sesquihydrate",
+          "dosage": "22,6 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61411863",
+      "name": "DOXYPALU (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": "52,05 mg un comprimé"
+        },
+        {
+          "substance": "DOXYCYCLINE ANHYDRE",
+          "norm_substance": "doxycycline anhydre",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61416209",
+      "name": "TRAMADOL ZYDUS L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "150 mg un comprimé"
         }
       ]
     },
@@ -2206,6 +3186,19 @@
       ]
     },
     {
+      "cis": "61447165",
+      "name": "CARIBAN (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "SUCCINATE DE DOXYLAMINE",
+          "norm_substance": "succinate de doxylamine",
+          "dosage": "10 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "61450026",
       "name": "LOPERAMIDE ARROW LAB (Orale)",
       "route": "orale",
@@ -2228,6 +3221,24 @@
           "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61471344",
+      "name": "ESOMEPRAZOLE + ESOMEPRAZOLE SODIQUE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉSOMÉPRAZOLE",
+          "norm_substance": "esomeprazole",
+          "dosage": "20 mg une gélule"
+        },
+        {
+          "substance": "ÉSOMÉPRAZOLE SODIQUE",
+          "norm_substance": "esomeprazole sodique",
+          "dosage": " "
         }
       ]
     },
@@ -2281,11 +3292,29 @@
       ]
     },
     {
+      "cis": "61542706",
+      "name": "TRIMEBUTINE EVOLUGEN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61567061",
       "name": "FOSFOPHARM ADULTES (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "FOSFOMYCINE TROMÉTAMOL",
+          "norm_substance": "fosfomycine trometamol",
+          "dosage": "5,631 g un sachet"
+        },
         {
           "substance": "FOSFOMYCINE",
           "norm_substance": "fosfomycine",
@@ -2307,6 +3336,37 @@
       ]
     },
     {
+      "cis": "61572941",
+      "name": "ERY (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉRYTHROMYCINE BASE",
+          "norm_substance": "erythromycine base",
+          "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "PROPIONATE D'ÉRYTHROMYCINE",
+          "norm_substance": "propionate d'erythromycine",
+          "dosage": "538 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61587060",
+      "name": "MONOALGIC L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61605665",
       "name": "MAXIDROL (Ophtalmique)",
       "route": "ophtalmique",
@@ -2320,11 +3380,34 @@
       ]
     },
     {
+      "cis": "61621687",
+      "name": "CHLORHYDRATE D'ONDANSETRON DIHYDRATE + ONDANSETRON (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'ONDANSÉTRON DIHYDRATÉ",
+          "norm_substance": "chlorhydrate d'ondansetron dihydrate",
+          "dosage": " "
+        },
+        {
+          "substance": "ONDANSÉTRON",
+          "norm_substance": "ondansetron",
+          "dosage": "8 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61633586",
       "name": "AMOXICILLINE ZYDUS (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg une cuillère-mesure de 5 ml de suspension reconstituée"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -2339,6 +3422,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
+          "dosage": "100 mg 1 ml de suspension reconstituée"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -2351,15 +3439,51 @@
       ]
     },
     {
+      "cis": "61641907",
+      "name": "MUXOL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AMBROXOL (CHLORHYDRATE D')",
+          "norm_substance": "ambroxol (chlorhydrate d')",
+          "dosage": "0,300 g 100 ml"
+        },
+        {
+          "substance": "AMBROXOL BASE",
+          "norm_substance": "ambroxol base",
+          "dosage": "0,273 g 100 ml"
+        }
+      ]
+    },
+    {
       "cis": "61644230",
       "name": "PRONTALGINE (Orale)",
       "route": "orale",
-      "is_otc": true,
+      "is_otc": false,
       "composition": [
         {
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "400,0 mg un comprimé"
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
+          "dosage": "20,0 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61644643",
+      "name": "TRAMADOL BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélule"
         }
       ]
     },
@@ -2382,6 +3506,19 @@
       ]
     },
     {
+      "cis": "61653585",
+      "name": "TRIMEBUTINE TEVA SANTE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61657904",
       "name": "OPHTACALM (Ophtalmique)",
       "route": "ophtalmique",
@@ -2391,6 +3528,37 @@
           "substance": "CROMOGLICATE DE SODIUM",
           "norm_substance": "cromoglicate de sodium",
           "dosage": "2 g 100 ml"
+        }
+      ]
+    },
+    {
+      "cis": "61662755",
+      "name": "DICHLORHYDRATE DE LEVOCETIRIZINE + LEVOCETIRIZINE (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
+        },
+        {
+          "substance": "LÉVOCÉTIRIZINE",
+          "norm_substance": "levocetirizine",
+          "dosage": "4,2 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61662919",
+      "name": "CONTRAMAL LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "150 mg un comprimé"
         }
       ]
     },
@@ -2432,6 +3600,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "250 mg une cuillère-mesure de 5 ml de suspension buvable reconstituée"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -2452,6 +3625,19 @@
       ]
     },
     {
+      "cis": "61703401",
+      "name": "DUSPATALIN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MÉBÉVÉRINE (CHLORHYDRATE DE)",
+          "norm_substance": "mebeverine (chlorhydrate de)",
+          "dosage": "200 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "61704802",
       "name": "HUMEX TOUX SECHE OXOMEMAZINE (Orale)",
       "route": "orale",
@@ -2465,6 +3651,19 @@
       ]
     },
     {
+      "cis": "61705683",
+      "name": "ZOLPIDEM ALMUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61710577",
       "name": "LOPERAMIDE LYOC (Orale)",
       "route": "orale",
@@ -2474,6 +3673,42 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2,00 mg un lyophilisat"
+        }
+      ]
+    },
+    {
+      "cis": "61722191",
+      "name": "DOXY (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "HYCLATE DE DOXYCYCLINE",
+          "norm_substance": "hyclate de doxycycline",
+          "dosage": "100 mg un comprimé"
+        },
+        {
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61730170",
+      "name": "PARACETAMOL + CODEINE (PHOSPHATE DE) HEMIHYDRATE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
+          "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
+          "norm_substance": "codeine (phosphate de) hemihydrate",
+          "dosage": "30 mg un comprimé"
         }
       ]
     },
@@ -2504,6 +3739,19 @@
       ]
     },
     {
+      "cis": "61748649",
+      "name": "FLIXONASE (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "50 microgrammes une dose"
+        }
+      ]
+    },
+    {
       "cis": "61751232",
       "name": "MIGPRIV (Orale)",
       "route": "orale",
@@ -2515,9 +3763,32 @@
           "dosage": "900 mg un sachet de 1860 mg"
         },
         {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
+          "norm_substance": "chlorhydrate de metoclopramide",
+          "dosage": "10,5 mg un sachet de 1860 mg"
+        },
+        {
           "substance": "MÉTOCLOPRAMIDE",
           "norm_substance": "metoclopramide",
           "dosage": "10 mg un sachet de 1860 mg"
+        }
+      ]
+    },
+    {
+      "cis": "61765641",
+      "name": "AZITHROMYCINE DIHYDRATEE + AZITHROMYCINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "AZITHROMYCINE",
+          "norm_substance": "azithromycine",
+          "dosage": "250 mg un comprimé"
         }
       ]
     },
@@ -2527,6 +3798,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
+          "dosage": "500,0 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -2589,6 +3865,19 @@
       ]
     },
     {
+      "cis": "61805185",
+      "name": "RABEPRAZOLE TEVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61817860",
       "name": "CALCIDOSE VITAMINE D (Orale)",
       "route": "orale",
@@ -2615,11 +3904,29 @@
       ]
     },
     {
+      "cis": "61843104",
+      "name": "ZOLPIDEM ZYDUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "61850771",
       "name": "AMOXICILLINE TEVA SANTE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "250 mg 5 ml de suspension buvable reconstituée"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -2663,6 +3970,50 @@
           "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": "10,000 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61881763",
+      "name": "LEVOCETIRIZINE ZENTIVA (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61895503",
+      "name": "DOXYCYCLINE PHARMACIE CENTRALE DES ARMEES (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": "103,63 mg un comprimé"
+        },
+        {
+          "substance": "DOXYCYCLINE ANHYDRE",
+          "norm_substance": "doxycycline anhydre",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61896847",
+      "name": "MEBEVERINE ZENTIVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE MÉBÉVÉRINE",
+          "norm_substance": "chlorhydrate de mebeverine",
+          "dosage": "200 mg un comprimé"
         }
       ]
     },
@@ -2728,6 +4079,37 @@
           "substance": "CEFPODOXIME",
           "norm_substance": "cefpodoxime",
           "dosage": "4,800 g 100 g de granulés"
+        },
+        {
+          "substance": "CEFPODOXIME PROXÉTIL",
+          "norm_substance": "cefpodoxime proxetil",
+          "dosage": "6,261 g 100 g de granulés"
+        }
+      ]
+    },
+    {
+      "cis": "61924474",
+      "name": "TRIMEBUTINE SUN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "61944313",
+      "name": "DELIPROCT (Rectale)",
+      "route": "rectale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CAPROATE DE PREDNISOLONE",
+          "norm_substance": "caproate de prednisolone",
+          "dosage": "0,190 g 100 g de pommade"
         }
       ]
     },
@@ -2811,6 +4193,11 @@
           "substance": "PREDNISOLONE",
           "norm_substance": "prednisolone",
           "dosage": "5,00 mg un comprimé"
+        },
+        {
+          "substance": "MÉTASULFOBENZOATE SODIQUE DE PREDNISOLONE",
+          "norm_substance": "metasulfobenzoate sodique de prednisolone",
+          "dosage": "7,86 mg un comprimé"
         }
       ]
     },
@@ -2868,6 +4255,11 @@
           "substance": "OMÉPRAZOLE",
           "norm_substance": "omeprazole",
           "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "OMÉPRAZOLE MAGNÉSIUM",
+          "norm_substance": "omeprazole magnesium",
+          "dosage": "20,60 mg un comprimé"
         }
       ]
     },
@@ -2885,8 +4277,39 @@
       ]
     },
     {
+      "cis": "62059468",
+      "name": "ZITHROMAX MONODOSE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": "262,05 mg un comprimé"
+        },
+        {
+          "substance": "AZITHROMYCINE ANHYDRE",
+          "norm_substance": "azithromycine anhydre",
+          "dosage": "250 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62066822",
+      "name": "PHLOROGLUCINOL BGR (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
+          "norm_substance": "phloroglucinol dihydrate",
+          "dosage": "80 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "62069124",
-      "name": "CEFADROXIL (Orale)",
+      "name": "CEFADROXIL + CEFADROXIL MONOHYDRATE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -2894,6 +4317,11 @@
           "substance": "CÉFADROXIL",
           "norm_substance": "cefadroxil",
           "dosage": "500 mg une gélule"
+        },
+        {
+          "substance": "CÉFADROXIL MONOHYDRATÉ",
+          "norm_substance": "cefadroxil monohydrate",
+          "dosage": "525 mg une gélule"
         }
       ]
     },
@@ -2938,6 +4366,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "300 mg un comprimé"
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
+          "dosage": "25 mg un comprimé"
         }
       ]
     },
@@ -2951,6 +4384,55 @@
           "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": "75 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62128284",
+      "name": "KETESSE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DEXKÉTOPROFÈNE",
+          "norm_substance": "dexketoprofene",
+          "dosage": "25 mg un comprimé"
+        },
+        {
+          "substance": "DEXKÉTOPROFÈNE TROMÉTAMOL",
+          "norm_substance": "dexketoprofene trometamol",
+          "dosage": "36,9 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62129781",
+      "name": "AMBROXOL ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "30 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62134839",
+      "name": "RABEPRAZOLE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "9,42 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -3003,6 +4485,42 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2,00 mg un comprimé"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62217516",
+      "name": "CEFIXIME VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62237910",
+      "name": "ALEVETABS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "NAPROXÈNE SODIQUE",
+          "norm_substance": "naproxene sodique",
+          "dosage": "220 mg un comprimé"
         }
       ]
     },
@@ -3082,6 +4600,19 @@
       ]
     },
     {
+      "cis": "62370693",
+      "name": "ZOLPIDEM TEVA SANTE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "62382724",
       "name": "DONORMYL (Orale)",
       "route": "orale",
@@ -3117,6 +4648,11 @@
           "substance": "BÉTAMÉTHASONE",
           "norm_substance": "betamethasone",
           "dosage": "5,0 mg 100 ml de solution rectale"
+        },
+        {
+          "substance": "PHOSPHATE DISODIQUE DE BÉTAMÉTHASONE",
+          "norm_substance": "phosphate disodique de betamethasone",
+          "dosage": "6,6 mg 100 ml de solution rectale"
         }
       ]
     },
@@ -3156,6 +4692,71 @@
           "substance": "DICHLORHYDRATE DE CÉTIRIZINE",
           "norm_substance": "dichlorhydrate de cetirizine",
           "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62484259",
+      "name": "TRAMADOL ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62503916",
+      "name": "TRAMADOL MYLAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62504861",
+      "name": "DICLOFENAC EG (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "50,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62526007",
+      "name": "TRIMEBUTINE ZYDUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62555820",
+      "name": "TRIMEBUTINE SANDOZ (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200,00 mg un comprimé"
         }
       ]
     },
@@ -3275,6 +4876,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -3300,6 +4906,37 @@
       ]
     },
     {
+      "cis": "62743861",
+      "name": "PREDNISOLONE + PREDNISOLONE (METASULFOBENZOATE SODIQUE DE) (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PREDNISOLONE",
+          "norm_substance": "prednisolone",
+          "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "PREDNISOLONE (MÉTASULFOBENZOATE SODIQUE DE)",
+          "norm_substance": "prednisolone (metasulfobenzoate sodique de)",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "62746658",
+      "name": "VOLTARENOPHTA (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "0,3 mg un récipient unidose"
+        }
+      ]
+    },
+    {
       "cis": "62783247",
       "name": "CETIRIZINE CRISTERS (Orale)",
       "route": "orale",
@@ -3309,6 +4946,19 @@
           "substance": "DICHLORHYDRATE DE CÉTIRIZINE",
           "norm_substance": "dichlorhydrate de cetirizine",
           "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62815360",
+      "name": "DICLOFENAC BIOGARAN LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "75 mg un comprimé"
         }
       ]
     },
@@ -3326,11 +4976,29 @@
       ]
     },
     {
-      "cis": "62818698",
-      "name": "CEFUROXIME (Orale)",
+      "cis": "62817482",
+      "name": "DECTANCYL (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "ACÉTATE DE DEXAMÉTHASONE",
+          "norm_substance": "acetate de dexamethasone",
+          "dosage": "0,500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62818698",
+      "name": "CEFUROXIME AXETIL + CEFUROXIME (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFUROXIME AXÉTIL",
+          "norm_substance": "cefuroxime axetil",
+          "dosage": " "
+        },
         {
           "substance": "CÉFUROXIME",
           "norm_substance": "cefuroxime",
@@ -3361,6 +5029,11 @@
           "substance": "ÉSOMÉPRAZOLE",
           "norm_substance": "esomeprazole",
           "dosage": "40 mg un comprimé"
+        },
+        {
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIUM TRIHYDRATÉ",
+          "norm_substance": "esomeprazole magnesium trihydrate",
+          "dosage": " "
         }
       ]
     },
@@ -3370,6 +5043,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "100 mg 1 ml de suspension reconstituée"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -3384,6 +5062,68 @@
           "substance": "ACIDE CLAVULANIQUE",
           "norm_substance": "acide clavulanique",
           "dosage": "12,5 mg 1 ml de suspension reconstituée"
+        }
+      ]
+    },
+    {
+      "cis": "62858931",
+      "name": "PHLOROGLUCINOL ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
+          "norm_substance": "phloroglucinol dihydrate",
+          "dosage": "160,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62867108",
+      "name": "TRIMEBUTINE BIOGARAN CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62909137",
+      "name": "PARIET (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "18,85 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "20 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62936337",
+      "name": "ERY ENFANTS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉRYTHROMYCINE (ÉTHYLSUCCINATE D')",
+          "norm_substance": "erythromycine (ethylsuccinate d')",
+          "dosage": "240 000 UI un sachet"
+        },
+        {
+          "substance": "ÉRYTHROMYCINE BASE",
+          "norm_substance": "erythromycine base",
+          "dosage": "250 mg un sachet"
         }
       ]
     },
@@ -3424,6 +5164,68 @@
       ]
     },
     {
+      "cis": "62950276",
+      "name": "AZELASTINE CHLORHYDRATE/PROPIONATE DE FLUTICASONE EG (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "50 microgrammes une pulvérisation (0,14 g)"
+        }
+      ]
+    },
+    {
+      "cis": "62953322",
+      "name": "AZITHROMYCINE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "AZITHROMYCINE ANHYDRE",
+          "norm_substance": "azithromycine anhydre",
+          "dosage": "250,000 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62964589",
+      "name": "ESOMEPRAZOLE + ESOMEPRAZOLE MAGNESIQUE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉSOMÉPRAZOLE",
+          "norm_substance": "esomeprazole",
+          "dosage": "40 mg un comprimé"
+        },
+        {
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE",
+          "norm_substance": "esomeprazole magnesique",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "62969974",
+      "name": "ZOLPIDEM BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "62972454",
       "name": "CROMOGLICATE DE SODIUM (Ophtalmique)",
       "route": "ophtalmique",
@@ -3450,6 +5252,37 @@
       ]
     },
     {
+      "cis": "62984887",
+      "name": "RABEPRAZOLE EG LABO (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "18,85 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "20 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "62989610",
+      "name": "ULTRA-LEVURE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SACCHAROMYCES BOULARDII CNCM I-745",
+          "norm_substance": "saccharomyces boulardii cncm i745",
+          "dosage": "50 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "63010787",
       "name": "NEO-CODION ADULTES (Orale)",
       "route": "orale",
@@ -3459,6 +5292,11 @@
           "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": "0,10270 g 100 ml de sirop"
+        },
+        {
+          "substance": "CAMPHOSULFONATE DE CODÉINE",
+          "norm_substance": "camphosulfonate de codeine",
+          "dosage": "0,17220 g 100 ml de sirop"
         }
       ]
     },
@@ -3472,6 +5310,11 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
         }
       ]
     },
@@ -3528,6 +5371,24 @@
       ]
     },
     {
+      "cis": "63076709",
+      "name": "METOCLOPRAMIDE VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
+          "norm_substance": "chlorhydrate de metoclopramide",
+          "dosage": "10,54 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
+          "norm_substance": "chlorhydrate de metoclopramide anhydre",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "63094301",
       "name": "CELESTENE (Orale)",
       "route": "orale",
@@ -3554,6 +5415,19 @@
       ]
     },
     {
+      "cis": "63144569",
+      "name": "TRAMADOL TEVA L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "63148172",
       "name": "CETIRIZINE BIOGARAN CONSEIL (Orale)",
       "route": "orale",
@@ -3562,6 +5436,24 @@
         {
           "substance": "DICHLORHYDRATE DE CÉTIRIZINE",
           "norm_substance": "dichlorhydrate de cetirizine",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63177843",
+      "name": "METOCLOPRAMIDE SANDOZ (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
+          "norm_substance": "chlorhydrate de metoclopramide",
+          "dosage": "10,54 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
+          "norm_substance": "chlorhydrate de metoclopramide anhydre",
           "dosage": "10 mg un comprimé"
         }
       ]
@@ -3576,6 +5468,24 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "63179285",
+      "name": "STILNOX (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -3606,6 +5516,19 @@
       ]
     },
     {
+      "cis": "63262126",
+      "name": "ELUSANES VALERIANE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALÉRIANE (RACINE DE) (EXTRAIT SEC DE)",
+          "norm_substance": "valeriane (racine de) (extrait sec de)",
+          "dosage": "200 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "63276510",
       "name": "LOPERAMIDE ZYDUS (Orale)",
       "route": "orale",
@@ -3628,6 +5551,55 @@
           "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": "0,100 g 100 ml de sirop"
+        }
+      ]
+    },
+    {
+      "cis": "63288046",
+      "name": "DEBRICALM (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TRIMÉBUTINE (MALÉATE DE)",
+          "norm_substance": "trimebutine (maleate de)",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63295400",
+      "name": "BECONASE (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE",
+          "norm_substance": "dipropionate de beclometasone",
+          "dosage": "50 microgrammes une dose"
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "dipropionate de beclometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "63309743",
+      "name": "CEFIXIME BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
         }
       ]
     },
@@ -3680,6 +5652,32 @@
           "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63361640",
+      "name": "TELFAST (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
+          "norm_substance": "chlorhydrate de fexofenadine",
+          "dosage": "180,000 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63374431",
+      "name": "XONVEA (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -3749,6 +5747,55 @@
       ]
     },
     {
+      "cis": "63435884",
+      "name": "TOPALGIC (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "63449026",
+      "name": "RABEPRAZOLE ZYDUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "9,42 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63451237",
+      "name": "INEXIUM (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉSOMÉPRAZOLE",
+          "norm_substance": "esomeprazole",
+          "dosage": "10 mg un sachet"
+        },
+        {
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE TRIHYDRATÉ",
+          "norm_substance": "esomeprazole magnesique trihydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "63455641",
       "name": "CETIRIZINE EVOLUGEN (Orale)",
       "route": "orale",
@@ -3758,6 +5805,24 @@
           "substance": "DICHLORHYDRATE DE CÉTIRIZINE",
           "norm_substance": "dichlorhydrate de cetirizine",
           "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63456907",
+      "name": "ZAGRAPA (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+          "norm_substance": "hydrogenofumarate de ketotifene",
+          "dosage": "0,345 mg 1 ml de solution"
+        },
+        {
+          "substance": "KETOTIFÈNE BASE",
+          "norm_substance": "ketotifene base",
+          "dosage": "0,25 mg 1 ml de solution"
         }
       ]
     },
@@ -3788,6 +5853,50 @@
       ]
     },
     {
+      "cis": "63491598",
+      "name": "MOMETASONE ZENTIVA (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "63519688",
+      "name": "TRAMADOL SANDOZ L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "100,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63526743",
+      "name": "TRIMEBUTINE SUBSTIPHARM (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "63535151",
       "name": "OFLOXACINE (Auriculaire)",
       "route": "auriculaire",
@@ -3810,6 +5919,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
         }
       ]
     },
@@ -3819,6 +5933,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -3837,6 +5956,24 @@
       ]
     },
     {
+      "cis": "63566855",
+      "name": "NASONEX (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "63595052",
       "name": "LIERRE GRIMPANT HUMEXPHYTO SANS SUCRE (Orale)",
       "route": "orale",
@@ -3850,6 +5987,24 @@
       ]
     },
     {
+      "cis": "63609769",
+      "name": "MOMETASONE SANDOZ (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50 microgrammes une dose"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "63610522",
       "name": "VOGALENE (Rectale)",
       "route": "rectale",
@@ -3859,6 +6014,19 @@
           "substance": "MÉTOPIMAZINE",
           "norm_substance": "metopimazine",
           "dosage": "0,005 g un suppositoire"
+        }
+      ]
+    },
+    {
+      "cis": "63628253",
+      "name": "SURBRONC EXPECTORANT AMBROXOL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "30 mg un comprimé"
         }
       ]
     },
@@ -3933,6 +6101,19 @@
       ]
     },
     {
+      "cis": "63683463",
+      "name": "TRIMEBUTINE EG (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "63713344",
       "name": "HUMEX RHUME (Orale)",
       "route": "orale",
@@ -3987,11 +6168,29 @@
       ]
     },
     {
+      "cis": "63738842",
+      "name": "APRANAX (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "NAPROXÈNE SODIQUE",
+          "norm_substance": "naproxene sodique",
+          "dosage": "550,00 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "63750773",
       "name": "AMOXICILLINE/ACIDE CLAVULANIQUE SANDOZ (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -4014,6 +6213,42 @@
           "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": "200 mg un comprimé"
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
+          "dosage": "30 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63782187",
+      "name": "ONDANSETRON (CHLORHYDRATE D') DIHYDRATE + ONDANSETRON (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ONDANSÉTRON (CHLORHYDRATE D') DIHYDRATÉ",
+          "norm_substance": "ondansetron (chlorhydrate d') dihydrate",
+          "dosage": " "
+        },
+        {
+          "substance": "ONDANSÉTRON",
+          "norm_substance": "ondansetron",
+          "dosage": "8 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63784416",
+      "name": "ZOLPIDEM SANDOZ (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -4075,6 +6310,37 @@
       ]
     },
     {
+      "cis": "63836158",
+      "name": "TOLEXINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": "52,05 mg un comprimé"
+        },
+        {
+          "substance": "DOXYCYCLINE ANHYDRE",
+          "norm_substance": "doxycycline anhydre",
+          "dosage": "50,00  mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63845762",
+      "name": "PROKINYL L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
+          "norm_substance": "chlorhydrate de metoclopramide",
+          "dosage": "15 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "63858119",
       "name": "INORIAL (Orale)",
       "route": "orale",
@@ -4084,6 +6350,37 @@
           "substance": "BILASTINE",
           "norm_substance": "bilastine",
           "dosage": "20 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63865252",
+      "name": "MOMETASONE BIOGARAN (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "63915157",
+      "name": "ETARTILEN (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": "1,5 mg 1 mL de solution"
         }
       ]
     },
@@ -4101,6 +6398,50 @@
       ]
     },
     {
+      "cis": "63965740",
+      "name": "RABEPRAZOLE ARROW GENERIQUES (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "9,42 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "63990590",
+      "name": "LEVOCETIRIZINE EG (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64014888",
+      "name": "FEXOFENADINE ZENTIVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
+          "norm_substance": "chlorhydrate de fexofenadine",
+          "dosage": "120,000 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "64038526",
       "name": "EPTAVIT (Orale)",
       "route": "orale",
@@ -4114,6 +6455,24 @@
       ]
     },
     {
+      "cis": "64041547",
+      "name": "DORMICALM (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PASSIFLORE (PARTIE AÉRIENNE DE) (EXTRAIT SEC DE)",
+          "norm_substance": "passiflore (partie aerienne de) (extrait sec de)",
+          "dosage": "80 mg un comprimé"
+        },
+        {
+          "substance": "VALÉRIANE (RACINE DE) (EXTRAIT SEC DE)",
+          "norm_substance": "valeriane (racine de) (extrait sec de)",
+          "dosage": "125 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "64045143",
       "name": "OROZAMUDOL (Orale)",
       "route": "orale",
@@ -4123,6 +6482,24 @@
           "substance": "TRAMADOL",
           "norm_substance": "tramadol",
           "dosage": "43,92 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64052764",
+      "name": "PHLOROGLUCINOL TEVA (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80 mg un comprimé"
         }
       ]
     },
@@ -4149,6 +6526,37 @@
           "substance": "MÉLATONINE",
           "norm_substance": "melatonine",
           "dosage": "1 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64076815",
+      "name": "CEFIXIME EG LABO (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64103073",
+      "name": "FLUTICASONE FUROATE SUBSTIPHARM (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE FLUTICASONE",
+          "norm_substance": "furoate de fluticasone",
+          "dosage": "27,5 microgrammes une pulvérisation délivrée"
         }
       ]
     },
@@ -4203,6 +6611,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "CLOXACILLINE SODIQUE MONOHYDRATÉE",
+          "norm_substance": "cloxacilline sodique monohydratee",
+          "dosage": " "
+        },
+        {
           "substance": "CLOXACILLINE",
           "norm_substance": "cloxacilline",
           "dosage": "500 mg une gélule"
@@ -4232,6 +6645,19 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "500 mg un lyophilisat"
+        }
+      ]
+    },
+    {
+      "cis": "64171551",
+      "name": "TRAMADOL TEVA SANTE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélule"
         }
       ]
     },
@@ -4271,6 +6697,16 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE ANHYDRE",
+          "norm_substance": "phosphate de codeine anhydre",
+          "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
+          "dosage": "20,5 mg un comprimé"
         }
       ]
     },
@@ -4280,6 +6716,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500,00 mg une gélule"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -4297,6 +6738,32 @@
           "substance": "POVIDONE IODÉE",
           "norm_substance": "povidone iodee",
           "dosage": "5,000 g 100 ml"
+        }
+      ]
+    },
+    {
+      "cis": "64280433",
+      "name": "TRAMADOL ZYDUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "64292987",
+      "name": "SURBRONC EXPECTORANT AMBROXOL SANS SUCRE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "0,600 g 100 mL de solution buvable"
         }
       ]
     },
@@ -4346,9 +6813,40 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+          "norm_substance": "hydrogenofumarate de ketotifene",
+          "dosage": "0,345 mg 1 mL"
+        },
+        {
           "substance": "KETOTIFÈNE",
           "norm_substance": "ketotifene",
           "dosage": "0,25 mg 1 mL"
+        }
+      ]
+    },
+    {
+      "cis": "64395332",
+      "name": "TOPALGIC LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "200,00 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64400053",
+      "name": "TRAMADOL BGR L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "100 mg un comprimé"
         }
       ]
     },
@@ -4398,6 +6896,11 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg un lyophilisat"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,85 mg un lyophilisat"
         }
       ]
     },
@@ -4421,6 +6924,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -4442,6 +6950,42 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "250 mg un sachet"
+        }
+      ]
+    },
+    {
+      "cis": "64475839",
+      "name": "RYALTRIS (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "25 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "64481322",
+      "name": "IBUPROFENE + LYSINATE D'IBUPROFENE (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
+          "dosage": "400 mg un comprimé"
+        },
+        {
+          "substance": "LYSINATE D'IBUPROFÈNE",
+          "norm_substance": "lysinate d'ibuprofene",
+          "dosage": "683,2 mg un comprimé"
         }
       ]
     },
@@ -4472,15 +7016,59 @@
       ]
     },
     {
+      "cis": "64497629",
+      "name": "DICLOFENAC TEVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "25 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64515956",
+      "name": "TRAMADOL EVOLUGEN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "64516894",
       "name": "AMOXICILLINE SANDOZ (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "250,00 mg une cuillère-mesure de 5 ml de suspension reconstituée"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": "0,2870 mg une cuillère-mesure de 5 ml de suspension reconstituée"
+        }
+      ]
+    },
+    {
+      "cis": "64517099",
+      "name": "ZOLPIDEM ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -4491,9 +7079,32 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "1000,00 mg un comprimé"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "64546663",
+      "name": "RABEPRAZOLE KRKA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "18,85 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "20 mg un comprimé"
         }
       ]
     },
@@ -4503,6 +7114,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
+          "dosage": "100 mg 1 ml de suspension reconstituée"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -4529,6 +7145,37 @@
       ]
     },
     {
+      "cis": "64578846",
+      "name": "SEDINAX (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "EXTRAIT SEC DE RACINE DE VALÉRIANE",
+          "norm_substance": "extrait sec de racine de valeriane",
+          "dosage": "500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64594722",
+      "name": "IBUPROFENE + IBUPROFENE (LYSINATE D') (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
+          "dosage": "400 mg un comprimé"
+        },
+        {
+          "substance": "IBUPROFÈNE (LYSINATE D')",
+          "norm_substance": "ibuprofene (lysinate d')",
+          "dosage": "684 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "64610621",
       "name": "BICAFRES (Orale)",
       "route": "orale",
@@ -4547,6 +7194,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "1000 mg un sachet-dose"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -4578,6 +7230,19 @@
       ]
     },
     {
+      "cis": "64652264",
+      "name": "TRAMADOL KRKA LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "150 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "64656227",
       "name": "TRAMADOL/PARACETAMOL ARROW GENERIQUES (Orale)",
       "route": "orale",
@@ -4587,6 +7252,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
         }
       ]
     },
@@ -4600,6 +7270,24 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64718440",
+      "name": "RABEPRAZOLE SANDOZ (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -4609,6 +7297,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "1000 mg un sachet-dose"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -4640,6 +7333,19 @@
       ]
     },
     {
+      "cis": "64741955",
+      "name": "DOXYLAMINE ARROW CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "64768525",
       "name": "TOPREC (Orale)",
       "route": "orale",
@@ -4653,15 +7359,51 @@
       ]
     },
     {
+      "cis": "64781024",
+      "name": "PHLOROGLUCINOL ZENTIVA (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
+          "norm_substance": "phloroglucinol dihydrate",
+          "dosage": "160,000 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "64784789",
       "name": "TAVANIC (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
+          "substance": "LÉVOFLOXACINE HÉMIHYDRATÉE",
+          "norm_substance": "levofloxacine hemihydratee",
+          "dosage": " "
+        },
+        {
           "substance": "LÉVOFLOXACINE",
           "norm_substance": "levofloxacine",
           "dosage": "500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64784981",
+      "name": "AZITHROMYCINE ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE MONOHYDRATÉE",
+          "norm_substance": "azithromycine monohydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "AZITHROMYCINE ANHYDRE",
+          "norm_substance": "azithromycine anhydre",
+          "dosage": "250 mg un comprimé"
         }
       ]
     },
@@ -4675,6 +7417,37 @@
           "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": "4,000 g 100 ml"
+        }
+      ]
+    },
+    {
+      "cis": "64821860",
+      "name": "CEFIXIME ALMUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64869766",
+      "name": "TRIMEBUTINE ZENTIVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100 mg un comprimé"
         }
       ]
     },
@@ -4705,6 +7478,32 @@
       ]
     },
     {
+      "cis": "64879963",
+      "name": "ARKOGELULES VALERIANE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALERIANE (RHIZOME DE) (POUDRE DE)",
+          "norm_substance": "valeriane (rhizome de) (poudre de)",
+          "dosage": "350 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "64881366",
+      "name": "LIDENE (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "SUCCINATE DE DOXYLAMINE",
+          "norm_substance": "succinate de doxylamine",
+          "dosage": "15 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "64892156",
       "name": "ECHINACEE POURPRE HUMEXPHYTO (Orale)",
       "route": "orale",
@@ -4714,6 +7513,50 @@
           "substance": "JUS PRESSÉ DÉSHYDRATÉ DES PARTIES AÉRIENNES FLEURIES FRAÎCHES D'ECHINACEA PURPUREA",
           "norm_substance": "jus presse deshydrate des parties aeriennes fleuries fraiches d'echinacea purpurea",
           "dosage": "180 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64914777",
+      "name": "CHLORHYDRATE DIHYDRATE DE VALACICLOVIR + VALACICLOVIR (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DIHYDRATÉ DE VALACICLOVIR",
+          "norm_substance": "chlorhydrate dihydrate de valaciclovir",
+          "dosage": " "
+        },
+        {
+          "substance": "VALACICLOVIR",
+          "norm_substance": "valaciclovir",
+          "dosage": "500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64929277",
+      "name": "TRIMEBUTINE ALMUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "64939766",
+      "name": "REACTINE (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "CÉTIRIZINE (DICHLORHYDRATE DE)",
+          "norm_substance": "cetirizine (dichlorhydrate de)",
+          "dosage": "10,00 mg un comprimé"
         }
       ]
     },
@@ -4802,6 +7645,11 @@
           "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": "1 mg 1 mL de solution"
+        },
+        {
+          "substance": "PHOSPHATE DISODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate disodique de dexamethasone",
+          "dosage": "1,32 mg 1 mL de solution"
         }
       ]
     },
@@ -4823,7 +7671,7 @@
         },
         {
           "substance": "PSEUDO-ÉPHÉDRINE",
-          "norm_substance": "pseudo-ephedrine",
+          "norm_substance": "pseudoephedrine",
           "dosage": "24,57 mg un comprimé"
         }
       ]
@@ -4855,6 +7703,32 @@
       ]
     },
     {
+      "cis": "65164218",
+      "name": "FRAKIDEX (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": "0,1 g 100 g de pommade ophtalmique"
+        }
+      ]
+    },
+    {
+      "cis": "65170801",
+      "name": "TRAMADOL ZENTIVA LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "65181349",
       "name": "BACTRIM (Orale)",
       "route": "orale",
@@ -4882,6 +7756,29 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "65203952",
+      "name": "DOXYCYCLINE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "HYCLATE DE DOXYCYCLINE",
+          "norm_substance": "hyclate de doxycycline",
+          "dosage": " "
+        },
+        {
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
+          "dosage": "100 mg un comprimé"
         }
       ]
     },
@@ -4895,6 +7792,19 @@
           "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": "100 mg 100 ml de collyre"
+        }
+      ]
+    },
+    {
+      "cis": "65242784",
+      "name": "MEBEVERINE ZYDUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE MÉBÉVÉRINE",
+          "norm_substance": "chlorhydrate de mebeverine",
+          "dosage": "200 mg un comprimé"
         }
       ]
     },
@@ -4939,6 +7849,11 @@
           "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": "14,93 mg un comprimé"
+        },
+        {
+          "substance": "CAMPHOSULFONATE DE CODÉINE",
+          "norm_substance": "camphosulfonate de codeine",
+          "dosage": "25,00 mg un comprimé"
         }
       ]
     },
@@ -4956,6 +7871,19 @@
       ]
     },
     {
+      "cis": "65321616",
+      "name": "AZELASTINE CHLORHYDRATE/FLUTICASONE PROPIONATE TEVA (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "50 microgrammes une pulvérisation (0,14 g)"
+        }
+      ]
+    },
+    {
       "cis": "65323026",
       "name": "RENNIE (Orale)",
       "route": "orale",
@@ -4965,6 +7893,55 @@
           "substance": "CARBONATE DE CALCIUM",
           "norm_substance": "carbonate de calcium",
           "dosage": "680 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "65330992",
+      "name": "DOXYLAMINE BIOGARAN CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "65333974",
+      "name": "SPANOR (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE HYDRATÉE",
+          "norm_substance": "doxycycline hydratee",
+          "dosage": "100 mg un comprimé"
+        },
+        {
+          "substance": "HYCLATE DE DOXYCYCLINE",
+          "norm_substance": "hyclate de doxycycline",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "65336041",
+      "name": "RABEPRAZOLE ALTER (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE SODIQUE MONOHYDRATÉ",
+          "norm_substance": "rabeprazole sodique monohydrate",
+          "dosage": "10 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "9,42 mg un comprimé"
         }
       ]
     },
@@ -4995,6 +7972,37 @@
       ]
     },
     {
+      "cis": "65371633",
+      "name": "ERY NOURRISSONS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉRYTHROMYCINE (ÉTHYLSUCCINATE D')",
+          "norm_substance": "erythromycine (ethylsuccinate d')",
+          "dosage": "120 000 UI un sachet"
+        },
+        {
+          "substance": "ÉRYTHROMYCINE BASE",
+          "norm_substance": "erythromycine base",
+          "dosage": "125 mg un sachet"
+        }
+      ]
+    },
+    {
+      "cis": "65373164",
+      "name": "TRAMADOL SANDOZ (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "65393957",
       "name": "RULID (Orale)",
       "route": "orale",
@@ -5004,6 +8012,19 @@
           "substance": "ROXITHROMYCINE",
           "norm_substance": "roxithromycine",
           "dosage": "150 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "65444540",
+      "name": "TRIMEBUTINE VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100 mg un comprimé"
         }
       ]
     },
@@ -5019,9 +8040,32 @@
           "dosage": "1 mg 1 mL de collyre en solution"
         },
         {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": " "
+        },
+        {
+          "substance": "LÉVOFLOXACINE HÉMIHYDRATÉE",
+          "norm_substance": "levofloxacine hemihydratee",
+          "dosage": " "
+        },
+        {
           "substance": "LÉVOFLOXACINE",
           "norm_substance": "levofloxacine",
           "dosage": "5 mg 1 mL de collyre en solution"
+        }
+      ]
+    },
+    {
+      "cis": "65472835",
+      "name": "SANTAMED N (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PARTIE AÉRIENNE DE PASSIFLORE",
+          "norm_substance": "partie aerienne de passiflore",
+          "dosage": "30 g 100 g de mélange de plantes pour tisane"
         }
       ]
     },
@@ -5048,6 +8092,11 @@
           "substance": "CEFPODOXIME",
           "norm_substance": "cefpodoxime",
           "dosage": "100 mg un comprimé"
+        },
+        {
+          "substance": "CEFPODOXIME PROXÉTIL",
+          "norm_substance": "cefpodoxime proxetil",
+          "dosage": "130,45 mg un comprimé"
         }
       ]
     },
@@ -5061,6 +8110,29 @@
           "substance": "MÉTOCLOPRAMIDE",
           "norm_substance": "metoclopramide",
           "dosage": "0,01 g un suppositoire"
+        }
+      ]
+    },
+    {
+      "cis": "65541548",
+      "name": "AMOXICILLINE/ACIDE CLAVULANIQUE VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CLAVULANATE DE POTASSIUM",
+          "norm_substance": "clavulanate de potassium",
+          "dosage": " "
         }
       ]
     },
@@ -5104,6 +8176,32 @@
       ]
     },
     {
+      "cis": "65569519",
+      "name": "DELIPROCT (Rectale)",
+      "route": "rectale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PREDNISOLONE (CAPROATE DE)",
+          "norm_substance": "prednisolone (caproate de)",
+          "dosage": "1,3 mg un suppositoire"
+        }
+      ]
+    },
+    {
+      "cis": "65570749",
+      "name": "POLARAMINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE DEXCHLORPHÉNIRAMINE",
+          "norm_substance": "maleate de dexchlorpheniramine",
+          "dosage": "2,00 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "65573720",
       "name": "BRUFEN (Orale)",
       "route": "orale",
@@ -5130,6 +8228,19 @@
       ]
     },
     {
+      "cis": "65591743",
+      "name": "ZUMALGIC (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "65617572",
       "name": "MIOREL (Orale)",
       "route": "orale",
@@ -5139,6 +8250,37 @@
           "substance": "THIOCOLCHICOSIDE",
           "norm_substance": "thiocolchicoside",
           "dosage": "4,0 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "65632624",
+      "name": "PHLOROGLUCINOL VIATRIS (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "65636245",
+      "name": "CIFLOX (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CIPROFLOXACINE",
+          "norm_substance": "ciprofloxacine",
+          "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
+          "norm_substance": "chlorhydrate de ciprofloxacine",
+          "dosage": " "
         }
       ]
     },
@@ -5188,9 +8330,32 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": "628,930 mg un comprimé"
+        },
+        {
           "substance": "AZITHROMYCINE",
           "norm_substance": "azithromycine",
           "dosage": "600 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "65740799",
+      "name": "ZITHROMAX (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": "262,05 mg un comprimé"
+        },
+        {
+          "substance": "AZITHROMYCINE ANHYDRE",
+          "norm_substance": "azithromycine anhydre",
+          "dosage": "250 mg un comprimé"
         }
       ]
     },
@@ -5224,6 +8389,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "1000 mg un sachet-dose"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -5237,6 +8407,19 @@
           "substance": "ACIDE CLAVULANIQUE",
           "norm_substance": "acide clavulanique",
           "dosage": "125 mg un sachet-dose"
+        }
+      ]
+    },
+    {
+      "cis": "65799705",
+      "name": "DEXTROMETHORPHANE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BROMHYDRATE DE DEXTROMÉTHORPHANE",
+          "norm_substance": "bromhydrate de dextromethorphane",
+          "dosage": "1,5 mg 1 ml de solution buvable"
         }
       ]
     },
@@ -5260,6 +8443,24 @@
           "substance": "PHLOROGLUCINOL ANHYDRE",
           "norm_substance": "phloroglucinol anhydre",
           "dosage": "166,7 mg un suppositoire"
+        }
+      ]
+    },
+    {
+      "cis": "65993012",
+      "name": "VALACICLOVIR + CHLORHYDRATE DE VALACICLOVIR MONOHYDRATE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALACICLOVIR",
+          "norm_substance": "valaciclovir",
+          "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE VALACICLOVIR MONOHYDRATÉ",
+          "norm_substance": "chlorhydrate de valaciclovir monohydrate",
+          "dosage": "584 mg un comprimé"
         }
       ]
     },
@@ -5291,6 +8492,24 @@
           "substance": "TRAMADOL",
           "norm_substance": "tramadol",
           "dosage": "131,76 mg une gélule"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "150 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "66011467",
+      "name": "DOXYLAMINE SANDOZ CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
         }
       ]
     },
@@ -5301,6 +8520,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "500,00 mg une gélule"
+        },
+        {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": " "
@@ -5309,7 +8533,7 @@
     },
     {
       "cis": "66077218",
-      "name": "FEXOFENADINE (Orale)",
+      "name": "FEXOFENADINE + CHLORHYDRATE DE FEXOFENADINE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
@@ -5317,6 +8541,37 @@
           "substance": "FEXOFENADINE",
           "norm_substance": "fexofenadine",
           "dosage": "168 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
+          "norm_substance": "chlorhydrate de fexofenadine",
+          "dosage": "180 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66078868",
+      "name": "PULMODEXANE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BROMHYDRATE DE DEXTROMÉTHORPHANE",
+          "norm_substance": "bromhydrate de dextromethorphane",
+          "dosage": "30 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66085371",
+      "name": "SPASMINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "EXTRAIT SEC DE RACINE DE VALÉRIANE",
+          "norm_substance": "extrait sec de racine de valeriane",
+          "dosage": "120,0 mg un comprimé"
         }
       ]
     },
@@ -5334,6 +8589,45 @@
       ]
     },
     {
+      "cis": "66098792",
+      "name": "TRAMADOL EG (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66105571",
+      "name": "PHLOROGLUCINOL ARROW (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66129490",
+      "name": "POLYDEXA (Auriculaire)",
+      "route": "auriculaire",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DEXAMÉTHASONE (MÉTASULFOBENZOATE SODIQUE DE)",
+          "norm_substance": "dexamethasone (metasulfobenzoate sodique de)",
+          "dosage": "0,100 g 100 ml"
+        }
+      ]
+    },
+    {
       "cis": "66146187",
       "name": "DIARETYL (Orale)",
       "route": "orale",
@@ -5343,6 +8637,11 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
         }
       ]
     },
@@ -5356,6 +8655,19 @@
           "substance": "CÉLÉCOXIB",
           "norm_substance": "celecoxib",
           "dosage": "200 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "66160831",
+      "name": "FLUTICASONE FUROATE TEVA (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE FLUTICASONE",
+          "norm_substance": "furoate de fluticasone",
+          "dosage": "27,5 microgrammes une pulvérisation délivrée"
         }
       ]
     },
@@ -5457,6 +8769,24 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "0,500 g un sachet"
+        },
+        {
+          "substance": "MALÉATE DE PHÉNIRAMINE",
+          "norm_substance": "maleate de pheniramine",
+          "dosage": "0,025 g un sachet"
+        }
+      ]
+    },
+    {
+      "cis": "66248181",
+      "name": "RINOCLENIL (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE",
+          "norm_substance": "dipropionate de beclometasone",
+          "dosage": "100 microgrammes une dose"
         }
       ]
     },
@@ -5500,6 +8830,19 @@
       ]
     },
     {
+      "cis": "66296411",
+      "name": "XYZALL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "66302120",
       "name": "TOBRADEX (Ophtalmique)",
       "route": "ophtalmique",
@@ -5526,6 +8869,19 @@
       ]
     },
     {
+      "cis": "66317033",
+      "name": "TAKADOL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "66322048",
       "name": "BETNESOL (Orale)",
       "route": "orale",
@@ -5535,6 +8891,24 @@
           "substance": "BÉTAMÉTHASONE",
           "norm_substance": "betamethasone",
           "dosage": "0,5000 mg un comprimé"
+        },
+        {
+          "substance": "BÉTAMETHASONE (PHOSPHATE DE) ET DE DISODIUM",
+          "norm_substance": "betamethasone (phosphate de) et de disodium",
+          "dosage": "0,6578 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66335825",
+      "name": "DOXYLAMINE VIATRIS CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
         }
       ]
     },
@@ -5561,6 +8935,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
         }
       ]
     },
@@ -5650,6 +9029,32 @@
       ]
     },
     {
+      "cis": "66482348",
+      "name": "PHLOROGLUCINOL BIOGARAN (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
+          "norm_substance": "phloroglucinol dihydrate",
+          "dosage": "160 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66484192",
+      "name": "ELUSANES PASSIFLORE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PASSIFLORE (PARTIE AÉRIENNE DE) (EXTRAIT SEC DE)",
+          "norm_substance": "passiflore (partie aerienne de) (extrait sec de)",
+          "dosage": "200 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "66484819",
       "name": "OFLOCET (Orale)",
       "route": "orale",
@@ -5664,14 +9069,45 @@
     },
     {
       "cis": "66488326",
-      "name": "DICLOFENAC (Orale)",
+      "name": "DICLOFENAC SODIQUE + DICLOFENAC (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "75,000 mg un comprimé"
+        },
+        {
           "substance": "DICLOFÉNAC",
           "norm_substance": "diclofenac",
           "dosage": "69,800 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66544465",
+      "name": "DICLOFENAC VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66565705",
+      "name": "OCUFEN (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FLURBIPROFÈNE SODIQUE DIHYDRATÉ",
+          "norm_substance": "flurbiprofene sodique dihydrate",
+          "dosage": "0,12 mg un récipient unidose"
         }
       ]
     },
@@ -5689,6 +9125,19 @@
       ]
     },
     {
+      "cis": "66584214",
+      "name": "DICLOFENAC SANDOZ (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "66586731",
       "name": "FRAMYXONE (Auriculaire)",
       "route": "auriculaire",
@@ -5698,6 +9147,37 @@
           "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": "0,077 g 100 ml de solution"
+        },
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": "0,100 g 100 ml de solution"
+        }
+      ]
+    },
+    {
+      "cis": "66592652",
+      "name": "AURICULARUM (Auriculaire)",
+      "route": "auriculaire",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DEXAMÉTHASONE (PHOSPHATE SODIQUE DE)",
+          "norm_substance": "dexamethasone (phosphate sodique de)",
+          "dosage": "10 mg un flacon"
+        }
+      ]
+    },
+    {
+      "cis": "66603508",
+      "name": "LEVOCETIRIZINE CRISTERS (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
         }
       ]
     },
@@ -5734,6 +9214,11 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
         }
       ]
     },
@@ -5747,6 +9232,19 @@
           "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": "100 mg un suppositoire"
+        }
+      ]
+    },
+    {
+      "cis": "66703316",
+      "name": "PASSIFLORINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PASSIFLORE (EXTRAIT DE) (FLUIDE)",
+          "norm_substance": "passiflore (extrait de) (fluide)",
+          "dosage": "10 g 100 ml"
         }
       ]
     },
@@ -5821,6 +9319,19 @@
       ]
     },
     {
+      "cis": "66750351",
+      "name": "TRAMADOL TEVA L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TRAMADOL (CHLORHYDRATE DE)",
+          "norm_substance": "tramadol (chlorhydrate de)",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "66769394",
       "name": "ASPEGIC NOURRISSONS (Orale)",
       "route": "orale",
@@ -5879,6 +9390,11 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "KÉTOTIFÈNE (HYDROGÉNOFUMARATE DE)",
+          "norm_substance": "ketotifene (hydrogenofumarate de)",
+          "dosage": "0,345 mg 1 mL"
+        },
+        {
           "substance": "KETOTIFÈNE",
           "norm_substance": "ketotifene",
           "dosage": "0,250 mg 1 mL"
@@ -5895,6 +9411,19 @@
           "substance": "MÉLATONINE",
           "norm_substance": "melatonine",
           "dosage": "1 mg 1 mL de solution"
+        }
+      ]
+    },
+    {
+      "cis": "66822683",
+      "name": "ZOLPIDEM VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -5927,6 +9456,24 @@
       ]
     },
     {
+      "cis": "66865026",
+      "name": "MOMETASONE EG (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "66866523",
       "name": "HUMEX CONJONCTIVITE ALLERGIQUE (Ophtalmique)",
       "route": "ophtalmique",
@@ -5953,11 +9500,47 @@
       ]
     },
     {
+      "cis": "66906619",
+      "name": "TRANSACALM (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66907450",
+      "name": "OROKEN ENFANTS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "0,80 g 13,3 g"
+        }
+      ]
+    },
+    {
       "cis": "66921126",
       "name": "AMOXICILLINE/ACIDE CLAVULANIQUE BGR (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
+          "dosage": "500,00 mg un comprimé"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -5972,6 +9555,19 @@
           "substance": "ACIDE CLAVULANIQUE",
           "norm_substance": "acide clavulanique",
           "dosage": "62,50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "66921927",
+      "name": "AVAMYS (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE FLUTICASONE",
+          "norm_substance": "furoate de fluticasone",
+          "dosage": "27,5 microgrammes une dose"
         }
       ]
     },
@@ -5999,11 +9595,29 @@
       ]
     },
     {
+      "cis": "66958014",
+      "name": "RHINOMAXIL (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE",
+          "norm_substance": "dipropionate de beclometasone",
+          "dosage": "100 microgrammes une dose"
+        }
+      ]
+    },
+    {
       "cis": "67015785",
       "name": "MONOKETO (Ophtalmique)",
       "route": "ophtalmique",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
+          "dosage": "0,138 mg 0,4 ml"
+        },
         {
           "substance": "KETOTIFÈNE",
           "norm_substance": "ketotifene",
@@ -6025,6 +9639,19 @@
       ]
     },
     {
+      "cis": "67052926",
+      "name": "TRANQUITAL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALÉRIANE (RACINE DE) (EXTRAIT SEC AQUEUX DE)",
+          "norm_substance": "valeriane (racine de) (extrait sec aqueux de)",
+          "dosage": "34,6 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "67094067",
       "name": "HUMEX (Orale)",
       "route": "orale",
@@ -6034,6 +9661,19 @@
           "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": "5 g 100 ml"
+        }
+      ]
+    },
+    {
+      "cis": "67105161",
+      "name": "TRAMADOL ALMUS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélules"
         }
       ]
     },
@@ -6051,6 +9691,24 @@
       ]
     },
     {
+      "cis": "67136694",
+      "name": "MOMETASONE ALTER (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "67140828",
       "name": "IPRAFEINE (Orale)",
       "route": "orale",
@@ -6060,6 +9718,24 @@
           "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": "400 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67164569",
+      "name": "DOXYCYCLINE ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "HYCLATE DE DOXYCYCLINE",
+          "norm_substance": "hyclate de doxycycline",
+          "dosage": " "
+        },
+        {
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
+          "dosage": "100 mg un comprimé"
         }
       ]
     },
@@ -6090,6 +9766,24 @@
       ]
     },
     {
+      "cis": "67235518",
+      "name": "PHLOROGLUCINOL CRISTERS (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80 mg un comprimé"
+        },
+        {
+          "substance": "PHLOROGLUCINOL ANHYDRE",
+          "norm_substance": "phloroglucinol anhydre",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "67275135",
       "name": "IMODIUMDUO (Orale)",
       "route": "orale",
@@ -6113,6 +9807,32 @@
       ]
     },
     {
+      "cis": "67294573",
+      "name": "SPASMOCALM (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67313123",
+      "name": "NEOSYNEPHRINE (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHÉNYLÉPHRINE (CHLORHYDRATE DE)",
+          "norm_substance": "phenylephrine (chlorhydrate de)",
+          "dosage": "40 mg un récipient unidose de 0,4 ml"
+        }
+      ]
+    },
+    {
       "cis": "67385005",
       "name": "OPTICRON UNIDOSE (Ophtalmique)",
       "route": "ophtalmique",
@@ -6126,6 +9846,24 @@
       ]
     },
     {
+      "cis": "67393849",
+      "name": "OROKEN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "67396382",
       "name": "ZELITREX (Orale)",
       "route": "orale",
@@ -6135,6 +9873,37 @@
           "substance": "VALACICLOVIR",
           "norm_substance": "valaciclovir",
           "dosage": "500 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE VALACICLOVIR",
+          "norm_substance": "chlorhydrate de valaciclovir",
+          "dosage": "556 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67411717",
+      "name": "DICLOFENAC ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67423452",
+      "name": "MYDRIASERT (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE PHÉNYLÉPHRINE",
+          "norm_substance": "chlorhydrate de phenylephrine",
+          "dosage": "5,40 mg un insert"
         }
       ]
     },
@@ -6148,6 +9917,24 @@
           "substance": "NAPROXÈNE",
           "norm_substance": "naproxene",
           "dosage": "457 mg un comprimé"
+        },
+        {
+          "substance": "NAPROXÈNE SODIQUE",
+          "norm_substance": "naproxene sodique",
+          "dosage": "500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67453787",
+      "name": "DOXYLAMINE ZENTIVA CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
         }
       ]
     },
@@ -6165,11 +9952,52 @@
       ]
     },
     {
+      "cis": "67462665",
+      "name": "RABEPRAZOLE BGR (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
+          "dosage": "18,85 mg un comprimé"
+        },
+        {
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
+          "dosage": "20 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67482372",
+      "name": "DICODIN L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE DIHYDROCODÉINE",
+          "norm_substance": "tartrate de dihydrocodeine",
+          "dosage": "60 mg un comprimé"
+        },
+        {
+          "substance": "DIHYDROCODÉINE",
+          "norm_substance": "dihydrocodeine",
+          "dosage": "40 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "67486972",
       "name": "ZALERGONIUM (Ophtalmique)",
       "route": "ophtalmique",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
+          "dosage": "0,345 mg 1 ml"
+        },
         {
           "substance": "KETOTIFÈNE",
           "norm_substance": "ketotifene",
@@ -6191,6 +10019,24 @@
       ]
     },
     {
+      "cis": "67490967",
+      "name": "CEFIXIME ARROW LAB (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "67504559",
       "name": "LOPERAMIDE SANDOZ CONSEIL (Orale)",
       "route": "orale",
@@ -6200,6 +10046,11 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2,00 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
         }
       ]
     },
@@ -6213,6 +10064,24 @@
           "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": "20 mg 1 ml de suspension buvable"
+        }
+      ]
+    },
+    {
+      "cis": "67547553",
+      "name": "CEFIXIME ARROW ENFANTS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": "111,919 5 mL de suspension reconstituée"
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "100 mg 5 mL de suspension reconstituée"
         }
       ]
     },
@@ -6240,6 +10109,24 @@
       ]
     },
     {
+      "cis": "67559559",
+      "name": "JOSACINE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE JOSAMYCINE",
+          "norm_substance": "propionate de josamycine",
+          "dosage": "500 mg 5 ml de suspension reconstituée"
+        },
+        {
+          "substance": "JOSAMYCINE BASE",
+          "norm_substance": "josamycine base",
+          "dosage": "500 mg 5 ml de suspension reconstituée"
+        }
+      ]
+    },
+    {
       "cis": "67565882",
       "name": "APRANAX (Orale)",
       "route": "orale",
@@ -6262,6 +10149,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
         }
       ]
     },
@@ -6280,6 +10172,55 @@
           "substance": "POUDRE D'OPIUM",
           "norm_substance": "poudre d'opium",
           "dosage": "25 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "67637794",
+      "name": "AZITHROMYCINE PFIZER (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": "262,05 mg un comprimé"
+        },
+        {
+          "substance": "AZITHROMYCINE ANHYDRE",
+          "norm_substance": "azithromycine anhydre",
+          "dosage": "250 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67656848",
+      "name": "DEXAFREE (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": " "
+        },
+        {
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate de dexamethasone",
+          "dosage": "1 mg 1 ml de solution"
+        }
+      ]
+    },
+    {
+      "cis": "67657117",
+      "name": "DOXYLAMINE TEVA CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
         }
       ]
     },
@@ -6306,6 +10247,24 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67698929",
+      "name": "DOXYLAMINE KRKA (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15,00 mg un comprimé"
         }
       ]
     },
@@ -6349,6 +10308,24 @@
       ]
     },
     {
+      "cis": "67751851",
+      "name": "MOMETASONE ARROW (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "67756414",
       "name": "DEXLIQ (Orale)",
       "route": "orale",
@@ -6358,6 +10335,29 @@
           "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": "4 mg 1 ml de solution"
+        },
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "67756752",
+      "name": "CHIBRO CADRON (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": "109,3 mg 100 ml"
+        },
+        {
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate de dexamethasone",
+          "dosage": "100 mg 100 ml"
         }
       ]
     },
@@ -6415,10 +10415,15 @@
     },
     {
       "cis": "67900882",
-      "name": "DOXYCYCLINE (Orale)",
+      "name": "DOXYCYCLINE MONOHYDRATEE + DOXYCYCLINE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": " "
+        },
         {
           "substance": "DOXYCYCLINE",
           "norm_substance": "doxycycline",
@@ -6436,6 +10441,42 @@
           "substance": "CIPROFLOXACINE",
           "norm_substance": "ciprofloxacine",
           "dosage": "3 mg 1 ml"
+        },
+        {
+          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
+          "norm_substance": "chlorhydrate de ciprofloxacine",
+          "dosage": "3,5 mg 1 ml"
+        }
+      ]
+    },
+    {
+      "cis": "67926980",
+      "name": "ZADITEN L.P. (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
+          "dosage": "2,75 mg un comprimé"
+        },
+        {
+          "substance": "KETOTIFÈNE BASE",
+          "norm_substance": "ketotifene base",
+          "dosage": "2 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "67939611",
+      "name": "GRANUDOXY (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": "100,00 mg un comprimé"
         }
       ]
     },
@@ -6454,6 +10495,37 @@
           "substance": "FOSFOMYCINE",
           "norm_substance": "fosfomycine",
           "dosage": "3,000 g un sachet de 8,000 g"
+        }
+      ]
+    },
+    {
+      "cis": "67953949",
+      "name": "BIOCARDE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TEINTURE DE RACINE DE VALÉRIANE",
+          "norm_substance": "teinture de racine de valeriane",
+          "dosage": "4,5 ml 30 mL de solution buvable"
+        },
+        {
+          "substance": "TEINTURE DE PARTIE AÉRIENNE DE PASSIFLORE",
+          "norm_substance": "teinture de partie aerienne de passiflore",
+          "dosage": "3 mL 30 mL de solution buvable"
+        }
+      ]
+    },
+    {
+      "cis": "67954855",
+      "name": "FLECTOR (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
+          "norm_substance": "epolamine de diclofenac",
+          "dosage": "65 mg un comprimé"
         }
       ]
     },
@@ -6490,6 +10562,55 @@
           "substance": "PHLOROGLUCINOL ANHYDRE",
           "norm_substance": "phloroglucinol anhydre",
           "dosage": "62,233 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68106394",
+      "name": "BIODALGIC (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68106914",
+      "name": "DEXOCOL (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": " "
+        },
+        {
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
+          "norm_substance": "phosphate de dexamethasone",
+          "dosage": "1 mg 1 mL de solution"
+        }
+      ]
+    },
+    {
+      "cis": "68133466",
+      "name": "DOXYCYCLINE VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
+          "dosage": "104,1 mg un comprimé"
+        },
+        {
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
+          "dosage": "100 mg un comprimé"
         }
       ]
     },
@@ -6536,6 +10657,78 @@
           "substance": "BALLOTE (EXTRAIT SEC DE SOMMITÉ FLEURIE DE)",
           "norm_substance": "ballote (extrait sec de sommite fleurie de)",
           "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68178924",
+      "name": "TRAMADOL TEVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68204269",
+      "name": "AMOXICILLINE/ACIDE CLAVULANIQUE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
+          "dosage": "100 mg 1 ml de suspension reconstituée"
+        },
+        {
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CLAVULANATE DE POTASSIUM",
+          "norm_substance": "clavulanate de potassium",
+          "dosage": " "
+        },
+        {
+          "substance": "ACIDE CLAVULANIQUE",
+          "norm_substance": "acide clavulanique",
+          "dosage": "12,5 mg 1 ml de suspension reconstituée"
+        }
+      ]
+    },
+    {
+      "cis": "68241755",
+      "name": "ANXEMIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "EXTRAIT SEC DE PARTIE AERIENNE DE PASSIFLORE",
+          "norm_substance": "extrait sec de partie aerienne de passiflore",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68261117",
+      "name": "FEXOFENADINE BIOGARAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FEXOFÉNADINE BASE",
+          "norm_substance": "fexofenadine base",
+          "dosage": "168 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
+          "norm_substance": "chlorhydrate de fexofenadine",
+          "dosage": "180 mg un comprimé"
         }
       ]
     },
@@ -6588,6 +10781,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
         }
       ]
     },
@@ -6615,6 +10813,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "100 mg 1 ml de suspension reconstituée"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -6667,6 +10870,19 @@
       ]
     },
     {
+      "cis": "68414328",
+      "name": "ZOLPIDEM ZENTIVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "68445462",
       "name": "CALCIUM/VITAMINE D (Orale)",
       "route": "orale",
@@ -6694,6 +10910,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "400 mg un comprimé"
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
+          "dosage": "25 mg un comprimé"
         }
       ]
     },
@@ -6746,6 +10967,11 @@
           "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": "40 mg un comprimé"
+        },
+        {
+          "substance": "ACÉTATE DE DEXAMÉTHASONE",
+          "norm_substance": "acetate de dexamethasone",
+          "dosage": "44,30 mg un comprimé"
         }
       ]
     },
@@ -6789,6 +11015,19 @@
       ]
     },
     {
+      "cis": "68598561",
+      "name": "TRAMADOL ZYDUS LP (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "68601502",
       "name": "CILOXADEX (Auriculaire)",
       "route": "auriculaire",
@@ -6803,6 +11042,11 @@
           "substance": "CIPROFLOXACINE",
           "norm_substance": "ciprofloxacine",
           "dosage": "3 mg 1 ml de suspension"
+        },
+        {
+          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
+          "norm_substance": "chlorhydrate de ciprofloxacine",
+          "dosage": " "
         }
       ]
     },
@@ -6813,9 +11057,97 @@
       "is_otc": true,
       "composition": [
         {
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
+          "dosage": "0,138 mg 0,4 ml"
+        },
+        {
           "substance": "KETOTIFÈNE",
           "norm_substance": "ketotifene",
           "dosage": "0,1 mg 0,4 ml"
+        }
+      ]
+    },
+    {
+      "cis": "68650944",
+      "name": "TRIMEBUTINE ARROW GENERIQUES (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68654914",
+      "name": "AZITHROMYCINE TEVA (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "AZITHROMYCINE ANHYDRE",
+          "norm_substance": "azithromycine anhydre",
+          "dosage": "250 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68674735",
+      "name": "PHLOROGLUCINOL BIOGARAN CONSEIL (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
+          "norm_substance": "phloroglucinol dihydrate",
+          "dosage": "80 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68694175",
+      "name": "PHLOROGLUCINOL ZENTIVA (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68710804",
+      "name": "ARKOGELULES PASSIFLORE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PASSIFLORE (POUDRE DES PARTIES AÉRIENNES DE)",
+          "norm_substance": "passiflore (poudre des parties aeriennes de)",
+          "dosage": "300 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "68712285",
+      "name": "ALLERVI (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
+          "norm_substance": "chlorhydrate de fexofenadine",
+          "dosage": "120,000 mg un comprimé"
         }
       ]
     },
@@ -6846,6 +11178,19 @@
       ]
     },
     {
+      "cis": "68781121",
+      "name": "DOXYLAMINE EG LABO (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "dosage": "15 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "68799614",
       "name": "ASPIRINE DU RHONE (Orale)",
       "route": "orale",
@@ -6859,6 +11204,55 @@
       ]
     },
     {
+      "cis": "68809147",
+      "name": "CEFIXIME CRISTERS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68809994",
+      "name": "AMBROXOL VIATRIS CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "30 mg un comprimé"
+        },
+        {
+          "substance": "AMBROXOL BASE",
+          "norm_substance": "ambroxol base",
+          "dosage": "27,3 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "68816348",
+      "name": "TRIMEBUTINE CRISTERS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "68823442",
       "name": "TRAMADOL/PARACETAMOL CRISTERS (Orale)",
       "route": "orale",
@@ -6868,6 +11262,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
         }
       ]
     },
@@ -6924,6 +11323,24 @@
       ]
     },
     {
+      "cis": "68906169",
+      "name": "MOMETASONE TEVA (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50 microgrammes une dose"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "68909329",
       "name": "MAALOX REFLUX ALGINATE DE SODIUM/BICARBONATE DE SODIUM MENTHE (Orale)",
       "route": "orale",
@@ -6955,6 +11372,50 @@
       ]
     },
     {
+      "cis": "68948990",
+      "name": "NODEX ADULTES (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DEXTROMÉTHORPHANE (BROMHYDRATE DE)",
+          "norm_substance": "dextromethorphane (bromhydrate de)",
+          "dosage": "0,025 g un récipient unidose de 10 ml"
+        }
+      ]
+    },
+    {
+      "cis": "68968199",
+      "name": "PRIMPERAN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
+          "norm_substance": "chlorhydrate de metoclopramide",
+          "dosage": "0,105 g 100 ml de solution buvable"
+        },
+        {
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
+          "norm_substance": "chlorhydrate de metoclopramide anhydre",
+          "dosage": "0,100 g 100 ml de solution buvable"
+        }
+      ]
+    },
+    {
+      "cis": "68976559",
+      "name": "LEVOCETIRIZINE ZYDUS (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
+          "dosage": "5 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "69016462",
       "name": "BRONCATHIOL EXPECTORANT ADULTES (Orale)",
       "route": "orale",
@@ -6968,11 +11429,29 @@
       ]
     },
     {
+      "cis": "69019024",
+      "name": "ZOLPIDEM EG (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "69021160",
       "name": "AMOXICILLINE/ACIDE CLAVULANIQUE SUN (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": "100 mg 1 ml de suspension reconstituée"
+        },
         {
           "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
@@ -6991,6 +11470,32 @@
       ]
     },
     {
+      "cis": "69043954",
+      "name": "SYNAZE (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": "365 microgrammes 1 g de suspension"
+        }
+      ]
+    },
+    {
+      "cis": "69054954",
+      "name": "SEDATIF TIBER (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PASSIFLORE (EXTRAIT DE) (FLUIDE)",
+          "norm_substance": "passiflore (extrait de) (fluide)",
+          "dosage": "5 g 100 g de sirop"
+        }
+      ]
+    },
+    {
       "cis": "69085818",
       "name": "DAFALGAN ADULTES (Rectale)",
       "route": "rectale",
@@ -7004,6 +11509,24 @@
       ]
     },
     {
+      "cis": "69100387",
+      "name": "CEFIXIME EG (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "69119195",
       "name": "LOPERAMIDE SANDOZ (Orale)",
       "route": "orale",
@@ -7013,6 +11536,24 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2,00 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
+        }
+      ]
+    },
+    {
+      "cis": "69125020",
+      "name": "TRIMEBUTINE VIATRIS CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "100 mg un comprimé"
         }
       ]
     },
@@ -7043,6 +11584,24 @@
       ]
     },
     {
+      "cis": "69161828",
+      "name": "MOMETASONE VIATRIS (Nasale)",
+      "route": "nasale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "FUROATE DE MOMÉTASONE",
+          "norm_substance": "furoate de mometasone",
+          "dosage": "50,00 microgrammes une dose délivrée"
+        },
+        {
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "furoate de mometasone monohydrate",
+          "dosage": " "
+        }
+      ]
+    },
+    {
       "cis": "69165716",
       "name": "CALCIUM ARROW (Orale)",
       "route": "orale",
@@ -7065,6 +11624,11 @@
           "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": "2 mg une gélule"
+        },
+        {
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
+          "dosage": "1,86 mg une gélule"
         }
       ]
     },
@@ -7078,6 +11642,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "500 mg un sachet de 5 g"
+        },
+        {
+          "substance": "MALÉATE DE PHÉNIRAMINE",
+          "norm_substance": "maleate de pheniramine",
+          "dosage": "25 mg un sachet de 5 g"
         }
       ]
     },
@@ -7095,15 +11664,46 @@
       ]
     },
     {
+      "cis": "69303640",
+      "name": "METEOXANE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
+          "dosage": "80,0 mg une gélule"
+        }
+      ]
+    },
+    {
       "cis": "69326767",
       "name": "AZYTER (Ophtalmique)",
       "route": "ophtalmique",
       "is_otc": false,
       "composition": [
         {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": "15 mg 1 g de solution"
+        },
+        {
           "substance": "AZITHROMYCINE",
           "norm_substance": "azithromycine",
           "dosage": "14,3 mg 1 g de solution"
+        }
+      ]
+    },
+    {
+      "cis": "69329603",
+      "name": "ZOLPIDEM CRISTERS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "TARTRATE DE ZOLPIDEM",
+          "norm_substance": "tartrate de zolpidem",
+          "dosage": "10 mg un comprimé"
         }
       ]
     },
@@ -7166,6 +11766,11 @@
           "substance": "CIPROFLOXACINE",
           "norm_substance": "ciprofloxacine",
           "dosage": "0,30 g 100 g"
+        },
+        {
+          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
+          "norm_substance": "chlorhydrate de ciprofloxacine",
+          "dosage": "0,35 g 100 g"
         }
       ]
     },
@@ -7183,6 +11788,24 @@
       ]
     },
     {
+      "cis": "69410877",
+      "name": "CEFIXIME EVOLUGEN (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CÉFIXIME TRIHYDRATÉE",
+          "norm_substance": "cefixime trihydratee",
+          "dosage": " "
+        },
+        {
+          "substance": "CÉFIXIME ANHYDRE",
+          "norm_substance": "cefixime anhydre",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "69424492",
       "name": "IPRAALOX (Orale)",
       "route": "orale",
@@ -7192,6 +11815,11 @@
           "substance": "PANTOPRAZOLE",
           "norm_substance": "pantoprazole",
           "dosage": "20 mg un comprimé"
+        },
+        {
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
+          "norm_substance": "pantoprazole sodique sesquihydrate",
+          "dosage": " "
         }
       ]
     },
@@ -7245,6 +11873,19 @@
       ]
     },
     {
+      "cis": "69488210",
+      "name": "ANTALNOX (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "NAPROXÈNE SODIQUE",
+          "norm_substance": "naproxene sodique",
+          "dosage": "550 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "69497177",
       "name": "STERDEX (Ophtalmique)",
       "route": "ophtalmique",
@@ -7254,6 +11895,19 @@
           "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": "0,267 mg un récipient unidose"
+        }
+      ]
+    },
+    {
+      "cis": "69521824",
+      "name": "TRAMADOL VIATRIS (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "50 mg une gélule"
         }
       ]
     },
@@ -7328,6 +11982,24 @@
       ]
     },
     {
+      "cis": "69585360",
+      "name": "AMBROXOL TEVA CONSEIL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
+          "dosage": "30,00 mg un comprimé"
+        },
+        {
+          "substance": "AMBROXOL BASE",
+          "norm_substance": "ambroxol base",
+          "dosage": "27,30 mg un comprimé"
+        }
+      ]
+    },
+    {
       "cis": "69592294",
       "name": "POLERY ADULTES SANS SUCRE (Orale)",
       "route": "orale",
@@ -7363,6 +12035,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
         }
       ]
     },
@@ -7372,6 +12049,11 @@
       "route": "orale",
       "is_otc": false,
       "composition": [
+        {
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
+          "norm_substance": "azithromycine dihydratee",
+          "dosage": " "
+        },
         {
           "substance": "AZITHROMYCINE",
           "norm_substance": "azithromycine",
@@ -7407,6 +12089,19 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "500 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "69685535",
+      "name": "PHLOROGLUCINOL VIATRIS (Orale;sublinguale)",
+      "route": "orale;sublinguale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
+          "norm_substance": "phloroglucinol dihydrate",
+          "dosage": "160 mg un comprimé"
         }
       ]
     },
@@ -7456,6 +12151,19 @@
           "substance": "CLAVULANATE DE POTASSIUM",
           "norm_substance": "clavulanate de potassium",
           "dosage": " "
+        }
+      ]
+    },
+    {
+      "cis": "69723217",
+      "name": "GASTROPULGITE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "GEL D'HYDROXYDE D'ALUMINIUM ET DE CARBONATE DE MAGNÉSIUM CODESSÉCHÉS",
+          "norm_substance": "gel d'hydroxyde d'aluminium et de carbonate de magnesium codesseches",
+          "dosage": "0,5 g un sachet-dose de 3,0515 g"
         }
       ]
     },
@@ -7527,6 +12235,45 @@
       ]
     },
     {
+      "cis": "69766898",
+      "name": "FEXOFENADINE VIATRIS SANTE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
+          "norm_substance": "chlorhydrate de fexofenadine",
+          "dosage": "180 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "69814229",
+      "name": "TRIMEBUTINE ARROW (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE TRIMÉBUTINE",
+          "norm_substance": "maleate de trimebutine",
+          "dosage": "200 mg un comprimé"
+        }
+      ]
+    },
+    {
+      "cis": "69819774",
+      "name": "ULTARCORLENE (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PIVALATE DE PREDNISOLONE",
+          "norm_substance": "pivalate de prednisolone",
+          "dosage": "5 mg 1 g de pommade ophtalmique"
+        }
+      ]
+    },
+    {
       "cis": "69835020",
       "name": "HUMEX ALLERGIE CETIRIZINE (Orale)",
       "route": "orale",
@@ -7562,6 +12309,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,5 mg un comprimé"
         }
       ]
     },
@@ -7637,6 +12389,11 @@
           "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": "325 mg un comprimé"
+        },
+        {
+          "substance": "CHLORHYDRATE DE TRAMADOL",
+          "norm_substance": "chlorhydrate de tramadol",
+          "dosage": "37,50 mg un comprimé"
         }
       ]
     }

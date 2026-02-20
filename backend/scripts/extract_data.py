@@ -89,7 +89,9 @@ def normalize_name(name):
     if not isinstance(name, str):
         return ""
     n = unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8')
-    return n.lower().strip()
+    n = n.lower().strip()
+    n = n.replace('-', '')
+    return n
 
 def load_otc_names():
     otc_names = set()
@@ -126,7 +128,7 @@ def forge_database():
     otc_names = load_otc_names()
 
     print("📖 Lecture CIS_bdpm.txt...")
-    cis_info = {} # cis -> {name, route}
+    cis_info = {} 
     try:
         with open(CIS_PATH, 'r', encoding='latin-1') as f:
             for line in f:
@@ -147,7 +149,7 @@ def forge_database():
          return
 
     print("🧪 Lecture CIS_COMPO_bdpm.txt...")
-    brands_to_import = {} # cis -> dict details
+    brands_to_import = {} 
     substances_to_import = set()
     
     try:
@@ -165,8 +167,7 @@ def forge_database():
                     
                     brand_info = cis_info[cis]
                     norm_brand_name = brand_info['norm_name']
-                    
-                    is_substance_allowed = sub_norm in substance_to_families
+                    is_substance_allowed = any(known_sub in sub_norm for known_sub in substance_to_families)
                     is_brand_vip = any(vip in norm_brand_name for vip in specific_brands)
                     
                     if is_substance_allowed or is_brand_vip:
@@ -175,7 +176,7 @@ def forge_database():
                                 "cis": cis,
                                 "name": brand_info["name"],
                                 "route": brand_info["route"],
-                                "is_otc": False, # Placeholder, sera calculé plus tard
+                                "is_otc": False, 
                                 "composition": []
                             }
                         
@@ -224,12 +225,10 @@ def forge_database():
         route = brand["route"]
         substances = [c["norm_substance"] for c in brand["composition"]]
         
-        # Nettoyage du nom : retire les dosages (chiffres et virgules)
         import re
         match = re.match(r"^([^\d,]+)", brand["name"])
         clean_name = match.group(1).strip().upper() if match else brand["name"].upper()
         
-        # Si c'est un générique, on le groupe sous le nom des substances
         is_generic = False
         for sub in sorted(substances, key=len, reverse=True):
             if norm_name.startswith(sub):
@@ -237,14 +236,12 @@ def forge_database():
                 clean_name = " + ".join(s.upper() for s in substances[:2])
                 break
                 
-        # On regroupe par (Nom, Voie, Substances) pour ne pas fusionner deux gammes différentes (ex: HUMEX RHUME vs HUMEX ALLERGIE)
         group_key = (clean_name, route, frozenset(substances))
         
         if group_key not in grouped_brands:
             brand["name"] = f"{clean_name} ({route.capitalize()})"
             grouped_brands[group_key] = brand
         else:
-            # Si déjà présent, on favorise la condition OTC si l'un d'eux l'est
             if brand["is_otc"]:
                 grouped_brands[group_key]["is_otc"] = True
 

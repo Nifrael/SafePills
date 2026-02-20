@@ -89,7 +89,9 @@ def normalize_name(name):
     if not isinstance(name, str):
         return ""
     n = unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8')
-    return n.lower().strip()
+    n = n.lower().strip()
+    n = n.replace('-', '')
+    return n
 
 def load_otc_names():
     otc_names = set()
@@ -140,11 +142,12 @@ def build_database():
         substance_ids[sub_name] = sub_id
         
         norm_sub = normalize_name(sub_name)
-        if norm_sub in substance_to_families:
-            for fam_name in substance_to_families[norm_sub]:
-                fam_id = family_ids.get(fam_name)
-                if fam_id:
-                    cursor.execute("INSERT INTO substance_families (substance_id, family_id) VALUES (?, ?)", (sub_id, fam_id))
+        for known_sub, fams in substance_to_families.items():
+            if known_sub in norm_sub:
+                for fam_name in fams:
+                    fam_id = family_ids.get(fam_name)
+                    if fam_id:
+                        cursor.execute("INSERT INTO substance_families (substance_id, family_id) VALUES (?, ?)", (sub_id, fam_id))
 
     for brand in brands_to_import:
         cursor.execute(

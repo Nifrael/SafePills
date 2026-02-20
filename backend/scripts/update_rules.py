@@ -12,7 +12,9 @@ def normalize_name(name):
     if not isinstance(name, str):
         return ""
     n = unicodedata.normalize('NFD', name).encode('ascii', 'ignore').decode('utf-8')
-    return n.lower().strip()
+    n = n.lower().strip()
+    n = n.replace('-', '')
+    return n
 
 def update_rules():
     print("🚀 Début de la mise à jour des Règles Médicales (Medical Knowledge)...")
