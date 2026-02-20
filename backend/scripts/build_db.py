@@ -103,101 +103,26 @@ def load_otc_names():
         print(f"❌ Erreur lecture OTC : {e}")
     return otc_names
 
-def forge_database():
-    print("🚀 Début de la Forge SafePills...")
+def build_database():
+    print("🚀 Début de l'intégration dans SafePills (SQLite)...")
     
-    with open(WHITELIST_PATH, 'r', encoding='utf-8') as f:
-        whitelist = json.load(f)
-    
-    allowed_routes = whitelist.get("allowed_routes", [])
-    wl_families = whitelist.get("families", {})
-    specific_brands = [normalize_name(b) for b in whitelist.get("specific_brands_allowed", [])]
-    otc_overrides = whitelist.get("otc_overrides", {})
-    otc_overrides_norm = {normalize_name(k): v for k, v in otc_overrides.items()}
-
-    substance_to_families = {}
-    for fam_name, subs in wl_families.items():
-        for sub in subs:
-            sub_norm = normalize_name(sub)
-            if sub_norm not in substance_to_families:
-                substance_to_families[sub_norm] = []
-            substance_to_families[sub_norm].append(fam_name)
-
-    otc_names = load_otc_names()
-
-    print("📖 Lecture CIS_bdpm.txt...")
-    cis_info = {} # cis -> {name, route}
-    try:
-        with open(CIS_PATH, 'r', encoding='latin-1') as f:
-            for line in f:
-                parts = line.strip().split('\t')
-                if len(parts) >= 4:
-                    cis = parts[0]
-                    name = parts[1].strip()
-                    route = parts[3].lower()
-                    
-                    if any(r in route for r in allowed_routes):
-                        cis_info[cis] = {
-                            "name": name,
-                            "route": route,
-                            "norm_name": normalize_name(name)
-                        }
-    except Exception as e:
-         print(f"❌ Erreur lecture CIS: {e}")
-         return
-
-    print("🧪 Lecture CIS_COMPO_bdpm.txt...")
-    brands_to_import = {} # cis -> dict details
-    substances_to_import = set()
-    
-    try:
-        with open(COMPO_PATH, 'r', encoding='latin-1') as f:
-            for line in f:
-                parts = line.strip().split('\t')
-                if len(parts) >= 6:
-                    cis = parts[0]
-                    if cis not in cis_info:
-                        continue 
-                    
-                    substance_name = parts[3].strip()
-                    dosage = parts[4].strip() + " " + parts[5].strip()
-                    sub_norm = normalize_name(substance_name)
-                    
-                    brand_info = cis_info[cis]
-                    norm_brand_name = brand_info['norm_name']
-                    
-                    is_substance_allowed = sub_norm in substance_to_families
-                    is_brand_vip = any(vip in norm_brand_name for vip in specific_brands)
-                    
-                    if is_substance_allowed or is_brand_vip:
-                        if cis not in brands_to_import:
-                            is_otc = any(otc in norm_brand_name for otc in otc_names)
-                            
-                            for ov_key, ov_val in otc_overrides_norm.items():
-                                if ov_key in norm_brand_name or ov_key in sub_norm:
-                                    is_otc = ov_val
-                                    break
-                            
-                            brands_to_import[cis] = {
-                                "cis": cis,
-                                "name": brand_info["name"],
-                                "route": brand_info["route"],
-                                "is_otc": is_otc,
-                                "composition": []
-                            }
-                        
-                        brands_to_import[cis]["composition"].append({
-                            "substance": substance_name,
-                            "norm_substance": sub_norm,
-                            "dosage": dosage
-                        })
-                        substances_to_import.add(substance_name)
-    except Exception as e:
-        print(f"❌ Erreur lecture COMPO: {e}")
+    PHARMA_DATA_PATH = os.path.join(DATA_DIR, 'pharma_data.json')
+    if not os.path.exists(PHARMA_DATA_PATH):
+        print(f"❌ Fichier manquant: {PHARMA_DATA_PATH}. Veuillez lancer extract_data.py d'abord.")
         return
+        
+    try:
+        with open(PHARMA_DATA_PATH, 'r', encoding='utf-8') as f:
+            pharma_data = json.load(f)
+    except Exception as e:
+        print(f"❌ Erreur lecture de la donnée JSON : {e}")
+        return
+        
+    wl_families = pharma_data.get("families", {})
+    substances_to_import = pharma_data.get("substances", [])
+    brands_to_import = pharma_data.get("brands", [])
+    substance_to_families = pharma_data.get("substance_to_families", {})
 
-    print(f"✅ Filtrage terminé. Marques à importer : {len(brands_to_import)}")
-    
     print("💾 Insertion dans SQLite...")
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
@@ -221,7 +146,7 @@ def forge_database():
                 if fam_id:
                     cursor.execute("INSERT INTO substance_families (substance_id, family_id) VALUES (?, ?)", (sub_id, fam_id))
 
-    for cis, brand in brands_to_import.items():
+    for brand in brands_to_import:
         cursor.execute(
             "INSERT INTO brands (cis, name, administration_route, is_otc) VALUES (?, ?, ?, ?)",
             (brand['cis'], brand['name'], brand['route'], brand['is_otc'])
@@ -229,11 +154,12 @@ def forge_database():
         brand_id = cursor.lastrowid
         
         for compo in brand['composition']:
-            sub_id = substance_ids[compo['substance']]
-            cursor.execute(
-                "INSERT INTO brand_substances (brand_id, substance_id, dosage) VALUES (?, ?, ?)",
-                (brand_id, sub_id, compo['dosage'])
-            )
+            sub_id = substance_ids.get(compo['substance'])
+            if sub_id:
+                cursor.execute(
+                    "INSERT INTO brand_substances (brand_id, substance_id, dosage) VALUES (?, ?, ?)",
+                    (brand_id, sub_id, compo.get('dosage'))
+                )
 
     conn.commit()
 
@@ -292,4 +218,4 @@ def forge_database():
     print("✨ Base de données générée avec succès (Schéma Relationnel Majeur).")
 
 if __name__ == "__main__":
-    forge_database()
+    build_database()

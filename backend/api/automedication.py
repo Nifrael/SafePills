@@ -1,20 +1,14 @@
-"""
-Endpoints API pour le système de Score d'Automédication (KISS).
-Connecté aux services simplifiés et à la base SQLite nettoyée.
-"""
 from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel, Field, field_validator
 from typing import Dict, List, Optional, Literal
 from ..services.automedication import evaluate_risk
 from ..core.schemas import EvaluationResponse
-from ..core.models import Question
 
 from backend.core.limiter import limiter
 
 router = APIRouter(prefix="/api/automedication", tags=["automedication"])
 
 class AnswersRequest(BaseModel):
-    """Payload pour envoyer les réponses — avec des garde-fous !"""
     cis: Optional[str] = Field(None, max_length=50)
     answers: Dict[str, bool] = Field(default_factory=dict)
     has_other_meds: Optional[bool] = False
@@ -32,11 +26,6 @@ class AnswersRequest(BaseModel):
 @router.post("/evaluate", response_model=EvaluationResponse)
 @limiter.limit("10/minute")
 async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
-    """
-    Calcule le score final basé sur les réponses OUI (True).
-    Si cis et has_other_meds sont fournis, applique automatiquement
-    le risque de polymédication (sans reposer la question).
-    """
     result = evaluate_risk(
         answers=body.answers,
         identifier=body.cis,
@@ -55,11 +44,7 @@ async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
             is_otc = drug_info.is_otc
             substance_names = [bs.substance.name for bs in drug_info.composition]
 
-    try:
-        from ..services.ai_service import get_general_advice
-        result.general_advice = get_general_advice(substance_names, lang)
-    except Exception:
-        result.general_advice = []
+    result.general_advice = []
         
     if not is_otc:
         warning_msg = "⚠️ Ce médicament nécessite normalement une prescription médicale."

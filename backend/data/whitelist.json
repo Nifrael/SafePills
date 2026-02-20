@@ -201,5 +201,20 @@
     "BISEPTINE",
     "BETADINE",
     "HEXOMEDINE"
-  ]
+  ],
+  "otc_overrides": {
+    "amoxicilline": false,
+    "codeine": false,
+    "tramadol": false,
+    "opium": false,
+    "ketoprofene": false,
+    "naproxene": false,
+    "diclofenac": false,
+    "paracetamol": true,
+    "ibuprofene": true,
+    "aspirine": true,
+    "doxylamine": true,
+    "cetirizine": true,
+    "loratadine": true
+  }
 }

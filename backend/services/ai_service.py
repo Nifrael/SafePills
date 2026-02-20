@@ -23,55 +23,6 @@ if GOOGLE_API_KEY:
     except Exception as e:
         logger.error(f"Erreur configuration Gemini: {e}")
 
-KNOWLEDGE_PATH = os.path.join(BASE_DIR, '..', 'data', 'medical_knowledge.json')
-SUBSTANCE_ADVICE: Dict = {}
-
-try:
-    with open(KNOWLEDGE_PATH, 'r', encoding='utf-8') as f:
-        knowledge = json.load(f)
-        SUBSTANCE_ADVICE = knowledge.get('substance_advice', {})
-    logger.info(f"Conseils pharmaceutiques chargés ({len(SUBSTANCE_ADVICE)} substances)")
-except Exception as e:
-    logger.warning(f"Impossible de charger les conseils: {e}")
-
-
-def _collect_advice(
-    substance_names: List[str],
-    triggered_question_ids: List[str],
-    lang: str = "fr"
-) -> str:
-    advice_lines = []
-
-    for substance in substance_names:
-        # Get general advice via i18n
-        for tip in i18n.get_advice(substance, "general", lang):
-             advice_lines.append(f"- {tip}")
-
-        for q_id in triggered_question_ids:
-            base_id = q_id
-            for suffix in ['_RED_F', '_ORANGE_F', '_GREEN_F', '_RED', '_ORANGE', '_GREEN']:
-                if q_id.endswith(suffix):
-                    base_id = q_id[:-len(suffix)]
-                    break
-            
-            # Get specific advice via i18n
-            for tip in i18n.get_advice(substance, base_id, lang):
-                if f"- {tip}" not in advice_lines:  
-                    advice_lines.append(f"- {tip}")
-
-    return '\n'.join(advice_lines)
-
-
-def get_general_advice(substance_names: List[str], lang: str = "fr") -> List[str]:
-    general_tips = []
-    for sub in substance_names:
-        tips = i18n.get_advice(sub, "general", lang)
-        for tip in tips:
-            if tip not in general_tips:
-                general_tips.append(tip)
-    return general_tips
-
-
 async def generate_risk_explanation(
     drug_name: str,
     score: str,
@@ -84,7 +35,6 @@ async def generate_risk_explanation(
         return "Service d'assistance virtuelle indisponible pour le moment." if lang == "fr" else "Servicio de asistencia virtual no disponible por el momento."
 
     try:
-        # Profile context
         if lang == "es":
             gender_text = "una mujer" if user_profile.get('gender') == 'F' else "un hombre"
             age_text = f"{user_profile.get('age', '?')} años"
@@ -109,11 +59,10 @@ async def generate_risk_explanation(
         substance_names = user_profile.get('substances', [])
         triggered_ids = [q['question_id'] for q in answered_questions if q.get('question_id')]
         
-        validated_advice = _collect_advice(substance_names, triggered_ids, lang)
+        validated_advice = "\n".join([f"- {d}" for d in details]) if details else ""
         
         logger.debug(f"RAG — Substances: {substance_names}")
-        logger.debug(f"RAG — Questions déclenchées: {triggered_ids}")
-        logger.debug(f"RAG — Conseils trouvés: {len(validated_advice.splitlines())} lignes")
+        logger.debug(f"RAG — Conseils transmis: {len(details)} lignes")
 
         if lang == "es":
             system_instruction = """Eres un farmacéutico experimentado, amable y pedagógico.

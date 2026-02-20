@@ -171,18 +171,11 @@ def forge_database():
                     
                     if is_substance_allowed or is_brand_vip:
                         if cis not in brands_to_import:
-                            is_otc = any(otc in norm_brand_name for otc in otc_names)
-                            
-                            for ov_key, ov_val in otc_overrides_norm.items():
-                                if ov_key in norm_brand_name or ov_key in sub_norm:
-                                    is_otc = ov_val
-                                    break
-                            
                             brands_to_import[cis] = {
                                 "cis": cis,
                                 "name": brand_info["name"],
                                 "route": brand_info["route"],
-                                "is_otc": is_otc,
+                                "is_otc": False, # Placeholder, sera calculé plus tard
                                 "composition": []
                             }
                         
@@ -196,100 +189,84 @@ def forge_database():
         print(f"❌ Erreur lecture COMPO: {e}")
         return
 
-    print(f"✅ Filtrage terminé. Marques à importer : {len(brands_to_import)}")
+    print(f"✅ Filtrage terminé. Marques brutes à importer : {len(brands_to_import)}")
     
-    print("💾 Insertion dans SQLite...")
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    init_db(cursor)
-
-    family_ids = {} 
-    for fam_name in wl_families.keys():
-        cursor.execute("INSERT INTO families (name) VALUES (?)", (fam_name,))
-        family_ids[fam_name] = cursor.lastrowid
-
-    substance_ids = {} 
-    for sub_name in substances_to_import:
-        cursor.execute("INSERT INTO substances (name) VALUES (?)", (sub_name,))
-        sub_id = cursor.lastrowid
-        substance_ids[sub_name] = sub_id
+    print("🚦 Application des règles et overrides OTC...")
+    for brand in brands_to_import.values():
+        norm_brand_name = normalize_name(brand["name"])
+        is_otc = any(otc in norm_brand_name for otc in otc_names)
         
-        norm_sub = normalize_name(sub_name)
-        if norm_sub in substance_to_families:
-            for fam_name in substance_to_families[norm_sub]:
-                fam_id = family_ids.get(fam_name)
-                if fam_id:
-                    cursor.execute("INSERT INTO substance_families (substance_id, family_id) VALUES (?, ?)", (sub_id, fam_id))
-
-    for cis, brand in brands_to_import.items():
-        cursor.execute(
-            "INSERT INTO brands (cis, name, administration_route, is_otc) VALUES (?, ?, ?, ?)",
-            (brand['cis'], brand['name'], brand['route'], brand['is_otc'])
-        )
-        brand_id = cursor.lastrowid
+        has_true_override = False
+        has_false_override = False
         
-        for compo in brand['composition']:
-            sub_id = substance_ids[compo['substance']]
-            cursor.execute(
-                "INSERT INTO brand_substances (brand_id, substance_id, dosage) VALUES (?, ?, ?)",
-                (brand_id, sub_id, compo['dosage'])
-            )
-
-    conn.commit()
-
-    print("📚 Importation des Règles Médicales (Medical Knowledge)...")
-    MED_KNOWLEDGE_PATH = os.path.join(DATA_DIR, 'medical_knowledge.json')
-    try:
-        with open(MED_KNOWLEDGE_PATH, 'r', encoding='utf-8') as f:
-            med_knowledge = json.load(f)
+        for ov_key, ov_val in otc_overrides_norm.items():
+            matches_brand_name = ov_key in norm_brand_name
+            matches_any_substance = any(ov_key in c["norm_substance"] for c in brand["composition"])
             
-        rules_inserted = 0
-        for rule in med_knowledge.get('rules', []):
-            family_id = None
-            if 'target_family' in rule:
-                fam_name = rule['target_family']
-                family_id = family_ids.get(fam_name)
-                if not family_id:
-                    print(f"⚠️ Famille '{fam_name}' inconnue pour la règle {rule['question_code']}. Ignorée.")
-                    continue
+            if matches_brand_name or matches_any_substance:
+                if ov_val:
+                    has_true_override = True
+                else:
+                    has_false_override = True
                     
-            substance_id = None
-            if 'target_substance' in rule:
-                sub_norm = normalize_name(rule['target_substance'])
-                for s_name, s_id in substance_ids.items():
-                    if normalize_name(s_name) == sub_norm:
-                        substance_id = s_id
-                        break
+        if has_false_override:
+            brand["is_otc"] = False
+        elif has_true_override:
+            brand["is_otc"] = True
+        else:
+            brand["is_otc"] = is_otc
+    
+    print("🧹 Dé-duplication intelligente des génériques et marques...")
+    grouped_brands = {}
+    
+    for brand in brands_to_import.values():
+        norm_name = normalize_name(brand["name"])
+        route = brand["route"]
+        substances = [c["norm_substance"] for c in brand["composition"]]
+        
+        # Nettoyage du nom : retire les dosages (chiffres et virgules)
+        import re
+        match = re.match(r"^([^\d,]+)", brand["name"])
+        clean_name = match.group(1).strip().upper() if match else brand["name"].upper()
+        
+        # Si c'est un générique, on le groupe sous le nom des substances
+        is_generic = False
+        for sub in sorted(substances, key=len, reverse=True):
+            if norm_name.startswith(sub):
+                is_generic = True
+                clean_name = " + ".join(s.upper() for s in substances[:2])
+                break
                 
-                if not substance_id:
-                    print(f"⚠️ Substance '{rule['target_substance']}' inconnue pour la règle {rule['question_code']}. Ignorée.")
-                    continue
+        # On regroupe par (Nom, Voie, Substances) pour ne pas fusionner deux gammes différentes (ex: HUMEX RHUME vs HUMEX ALLERGIE)
+        group_key = (clean_name, route, frozenset(substances))
+        
+        if group_key not in grouped_brands:
+            brand["name"] = f"{clean_name} ({route.capitalize()})"
+            grouped_brands[group_key] = brand
+        else:
+            # Si déjà présent, on favorise la condition OTC si l'un d'eux l'est
+            if brand["is_otc"]:
+                grouped_brands[group_key]["is_otc"] = True
 
-            cursor.execute("""
-                INSERT INTO rules (
-                    question_code, risk_level, advice, family_id, substance_id,
-                    filter_route, filter_polymedication, filter_gender, age_min
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                rule['question_code'],
-                rule['risk_level'],
-                rule['advice'],
-                family_id,
-                substance_id,
-                rule.get('filter_route'),
-                rule.get('filter_polymedication', 0),
-                rule.get('filter_gender'),
-                rule.get('age_min')
-            ))
-            rules_inserted += 1
-            
-        conn.commit()
-        print(f"✅ {rules_inserted} règles insérées avec succès.")
+    final_brands = list(grouped_brands.values())
+    print(f"📉 Après dé-duplication : {len(final_brands)} médicaments uniques conservés.")
+    
+    print("💾 Exportation au format JSON...")
+    
+    output_data = {
+        "families": wl_families,
+        "substances": list(substances_to_import),
+        "brands": final_brands,
+        "substance_to_families": substance_to_families
+    }
+    
+    PHARMA_DATA_PATH = os.path.join(DATA_DIR, 'pharma_data.json')
+    try:
+        with open(PHARMA_DATA_PATH, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, ensure_ascii=False, indent=2)
+        print(f"✨ Fichier {PHARMA_DATA_PATH} généré avec succès.")
     except Exception as e:
-        print(f"❌ Erreur lors de l'import des règles : {e}")
-
-    conn.close()
-    print("✨ Base de données générée avec succès (Schéma Relationnel Majeur).")
+        print(f"❌ Erreur lors de la génération du JSON : {e}")
 
 if __name__ == "__main__":
     forge_database()

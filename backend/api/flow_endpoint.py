@@ -90,6 +90,10 @@ async def get_flow(request: Request, identifier: str, lang: str = Query("fr")):
     
     if not rules:
         return _build_profile_questions(False, False, lang)
+        
+    for r in rules:
+        if r.question_code == "GENERAL" and r.risk_level.value == 4:
+            return []
     
     route = _repository.get_drug_route(identifier)
     
