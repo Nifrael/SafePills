@@ -104,14 +104,15 @@
       "diosmectite",
       "racecadotril",
       "saccharomyces boulardii",
-      "tifuroxazide"
+      "nifuroxazide"
     ],
     "GASTRO_ANTISPASMODIQUES": [
       "phloroglucinol",
       "trimethylphloroglucinol",
       "mebeverine",
       "trimebutine",
-      "meteospasmyl"
+      "alverine",
+      "simeticone"
     ],
     "GASTRO_ANTIEMETIQUES": [
       "metoclopramide",
@@ -128,8 +129,7 @@
       "dextromethorphane",
       "pholcodine",
       "helicidine",
-      "oxomemazine",
-      "clobutinol"
+      "oxomemazine"
     ],
     "TOUX_GRASSE": [
       "carbocisteine",
@@ -162,7 +162,7 @@
     "ALLERGIE_OPHTALMIQUE": [
       "cromoglicate de sodium",
       "ketotifene",
-      "acide spaglumique"
+      "acide n-acetyl aspartyl glutamique"
     ]
   },
   "specific_brands_allowed": [

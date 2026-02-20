@@ -94,14 +94,15 @@
       "diosmectite",
       "racecadotril",
       "saccharomyces boulardii",
-      "tifuroxazide"
+      "nifuroxazide"
     ],
     "GASTRO_ANTISPASMODIQUES": [
       "phloroglucinol",
       "trimethylphloroglucinol",
       "mebeverine",
       "trimebutine",
-      "meteospasmyl"
+      "alverine",
+      "simeticone"
     ],
     "GASTRO_ANTIEMETIQUES": [
       "metoclopramide",
@@ -118,8 +119,7 @@
       "dextromethorphane",
       "pholcodine",
       "helicidine",
-      "oxomemazine",
-      "clobutinol"
+      "oxomemazine"
     ],
     "TOUX_GRASSE": [
       "carbocisteine",
@@ -152,244 +152,257 @@
     "ALLERGIE_OPHTALMIQUE": [
       "cromoglicate de sodium",
       "ketotifene",
-      "acide spaglumique"
+      "acide n-acetyl aspartyl glutamique"
     ]
   },
   "substances": [
-    "PRISTINAMYCINE",
-    "TRAMADOL",
-    "ÉSOMÉPRAZOLE",
-    "DIPROPIONATE DE BÉCLOMÉTASONE",
-    "KETOTIFÈNE (FUMARATE DE)",
-    "LOPÉRAMIDE",
-    "CHLORHYDRATE DE VALACICLOVIR MONOHYDRATÉ",
-    "CARBOCISTÉINE",
-    "TRIMÉBUTINE (MALÉATE DE)",
-    "PASSIFLORE (PARTIE AÉRIENNE DE) (EXTRAIT SEC DE)",
-    "PANTOPRAZOLE",
-    "RABÉPRAZOLE SODIQUE MONOHYDRATÉ",
-    "ÉSOMÉPRAZOLE SODIQUE",
-    "PROPIONATE DE JOSAMYCINE",
-    "RABÉPRAZOLE BASE",
-    "ÉTIFOXINE (CHLORHYDRATE D')",
-    "PREDNISOLONE",
-    "DICLOFÉNAC SODIQUE",
-    "PHOLCODINE",
-    "CLOXACILLINE SODIQUE MONOHYDRATÉE",
-    "CROMOGLICATE DE SODIUM",
-    "CLARITHROMYCINE",
-    "BÉCLOMÉTASONE (DIPROPIONATE DE)",
-    "VALÉRIANE (RACINE DE) (EXTRAIT SEC DE)",
-    "AMBROXOL BASE",
-    "LORATADINE",
-    "DICLOFÉNAC",
-    "FOSFOMYCINE",
     "IBUPROFÈNE",
-    "FUROATE DE MOMÉTASONE",
-    "AMOXICILLINE TRIHYDRATÉE",
-    "BÉTAMETHASONE (PHOSPHATE DE) ET DE DISODIUM",
-    "MALÉATE DE TRIMÉBUTINE",
-    "CLOXACILLINE",
-    "ÉSOMÉPRAZOLE MAGNÉSIQUE DIHYDRATÉ",
-    "MALÉATE DE PHÉNIRAMINE",
-    "DOXYCYCLINE",
-    "NAPROXÈNE SODIQUE",
-    "FEXOFÉNADINE BASE",
-    "CHLORHYDRATE DE DIPHÉNHYDRAMINE",
-    "CHLORHYDRATE DE FEXOFÉNADINE",
-    "CODÉINE (PHOSPHATE DE)",
-    "DOXYCYCLINE BASE",
-    "OMÉPRAZOLE MAGNÉSIUM",
-    "PREDNISONE",
-    "ÉSOMÉPRAZOLE MAGNÉSIQUE",
-    "RABÉPRAZOLE SODIQUE",
-    "CHLORHYDRATE DE LOPÉRAMIDE",
-    "SUCCINATE DE DOXYLAMINE",
-    "ÉSOMÉPRAZOLE MAGNÉSIUM TRIHYDRATÉ",
-    "AZITHROMYCINE MONOHYDRATÉE",
-    "HÉLICIDINE",
-    "OMÉPRAZOLE",
-    "BROMHYDRATE DE DEXTROMÉTHORPHANE",
-    "DICHLORHYDRATE DE CÉTIRIZINE",
-    "GEL D'HYDROXYDE D'ALUMINIUM ET DE CARBONATE DE MAGNÉSIUM CODESSÉCHÉS",
-    "DIAZÉPAM",
-    "DEXAMÉTHASONE (MÉTASULFOBENZOATE SODIQUE DE)",
-    "CÉFADROXIL MONOHYDRATÉ",
-    "OXAZÉPAM",
-    "PHOSPHATE DISODIQUE DE BÉTAMÉTHASONE",
-    "PREDNISOLONE (MÉTASULFOBENZOATE SODIQUE DE)",
-    "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
-    "DIHYDROCODÉINE",
-    "CÉLÉCOXIB",
-    "DIPROPIONATE DE BÉCLOMÉTASONE MONOHYDRATÉ",
-    "CÉFIXIME ANHYDRE",
-    "CAMPHOSULFONATE DE CODÉINE",
-    "PSEUDOÉPHÉDRINE",
-    "BÉTAMÉTHASONE",
-    "POVIDONE IODÉE",
-    "DEXAMÉTHASONE (PHOSPHATE SODIQUE DE)",
-    "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
-    "ÉPOLAMINE DE DICLOFÉNAC",
-    "CÉFUROXIME AXÉTIL",
-    "MÉTHOCARBAMOL",
-    "MÉTOPIMAZINE",
-    "FLURBIPROFÈNE SODIQUE DIHYDRATÉ",
-    "SIMÉTICONE",
-    "PARTIE AÉRIENNE DE PASSIFLORE",
-    "CARBONATE DE CALCIUM",
-    "CHLORHYDRATE DE BROMHEXINE",
-    "KÉTOPROFÈNE",
-    "EXTRAIT SEC DE PARTIE AERIENNE DE PASSIFLORE",
-    "MALÉATE DE DEXCHLORPHÉNIRAMINE",
-    "CODÉINE",
-    "EXTRAIT SEC DE FEUILLE DE LIERRE GRIMPANT",
-    "LÉVOFLOXACINE",
-    "PHLOROGLUCINOL DIHYDRATÉ",
-    "ONDANSÉTRON",
-    "MIZOLASTINE",
-    "ACIDE ACÉTYLSALICYLIQUE",
-    "BILASTINE",
-    "CÉFADROXIL",
-    "TRIMÉTHYLPHLOROGLUCINOL",
-    "MÉTASULFOBENZOATE SODIQUE DE PREDNISOLONE",
-    "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
-    "CHLORHYDRATE DE MÉBÉVÉRINE",
-    "CIPROFLOXACINE",
-    "CHLORHYDRATE DE TRIPROLIDINE",
-    "ESZOPICLONE",
-    "ACÉTYLCYSTÉINE",
-    "RABÉPRAZOLE",
-    "TEINTURE DE RACINE DE VALÉRIANE",
-    "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
-    "CÉFIXIME TRIHYDRATÉE",
-    "TARTRATE DE ZOLPIDEM",
-    "LÉVOFLOXACINE HÉMIHYDRATÉE",
-    "PHLOROGLUCINOL ANHYDRE",
-    "AZITHROMYCINE",
-    "FOSFOMYCINE TROMÉTAMOL",
-    "AMBROXOL (CHLORHYDRATE D')",
-    "TRIMÉTHOPRIME",
-    "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
-    "PHOLCODINE MONOHYDRATÉE",
-    "SODIUM (ALGINATE DE)",
-    "JOSAMYCINE",
-    "NAPROXÈNE",
-    "ACÉTATE DE DEXAMÉTHASONE",
-    "BICARBONATE DE SODIUM",
-    "PHOSPHATE DE DEXAMÉTHASONE",
-    "LÉVOCÉTIRIZINE",
-    "JOSAMYCINE BASE",
-    "AZITHROMYCINE DIHYDRATÉE",
-    "DEXKÉTOPROFÈNE TROMÉTAMOL",
-    "CHLORHYDRATE DE TRAMADOL",
-    "OFLOXACINE",
-    "PHOSPHATE DE CODÉINE ANHYDRE",
-    "DIMÉTICONE",
-    "TEINTURE DE PARTIE AÉRIENNE DE PASSIFLORE",
-    "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
-    "BROMAZÉPAM",
-    "DOXYCYCLINE HYDRATÉE",
-    "CLAVULANATE DE POTASSIUM",
-    "LYSINATE D'IBUPROFÈNE",
-    "EXTRAIT SEC DE SOMMITÉ FLEURIE D'AUBÉPINE",
-    "CHLORHYDRATE DIHYDRATÉ DE VALACICLOVIR",
-    "DIOSMECTITE",
-    "THIOCOLCHICOSIDE",
-    "ALPRAZOLAM",
-    "TARTRATE DE DIHYDROCODÉINE",
-    "BALLOTE (EXTRAIT SEC DE SOMMITÉ FLEURIE DE)",
-    "CÉFUROXIME",
-    "VALERIANE (RHIZOME DE) (POUDRE DE)",
-    "PHÉNYLÉPHRINE (CHLORHYDRATE DE)",
-    "CEFPODOXIME",
-    "ACIDE NIFLUMIQUE",
-    "JUS PRESSÉ DÉSHYDRATÉ DES PARTIES AÉRIENNES FLEURIES FRAÎCHES D'ECHINACEA PURPUREA",
-    "CAPROATE DE PREDNISOLONE",
-    "DEXKÉTOPROFÈNE",
-    "HYCLATE DE DOXYCYCLINE",
-    "SACCHAROMYCES BOULARDII CNCM I-745",
-    "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
-    "VALACICLOVIR",
-    "LANSOPRAZOLE",
-    "DEXAMÉTHASONE",
-    "AZITHROMYCINE ANHYDRE",
-    "MÉBÉVÉRINE (CHLORHYDRATE DE)",
-    "AMOXICILLINE",
-    "BUDÉSONIDE",
-    "FUROATE DE FLUTICASONE",
-    "EXTRAIT SEC DE RACINE DE VALÉRIANE",
-    "DEXTROMÉTHORPHANE (BROMHYDRATE DE)",
-    "CHLORHYDRATE D'AMBROXOL",
-    "KETOTIFÈNE",
-    "ONDANSÉTRON (CHLORHYDRATE D') DIHYDRATÉ",
-    "PROPIONATE DE FLUTICASONE",
-    "PARACÉTAMOL",
-    "DOXYCYCLINE MONOHYDRATÉE",
-    "DESLORATADINE",
-    "ACIDE CLAVULANIQUE",
-    "CEFPODOXIME PROXÉTIL",
-    "DOXYCYCLINE ANHYDRE",
-    "SULFAMÉTHOXAZOLE",
-    "ACICLOVIR",
-    "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
-    "MÉTOCLOPRAMIDE",
-    "ZOPICLONE",
-    "CHLORHYDRATE DE VALACICLOVIR",
-    "POUDRE D'OPIUM",
-    "PREDNISOLONE (CAPROATE DE)",
-    "PASSIFLORE (EXTRAIT DE) (FLUIDE)",
-    "KÉTOTIFÈNE (HYDROGÉNOFUMARATE DE)",
-    "BICARBONATE DE POTASSIUM",
-    "IBUPROFÈNE (LYSINATE D')",
-    "CÉTIRIZINE (DICHLORHYDRATE DE)",
     "PSEUDO-ÉPHÉDRINE",
-    "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
-    "NITROFURANTOÏNE",
-    "VALÉRIANE (RACINE DE) (EXTRAIT SEC AQUEUX DE)",
-    "MÉQUITAZINE",
-    "CHLORHYDRATE DE CIPROFLOXACINE",
-    "CLAVULANATE DE POTASSIUM DILUÉ",
-    "MÉTHYLPREDNISOLONE",
-    "ÉRYTHROMYCINE BASE",
-    "RACÉCADOTRIL",
-    "HYDROXYDE D'ALUMINIUM",
-    "FUMARATE DE KETOTIFÈNE",
-    "TRIMÉBUTINE",
-    "OXOMÉMAZINE",
-    "BILASTINE MONOHYDRATÉE",
-    "PHOSPHATE DISODIQUE DE DEXAMÉTHASONE",
-    "PHLOROGLUCINOL HYDRATÉ",
-    "LOPÉRAMIDE BASE",
-    "MALÉATE DE CHLORPHÉNAMINE",
-    "CHLORHYDRATE D'ONDANSÉTRON DIHYDRATÉ",
-    "AMOXICILLINE ANHYDRE",
-    "OXYDE D'ALUMINIUM",
-    "ACIDE ASCORBIQUE",
-    "SPIRAMYCINE",
-    "KETOTIFÈNE BASE",
-    "PASSIFLORE (POUDRE DES PARTIES AÉRIENNES DE)",
+    "CHLORHYDRATE DE VALACICLOVIR",
+    "ACÉTATE DE DEXAMÉTHASONE",
+    "CHLORHYDRATE DE TRAMADOL",
     "PIVALATE DE PREDNISOLONE",
-    "AMOXICILLINE BASE",
-    "TRAMADOL (CHLORHYDRATE DE)",
-    "ROXITHROMYCINE",
-    "FEXOFENADINE",
-    "MÉLATONINE",
-    "ÉRYTHROMYCINE (ÉTHYLSUCCINATE D')",
-    "CHLORURE DE BENZALKONIUM",
-    "SODIUM (BICARBONATE DE)",
-    "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)",
-    "CHLORHYDRATE DE PHÉNYLÉPHRINE",
-    "LOPÉRAMIDE (CHLORHYDRATE DE)",
-    "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
-    "ÉSOMÉPRAZOLE MAGNÉSIQUE TRIHYDRATÉ",
-    "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+    "CHLORHEXIDINE (DIGLUCONATE DE)",
     "PSEUDOÉPHÉDRINE (CHLORHYDRATE DE)",
+    "THIOCOLCHICOSIDE",
+    "PHOLCODINE",
+    "MALÉATE DE PHÉNIRAMINE",
+    "LÉVOCÉTIRIZINE",
+    "LOPÉRAMIDE BASE",
+    "SODIUM (BICARBONATE DE)",
+    "DEXAMÉTHASONE (MÉTASULFOBENZOATE SODIQUE DE)",
+    "PREDNISONE",
+    "NITROFURANTOÏNE",
+    "ALCOOL BENZYLIQUE",
+    "CÉLÉCOXIB",
+    "OMÉPRAZOLE",
+    "CÉFADROXIL",
+    "CARBONATE DE CALCIUM",
+    "PHOSPHATE DISODIQUE DE DEXAMÉTHASONE",
+    "VALÉRIANE (RACINE DE) (EXTRAIT SEC AQUEUX DE)",
+    "BROMAZÉPAM",
+    "CIPROFLOXACINE",
+    "PREDNISOLONE (CAPROATE DE)",
+    "AMOXICILLINE BASE",
+    "FOSFOMYCINE",
+    "CHLORHYDRATE D'AMBROXOL",
+    "ACIDE ASCORBIQUE",
+    "FEXOFENADINE",
+    "SULFAMÉTHOXAZOLE",
+    "EXTRAIT SEC DE PARTIE AERIENNE DE PASSIFLORE",
+    "MÉTOPIMAZINE",
+    "PASSIFLORE (POUDRE DES PARTIES AÉRIENNES DE)",
+    "CHLORHYDRATE DE TRIPROLIDINE",
+    "CLARITHROMYCINE",
     "HYDROXYDE DE MAGNÉSIUM",
+    "DOXYCYCLINE ANHYDRE",
+    "BILASTINE MONOHYDRATÉE",
+    "CODÉINE",
+    "CHLORHYDRATE DE DIPHÉNHYDRAMINE",
+    "PREDNISOLONE (MÉTASULFOBENZOATE SODIQUE DE)",
+    "TRIMÉBUTINE (MALÉATE DE)",
+    "FUROATE DE FLUTICASONE",
+    "PARTIE AÉRIENNE DE PASSIFLORE",
+    "BÉTAMÉTHASONE (DIPROPIONATE DE)",
+    "CHLORHYDRATE DE FEXOFÉNADINE",
+    "BUDÉSONIDE",
+    "VALÉRIANE (RACINE DE) (EXTRAIT SEC DE)",
+    "JOSAMYCINE",
+    "EXTRAIT SEC DE SOMMITÉ FLEURIE D'AUBÉPINE",
+    "CHLORHYDRATE DE PHÉNYLÉPHRINE",
+    "AZITHROMYCINE MONOHYDRATÉE",
+    "AMBROXOL BASE",
+    "CLAVULANATE DE POTASSIUM DILUÉ",
+    "PREDNISOLONE",
+    "LANSOPRAZOLE",
+    "DEXKÉTOPROFÈNE TROMÉTAMOL",
+    "FUROATE DE MOMÉTASONE",
+    "PROPIONATE DE JOSAMYCINE",
+    "BÉCLOMÉTASONE (DIPROPIONATE DE)",
+    "LÉVOFLOXACINE",
+    "POVIDONE IODÉE",
+    "CHLORURE DE BENZALKONIUM",
+    "ACIDE ACÉTYLSALICYLIQUE",
+    "POUDRE D'OPIUM",
+    "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
+    "CAMPHOSULFONATE DE CODÉINE",
+    "CHLORHYDRATE DE LOPÉRAMIDE",
+    "LOPÉRAMIDE",
+    "DOXYCYCLINE",
+    "CÉFIXIME TRIHYDRATÉE",
     "ALGINATE DE SODIUM",
+    "ÉRYTHROMYCINE BASE",
+    "DESLORATADINE",
+    "MÉTASULFOBENZOATE SODIQUE DE PREDNISOLONE",
+    "BICARBONATE DE SODIUM",
+    "AZITHROMYCINE ANHYDRE",
+    "DIAZÉPAM",
+    "KETOTIFÈNE (FUMARATE DE)",
+    "CHLORHYDRATE DE MÉBÉVÉRINE",
+    "PSEUDOÉPHÉDRINE",
+    "ÉSOMÉPRAZOLE",
+    "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
+    "VALACICLOVIR",
+    "RABÉPRAZOLE BASE",
+    "TRAMADOL (CHLORHYDRATE DE)",
+    "ÉSOMÉPRAZOLE MAGNÉSIUM TRIHYDRATÉ",
+    "AMOXICILLINE TRIHYDRATÉE",
+    "PHLOROGLUCINOL HYDRATÉ",
+    "ÉSOMÉPRAZOLE MAGNÉSIQUE",
+    "DICLOFÉNAC",
+    "FUMARATE DE KETOTIFÈNE",
+    "IBUPROFÈNE (LYSINATE D')",
+    "CHLORHYDRATE DE VALACICLOVIR MONOHYDRATÉ",
+    "EXTRAIT SEC DE RACINE DE VALÉRIANE",
+    "ÉSOMÉPRAZOLE MAGNÉSIQUE DIHYDRATÉ",
+    "MALÉATE DE TRIMÉBUTINE",
+    "ÉRYTHROMYCINE",
+    "CÉFADROXIL MONOHYDRATÉ",
+    "FLURBIPROFÈNE SODIQUE DIHYDRATÉ",
+    "DICLOFÉNAC DE DIÉTHYLAMINE",
+    "CHLORHYDRATE D'ONDANSÉTRON DIHYDRATÉ",
+    "ÉRYTHROMYCINE (ÉTHYLSUCCINATE D')",
+    "ACICLOVIR",
+    "BICARBONATE DE POTASSIUM",
+    "TRIMÉTHOPRIME",
+    "TRIMÉTHYLPHLOROGLUCINOL",
+    "DIOSMECTITE",
+    "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+    "CÉTIRIZINE (DICHLORHYDRATE DE)",
+    "HYCLATE DE DOXYCYCLINE",
+    "CLAVULANATE DE POTASSIUM",
+    "JUS PRESSÉ DÉSHYDRATÉ DES PARTIES AÉRIENNES FLEURIES FRAÎCHES D'ECHINACEA PURPUREA",
+    "ÉSOMÉPRAZOLE SODIQUE",
+    "DIMÉTICONE",
+    "DIPROPIONATE DE BÉTAMÉTHASONE",
+    "MÉBÉVÉRINE (CHLORHYDRATE DE)",
+    "CAPROATE DE PREDNISOLONE",
+    "TEINTURE DE PARTIE AÉRIENNE DE PASSIFLORE",
+    "KETOTIFÈNE BASE",
+    "LÉVOFLOXACINE HÉMIHYDRATÉE",
+    "AZITHROMYCINE",
+    "OXYDE D'ALUMINIUM",
+    "HYDROXYDE D'ALUMINIUM",
+    "BROMHYDRATE DE DEXTROMÉTHORPHANE",
+    "ESZOPICLONE",
+    "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
+    "DICLOFÉNAC SODIQUE",
+    "DOXYCYCLINE MONOHYDRATÉE",
+    "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+    "OXOMÉMAZINE",
+    "BILASTINE",
+    "BÉTAMÉTHASONE",
+    "DEXAMÉTHASONE (PHOSPHATE SODIQUE DE)",
+    "CLOXACILLINE SODIQUE MONOHYDRATÉE",
+    "FLURBIPROFÈNE",
+    "TEINTURE DE RACINE DE VALÉRIANE",
+    "DEXAMÉTHASONE",
+    "ÉTHANOL À 96 POUR CENT",
+    "CHLORHYDRATE DE BROMHEXINE",
+    "MÉTOCLOPRAMIDE",
+    "RACÉCADOTRIL",
+    "VALERIANE (RHIZOME DE) (POUDRE DE)",
     "DOMPÉRIDONE",
-    "JOSAMYCINE (PROPIONATE DE)",
+    "RABÉPRAZOLE SODIQUE",
+    "PANTOPRAZOLE",
+    "CEFPODOXIME PROXÉTIL",
+    "PHOLCODINE MONOHYDRATÉE",
+    "TRAMADOL",
+    "ALPRAZOLAM",
+    "OFLOXACINE",
+    "TARTRATE DE ZOLPIDEM",
+    "PROPIONATE DE FLUTICASONE",
+    "MÉTHYLPREDNISOLONE",
+    "ÉPOLAMINE DE DICLOFÉNAC",
+    "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
+    "RABÉPRAZOLE SODIQUE MONOHYDRATÉ",
+    "SPIRAMYCINE",
+    "ROXITHROMYCINE",
+    "CÉFUROXIME AXÉTIL",
+    "DICHLORHYDRATE DE CÉTIRIZINE",
+    "AZITHROMYCINE DIHYDRATÉE",
+    "ALVÉRINE (CITRATE D')",
+    "MALÉATE DE CHLORPHÉNAMINE",
+    "DOXYCYCLINE BASE",
+    "ONDANSÉTRON",
+    "KÉTOTIFÈNE (HYDROGÉNOFUMARATE DE)",
+    "GEL D'HYDROXYDE D'ALUMINIUM ET DE CARBONATE DE MAGNÉSIUM CODESSÉCHÉS",
+    "AMOXICILLINE",
+    "ACIDE NIFLUMIQUE",
+    "AMOXICILLINE ANHYDRE",
+    "TRIMÉBUTINE",
+    "VALÉRATE DE BÉTAMÉTHASONE",
+    "ONDANSÉTRON (CHLORHYDRATE D') DIHYDRATÉ",
+    "JOSAMYCINE BASE",
+    "DIPROPIONATE DE BÉCLOMÉTASONE MONOHYDRATÉ",
     "PROPIONATE D'ÉRYTHROMYCINE",
-    "FLURBIPROFÈNE"
+    "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+    "HÉLICIDINE",
+    "PRISTINAMYCINE",
+    "HEXAMIDINE (DIISÉTHIONATE D')",
+    "JOSAMYCINE (PROPIONATE DE)",
+    "PHOSPHATE DISODIQUE DE BÉTAMÉTHASONE",
+    "LORATADINE",
+    "NAPROXÈNE",
+    "FOSFOMYCINE TROMÉTAMOL",
+    "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
+    "PARACÉTAMOL",
+    "MÉQUITAZINE",
+    "LYSINATE D'IBUPROFÈNE",
+    "BALLOTE (EXTRAIT SEC DE SOMMITÉ FLEURIE DE)",
+    "SODIUM (ALGINATE DE)",
+    "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)",
+    "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
+    "BENZALKONIUM (CHLORURE DE)",
+    "ÉTIFOXINE (CHLORHYDRATE D')",
+    "CODÉINE (PHOSPHATE DE)",
+    "PHLOROGLUCINOL DIHYDRATÉ",
+    "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+    "CEFPODOXIME",
+    "KÉTOPROFÈNE",
+    "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
+    "MÉTHOCARBAMOL",
+    "MALÉATE DE DEXCHLORPHÉNIRAMINE",
+    "CÉFIXIME ANHYDRE",
+    "DEXKÉTOPROFÈNE",
+    "PHLOROGLUCINOL ANHYDRE",
+    "SIMÉTICONE",
+    "BÉTAMETHASONE (PHOSPHATE DE) ET DE DISODIUM",
+    "PHÉNYLÉPHRINE (CHLORHYDRATE DE)",
+    "EXTRAIT SEC DE FEUILLE DE LIERRE GRIMPANT",
+    "FEXOFÉNADINE BASE",
+    "ACÉTYLCYSTÉINE",
+    "DEXTROMÉTHORPHANE (BROMHYDRATE DE)",
+    "CÉFUROXIME",
+    "CLOXACILLINE",
+    "PHOSPHATE DE DEXAMÉTHASONE",
+    "NAPROXÈNE SODIQUE",
+    "CROMOGLICATE DE SODIUM",
+    "SACCHAROMYCES BOULARDII CNCM I-745",
+    "MIZOLASTINE",
+    "ACIDE CLAVULANIQUE",
+    "ZOPICLONE",
+    "RABÉPRAZOLE",
+    "KETOTIFÈNE",
+    "CHLORHYDRATE DE CIPROFLOXACINE",
+    "LOPÉRAMIDE (CHLORHYDRATE DE)",
+    "CHLORHYDRATE DIHYDRATÉ DE VALACICLOVIR",
+    "ACIDE N-ACÉTYL ASPARTYL GLUTAMIQUE (SEL DE SODIUM)",
+    "AMBROXOL (CHLORHYDRATE D')",
+    "SUCCINATE DE DOXYLAMINE",
+    "OXAZÉPAM",
+    "PASSIFLORE (EXTRAIT DE) (FLUIDE)",
+    "DOXYCYCLINE HYDRATÉE",
+    "ÉSOMÉPRAZOLE MAGNÉSIQUE TRIHYDRATÉ",
+    "TARTRATE DE DIHYDROCODÉINE",
+    "PASSIFLORE (PARTIE AÉRIENNE DE) (EXTRAIT SEC DE)",
+    "OMÉPRAZOLE MAGNÉSIUM",
+    "DIHYDROCODÉINE",
+    "PHOSPHATE DE CODÉINE ANHYDRE",
+    "MÉLATONINE",
+    "CITRATE D'ALVÉRINE",
+    "CARBOCISTÉINE",
+    "DIPROPIONATE DE BÉCLOMÉTASONE"
   ],
   "brands": [
     {
@@ -412,12 +425,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE CODEINE HEMIHYDRATE",
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
           "norm_substance": "phosphate de codeine hemihydrate",
           "dosage": ""
         }
@@ -461,7 +474,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "HYDROGENOSUCCINATE DE DOXYLAMINE",
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
           "norm_substance": "hydrogenosuccinate de doxylamine",
           "dosage": ""
         }
@@ -474,7 +487,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
@@ -492,23 +505,23 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE PSEUDOEPHEDRINE",
-          "norm_substance": "chlorhydrate de pseudoephedrine",
-          "dosage": ""
-        },
-        {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "HYDROGENOSUCCINATE DE DOXYLAMINE",
-          "norm_substance": "hydrogenosuccinate de doxylamine",
+          "substance": "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
+          "norm_substance": "chlorhydrate de pseudoephedrine",
           "dosage": ""
         },
         {
-          "substance": "PSEUDOEPHEDRINE",
+          "substance": "PSEUDO-ÉPHÉDRINE",
           "norm_substance": "pseudoephedrine",
+          "dosage": ""
+        },
+        {
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
+          "norm_substance": "hydrogenosuccinate de doxylamine",
           "dosage": ""
         }
       ]
@@ -520,7 +533,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OXOMEMAZINE",
+          "substance": "OXOMÉMAZINE",
           "norm_substance": "oxomemazine",
           "dosage": ""
         }
@@ -533,7 +546,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOLCODINE MONOHYDRATEE",
+          "substance": "PHOLCODINE MONOHYDRATÉE",
           "norm_substance": "pholcodine monohydratee",
           "dosage": ""
         }
@@ -546,7 +559,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATE",
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
           "norm_substance": "pantoprazole sodique sesquihydrate",
           "dosage": ""
         },
@@ -564,13 +577,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOTIFENE (FUMARATE DE)",
-          "norm_substance": "ketotifene (fumarate de)",
+          "substance": "KETOTIFÈNE BASE",
+          "norm_substance": "ketotifene base",
           "dosage": ""
         },
         {
-          "substance": "KETOTIFENE BASE",
-          "norm_substance": "ketotifene base",
+          "substance": "KETOTIFÈNE (FUMARATE DE)",
+          "norm_substance": "ketotifene (fumarate de)",
           "dosage": ""
         }
       ]
@@ -582,7 +595,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATE",
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
           "norm_substance": "pantoprazole sodique sesquihydrate",
           "dosage": ""
         },
@@ -600,7 +613,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "DICHLORHYDRATE DE LEVOCETIRIZINE",
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
           "norm_substance": "dichlorhydrate de levocetirizine",
           "dosage": ""
         }
@@ -613,7 +626,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -626,23 +639,23 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "MALEATE DE PHENIRAMINE",
+          "substance": "MALÉATE DE PHÉNIRAMINE",
           "norm_substance": "maleate de pheniramine",
           "dosage": ""
         },
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
+          "dosage": ""
+        },
+        {
+          "substance": "MALÉATE DE CHLORPHÉNAMINE",
+          "norm_substance": "maleate de chlorphenamine",
           "dosage": ""
         },
         {
           "substance": "ACIDE ASCORBIQUE",
           "norm_substance": "acide ascorbique",
-          "dosage": ""
-        },
-        {
-          "substance": "MALEATE DE CHLORPHENAMINE",
-          "norm_substance": "maleate de chlorphenamine",
           "dosage": ""
         }
       ]
@@ -654,7 +667,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -667,27 +680,27 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "LOPERAMIDE (CHLORHYDRATE DE)",
+          "substance": "LOPÉRAMIDE (CHLORHYDRATE DE)",
           "norm_substance": "loperamide (chlorhydrate de)",
           "dosage": ""
         },
         {
-          "substance": "SIMETICONE",
-          "norm_substance": "simeticone",
-          "dosage": ""
-        },
-        {
-          "substance": "LOPERAMIDE BASE",
+          "substance": "LOPÉRAMIDE BASE",
           "norm_substance": "loperamide base",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE LOPERAMIDE",
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
+          "dosage": ""
+        },
+        {
+          "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": ""
         },
         {
-          "substance": "DIMETICONE",
+          "substance": "DIMÉTICONE",
           "norm_substance": "dimeticone",
           "dosage": ""
         }
@@ -700,11 +713,6 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
-          "dosage": ""
-        },
-        {
           "substance": "AMOXICILLINE ANHYDRE",
           "norm_substance": "amoxicilline anhydre",
           "dosage": ""
@@ -712,6 +720,11 @@
         {
           "substance": "CLAVULANATE DE POTASSIUM",
           "norm_substance": "clavulanate de potassium",
+          "dosage": ""
+        },
+        {
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         }
       ]
@@ -723,13 +736,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE",
-          "norm_substance": "amoxicilline",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
+          "substance": "AMOXICILLINE",
+          "norm_substance": "amoxicilline",
           "dosage": ""
         }
       ]
@@ -754,7 +767,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RACECADOTRIL",
+          "substance": "RACÉCADOTRIL",
           "norm_substance": "racecadotril",
           "dosage": ""
         }
@@ -774,13 +787,26 @@
       ]
     },
     {
+      "cis": "60126377",
+      "name": "ACICLOVIR (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "ACICLOVIR",
+          "norm_substance": "aciclovir",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "60133432",
       "name": "TUSSIDANE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "BROMHYDRATE DE DEXTROMETHORPHANE",
+          "substance": "BROMHYDRATE DE DEXTROMÉTHORPHANE",
           "norm_substance": "bromhydrate de dextromethorphane",
           "dosage": ""
         }
@@ -793,7 +819,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "RACECADOTRIL",
+          "substance": "RACÉCADOTRIL",
           "norm_substance": "racecadotril",
           "dosage": ""
         }
@@ -806,13 +832,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE ANHYDRE",
-          "norm_substance": "amoxicilline anhydre",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         }
       ]
@@ -842,7 +868,7 @@
           "dosage": ""
         },
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
@@ -854,24 +880,60 @@
       ]
     },
     {
+      "cis": "60158147",
+      "name": "DICLOFENAC DE DIETHYLAMINE + DICLOFENAC SODIQUE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "DICLOFÉNAC DE DIÉTHYLAMINE",
+          "norm_substance": "diclofenac de diethylamine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "60162494",
       "name": "SKUDEXUM (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXKETOPROFENE TROMETAMOL",
+          "substance": "DEXKÉTOPROFÈNE TROMÉTAMOL",
           "norm_substance": "dexketoprofene trometamol",
+          "dosage": ""
+        },
+        {
+          "substance": "DEXKÉTOPROFÈNE",
+          "norm_substance": "dexketoprofene",
           "dosage": ""
         },
         {
           "substance": "CHLORHYDRATE DE TRAMADOL",
           "norm_substance": "chlorhydrate de tramadol",
           "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60182237",
+      "name": "CITRATE D'ALVERINE + SIMETICONE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
+          "dosage": ""
         },
         {
-          "substance": "DEXKETOPROFENE",
-          "norm_substance": "dexketoprofene",
+          "substance": "CITRATE D'ALVÉRINE",
+          "norm_substance": "citrate d'alverine",
           "dosage": ""
         }
       ]
@@ -901,13 +963,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE BASE",
-          "norm_substance": "amoxicilline base",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         },
         {
@@ -924,7 +986,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BILASTINE MONOHYDRATEE",
+          "substance": "BILASTINE MONOHYDRATÉE",
           "norm_substance": "bilastine monohydratee",
           "dosage": ""
         },
@@ -942,7 +1004,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -955,18 +1017,18 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE PSEUDOEPHEDRINE",
-          "norm_substance": "chlorhydrate de pseudoephedrine",
+          "substance": "CHLORHYDRATE DE DIPHÉNHYDRAMINE",
+          "norm_substance": "chlorhydrate de diphenhydramine",
           "dosage": ""
         },
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE DIPHENHYDRAMINE",
-          "norm_substance": "chlorhydrate de diphenhydramine",
+          "substance": "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
+          "norm_substance": "chlorhydrate de pseudoephedrine",
           "dosage": ""
         },
         {
@@ -996,23 +1058,23 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "JOSAMYCINE BASE",
-          "norm_substance": "josamycine base",
-          "dosage": ""
-        },
-        {
-          "substance": "JOSAMYCINE (PROPIONATE DE)",
-          "norm_substance": "josamycine (propionate de)",
-          "dosage": ""
-        },
-        {
           "substance": "PROPIONATE DE JOSAMYCINE",
           "norm_substance": "propionate de josamycine",
           "dosage": ""
         },
         {
+          "substance": "JOSAMYCINE BASE",
+          "norm_substance": "josamycine base",
+          "dosage": ""
+        },
+        {
           "substance": "JOSAMYCINE",
           "norm_substance": "josamycine",
+          "dosage": ""
+        },
+        {
+          "substance": "JOSAMYCINE (PROPIONATE DE)",
+          "norm_substance": "josamycine (propionate de)",
           "dosage": ""
         }
       ]
@@ -1024,7 +1086,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "METHYLPREDNISOLONE",
+          "substance": "MÉTHYLPREDNISOLONE",
           "norm_substance": "methylprednisolone",
           "dosage": ""
         }
@@ -1037,7 +1099,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -1050,8 +1112,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60233913",
+      "name": "IBUFETUM (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         }
       ]
@@ -1063,18 +1138,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CODEINE (PHOSPHATE DE) HEMIHYDRATE",
-          "norm_substance": "codeine (phosphate de) hemihydrate",
-          "dosage": ""
-        },
-        {
-          "substance": "CODEINE",
-          "norm_substance": "codeine",
-          "dosage": ""
-        },
-        {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
+          "dosage": ""
+        },
+        {
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
           "dosage": ""
         },
         {
@@ -1083,8 +1153,13 @@
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE CODEINE HEMIHYDRATE",
-          "norm_substance": "phosphate de codeine hemihydrate",
+          "substance": "CODÉINE",
+          "norm_substance": "codeine",
+          "dosage": ""
+        },
+        {
+          "substance": "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
+          "norm_substance": "codeine (phosphate de) hemihydrate",
           "dosage": ""
         }
       ]
@@ -1096,13 +1171,62 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "TRIMEBUTINE",
+          "substance": "TRIMÉBUTINE",
           "norm_substance": "trimebutine",
           "dosage": ""
         },
         {
-          "substance": "MALEATE DE TRIMEBUTINE",
+          "substance": "MALÉATE DE TRIMÉBUTINE",
           "norm_substance": "maleate de trimebutine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60252027",
+      "name": "DOLOSPASMYL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
+          "dosage": ""
+        },
+        {
+          "substance": "CITRATE D'ALVÉRINE",
+          "norm_substance": "citrate d'alverine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60264410",
+      "name": "HERPESEDERMYL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ACICLOVIR",
+          "norm_substance": "aciclovir",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60275086",
+      "name": "FLECTOR (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
+          "norm_substance": "epolamine de diclofenac",
           "dosage": ""
         }
       ]
@@ -1114,18 +1238,18 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "CODEINE (PHOSPHATE DE) HEMIHYDRATE",
-          "norm_substance": "codeine (phosphate de) hemihydrate",
+          "substance": "CODÉINE (PHOSPHATE DE)",
+          "norm_substance": "codeine (phosphate de)",
           "dosage": ""
         },
         {
-          "substance": "CODEINE (PHOSPHATE DE)",
-          "norm_substance": "codeine (phosphate de)",
+          "substance": "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
+          "norm_substance": "codeine (phosphate de) hemihydrate",
           "dosage": ""
         }
       ]
@@ -1137,7 +1261,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -1150,7 +1274,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DIAZEPAM",
+          "substance": "DIAZÉPAM",
           "norm_substance": "diazepam",
           "dosage": ""
         }
@@ -1163,7 +1287,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -1176,18 +1300,18 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE PSEUDOEPHEDRINE",
-          "norm_substance": "chlorhydrate de pseudoephedrine",
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         },
         {
-          "substance": "LYSINATE D'IBUPROFENE",
+          "substance": "LYSINATE D'IBUPROFÈNE",
           "norm_substance": "lysinate d'ibuprofene",
           "dosage": ""
         },
         {
-          "substance": "IBUPROFENE",
-          "norm_substance": "ibuprofene",
+          "substance": "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
+          "norm_substance": "chlorhydrate de pseudoephedrine",
           "dosage": ""
         }
       ]
@@ -1199,7 +1323,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -1243,13 +1367,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "LEVOFLOXACINE",
-          "norm_substance": "levofloxacine",
+          "substance": "LÉVOFLOXACINE HÉMIHYDRATÉE",
+          "norm_substance": "levofloxacine hemihydratee",
           "dosage": ""
         },
         {
-          "substance": "LEVOFLOXACINE HEMIHYDRATEE",
-          "norm_substance": "levofloxacine hemihydratee",
+          "substance": "LÉVOFLOXACINE",
+          "norm_substance": "levofloxacine",
           "dosage": ""
         }
       ]
@@ -1261,7 +1385,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
@@ -1279,7 +1403,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         },
@@ -1294,13 +1418,13 @@
           "dosage": ""
         },
         {
-          "substance": "BICARBONATE DE SODIUM",
-          "norm_substance": "bicarbonate de sodium",
+          "substance": "HYDROXYDE D'ALUMINIUM",
+          "norm_substance": "hydroxyde d'aluminium",
           "dosage": ""
         },
         {
-          "substance": "HYDROXYDE D'ALUMINIUM",
-          "norm_substance": "hydroxyde d'aluminium",
+          "substance": "BICARBONATE DE SODIUM",
+          "norm_substance": "bicarbonate de sodium",
           "dosage": ""
         }
       ]
@@ -1330,7 +1454,7 @@
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE MONOHYDRATEE",
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
           "norm_substance": "doxycycline monohydratee",
           "dosage": ""
         }
@@ -1343,7 +1467,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OXAZEPAM",
+          "substance": "OXAZÉPAM",
           "norm_substance": "oxazepam",
           "dosage": ""
         }
@@ -1356,13 +1480,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ESOMEPRAZOLE MAGNESIQUE TRIHYDRATE",
-          "norm_substance": "esomeprazole magnesique trihydrate",
+          "substance": "ÉSOMÉPRAZOLE",
+          "norm_substance": "esomeprazole",
           "dosage": ""
         },
         {
-          "substance": "ESOMEPRAZOLE",
-          "norm_substance": "esomeprazole",
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE TRIHYDRATÉ",
+          "norm_substance": "esomeprazole magnesique trihydrate",
           "dosage": ""
         }
       ]
@@ -1374,7 +1498,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
@@ -1405,7 +1529,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         }
@@ -1418,12 +1542,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OMEPRAZOLE",
+          "substance": "OMÉPRAZOLE",
           "norm_substance": "omeprazole",
           "dosage": ""
         },
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -1449,7 +1573,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
@@ -1467,7 +1591,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL HYDRATE",
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
           "norm_substance": "phloroglucinol hydrate",
           "dosage": ""
         }
@@ -1480,16 +1604,6 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE CLAVULANIQUE",
-          "norm_substance": "acide clavulanique",
-          "dosage": ""
-        },
-        {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
-          "dosage": ""
-        },
-        {
           "substance": "AMOXICILLINE ANHYDRE",
           "norm_substance": "amoxicilline anhydre",
           "dosage": ""
@@ -1497,6 +1611,16 @@
         {
           "substance": "CLAVULANATE DE POTASSIUM",
           "norm_substance": "clavulanate de potassium",
+          "dosage": ""
+        },
+        {
+          "substance": "ACIDE CLAVULANIQUE",
+          "norm_substance": "acide clavulanique",
+          "dosage": ""
+        },
+        {
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         }
       ]
@@ -1521,22 +1645,22 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE CLAVULANIQUE",
-          "norm_substance": "acide clavulanique",
-          "dosage": ""
-        },
-        {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
-          "dosage": ""
-        },
-        {
           "substance": "AMOXICILLINE ANHYDRE",
           "norm_substance": "amoxicilline anhydre",
           "dosage": ""
         },
         {
-          "substance": "CLAVULANATE DE POTASSIUM DILUE",
+          "substance": "ACIDE CLAVULANIQUE",
+          "norm_substance": "acide clavulanique",
+          "dosage": ""
+        },
+        {
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
+          "dosage": ""
+        },
+        {
+          "substance": "CLAVULANATE DE POTASSIUM DILUÉ",
           "norm_substance": "clavulanate de potassium dilue",
           "dosage": ""
         }
@@ -1549,13 +1673,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RABEPRAZOLE BASE",
-          "norm_substance": "rabeprazole base",
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
           "dosage": ""
         },
         {
-          "substance": "RABEPRAZOLE SODIQUE",
-          "norm_substance": "rabeprazole sodique",
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
           "dosage": ""
         }
       ]
@@ -1580,13 +1704,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ESOMEPRAZOLE MAGNESIQUE DIHYDRATE",
-          "norm_substance": "esomeprazole magnesique dihydrate",
+          "substance": "ÉSOMÉPRAZOLE",
+          "norm_substance": "esomeprazole",
           "dosage": ""
         },
         {
-          "substance": "ESOMEPRAZOLE",
-          "norm_substance": "esomeprazole",
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE DIHYDRATÉ",
+          "norm_substance": "esomeprazole magnesique dihydrate",
           "dosage": ""
         }
       ]
@@ -1611,7 +1735,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -1624,7 +1748,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -1637,7 +1761,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RABEPRAZOLE SODIQUE MONOHYDRATE",
+          "substance": "RABÉPRAZOLE SODIQUE MONOHYDRATÉ",
           "norm_substance": "rabeprazole sodique monohydrate",
           "dosage": ""
         }
@@ -1650,7 +1774,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MALEATE DE TRIMEBUTINE",
+          "substance": "MALÉATE DE TRIMÉBUTINE",
           "norm_substance": "maleate de trimebutine",
           "dosage": ""
         }
@@ -1663,13 +1787,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AZITHROMYCINE",
-          "norm_substance": "azithromycine",
+          "substance": "AZITHROMYCINE MONOHYDRATÉE",
+          "norm_substance": "azithromycine monohydratee",
           "dosage": ""
         },
         {
-          "substance": "AZITHROMYCINE MONOHYDRATEE",
-          "norm_substance": "azithromycine monohydratee",
+          "substance": "AZITHROMYCINE",
+          "norm_substance": "azithromycine",
           "dosage": ""
         }
       ]
@@ -1694,13 +1818,31 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ONDANSETRON",
-          "norm_substance": "ondansetron",
+          "substance": "CHLORHYDRATE D'ONDANSÉTRON DIHYDRATÉ",
+          "norm_substance": "chlorhydrate d'ondansetron dihydrate",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE D'ONDANSETRON DIHYDRATE",
-          "norm_substance": "chlorhydrate d'ondansetron dihydrate",
+          "substance": "ONDANSÉTRON",
+          "norm_substance": "ondansetron",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60546502",
+      "name": "BETADINE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "POVIDONE IODÉE",
+          "norm_substance": "povidone iodee",
+          "dosage": ""
+        },
+        {
+          "substance": "ÉTHANOL À 96 POUR CENT",
+          "norm_substance": "ethanol a 96 pour cent",
           "dosage": ""
         }
       ]
@@ -1727,6 +1869,19 @@
         {
           "substance": "CROMOGLICATE DE SODIUM",
           "norm_substance": "cromoglicate de sodium",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60569860",
+      "name": "IBUPROFENE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         }
       ]
@@ -1777,13 +1932,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CLOXACILLINE SODIQUE MONOHYDRATEE",
-          "norm_substance": "cloxacilline sodique monohydratee",
+          "substance": "CLOXACILLINE",
+          "norm_substance": "cloxacilline",
           "dosage": ""
         },
         {
-          "substance": "CLOXACILLINE",
-          "norm_substance": "cloxacilline",
+          "substance": "CLOXACILLINE SODIQUE MONOHYDRATÉE",
+          "norm_substance": "cloxacilline sodique monohydratee",
           "dosage": ""
         }
       ]
@@ -1795,7 +1950,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOMPERIDONE",
+          "substance": "DOMPÉRIDONE",
           "norm_substance": "domperidone",
           "dosage": ""
         }
@@ -1821,7 +1976,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         },
@@ -1839,7 +1994,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "METHOCARBAMOL",
+          "substance": "MÉTHOCARBAMOL",
           "norm_substance": "methocarbamol",
           "dosage": ""
         }
@@ -1865,6 +2020,16 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
+          "dosage": ""
+        },
+        {
+          "substance": "CLAVULANATE DE POTASSIUM",
+          "norm_substance": "clavulanate de potassium",
+          "dosage": ""
+        },
+        {
           "substance": "ACIDE CLAVULANIQUE",
           "norm_substance": "acide clavulanique",
           "dosage": ""
@@ -1872,16 +2037,6 @@
         {
           "substance": "AMOXICILLINE",
           "norm_substance": "amoxicilline",
-          "dosage": ""
-        },
-        {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
-          "dosage": ""
-        },
-        {
-          "substance": "CLAVULANATE DE POTASSIUM",
-          "norm_substance": "clavulanate de potassium",
           "dosage": ""
         }
       ]
@@ -1906,12 +2061,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFIXIME ANHYDRE",
+          "substance": "CÉFIXIME ANHYDRE",
           "norm_substance": "cefixime anhydre",
           "dosage": ""
         },
         {
-          "substance": "CEFIXIME TRIHYDRATEE",
+          "substance": "CÉFIXIME TRIHYDRATÉE",
           "norm_substance": "cefixime trihydratee",
           "dosage": ""
         }
@@ -1924,7 +2079,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "NAPROXENE",
+          "substance": "NAPROXÈNE",
           "norm_substance": "naproxene",
           "dosage": ""
         }
@@ -1937,13 +2092,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
-          "norm_substance": "paracetamol",
+          "substance": "MALÉATE DE PHÉNIRAMINE",
+          "norm_substance": "maleate de pheniramine",
           "dosage": ""
         },
         {
-          "substance": "MALEATE DE PHENIRAMINE",
-          "norm_substance": "maleate de pheniramine",
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
           "dosage": ""
         }
       ]
@@ -1955,7 +2110,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -1975,13 +2130,31 @@
       ]
     },
     {
+      "cis": "60805638",
+      "name": "BETNEVAL LOTION (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALÉRATE DE BÉTAMÉTHASONE",
+          "norm_substance": "valerate de betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "60806188",
       "name": "OMEPRAZOLE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "OMEPRAZOLE",
+          "substance": "OMÉPRAZOLE",
           "norm_substance": "omeprazole",
           "dosage": ""
         }
@@ -1994,7 +2167,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "DICHLORHYDRATE DE CETIRIZINE",
+          "substance": "DICHLORHYDRATE DE CÉTIRIZINE",
           "norm_substance": "dichlorhydrate de cetirizine",
           "dosage": ""
         }
@@ -2007,8 +2180,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OXAZEPAM",
+          "substance": "OXAZÉPAM",
           "norm_substance": "oxazepam",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60810368",
+      "name": "FLECTOR TISSUGEL HEPARINE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
+          "norm_substance": "epolamine de diclofenac",
           "dosage": ""
         }
       ]
@@ -2020,12 +2211,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CODEINE (PHOSPHATE DE) HEMIHYDRATE",
+          "substance": "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
           "norm_substance": "codeine (phosphate de) hemihydrate",
           "dosage": ""
         },
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -2038,12 +2229,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "DEXAMETHASONE (PHOSPHATE SODIQUE DE)",
+          "substance": "DEXAMÉTHASONE (PHOSPHATE SODIQUE DE)",
           "norm_substance": "dexamethasone (phosphate sodique de)",
           "dosage": ""
         }
@@ -2069,13 +2260,44 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate de dexamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60845223",
+      "name": "LUMIRELAX (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MÉTHOCARBAMOL",
+          "norm_substance": "methocarbamol",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "60851678",
+      "name": "VOLTARENACTIGO (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "DICLOFÉNAC DE DIÉTHYLAMINE",
+          "norm_substance": "diclofenac de diethylamine",
           "dosage": ""
         }
       ]
@@ -2100,12 +2322,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FUROATE DE MOMETASONE MONOHYDRATE",
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
           "norm_substance": "furoate de mometasone monohydrate",
           "dosage": ""
         },
         {
-          "substance": "FUROATE DE MOMETASONE",
+          "substance": "FUROATE DE MOMÉTASONE",
           "norm_substance": "furoate de mometasone",
           "dosage": ""
         }
@@ -2131,7 +2353,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DICLOFENAC SODIQUE",
+          "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": ""
         }
@@ -2144,7 +2366,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CELECOXIB",
+          "substance": "CÉLÉCOXIB",
           "norm_substance": "celecoxib",
           "dosage": ""
         }
@@ -2157,7 +2379,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "NAPROXENE SODIQUE",
+          "substance": "NAPROXÈNE SODIQUE",
           "norm_substance": "naproxene sodique",
           "dosage": ""
         }
@@ -2170,12 +2392,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DICLOFENAC SODIQUE",
+          "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": ""
         },
         {
-          "substance": "DICLOFENAC",
+          "substance": "DICLOFÉNAC",
           "norm_substance": "diclofenac",
           "dosage": ""
         }
@@ -2188,12 +2410,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DICLOFENAC SODIQUE",
+          "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": ""
         },
         {
-          "substance": "EPOLAMINE DE DICLOFENAC",
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
           "norm_substance": "epolamine de diclofenac",
           "dosage": ""
         }
@@ -2211,7 +2433,7 @@
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE MONOHYDRATEE",
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
           "norm_substance": "doxycycline monohydratee",
           "dosage": ""
         }
@@ -2224,13 +2446,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "BICARBONATE DE SODIUM",
-          "norm_substance": "bicarbonate de sodium",
+          "substance": "ALGINATE DE SODIUM",
+          "norm_substance": "alginate de sodium",
           "dosage": ""
         },
         {
-          "substance": "ALGINATE DE SODIUM",
-          "norm_substance": "alginate de sodium",
+          "substance": "BICARBONATE DE SODIUM",
+          "norm_substance": "bicarbonate de sodium",
           "dosage": ""
         }
       ]
@@ -2268,7 +2490,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         }
@@ -2281,7 +2503,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -2294,7 +2516,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FLURBIPROFENE",
+          "substance": "FLURBIPROFÈNE",
           "norm_substance": "flurbiprofene",
           "dosage": ""
         }
@@ -2307,7 +2529,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BUDESONIDE",
+          "substance": "BUDÉSONIDE",
           "norm_substance": "budesonide",
           "dosage": ""
         }
@@ -2320,13 +2542,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFUROXIME",
-          "norm_substance": "cefuroxime",
+          "substance": "CÉFUROXIME AXÉTIL",
+          "norm_substance": "cefuroxime axetil",
           "dosage": ""
         },
         {
-          "substance": "CEFUROXIME AXETIL",
-          "norm_substance": "cefuroxime axetil",
+          "substance": "CÉFUROXIME",
+          "norm_substance": "cefuroxime",
           "dosage": ""
         }
       ]
@@ -2338,7 +2560,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -2351,7 +2573,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BROMAZEPAM",
+          "substance": "BROMAZÉPAM",
           "norm_substance": "bromazepam",
           "dosage": ""
         }
@@ -2364,8 +2586,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ONDANSETRON",
+          "substance": "ONDANSÉTRON",
           "norm_substance": "ondansetron",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61096983",
+      "name": "ERYFLUID (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉRYTHROMYCINE",
+          "norm_substance": "erythromycine",
           "dosage": ""
         }
       ]
@@ -2377,7 +2612,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BETAMETHASONE",
+          "substance": "BÉTAMÉTHASONE",
           "norm_substance": "betamethasone",
           "dosage": ""
         }
@@ -2416,7 +2651,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -2429,12 +2664,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE PHENYLEPHRINE",
+          "substance": "CHLORHYDRATE DE PHÉNYLÉPHRINE",
           "norm_substance": "chlorhydrate de phenylephrine",
           "dosage": ""
         },
         {
-          "substance": "PHENYLEPHRINE (CHLORHYDRATE DE)",
+          "substance": "PHÉNYLÉPHRINE (CHLORHYDRATE DE)",
           "norm_substance": "phenylephrine (chlorhydrate de)",
           "dosage": ""
         }
@@ -2447,18 +2682,18 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE",
-          "norm_substance": "amoxicilline",
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE ANHYDRE",
-          "norm_substance": "amoxicilline anhydre",
+          "substance": "AMOXICILLINE",
+          "norm_substance": "amoxicilline",
           "dosage": ""
         }
       ]
@@ -2470,7 +2705,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -2483,7 +2718,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -2496,7 +2731,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -2509,7 +2744,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -2522,7 +2757,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MELATONINE",
+          "substance": "MÉLATONINE",
           "norm_substance": "melatonine",
           "dosage": ""
         }
@@ -2535,8 +2770,44 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "METOPIMAZINE",
+          "substance": "MÉTOPIMAZINE",
           "norm_substance": "metopimazine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61183406",
+      "name": "FLECTOREFFIGEL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
+          "norm_substance": "epolamine de diclofenac",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61204836",
+      "name": "METEOSPASMYL (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
+          "dosage": ""
+        },
+        {
+          "substance": "ALVÉRINE (CITRATE D')",
+          "norm_substance": "alverine (citrate d')",
           "dosage": ""
         }
       ]
@@ -2548,13 +2819,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RABEPRAZOLE SODIQUE",
+          "substance": "RABÉPRAZOLE SODIQUE",
           "norm_substance": "rabeprazole sodique",
           "dosage": ""
         },
         {
-          "substance": "RABEPRAZOLE",
+          "substance": "RABÉPRAZOLE",
           "norm_substance": "rabeprazole",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61224739",
+      "name": "CARBOSYLANE ENFANT (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
           "dosage": ""
         }
       ]
@@ -2566,7 +2850,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFPODOXIME PROXETIL",
+          "substance": "CEFPODOXIME PROXÉTIL",
           "norm_substance": "cefpodoxime proxetil",
           "dosage": ""
         },
@@ -2584,13 +2868,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "LOPERAMIDE BASE",
-          "norm_substance": "loperamide base",
+          "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
+          "norm_substance": "chlorhydrate de loperamide",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE LOPERAMIDE",
-          "norm_substance": "chlorhydrate de loperamide",
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
           "dosage": ""
         }
       ]
@@ -2602,7 +2886,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -2615,7 +2899,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE LOPERAMIDE",
+          "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": ""
         }
@@ -2654,13 +2938,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FOSFOMYCINE TROMETAMOL",
-          "norm_substance": "fosfomycine trometamol",
+          "substance": "FOSFOMYCINE",
+          "norm_substance": "fosfomycine",
           "dosage": ""
         },
         {
-          "substance": "FOSFOMYCINE",
-          "norm_substance": "fosfomycine",
+          "substance": "FOSFOMYCINE TROMÉTAMOL",
+          "norm_substance": "fosfomycine trometamol",
           "dosage": ""
         }
       ]
@@ -2672,13 +2956,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PREDNISOLONE",
-          "norm_substance": "prednisolone",
+          "substance": "MÉTASULFOBENZOATE SODIQUE DE PREDNISOLONE",
+          "norm_substance": "metasulfobenzoate sodique de prednisolone",
           "dosage": ""
         },
         {
-          "substance": "METASULFOBENZOATE SODIQUE DE PREDNISOLONE",
-          "norm_substance": "metasulfobenzoate sodique de prednisolone",
+          "substance": "PREDNISOLONE",
+          "norm_substance": "prednisolone",
           "dosage": ""
         }
       ]
@@ -2690,7 +2974,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -2716,13 +3000,39 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "LOPERAMIDE",
-          "norm_substance": "loperamide",
+          "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
+          "norm_substance": "chlorhydrate de loperamide",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE LOPERAMIDE",
-          "norm_substance": "chlorhydrate de loperamide",
+          "substance": "LOPÉRAMIDE",
+          "norm_substance": "loperamide",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61381765",
+      "name": "ERYLIK (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉRYTHROMYCINE",
+          "norm_substance": "erythromycine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61381943",
+      "name": "KETOPROFENE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "KÉTOPROFÈNE",
+          "norm_substance": "ketoprofene",
           "dosage": ""
         }
       ]
@@ -2760,7 +3070,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HELICIDINE",
+          "substance": "HÉLICIDINE",
           "norm_substance": "helicidine",
           "dosage": ""
         }
@@ -2773,7 +3083,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACETYLCYSTEINE",
+          "substance": "ACÉTYLCYSTÉINE",
           "norm_substance": "acetylcysteine",
           "dosage": ""
         }
@@ -2786,7 +3096,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATE",
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
           "norm_substance": "pantoprazole sodique sesquihydrate",
           "dosage": ""
         },
@@ -2804,13 +3114,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOXYCYCLINE ANHYDRE",
-          "norm_substance": "doxycycline anhydre",
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE MONOHYDRATEE",
-          "norm_substance": "doxycycline monohydratee",
+          "substance": "DOXYCYCLINE ANHYDRE",
+          "norm_substance": "doxycycline anhydre",
           "dosage": ""
         }
       ]
@@ -2835,7 +3145,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DIAZEPAM",
+          "substance": "DIAZÉPAM",
           "norm_substance": "diazepam",
           "dosage": ""
         }
@@ -2861,7 +3171,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -2874,12 +3184,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ESOMEPRAZOLE",
+          "substance": "ÉSOMÉPRAZOLE",
           "norm_substance": "esomeprazole",
           "dosage": ""
         },
         {
-          "substance": "ESOMEPRAZOLE SODIQUE",
+          "substance": "ÉSOMÉPRAZOLE SODIQUE",
           "norm_substance": "esomeprazole sodique",
           "dosage": ""
         }
@@ -2905,48 +3215,23 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "OXOMEMAZINE",
-          "norm_substance": "oxomemazine",
-          "dosage": ""
-        },
-        {
-          "substance": "DICHLORHYDRATE DE CETIRIZINE",
-          "norm_substance": "dichlorhydrate de cetirizine",
-          "dosage": ""
-        },
-        {
-          "substance": "MALEATE DE PHENIRAMINE",
-          "norm_substance": "maleate de pheniramine",
-          "dosage": ""
-        },
-        {
-          "substance": "CHLORHYDRATE DE PSEUDOEPHEDRINE",
-          "norm_substance": "chlorhydrate de pseudoephedrine",
-          "dosage": ""
-        },
-        {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         },
         {
-          "substance": "PARACETAMOL",
-          "norm_substance": "paracetamol",
+          "substance": "OXOMÉMAZINE",
+          "norm_substance": "oxomemazine",
           "dosage": ""
         },
         {
-          "substance": "ACIDE ASCORBIQUE",
-          "norm_substance": "acide ascorbique",
+          "substance": "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
+          "norm_substance": "chlorhydrate de pseudoephedrine",
           "dosage": ""
         },
         {
-          "substance": "MALEATE DE CHLORPHENAMINE",
-          "norm_substance": "maleate de chlorphenamine",
-          "dosage": ""
-        },
-        {
-          "substance": "EXTRAIT SEC DE FEUILLE DE LIERRE GRIMPANT",
-          "norm_substance": "extrait sec de feuille de lierre grimpant",
+          "substance": "DICHLORHYDRATE DE CÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de cetirizine",
           "dosage": ""
         },
         {
@@ -2955,8 +3240,33 @@
           "dosage": ""
         },
         {
-          "substance": "JUS PRESSE DESHYDRATE DES PARTIES AERIENNES FLEURIES FRAICHES D'ECHINACEA PURPUREA",
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
+          "dosage": ""
+        },
+        {
+          "substance": "JUS PRESSÉ DÉSHYDRATÉ DES PARTIES AÉRIENNES FLEURIES FRAÎCHES D'ECHINACEA PURPUREA",
           "norm_substance": "jus presse deshydrate des parties aeriennes fleuries fraiches d'echinacea purpurea",
+          "dosage": ""
+        },
+        {
+          "substance": "MALÉATE DE CHLORPHÉNAMINE",
+          "norm_substance": "maleate de chlorphenamine",
+          "dosage": ""
+        },
+        {
+          "substance": "ACIDE ASCORBIQUE",
+          "norm_substance": "acide ascorbique",
+          "dosage": ""
+        },
+        {
+          "substance": "MALÉATE DE PHÉNIRAMINE",
+          "norm_substance": "maleate de pheniramine",
+          "dosage": ""
+        },
+        {
+          "substance": "EXTRAIT SEC DE FEUILLE DE LIERRE GRIMPANT",
+          "norm_substance": "extrait sec de feuille de lierre grimpant",
           "dosage": ""
         }
       ]
@@ -2968,13 +3278,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FOSFOMYCINE TROMETAMOL",
-          "norm_substance": "fosfomycine trometamol",
+          "substance": "FOSFOMYCINE",
+          "norm_substance": "fosfomycine",
           "dosage": ""
         },
         {
-          "substance": "FOSFOMYCINE",
-          "norm_substance": "fosfomycine",
+          "substance": "FOSFOMYCINE TROMÉTAMOL",
+          "norm_substance": "fosfomycine trometamol",
           "dosage": ""
         }
       ]
@@ -2986,7 +3296,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DIAZEPAM",
+          "substance": "DIAZÉPAM",
           "norm_substance": "diazepam",
           "dosage": ""
         }
@@ -2999,13 +3309,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PROPIONATE D'ERYTHROMYCINE",
-          "norm_substance": "propionate d'erythromycine",
+          "substance": "ÉRYTHROMYCINE BASE",
+          "norm_substance": "erythromycine base",
           "dosage": ""
         },
         {
-          "substance": "ERYTHROMYCINE BASE",
-          "norm_substance": "erythromycine base",
+          "substance": "PROPIONATE D'ÉRYTHROMYCINE",
+          "norm_substance": "propionate d'erythromycine",
           "dosage": ""
         }
       ]
@@ -3030,7 +3340,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -3043,13 +3353,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ONDANSETRON",
-          "norm_substance": "ondansetron",
+          "substance": "CHLORHYDRATE D'ONDANSÉTRON DIHYDRATÉ",
+          "norm_substance": "chlorhydrate d'ondansetron dihydrate",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE D'ONDANSETRON DIHYDRATE",
-          "norm_substance": "chlorhydrate d'ondansetron dihydrate",
+          "substance": "ONDANSÉTRON",
+          "norm_substance": "ondansetron",
           "dosage": ""
         }
       ]
@@ -3061,13 +3371,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMBROXOL BASE",
-          "norm_substance": "ambroxol base",
+          "substance": "AMBROXOL (CHLORHYDRATE D')",
+          "norm_substance": "ambroxol (chlorhydrate d')",
           "dosage": ""
         },
         {
-          "substance": "AMBROXOL (CHLORHYDRATE D')",
-          "norm_substance": "ambroxol (chlorhydrate d')",
+          "substance": "AMBROXOL BASE",
+          "norm_substance": "ambroxol base",
           "dosage": ""
         }
       ]
@@ -3079,12 +3389,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE CODEINE HEMIHYDRATE",
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
           "norm_substance": "phosphate de codeine hemihydrate",
           "dosage": ""
         }
@@ -3110,13 +3420,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "DICHLORHYDRATE DE LEVOCETIRIZINE",
-          "norm_substance": "dichlorhydrate de levocetirizine",
+          "substance": "LÉVOCÉTIRIZINE",
+          "norm_substance": "levocetirizine",
           "dosage": ""
         },
         {
-          "substance": "LEVOCETIRIZINE",
-          "norm_substance": "levocetirizine",
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
+          "norm_substance": "dichlorhydrate de levocetirizine",
           "dosage": ""
         }
       ]
@@ -3141,13 +3451,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
-          "norm_substance": "paracetamol",
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         },
         {
-          "substance": "IBUPROFENE",
-          "norm_substance": "ibuprofene",
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
           "dosage": ""
         }
       ]
@@ -3159,7 +3469,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -3172,7 +3482,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MEBEVERINE (CHLORHYDRATE DE)",
+          "substance": "MÉBÉVÉRINE (CHLORHYDRATE DE)",
           "norm_substance": "mebeverine (chlorhydrate de)",
           "dosage": ""
         }
@@ -3198,13 +3508,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYCLATE DE DOXYCYCLINE",
-          "norm_substance": "hyclate de doxycycline",
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE BASE",
-          "norm_substance": "doxycycline base",
+          "substance": "HYCLATE DE DOXYCYCLINE",
+          "norm_substance": "hyclate de doxycycline",
           "dosage": ""
         }
       ]
@@ -3216,12 +3526,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "CODEINE (PHOSPHATE DE) HEMIHYDRATE",
+          "substance": "CODÉINE (PHOSPHATE DE) HÉMIHYDRATÉ",
           "norm_substance": "codeine (phosphate de) hemihydrate",
           "dosage": ""
         }
@@ -3234,7 +3544,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BUDESONIDE",
+          "substance": "BUDÉSONIDE",
           "norm_substance": "budesonide",
           "dosage": ""
         }
@@ -3254,23 +3564,41 @@
       ]
     },
     {
+      "cis": "61750511",
+      "name": "BETNEVAL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALÉRATE DE BÉTAMÉTHASONE",
+          "norm_substance": "valerate de betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "61751232",
       "name": "MIGPRIV (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "METOCLOPRAMIDE",
+          "substance": "MÉTOCLOPRAMIDE",
           "norm_substance": "metoclopramide",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE METOCLOPRAMIDE",
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
           "norm_substance": "chlorhydrate de metoclopramide",
           "dosage": ""
         },
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -3288,7 +3616,7 @@
           "dosage": ""
         },
         {
-          "substance": "AZITHROMYCINE DIHYDRATEE",
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
           "norm_substance": "azithromycine dihydratee",
           "dosage": ""
         }
@@ -3301,18 +3629,18 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE BASE",
+          "norm_substance": "amoxicilline base",
+          "dosage": ""
+        },
+        {
           "substance": "ACIDE CLAVULANIQUE",
           "norm_substance": "acide clavulanique",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
-          "dosage": ""
-        },
-        {
-          "substance": "AMOXICILLINE BASE",
-          "norm_substance": "amoxicilline base",
           "dosage": ""
         },
         {
@@ -3342,13 +3670,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE",
-          "norm_substance": "amoxicilline",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
+          "substance": "AMOXICILLINE",
+          "norm_substance": "amoxicilline",
           "dosage": ""
         }
       ]
@@ -3360,7 +3688,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RABEPRAZOLE SODIQUE",
+          "substance": "RABÉPRAZOLE SODIQUE",
           "norm_substance": "rabeprazole sodique",
           "dosage": ""
         }
@@ -3393,6 +3721,47 @@
       ]
     },
     {
+      "cis": "61837560",
+      "name": "BISEPTINE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "ALCOOL BENZYLIQUE",
+          "norm_substance": "alcool benzylique",
+          "dosage": ""
+        },
+        {
+          "substance": "CHLORHEXIDINE (DIGLUCONATE DE)",
+          "norm_substance": "chlorhexidine (digluconate de)",
+          "dosage": ""
+        },
+        {
+          "substance": "BENZALKONIUM (CHLORURE DE)",
+          "norm_substance": "benzalkonium (chlorure de)",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61853543",
+      "name": "CLOSALIS (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉTAMÉTHASONE",
+          "norm_substance": "dipropionate de betamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "61872561",
       "name": "CALPEROS (Orale)",
       "route": "orale",
@@ -3412,7 +3781,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -3425,13 +3794,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOXYCYCLINE ANHYDRE",
-          "norm_substance": "doxycycline anhydre",
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE MONOHYDRATEE",
-          "norm_substance": "doxycycline monohydratee",
+          "substance": "DOXYCYCLINE ANHYDRE",
+          "norm_substance": "doxycycline anhydre",
           "dosage": ""
         }
       ]
@@ -3443,7 +3812,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE MEBEVERINE",
+          "substance": "CHLORHYDRATE DE MÉBÉVÉRINE",
           "norm_substance": "chlorhydrate de mebeverine",
           "dosage": ""
         }
@@ -3456,7 +3825,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BUDESONIDE",
+          "substance": "BUDÉSONIDE",
           "norm_substance": "budesonide",
           "dosage": ""
         }
@@ -3469,18 +3838,18 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE PSEUDOEPHEDRINE",
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
+          "dosage": ""
+        },
+        {
+          "substance": "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
           "norm_substance": "chlorhydrate de pseudoephedrine",
           "dosage": ""
         },
         {
-          "substance": "PSEUDOEPHEDRINE (CHLORHYDRATE DE)",
+          "substance": "PSEUDOÉPHÉDRINE (CHLORHYDRATE DE)",
           "norm_substance": "pseudoephedrine (chlorhydrate de)",
-          "dosage": ""
-        },
-        {
-          "substance": "IBUPROFENE",
-          "norm_substance": "ibuprofene",
           "dosage": ""
         }
       ]
@@ -3492,7 +3861,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -3505,13 +3874,31 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFPODOXIME PROXETIL",
+          "substance": "CEFPODOXIME PROXÉTIL",
           "norm_substance": "cefpodoxime proxetil",
           "dosage": ""
         },
         {
           "substance": "CEFPODOXIME",
           "norm_substance": "cefpodoxime",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "61938997",
+      "name": "DIPROSONE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉTAMÉTHASONE",
+          "norm_substance": "dipropionate de betamethasone",
           "dosage": ""
         }
       ]
@@ -3541,7 +3928,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -3554,7 +3941,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -3567,7 +3954,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -3580,13 +3967,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PREDNISOLONE",
-          "norm_substance": "prednisolone",
+          "substance": "MÉTASULFOBENZOATE SODIQUE DE PREDNISOLONE",
+          "norm_substance": "metasulfobenzoate sodique de prednisolone",
           "dosage": ""
         },
         {
-          "substance": "METASULFOBENZOATE SODIQUE DE PREDNISOLONE",
-          "norm_substance": "metasulfobenzoate sodique de prednisolone",
+          "substance": "PREDNISOLONE",
+          "norm_substance": "prednisolone",
           "dosage": ""
         }
       ]
@@ -3598,7 +3985,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "NITROFURANTOINE",
+          "substance": "NITROFURANTOÏNE",
           "norm_substance": "nitrofurantoine",
           "dosage": ""
         }
@@ -3611,12 +3998,12 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -3629,13 +4016,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OMEPRAZOLE",
-          "norm_substance": "omeprazole",
+          "substance": "OMÉPRAZOLE MAGNÉSIUM",
+          "norm_substance": "omeprazole magnesium",
           "dosage": ""
         },
         {
-          "substance": "OMEPRAZOLE MAGNESIUM",
-          "norm_substance": "omeprazole magnesium",
+          "substance": "OMÉPRAZOLE",
+          "norm_substance": "omeprazole",
           "dosage": ""
         }
       ]
@@ -3647,7 +4034,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BUDESONIDE",
+          "substance": "BUDÉSONIDE",
           "norm_substance": "budesonide",
           "dosage": ""
         }
@@ -3660,7 +4047,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AZITHROMYCINE DIHYDRATEE",
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
           "norm_substance": "azithromycine dihydratee",
           "dosage": ""
         },
@@ -3678,7 +4065,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL DIHYDRATE",
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
           "norm_substance": "phloroglucinol dihydrate",
           "dosage": ""
         }
@@ -3691,12 +4078,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFADROXIL MONOHYDRATE",
+          "substance": "CÉFADROXIL MONOHYDRATÉ",
           "norm_substance": "cefadroxil monohydrate",
           "dosage": ""
         },
         {
-          "substance": "CEFADROXIL",
+          "substance": "CÉFADROXIL",
           "norm_substance": "cefadroxil",
           "dosage": ""
         }
@@ -3709,7 +4096,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "METOPIMAZINE",
+          "substance": "MÉTOPIMAZINE",
           "norm_substance": "metopimazine",
           "dosage": ""
         }
@@ -3722,8 +4109,21 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "62090079",
+      "name": "XIMEPEG (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
           "dosage": ""
         }
       ]
@@ -3735,17 +4135,17 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE CODEINE HEMIHYDRATE",
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
           "norm_substance": "phosphate de codeine hemihydrate",
           "dosage": ""
         },
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -3758,12 +4158,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXKETOPROFENE TROMETAMOL",
+          "substance": "DEXKÉTOPROFÈNE TROMÉTAMOL",
           "norm_substance": "dexketoprofene trometamol",
           "dosage": ""
         },
         {
-          "substance": "DEXKETOPROFENE",
+          "substance": "DEXKÉTOPROFÈNE",
           "norm_substance": "dexketoprofene",
           "dosage": ""
         }
@@ -3776,7 +4176,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "METOPIMAZINE",
+          "substance": "MÉTOPIMAZINE",
           "norm_substance": "metopimazine",
           "dosage": ""
         }
@@ -3789,12 +4189,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFIXIME ANHYDRE",
+          "substance": "CÉFIXIME ANHYDRE",
           "norm_substance": "cefixime anhydre",
           "dosage": ""
         },
         {
-          "substance": "CEFIXIME TRIHYDRATEE",
+          "substance": "CÉFIXIME TRIHYDRATÉE",
           "norm_substance": "cefixime trihydratee",
           "dosage": ""
         }
@@ -3807,7 +4207,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "NAPROXENE SODIQUE",
+          "substance": "NAPROXÈNE SODIQUE",
           "norm_substance": "naproxene sodique",
           "dosage": ""
         }
@@ -3820,7 +4220,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACETYLCYSTEINE",
+          "substance": "ACÉTYLCYSTÉINE",
           "norm_substance": "acetylcysteine",
           "dosage": ""
         }
@@ -3846,8 +4246,8 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "SODIUM (BICARBONATE DE)",
-          "norm_substance": "sodium (bicarbonate de)",
+          "substance": "SODIUM (ALGINATE DE)",
+          "norm_substance": "sodium (alginate de)",
           "dosage": ""
         },
         {
@@ -3861,18 +4261,18 @@
           "dosage": ""
         },
         {
-          "substance": "SODIUM (ALGINATE DE)",
-          "norm_substance": "sodium (alginate de)",
+          "substance": "BICARBONATE DE POTASSIUM",
+          "norm_substance": "bicarbonate de potassium",
+          "dosage": ""
+        },
+        {
+          "substance": "SODIUM (BICARBONATE DE)",
+          "norm_substance": "sodium (bicarbonate de)",
           "dosage": ""
         },
         {
           "substance": "BICARBONATE DE SODIUM",
           "norm_substance": "bicarbonate de sodium",
-          "dosage": ""
-        },
-        {
-          "substance": "BICARBONATE DE POTASSIUM",
-          "norm_substance": "bicarbonate de potassium",
           "dosage": ""
         }
       ]
@@ -3886,6 +4286,24 @@
         {
           "substance": "CLARITHROMYCINE",
           "norm_substance": "clarithromycine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "62362440",
+      "name": "XAMIOL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉTAMÉTHASONE",
+          "norm_substance": "dipropionate de betamethasone",
           "dosage": ""
         }
       ]
@@ -3910,12 +4328,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE DISODIQUE DE BETAMETHASONE",
+          "substance": "PHOSPHATE DISODIQUE DE BÉTAMÉTHASONE",
           "norm_substance": "phosphate disodique de betamethasone",
           "dosage": ""
         },
         {
-          "substance": "BETAMETHASONE",
+          "substance": "BÉTAMÉTHASONE",
           "norm_substance": "betamethasone",
           "dosage": ""
         }
@@ -3928,7 +4346,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DICLOFENAC SODIQUE",
+          "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": ""
         }
@@ -3954,7 +4372,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -3967,12 +4385,12 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CETIRIZINE (DICHLORHYDRATE DE)",
+          "substance": "CÉTIRIZINE (DICHLORHYDRATE DE)",
           "norm_substance": "cetirizine (dichlorhydrate de)",
           "dosage": ""
         },
         {
-          "substance": "DICHLORHYDRATE DE CETIRIZINE",
+          "substance": "DICHLORHYDRATE DE CÉTIRIZINE",
           "norm_substance": "dichlorhydrate de cetirizine",
           "dosage": ""
         }
@@ -3985,7 +4403,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACETYLCYSTEINE",
+          "substance": "ACÉTYLCYSTÉINE",
           "norm_substance": "acetylcysteine",
           "dosage": ""
         }
@@ -3998,7 +4416,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACETYLCYSTEINE",
+          "substance": "ACÉTYLCYSTÉINE",
           "norm_substance": "acetylcysteine",
           "dosage": ""
         }
@@ -4011,7 +4429,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -4024,13 +4442,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "POUDRE D'OPIUM",
-          "norm_substance": "poudre d'opium",
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PARACETAMOL",
-          "norm_substance": "paracetamol",
+          "substance": "POUDRE D'OPIUM",
+          "norm_substance": "poudre d'opium",
           "dosage": ""
         }
       ]
@@ -4047,7 +4465,7 @@
           "dosage": ""
         },
         {
-          "substance": "PREDNISOLONE (METASULFOBENZOATE SODIQUE DE)",
+          "substance": "PREDNISOLONE (MÉTASULFOBENZOATE SODIQUE DE)",
           "norm_substance": "prednisolone (metasulfobenzoate sodique de)",
           "dosage": ""
         }
@@ -4060,7 +4478,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DICLOFENAC SODIQUE",
+          "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": ""
         }
@@ -4073,7 +4491,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACETATE DE DEXAMETHASONE",
+          "substance": "ACÉTATE DE DEXAMÉTHASONE",
           "norm_substance": "acetate de dexamethasone",
           "dosage": ""
         }
@@ -4086,13 +4504,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFUROXIME",
-          "norm_substance": "cefuroxime",
+          "substance": "CÉFUROXIME AXÉTIL",
+          "norm_substance": "cefuroxime axetil",
           "dosage": ""
         },
         {
-          "substance": "CEFUROXIME AXETIL",
-          "norm_substance": "cefuroxime axetil",
+          "substance": "CÉFUROXIME",
+          "norm_substance": "cefuroxime",
           "dosage": ""
         }
       ]
@@ -4104,18 +4522,31 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ESOMEPRAZOLE MAGNESIQUE TRIHYDRATE",
-          "norm_substance": "esomeprazole magnesique trihydrate",
-          "dosage": ""
-        },
-        {
-          "substance": "ESOMEPRAZOLE",
+          "substance": "ÉSOMÉPRAZOLE",
           "norm_substance": "esomeprazole",
           "dosage": ""
         },
         {
-          "substance": "ESOMEPRAZOLE MAGNESIUM TRIHYDRATE",
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIUM TRIHYDRATÉ",
           "norm_substance": "esomeprazole magnesium trihydrate",
+          "dosage": ""
+        },
+        {
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE TRIHYDRATÉ",
+          "norm_substance": "esomeprazole magnesique trihydrate",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "62856453",
+      "name": "ERYTHROMYCINE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉRYTHROMYCINE",
+          "norm_substance": "erythromycine",
           "dosage": ""
         }
       ]
@@ -4127,7 +4558,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL DIHYDRATE",
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
           "norm_substance": "phloroglucinol dihydrate",
           "dosage": ""
         }
@@ -4140,13 +4571,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RABEPRAZOLE BASE",
-          "norm_substance": "rabeprazole base",
+          "substance": "RABÉPRAZOLE SODIQUE",
+          "norm_substance": "rabeprazole sodique",
           "dosage": ""
         },
         {
-          "substance": "RABEPRAZOLE SODIQUE",
-          "norm_substance": "rabeprazole sodique",
+          "substance": "RABÉPRAZOLE BASE",
+          "norm_substance": "rabeprazole base",
           "dosage": ""
         }
       ]
@@ -4158,13 +4589,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ERYTHROMYCINE (ETHYLSUCCINATE D')",
-          "norm_substance": "erythromycine (ethylsuccinate d')",
+          "substance": "ÉRYTHROMYCINE BASE",
+          "norm_substance": "erythromycine base",
           "dosage": ""
         },
         {
-          "substance": "ERYTHROMYCINE BASE",
-          "norm_substance": "erythromycine base",
+          "substance": "ÉRYTHROMYCINE (ÉTHYLSUCCINATE D')",
+          "norm_substance": "erythromycine (ethylsuccinate d')",
           "dosage": ""
         }
       ]
@@ -4176,18 +4607,18 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL HYDRATE",
-          "norm_substance": "phloroglucinol hydrate",
-          "dosage": ""
-        },
-        {
           "substance": "PHLOROGLUCINOL ANHYDRE",
           "norm_substance": "phloroglucinol anhydre",
           "dosage": ""
         },
         {
-          "substance": "PHLOROGLUCINOL DIHYDRATE",
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
           "norm_substance": "phloroglucinol dihydrate",
+          "dosage": ""
+        },
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
           "dosage": ""
         }
       ]
@@ -4199,7 +4630,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AZITHROMYCINE DIHYDRATEE",
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
           "norm_substance": "azithromycine dihydratee",
           "dosage": ""
         },
@@ -4217,13 +4648,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ESOMEPRAZOLE MAGNESIQUE",
-          "norm_substance": "esomeprazole magnesique",
+          "substance": "ÉSOMÉPRAZOLE",
+          "norm_substance": "esomeprazole",
           "dosage": ""
         },
         {
-          "substance": "ESOMEPRAZOLE",
-          "norm_substance": "esomeprazole",
+          "substance": "ÉSOMÉPRAZOLE MAGNÉSIQUE",
+          "norm_substance": "esomeprazole magnesique",
           "dosage": ""
         }
       ]
@@ -4248,7 +4679,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OXOMEMAZINE",
+          "substance": "OXOMÉMAZINE",
           "norm_substance": "oxomemazine",
           "dosage": ""
         }
@@ -4261,7 +4692,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "SACCHAROMYCES BOULARDII CNCM I745",
+          "substance": "SACCHAROMYCES BOULARDII CNCM I-745",
           "norm_substance": "saccharomyces boulardii cncm i745",
           "dosage": ""
         }
@@ -4274,12 +4705,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CAMPHOSULFONATE DE CODEINE",
+          "substance": "CAMPHOSULFONATE DE CODÉINE",
           "norm_substance": "camphosulfonate de codeine",
           "dosage": ""
         },
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -4292,8 +4723,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MEQUITAZINE",
+          "substance": "MÉQUITAZINE",
           "norm_substance": "mequitazine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "63038758",
+      "name": "BETAMETHASONE + DIPROPIONATE DE BETAMETHASONE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉTAMÉTHASONE",
+          "norm_substance": "dipropionate de betamethasone",
           "dosage": ""
         }
       ]
@@ -4331,12 +4780,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE METOCLOPRAMIDE ANHYDRE",
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
           "norm_substance": "chlorhydrate de metoclopramide anhydre",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE METOCLOPRAMIDE",
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
           "norm_substance": "chlorhydrate de metoclopramide",
           "dosage": ""
         }
@@ -4349,7 +4798,25 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BETAMETHASONE",
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "63101233",
+      "name": "DERMAFUSONE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALÉRATE DE BÉTAMÉTHASONE",
+          "norm_substance": "valerate de betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "BÉTAMÉTHASONE",
           "norm_substance": "betamethasone",
           "dosage": ""
         }
@@ -4362,7 +4829,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ETIFOXINE (CHLORHYDRATE D')",
+          "substance": "ÉTIFOXINE (CHLORHYDRATE D')",
           "norm_substance": "etifoxine (chlorhydrate d')",
           "dosage": ""
         }
@@ -4401,7 +4868,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACETYLCYSTEINE",
+          "substance": "ACÉTYLCYSTÉINE",
           "norm_substance": "acetylcysteine",
           "dosage": ""
         }
@@ -4414,7 +4881,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "VALERIANE (RACINE DE) (EXTRAIT SEC DE)",
+          "substance": "VALÉRIANE (RACINE DE) (EXTRAIT SEC DE)",
           "norm_substance": "valeriane (racine de) (extrait sec de)",
           "dosage": ""
         }
@@ -4427,7 +4894,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -4440,7 +4907,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "TRIMEBUTINE (MALEATE DE)",
+          "substance": "TRIMÉBUTINE (MALÉATE DE)",
           "norm_substance": "trimebutine (maleate de)",
           "dosage": ""
         }
@@ -4453,13 +4920,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DIPROPIONATE DE BECLOMETASONE",
-          "norm_substance": "dipropionate de beclometasone",
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE MONOHYDRATÉ",
+          "norm_substance": "dipropionate de beclometasone monohydrate",
           "dosage": ""
         },
         {
-          "substance": "DIPROPIONATE DE BECLOMETASONE MONOHYDRATE",
-          "norm_substance": "dipropionate de beclometasone monohydrate",
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE",
+          "norm_substance": "dipropionate de beclometasone",
           "dosage": ""
         }
       ]
@@ -4471,13 +4938,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BECLOMETASONE (DIPROPIONATE DE)",
-          "norm_substance": "beclometasone (dipropionate de)",
+          "substance": "CHLORURE DE BENZALKONIUM",
+          "norm_substance": "chlorure de benzalkonium",
           "dosage": ""
         },
         {
-          "substance": "CHLORURE DE BENZALKONIUM",
-          "norm_substance": "chlorure de benzalkonium",
+          "substance": "BÉCLOMÉTASONE (DIPROPIONATE DE)",
+          "norm_substance": "beclometasone (dipropionate de)",
           "dosage": ""
         }
       ]
@@ -4489,7 +4956,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BUDESONIDE",
+          "substance": "BUDÉSONIDE",
           "norm_substance": "budesonide",
           "dosage": ""
         }
@@ -4502,7 +4969,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -4515,7 +4982,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -4528,7 +4995,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE FEXOFENADINE",
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
           "norm_substance": "chlorhydrate de fexofenadine",
           "dosage": ""
         }
@@ -4541,7 +5008,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "HYDROGENOSUCCINATE DE DOXYLAMINE",
+          "substance": "HYDROGÉNOSUCCINATE DE DOXYLAMINE",
           "norm_substance": "hydrogenosuccinate de doxylamine",
           "dosage": ""
         }
@@ -4567,7 +5034,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OMEPRAZOLE",
+          "substance": "OMÉPRAZOLE",
           "norm_substance": "omeprazole",
           "dosage": ""
         }
@@ -4593,23 +5060,23 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "HYDROGENOFUMARATE DE KETOTIFENE",
-          "norm_substance": "hydrogenofumarate de ketotifene",
-          "dosage": ""
-        },
-        {
-          "substance": "FUMARATE DE KETOTIFENE",
-          "norm_substance": "fumarate de ketotifene",
-          "dosage": ""
-        },
-        {
-          "substance": "KETOTIFENE BASE",
+          "substance": "KETOTIFÈNE BASE",
           "norm_substance": "ketotifene base",
           "dosage": ""
         },
         {
-          "substance": "KETOTIFENE",
+          "substance": "KETOTIFÈNE",
           "norm_substance": "ketotifene",
+          "dosage": ""
+        },
+        {
+          "substance": "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+          "norm_substance": "hydrogenofumarate de ketotifene",
+          "dosage": ""
+        },
+        {
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
           "dosage": ""
         }
       ]
@@ -4621,7 +5088,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -4636,6 +5103,19 @@
         {
           "substance": "BICARBONATE DE SODIUM",
           "norm_substance": "bicarbonate de sodium",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "63502571",
+      "name": "VOLTARENPLAST (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
           "dosage": ""
         }
       ]
@@ -4660,13 +5140,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
-          "norm_substance": "amoxicilline trihydratee",
+          "substance": "CLAVULANATE DE POTASSIUM",
+          "norm_substance": "clavulanate de potassium",
           "dosage": ""
         },
         {
-          "substance": "CLAVULANATE DE POTASSIUM",
-          "norm_substance": "clavulanate de potassium",
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
           "dosage": ""
         },
         {
@@ -4675,13 +5155,13 @@
           "dosage": ""
         },
         {
-          "substance": "ACIDE CLAVULANIQUE",
-          "norm_substance": "acide clavulanique",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
+          "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE ANHYDRE",
-          "norm_substance": "amoxicilline anhydre",
+          "substance": "ACIDE CLAVULANIQUE",
+          "norm_substance": "acide clavulanique",
           "dosage": ""
         }
       ]
@@ -4693,12 +5173,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FUROATE DE MOMETASONE MONOHYDRATE",
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
           "norm_substance": "furoate de mometasone monohydrate",
           "dosage": ""
         },
         {
-          "substance": "FUROATE DE MOMETASONE",
+          "substance": "FUROATE DE MOMÉTASONE",
           "norm_substance": "furoate de mometasone",
           "dosage": ""
         }
@@ -4711,8 +5191,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "METOPIMAZINE",
+          "substance": "MÉTOPIMAZINE",
           "norm_substance": "metopimazine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "63660735",
+      "name": "SILIGAZ (Orale)",
+      "route": "orale",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
           "dosage": ""
         }
       ]
@@ -4724,7 +5217,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE LOPERAMIDE",
+          "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": ""
         }
@@ -4737,7 +5230,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOMPERIDONE",
+          "substance": "DOMPÉRIDONE",
           "norm_substance": "domperidone",
           "dosage": ""
         }
@@ -4770,19 +5263,45 @@
       ]
     },
     {
+      "cis": "63735593",
+      "name": "KENDIX (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "ACICLOVIR",
+          "norm_substance": "aciclovir",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "63736058",
+      "name": "KETUM (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "KÉTOPROFÈNE",
+          "norm_substance": "ketoprofene",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "63738842",
       "name": "APRANAX (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "NAPROXENE SODIQUE",
-          "norm_substance": "naproxene sodique",
+          "substance": "NAPROXÈNE",
+          "norm_substance": "naproxene",
           "dosage": ""
         },
         {
-          "substance": "NAPROXENE",
-          "norm_substance": "naproxene",
+          "substance": "NAPROXÈNE SODIQUE",
+          "norm_substance": "naproxene sodique",
           "dosage": ""
         }
       ]
@@ -4794,13 +5313,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE DE CODEINE HEMIHYDRATE",
-          "norm_substance": "phosphate de codeine hemihydrate",
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         },
         {
-          "substance": "IBUPROFENE",
-          "norm_substance": "ibuprofene",
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
+          "norm_substance": "phosphate de codeine hemihydrate",
           "dosage": ""
         }
       ]
@@ -4812,13 +5331,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ONDANSETRON",
-          "norm_substance": "ondansetron",
+          "substance": "ONDANSÉTRON (CHLORHYDRATE D') DIHYDRATÉ",
+          "norm_substance": "ondansetron (chlorhydrate d') dihydrate",
           "dosage": ""
         },
         {
-          "substance": "ONDANSETRON (CHLORHYDRATE D') DIHYDRATE",
-          "norm_substance": "ondansetron (chlorhydrate d') dihydrate",
+          "substance": "ONDANSÉTRON",
+          "norm_substance": "ondansetron",
           "dosage": ""
         }
       ]
@@ -4830,7 +5349,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         }
@@ -4843,7 +5362,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MELATONINE",
+          "substance": "MÉLATONINE",
           "norm_substance": "melatonine",
           "dosage": ""
         }
@@ -4856,7 +5375,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ONDANSETRON",
+          "substance": "ONDANSÉTRON",
           "norm_substance": "ondansetron",
           "dosage": ""
         }
@@ -4869,13 +5388,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOXYCYCLINE ANHYDRE",
-          "norm_substance": "doxycycline anhydre",
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE MONOHYDRATEE",
-          "norm_substance": "doxycycline monohydratee",
+          "substance": "DOXYCYCLINE ANHYDRE",
+          "norm_substance": "doxycycline anhydre",
           "dosage": ""
         }
       ]
@@ -4887,8 +5406,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE METOCLOPRAMIDE",
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
           "norm_substance": "chlorhydrate de metoclopramide",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "63855240",
+      "name": "VOLTARENE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "DICLOFÉNAC DE DIÉTHYLAMINE",
+          "norm_substance": "diclofenac de diethylamine",
           "dosage": ""
         }
       ]
@@ -4907,14 +5444,45 @@
       ]
     },
     {
+      "cis": "63872528",
+      "name": "FLIXOVATE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "PROPIONATE DE FLUTICASONE",
+          "norm_substance": "propionate de fluticasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "63915157",
       "name": "ETARTILEN (Ophtalmique)",
       "route": "ophtalmique",
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "63931033",
+      "name": "DAIVOBET (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉTAMÉTHASONE",
+          "norm_substance": "dipropionate de betamethasone",
           "dosage": ""
         }
       ]
@@ -4926,7 +5494,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -4939,7 +5507,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE FEXOFENADINE",
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
           "norm_substance": "chlorhydrate de fexofenadine",
           "dosage": ""
         }
@@ -4965,12 +5533,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PASSIFLORE (PARTIE AERIENNE DE) (EXTRAIT SEC DE)",
+          "substance": "PASSIFLORE (PARTIE AÉRIENNE DE) (EXTRAIT SEC DE)",
           "norm_substance": "passiflore (partie aerienne de) (extrait sec de)",
           "dosage": ""
         },
         {
-          "substance": "VALERIANE (RACINE DE) (EXTRAIT SEC DE)",
+          "substance": "VALÉRIANE (RACINE DE) (EXTRAIT SEC DE)",
           "norm_substance": "valeriane (racine de) (extrait sec de)",
           "dosage": ""
         }
@@ -5014,7 +5582,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MELATONINE",
+          "substance": "MÉLATONINE",
           "norm_substance": "melatonine",
           "dosage": ""
         }
@@ -5040,7 +5608,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "OMEPRAZOLE",
+          "substance": "OMÉPRAZOLE",
           "norm_substance": "omeprazole",
           "dosage": ""
         }
@@ -5053,12 +5621,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "SULFAMETHOXAZOLE",
+          "substance": "SULFAMÉTHOXAZOLE",
           "norm_substance": "sulfamethoxazole",
           "dosage": ""
         },
         {
-          "substance": "TRIMETHOPRIME",
+          "substance": "TRIMÉTHOPRIME",
           "norm_substance": "trimethoprime",
           "dosage": ""
         }
@@ -5084,13 +5652,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CLOXACILLINE SODIQUE MONOHYDRATEE",
-          "norm_substance": "cloxacilline sodique monohydratee",
+          "substance": "CLOXACILLINE",
+          "norm_substance": "cloxacilline",
           "dosage": ""
         },
         {
-          "substance": "CLOXACILLINE",
-          "norm_substance": "cloxacilline",
+          "substance": "CLOXACILLINE SODIQUE MONOHYDRATÉE",
+          "norm_substance": "cloxacilline sodique monohydratee",
           "dosage": ""
         }
       ]
@@ -5102,7 +5670,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FLURBIPROFENE",
+          "substance": "FLURBIPROFÈNE",
           "norm_substance": "flurbiprofene",
           "dosage": ""
         }
@@ -5115,7 +5683,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -5128,7 +5696,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -5154,17 +5722,17 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE DE CODEINE ANHYDRE",
+          "substance": "PHOSPHATE DE CODÉINE ANHYDRE",
           "norm_substance": "phosphate de codeine anhydre",
           "dosage": ""
         },
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE CODEINE HEMIHYDRATE",
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
           "norm_substance": "phosphate de codeine hemihydrate",
           "dosage": ""
         }
@@ -5177,8 +5745,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "POVIDONE IODEE",
+          "substance": "POVIDONE IODÉE",
           "norm_substance": "povidone iodee",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "64311448",
+      "name": "PERCUTALGINE SPRAY (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DEXAMÉTHASONE",
+          "norm_substance": "dexamethasone",
           "dosage": ""
         }
       ]
@@ -5190,7 +5771,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -5203,7 +5784,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BUDESONIDE",
+          "substance": "BUDÉSONIDE",
           "norm_substance": "budesonide",
           "dosage": ""
         }
@@ -5216,13 +5797,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROGENOFUMARATE DE KETOTIFENE",
-          "norm_substance": "hydrogenofumarate de ketotifene",
+          "substance": "KETOTIFÈNE",
+          "norm_substance": "ketotifene",
           "dosage": ""
         },
         {
-          "substance": "KETOTIFENE",
-          "norm_substance": "ketotifene",
+          "substance": "HYDROGÉNOFUMARATE DE KÉTOTIFÈNE",
+          "norm_substance": "hydrogenofumarate de ketotifene",
           "dosage": ""
         }
       ]
@@ -5254,18 +5835,41 @@
       ]
     },
     {
+      "cis": "64435022",
+      "name": "DIPROSALIC (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE (DIPROPIONATE DE)",
+          "norm_substance": "betamethasone (dipropionate de)",
+          "dosage": ""
+        },
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉTAMÉTHASONE",
+          "norm_substance": "dipropionate de betamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "64475839",
       "name": "RYALTRIS (Nasale)",
       "route": "nasale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "FUROATE DE MOMETASONE MONOHYDRATE",
+          "substance": "FUROATE DE MOMÉTASONE MONOHYDRATÉ",
           "norm_substance": "furoate de mometasone monohydrate",
           "dosage": ""
         },
         {
-          "substance": "FUROATE DE MOMETASONE",
+          "substance": "FUROATE DE MOMÉTASONE",
           "norm_substance": "furoate de mometasone",
           "dosage": ""
         }
@@ -5278,13 +5882,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "LYSINATE D'IBUPROFENE",
-          "norm_substance": "lysinate d'ibuprofene",
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         },
         {
-          "substance": "IBUPROFENE",
-          "norm_substance": "ibuprofene",
+          "substance": "LYSINATE D'IBUPROFÈNE",
+          "norm_substance": "lysinate d'ibuprofene",
           "dosage": ""
         }
       ]
@@ -5322,7 +5926,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "EXTRAIT SEC DE RACINE DE VALERIANE",
+          "substance": "EXTRAIT SEC DE RACINE DE VALÉRIANE",
           "norm_substance": "extrait sec de racine de valeriane",
           "dosage": ""
         }
@@ -5335,13 +5939,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE (LYSINATE D')",
-          "norm_substance": "ibuprofene (lysinate d')",
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         },
         {
-          "substance": "IBUPROFENE",
-          "norm_substance": "ibuprofene",
+          "substance": "IBUPROFÈNE (LYSINATE D')",
+          "norm_substance": "ibuprofene (lysinate d')",
           "dosage": ""
         }
       ]
@@ -5366,7 +5970,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -5397,7 +6001,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -5410,13 +6014,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "LEVOFLOXACINE",
-          "norm_substance": "levofloxacine",
+          "substance": "LÉVOFLOXACINE HÉMIHYDRATÉE",
+          "norm_substance": "levofloxacine hemihydratee",
           "dosage": ""
         },
         {
-          "substance": "LEVOFLOXACINE HEMIHYDRATEE",
-          "norm_substance": "levofloxacine hemihydratee",
+          "substance": "LÉVOFLOXACINE",
+          "norm_substance": "levofloxacine",
           "dosage": ""
         }
       ]
@@ -5428,7 +6032,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AZITHROMYCINE MONOHYDRATEE",
+          "substance": "AZITHROMYCINE MONOHYDRATÉE",
           "norm_substance": "azithromycine monohydratee",
           "dosage": ""
         },
@@ -5446,13 +6050,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         },
         {
           "substance": "HYDROXYDE D'ALUMINIUM",
           "norm_substance": "hydroxyde d'aluminium",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "64835493",
+      "name": "TRUE TEST (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BUDÉSONIDE",
+          "norm_substance": "budesonide",
           "dosage": ""
         }
       ]
@@ -5508,7 +6125,7 @@
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DIHYDRATE DE VALACICLOVIR",
+          "substance": "CHLORHYDRATE DIHYDRATÉ DE VALACICLOVIR",
           "norm_substance": "chlorhydrate dihydrate de valaciclovir",
           "dosage": ""
         }
@@ -5521,7 +6138,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CETIRIZINE (DICHLORHYDRATE DE)",
+          "substance": "CÉTIRIZINE (DICHLORHYDRATE DE)",
           "norm_substance": "cetirizine (dichlorhydrate de)",
           "dosage": ""
         }
@@ -5547,13 +6164,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE DISODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE DISODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate disodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "65069229",
+      "name": "ZOVIRAX (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ACICLOVIR",
+          "norm_substance": "aciclovir",
           "dosage": ""
         }
       ]
@@ -5578,7 +6208,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -5591,13 +6221,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYCLATE DE DOXYCYCLINE",
-          "norm_substance": "hyclate de doxycycline",
+          "substance": "DOXYCYCLINE BASE",
+          "norm_substance": "doxycycline base",
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE BASE",
-          "norm_substance": "doxycycline base",
+          "substance": "HYCLATE DE DOXYCYCLINE",
+          "norm_substance": "hyclate de doxycycline",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "65227405",
+      "name": "POLARAMINE (Intramusculaire;intraveineuse;sous-cutanée)",
+      "route": "intramusculaire;intraveineuse;sous-cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "MALÉATE DE DEXCHLORPHÉNIRAMINE",
+          "norm_substance": "maleate de dexchlorpheniramine",
           "dosage": ""
         }
       ]
@@ -5609,8 +6252,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "65256289",
+      "name": "ERYTHROGEL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ÉRYTHROMYCINE",
+          "norm_substance": "erythromycine",
           "dosage": ""
         }
       ]
@@ -5635,12 +6291,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CAMPHOSULFONATE DE CODEINE",
+          "substance": "CAMPHOSULFONATE DE CODÉINE",
           "norm_substance": "camphosulfonate de codeine",
           "dosage": ""
         },
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -5653,7 +6309,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -5679,13 +6335,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOXYCYCLINE HYDRATEE",
-          "norm_substance": "doxycycline hydratee",
+          "substance": "HYCLATE DE DOXYCYCLINE",
+          "norm_substance": "hyclate de doxycycline",
           "dosage": ""
         },
         {
-          "substance": "HYCLATE DE DOXYCYCLINE",
-          "norm_substance": "hyclate de doxycycline",
+          "substance": "DOXYCYCLINE HYDRATÉE",
+          "norm_substance": "doxycycline hydratee",
           "dosage": ""
         }
       ]
@@ -5697,12 +6353,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RABEPRAZOLE BASE",
+          "substance": "RABÉPRAZOLE BASE",
           "norm_substance": "rabeprazole base",
           "dosage": ""
         },
         {
-          "substance": "RABEPRAZOLE SODIQUE MONOHYDRATE",
+          "substance": "RABÉPRAZOLE SODIQUE MONOHYDRATÉ",
           "norm_substance": "rabeprazole sodique monohydrate",
           "dosage": ""
         }
@@ -5741,13 +6397,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ERYTHROMYCINE (ETHYLSUCCINATE D')",
-          "norm_substance": "erythromycine (ethylsuccinate d')",
+          "substance": "ÉRYTHROMYCINE BASE",
+          "norm_substance": "erythromycine base",
           "dosage": ""
         },
         {
-          "substance": "ERYTHROMYCINE BASE",
-          "norm_substance": "erythromycine base",
+          "substance": "ÉRYTHROMYCINE (ÉTHYLSUCCINATE D')",
+          "norm_substance": "erythromycine (ethylsuccinate d')",
           "dosage": ""
         }
       ]
@@ -5772,23 +6428,23 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "LEVOFLOXACINE",
-          "norm_substance": "levofloxacine",
+          "substance": "LÉVOFLOXACINE HÉMIHYDRATÉE",
+          "norm_substance": "levofloxacine hemihydratee",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "DEXAMETHASONE",
-          "norm_substance": "dexamethasone",
+          "substance": "LÉVOFLOXACINE",
+          "norm_substance": "levofloxacine",
           "dosage": ""
         },
         {
-          "substance": "LEVOFLOXACINE HEMIHYDRATEE",
-          "norm_substance": "levofloxacine hemihydratee",
+          "substance": "DEXAMÉTHASONE",
+          "norm_substance": "dexamethasone",
           "dosage": ""
         }
       ]
@@ -5800,8 +6456,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARTIE AERIENNE DE PASSIFLORE",
+          "substance": "PARTIE AÉRIENNE DE PASSIFLORE",
           "norm_substance": "partie aerienne de passiflore",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "65490819",
+      "name": "HEXOMEDINE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "HEXAMIDINE (DIISÉTHIONATE D')",
+          "norm_substance": "hexamidine (diisethionate d')",
           "dosage": ""
         }
       ]
@@ -5813,7 +6482,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFPODOXIME PROXETIL",
+          "substance": "CEFPODOXIME PROXÉTIL",
           "norm_substance": "cefpodoxime proxetil",
           "dosage": ""
         },
@@ -5831,7 +6500,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "METOCLOPRAMIDE",
+          "substance": "MÉTOCLOPRAMIDE",
           "norm_substance": "metoclopramide",
           "dosage": ""
         }
@@ -5844,7 +6513,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -5857,7 +6526,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -5870,7 +6539,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RACECADOTRIL",
+          "substance": "RACÉCADOTRIL",
           "norm_substance": "racecadotril",
           "dosage": ""
         }
@@ -5883,7 +6552,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MALEATE DE DEXCHLORPHENIRAMINE",
+          "substance": "MALÉATE DE DEXCHLORPHÉNIRAMINE",
           "norm_substance": "maleate de dexchlorpheniramine",
           "dosage": ""
         }
@@ -5896,7 +6565,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -5909,7 +6578,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -5979,8 +6648,26 @@
           "dosage": ""
         },
         {
-          "substance": "AZITHROMYCINE DIHYDRATEE",
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
           "norm_substance": "azithromycine dihydratee",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "65726080",
+      "name": "BETESIL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "VALÉRATE DE BÉTAMÉTHASONE",
+          "norm_substance": "valerate de betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
           "dosage": ""
         }
       ]
@@ -5992,7 +6679,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AZITHROMYCINE DIHYDRATEE",
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
           "norm_substance": "azithromycine dihydratee",
           "dosage": ""
         },
@@ -6004,13 +6691,26 @@
       ]
     },
     {
+      "cis": "65750786",
+      "name": "NUROFEN (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "65799705",
       "name": "BROMHYDRATE DE DEXTROMETHORPHANE (Orale)",
       "route": "orale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "BROMHYDRATE DE DEXTROMETHORPHANE",
+          "substance": "BROMHYDRATE DE DEXTROMÉTHORPHANE",
           "norm_substance": "bromhydrate de dextromethorphane",
           "dosage": ""
         }
@@ -6023,18 +6723,18 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "TRIMETHYLPHLOROGLUCINOL",
-          "norm_substance": "trimethylphloroglucinol",
-          "dosage": ""
-        },
-        {
           "substance": "PHLOROGLUCINOL ANHYDRE",
           "norm_substance": "phloroglucinol anhydre",
           "dosage": ""
         },
         {
-          "substance": "PHLOROGLUCINOL DIHYDRATE",
+          "substance": "PHLOROGLUCINOL DIHYDRATÉ",
           "norm_substance": "phloroglucinol dihydrate",
+          "dosage": ""
+        },
+        {
+          "substance": "TRIMÉTHYLPHLOROGLUCINOL",
+          "norm_substance": "trimethylphloroglucinol",
           "dosage": ""
         }
       ]
@@ -6051,7 +6751,7 @@
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE VALACICLOVIR MONOHYDRATE",
+          "substance": "CHLORHYDRATE DE VALACICLOVIR MONOHYDRATÉ",
           "norm_substance": "chlorhydrate de valaciclovir monohydrate",
           "dosage": ""
         }
@@ -6100,7 +6800,7 @@
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE FEXOFENADINE",
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
           "norm_substance": "chlorhydrate de fexofenadine",
           "dosage": ""
         }
@@ -6113,7 +6813,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BROMHYDRATE DE DEXTROMETHORPHANE",
+          "substance": "BROMHYDRATE DE DEXTROMÉTHORPHANE",
           "norm_substance": "bromhydrate de dextromethorphane",
           "dosage": ""
         }
@@ -6126,7 +6826,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "EXTRAIT SEC DE RACINE DE VALERIANE",
+          "substance": "EXTRAIT SEC DE RACINE DE VALÉRIANE",
           "norm_substance": "extrait sec de racine de valeriane",
           "dosage": ""
         }
@@ -6146,13 +6846,26 @@
       ]
     },
     {
+      "cis": "66091940",
+      "name": "DICLOFENAC SODIQUE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "66129490",
       "name": "POLYDEXA (Auriculaire)",
       "route": "auriculaire",
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE (METASULFOBENZOATE SODIQUE DE)",
+          "substance": "DEXAMÉTHASONE (MÉTASULFOBENZOATE SODIQUE DE)",
           "norm_substance": "dexamethasone (metasulfobenzoate sodique de)",
           "dosage": ""
         }
@@ -6165,13 +6878,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "LOPERAMIDE BASE",
-          "norm_substance": "loperamide base",
+          "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
+          "norm_substance": "chlorhydrate de loperamide",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE LOPERAMIDE",
-          "norm_substance": "chlorhydrate de loperamide",
+          "substance": "LOPÉRAMIDE BASE",
+          "norm_substance": "loperamide base",
           "dosage": ""
         }
       ]
@@ -6183,7 +6896,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CELECOXIB",
+          "substance": "CÉLÉCOXIB",
           "norm_substance": "celecoxib",
           "dosage": ""
         }
@@ -6216,19 +6929,32 @@
       ]
     },
     {
+      "cis": "66227034",
+      "name": "NAABAK (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ACIDE N-ACÉTYL ASPARTYL GLUTAMIQUE (SEL DE SODIUM)",
+          "norm_substance": "acide nacetyl aspartyl glutamique (sel de sodium)",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "66238760",
       "name": "RHINOFEBRAL SANS SUCRE (Orale)",
       "route": "orale",
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
-          "norm_substance": "paracetamol",
+          "substance": "MALÉATE DE PHÉNIRAMINE",
+          "norm_substance": "maleate de pheniramine",
           "dosage": ""
         },
         {
-          "substance": "MALEATE DE PHENIRAMINE",
-          "norm_substance": "maleate de pheniramine",
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
           "dosage": ""
         }
       ]
@@ -6240,8 +6966,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DIPROPIONATE DE BECLOMETASONE",
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE",
           "norm_substance": "dipropionate de beclometasone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "66271479",
+      "name": "ANTARENE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
           "dosage": ""
         }
       ]
@@ -6253,7 +6992,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -6266,7 +7005,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "DICHLORHYDRATE DE LEVOCETIRIZINE",
+          "substance": "DICHLORHYDRATE DE LÉVOCÉTIRIZINE",
           "norm_substance": "dichlorhydrate de levocetirizine",
           "dosage": ""
         }
@@ -6279,7 +7018,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -6292,7 +7031,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -6318,13 +7057,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BETAMETHASONE (PHOSPHATE DE) ET DE DISODIUM",
-          "norm_substance": "betamethasone (phosphate de) et de disodium",
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
           "dosage": ""
         },
         {
-          "substance": "BETAMETHASONE",
-          "norm_substance": "betamethasone",
+          "substance": "BÉTAMETHASONE (PHOSPHATE DE) ET DE DISODIUM",
+          "norm_substance": "betamethasone (phosphate de) et de disodium",
           "dosage": ""
         }
       ]
@@ -6343,24 +7082,42 @@
       ]
     },
     {
+      "cis": "66343957",
+      "name": "VOLTARENSPE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "DICLOFÉNAC DE DIÉTHYLAMINE",
+          "norm_substance": "diclofenac de diethylamine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "66365672",
       "name": "RHUMAGRIP (Orale)",
       "route": "orale",
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE PSEUDOEPHEDRINE",
-          "norm_substance": "chlorhydrate de pseudoephedrine",
-          "dosage": ""
-        },
-        {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PSEUDOEPHEDRINE",
+          "substance": "PSEUDOÉPHÉDRINE",
           "norm_substance": "pseudoephedrine",
+          "dosage": ""
+        },
+        {
+          "substance": "CHLORHYDRATE DE PSEUDOÉPHÉDRINE",
+          "norm_substance": "chlorhydrate de pseudoephedrine",
           "dosage": ""
         }
       ]
@@ -6398,7 +7155,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PASSIFLORE (PARTIE AERIENNE DE) (EXTRAIT SEC DE)",
+          "substance": "PASSIFLORE (PARTIE AÉRIENNE DE) (EXTRAIT SEC DE)",
           "norm_substance": "passiflore (partie aerienne de) (extrait sec de)",
           "dosage": ""
         }
@@ -6424,12 +7181,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DICLOFENAC SODIQUE",
+          "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": ""
         },
         {
-          "substance": "DICLOFENAC",
+          "substance": "DICLOFÉNAC",
           "norm_substance": "diclofenac",
           "dosage": ""
         }
@@ -6442,7 +7199,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FLURBIPROFENE SODIQUE DIHYDRATE",
+          "substance": "FLURBIPROFÈNE SODIQUE DIHYDRATÉ",
           "norm_substance": "flurbiprofene sodique dihydrate",
           "dosage": ""
         }
@@ -6455,7 +7212,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -6468,12 +7225,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -6486,7 +7243,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE (PHOSPHATE SODIQUE DE)",
+          "substance": "DEXAMÉTHASONE (PHOSPHATE SODIQUE DE)",
           "norm_substance": "dexamethasone (phosphate sodique de)",
           "dosage": ""
         }
@@ -6499,13 +7256,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
-          "norm_substance": "hydroxyde de magnesium",
+          "substance": "CARBONATE DE CALCIUM",
+          "norm_substance": "carbonate de calcium",
           "dosage": ""
         },
         {
-          "substance": "CARBONATE DE CALCIUM",
-          "norm_substance": "carbonate de calcium",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
+          "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         },
         {
@@ -6522,7 +7279,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DICLOFENAC SODIQUE",
+          "substance": "DICLOFÉNAC SODIQUE",
           "norm_substance": "diclofenac sodique",
           "dosage": ""
         }
@@ -6548,7 +7305,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -6574,7 +7331,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "METOPIMAZINE",
+          "substance": "MÉTOPIMAZINE",
           "norm_substance": "metopimazine",
           "dosage": ""
         }
@@ -6600,7 +7357,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -6613,7 +7370,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -6626,7 +7383,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ONDANSETRON",
+          "substance": "ONDANSÉTRON",
           "norm_substance": "ondansetron",
           "dosage": ""
         }
@@ -6639,7 +7396,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BROMAZEPAM",
+          "substance": "BROMAZÉPAM",
           "norm_substance": "bromazepam",
           "dosage": ""
         }
@@ -6652,12 +7409,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOTIFENE",
+          "substance": "KETOTIFÈNE",
           "norm_substance": "ketotifene",
           "dosage": ""
         },
         {
-          "substance": "KETOTIFENE (HYDROGENOFUMARATE DE)",
+          "substance": "KÉTOTIFÈNE (HYDROGÉNOFUMARATE DE)",
           "norm_substance": "ketotifene (hydrogenofumarate de)",
           "dosage": ""
         }
@@ -6670,7 +7427,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MELATONINE",
+          "substance": "MÉLATONINE",
           "norm_substance": "melatonine",
           "dosage": ""
         }
@@ -6696,7 +7453,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "RACECADOTRIL",
+          "substance": "RACÉCADOTRIL",
           "norm_substance": "racecadotril",
           "dosage": ""
         }
@@ -6709,7 +7466,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MALEATE DE TRIMEBUTINE",
+          "substance": "MALÉATE DE TRIMÉBUTINE",
           "norm_substance": "maleate de trimebutine",
           "dosage": ""
         }
@@ -6722,12 +7479,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFIXIME ANHYDRE",
+          "substance": "CÉFIXIME ANHYDRE",
           "norm_substance": "cefixime anhydre",
           "dosage": ""
         },
         {
-          "substance": "CEFIXIME TRIHYDRATEE",
+          "substance": "CÉFIXIME TRIHYDRATÉE",
           "norm_substance": "cefixime trihydratee",
           "dosage": ""
         }
@@ -6747,13 +7504,31 @@
       ]
     },
     {
+      "cis": "66950512",
+      "name": "FLECTORTISSUGELEP (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
+          "norm_substance": "epolamine de diclofenac",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "66958014",
       "name": "RHINOMAXIL (Nasale)",
       "route": "nasale",
       "is_otc": false,
       "composition": [
         {
-          "substance": "DIPROPIONATE DE BECLOMETASONE",
+          "substance": "DIPROPIONATE DE BÉCLOMÉTASONE",
           "norm_substance": "dipropionate de beclometasone",
           "dosage": ""
         }
@@ -6766,13 +7541,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FUMARATE DE KETOTIFENE",
-          "norm_substance": "fumarate de ketotifene",
+          "substance": "KETOTIFÈNE",
+          "norm_substance": "ketotifene",
           "dosage": ""
         },
         {
-          "substance": "KETOTIFENE",
-          "norm_substance": "ketotifene",
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
           "dosage": ""
         }
       ]
@@ -6797,7 +7572,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "VALERIANE (RACINE DE) (EXTRAIT SEC AQUEUX DE)",
+          "substance": "VALÉRIANE (RACINE DE) (EXTRAIT SEC AQUEUX DE)",
           "norm_substance": "valeriane (racine de) (extrait sec aqueux de)",
           "dosage": ""
         }
@@ -6823,8 +7598,26 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "67207458",
+      "name": "DICLOFENAC SODIQUE + EPOLAMINE DE DICLOFENAC (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
+          "dosage": ""
+        },
+        {
+          "substance": "ÉPOLAMINE DE DICLOFÉNAC",
+          "norm_substance": "epolamine de diclofenac",
           "dosage": ""
         }
       ]
@@ -6836,7 +7629,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -6849,7 +7642,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "METHOCARBAMOL",
+          "substance": "MÉTHOCARBAMOL",
           "norm_substance": "methocarbamol",
           "dosage": ""
         }
@@ -6862,13 +7655,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL HYDRATE",
-          "norm_substance": "phloroglucinol hydrate",
+          "substance": "PHLOROGLUCINOL ANHYDRE",
+          "norm_substance": "phloroglucinol anhydre",
           "dosage": ""
         },
         {
-          "substance": "PHLOROGLUCINOL ANHYDRE",
-          "norm_substance": "phloroglucinol anhydre",
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
+          "norm_substance": "phloroglucinol hydrate",
           "dosage": ""
         }
       ]
@@ -6880,8 +7673,52 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL HYDRATE",
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
           "norm_substance": "phloroglucinol hydrate",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "67300325",
+      "name": "CARBOSYMAG (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "67342541",
+      "name": "CLIPTOL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "67347855",
+      "name": "ENSTILAR (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
+          "dosage": ""
+        },
+        {
+          "substance": "DIPROPIONATE DE BÉTAMÉTHASONE",
+          "norm_substance": "dipropionate de betamethasone",
           "dosage": ""
         }
       ]
@@ -6906,12 +7743,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CEFIXIME ANHYDRE",
+          "substance": "CÉFIXIME ANHYDRE",
           "norm_substance": "cefixime anhydre",
           "dosage": ""
         },
         {
-          "substance": "CEFIXIME TRIHYDRATEE",
+          "substance": "CÉFIXIME TRIHYDRATÉE",
           "norm_substance": "cefixime trihydratee",
           "dosage": ""
         }
@@ -6942,7 +7779,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE PHENYLEPHRINE",
+          "substance": "CHLORHYDRATE DE PHÉNYLÉPHRINE",
           "norm_substance": "chlorhydrate de phenylephrine",
           "dosage": ""
         }
@@ -6955,13 +7792,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "NAPROXENE SODIQUE",
-          "norm_substance": "naproxene sodique",
+          "substance": "NAPROXÈNE",
+          "norm_substance": "naproxene",
           "dosage": ""
         },
         {
-          "substance": "NAPROXENE",
-          "norm_substance": "naproxene",
+          "substance": "NAPROXÈNE SODIQUE",
+          "norm_substance": "naproxene sodique",
           "dosage": ""
         }
       ]
@@ -6973,7 +7810,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "BUDESONIDE",
+          "substance": "BUDÉSONIDE",
           "norm_substance": "budesonide",
           "dosage": ""
         }
@@ -6986,12 +7823,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "TARTRATE DE DIHYDROCODEINE",
+          "substance": "TARTRATE DE DIHYDROCODÉINE",
           "norm_substance": "tartrate de dihydrocodeine",
           "dosage": ""
         },
         {
-          "substance": "DIHYDROCODEINE",
+          "substance": "DIHYDROCODÉINE",
           "norm_substance": "dihydrocodeine",
           "dosage": ""
         }
@@ -7004,13 +7841,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FUMARATE DE KETOTIFENE",
-          "norm_substance": "fumarate de ketotifene",
+          "substance": "KETOTIFÈNE",
+          "norm_substance": "ketotifene",
           "dosage": ""
         },
         {
-          "substance": "KETOTIFENE",
-          "norm_substance": "ketotifene",
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
           "dosage": ""
         }
       ]
@@ -7022,13 +7859,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "POUDRE D'OPIUM",
-          "norm_substance": "poudre d'opium",
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PARACETAMOL",
-          "norm_substance": "paracetamol",
+          "substance": "POUDRE D'OPIUM",
+          "norm_substance": "poudre d'opium",
           "dosage": ""
         }
       ]
@@ -7040,12 +7877,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate de dexamethasone",
           "dosage": ""
         }
@@ -7058,7 +7895,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "RACECADOTRIL",
+          "substance": "RACÉCADOTRIL",
           "norm_substance": "racecadotril",
           "dosage": ""
         }
@@ -7084,12 +7921,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -7102,12 +7939,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate de dexamethasone",
           "dosage": ""
         }
@@ -7120,7 +7957,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACETYLCYSTEINE",
+          "substance": "ACÉTYLCYSTÉINE",
           "norm_substance": "acetylcysteine",
           "dosage": ""
         }
@@ -7133,8 +7970,21 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "67885195",
+      "name": "CARBOSYLANE (Orale)",
+      "route": "orale",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
           "dosage": ""
         }
       ]
@@ -7159,7 +8009,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -7172,13 +8022,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOXYCYCLINE",
-          "norm_substance": "doxycycline",
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
+          "norm_substance": "doxycycline monohydratee",
           "dosage": ""
         },
         {
-          "substance": "DOXYCYCLINE MONOHYDRATEE",
-          "norm_substance": "doxycycline monohydratee",
+          "substance": "DOXYCYCLINE",
+          "norm_substance": "doxycycline",
           "dosage": ""
         }
       ]
@@ -7208,13 +8058,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FUMARATE DE KETOTIFENE",
-          "norm_substance": "fumarate de ketotifene",
+          "substance": "KETOTIFÈNE BASE",
+          "norm_substance": "ketotifene base",
           "dosage": ""
         },
         {
-          "substance": "KETOTIFENE BASE",
-          "norm_substance": "ketotifene base",
+          "substance": "FUMARATE DE KETOTIFÈNE",
+          "norm_substance": "fumarate de ketotifene",
           "dosage": ""
         }
       ]
@@ -7226,7 +8076,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DOXYCYCLINE MONOHYDRATEE",
+          "substance": "DOXYCYCLINE MONOHYDRATÉE",
           "norm_substance": "doxycycline monohydratee",
           "dosage": ""
         }
@@ -7239,13 +8089,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FOSFOMYCINE TROMETAMOL",
-          "norm_substance": "fosfomycine trometamol",
+          "substance": "FOSFOMYCINE",
+          "norm_substance": "fosfomycine",
           "dosage": ""
         },
         {
-          "substance": "FOSFOMYCINE",
-          "norm_substance": "fosfomycine",
+          "substance": "FOSFOMYCINE TROMÉTAMOL",
+          "norm_substance": "fosfomycine trometamol",
           "dosage": ""
         }
       ]
@@ -7257,13 +8107,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "TEINTURE DE RACINE DE VALERIANE",
-          "norm_substance": "teinture de racine de valeriane",
+          "substance": "TEINTURE DE PARTIE AÉRIENNE DE PASSIFLORE",
+          "norm_substance": "teinture de partie aerienne de passiflore",
           "dosage": ""
         },
         {
-          "substance": "TEINTURE DE PARTIE AERIENNE DE PASSIFLORE",
-          "norm_substance": "teinture de partie aerienne de passiflore",
+          "substance": "TEINTURE DE RACINE DE VALÉRIANE",
+          "norm_substance": "teinture de racine de valeriane",
           "dosage": ""
         }
       ]
@@ -7275,7 +8125,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DIAZEPAM",
+          "substance": "DIAZÉPAM",
           "norm_substance": "diazepam",
           "dosage": ""
         }
@@ -7288,18 +8138,18 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL HYDRATE",
+          "substance": "PHLOROGLUCINOL ANHYDRE",
+          "norm_substance": "phloroglucinol anhydre",
+          "dosage": ""
+        },
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
           "norm_substance": "phloroglucinol hydrate",
           "dosage": ""
         },
         {
-          "substance": "PHLOROGLUCINOL (TRIMETHYL ETHER DU)",
+          "substance": "PHLOROGLUCINOL (TRIMÉTHYL ÉTHER DU)",
           "norm_substance": "phloroglucinol (trimethyl ether du)",
-          "dosage": ""
-        },
-        {
-          "substance": "PHLOROGLUCINOL ANHYDRE",
-          "norm_substance": "phloroglucinol anhydre",
           "dosage": ""
         }
       ]
@@ -7324,12 +8174,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHOSPHATE SODIQUE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE SODIQUE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate sodique de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE DEXAMETHASONE",
+          "substance": "PHOSPHATE DE DEXAMÉTHASONE",
           "norm_substance": "phosphate de dexamethasone",
           "dosage": ""
         }
@@ -7342,23 +8192,23 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "EXTRAIT SEC DE RACINE DE VALÉRIANE",
+          "norm_substance": "extrait sec de racine de valeriane",
+          "dosage": ""
+        },
+        {
           "substance": "EXTRAIT SEC DE PARTIE AERIENNE DE PASSIFLORE",
           "norm_substance": "extrait sec de partie aerienne de passiflore",
           "dosage": ""
         },
         {
-          "substance": "BALLOTE (EXTRAIT SEC DE SOMMITE FLEURIE DE)",
-          "norm_substance": "ballote (extrait sec de sommite fleurie de)",
-          "dosage": ""
-        },
-        {
-          "substance": "EXTRAIT SEC DE RACINE DE VALERIANE",
-          "norm_substance": "extrait sec de racine de valeriane",
-          "dosage": ""
-        },
-        {
-          "substance": "EXTRAIT SEC DE SOMMITE FLEURIE D'AUBEPINE",
+          "substance": "EXTRAIT SEC DE SOMMITÉ FLEURIE D'AUBÉPINE",
           "norm_substance": "extrait sec de sommite fleurie d'aubepine",
+          "dosage": ""
+        },
+        {
+          "substance": "BALLOTE (EXTRAIT SEC DE SOMMITÉ FLEURIE DE)",
+          "norm_substance": "ballote (extrait sec de sommite fleurie de)",
           "dosage": ""
         }
       ]
@@ -7383,13 +8233,26 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE FEXOFENADINE",
-          "norm_substance": "chlorhydrate de fexofenadine",
+          "substance": "FEXOFÉNADINE BASE",
+          "norm_substance": "fexofenadine base",
           "dosage": ""
         },
         {
-          "substance": "FEXOFENADINE BASE",
-          "norm_substance": "fexofenadine base",
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
+          "norm_substance": "chlorhydrate de fexofenadine",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "68266388",
+      "name": "ANTALCALM (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
           "dosage": ""
         }
       ]
@@ -7401,7 +8264,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE LOPERAMIDE",
+          "substance": "CHLORHYDRATE DE LOPÉRAMIDE",
           "norm_substance": "chlorhydrate de loperamide",
           "dosage": ""
         }
@@ -7427,18 +8290,18 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "AMOXICILLINE ANHYDRE",
+          "norm_substance": "amoxicilline anhydre",
+          "dosage": ""
+        },
+        {
           "substance": "ACIDE CLAVULANIQUE",
           "norm_substance": "acide clavulanique",
           "dosage": ""
         },
         {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
-          "dosage": ""
-        },
-        {
-          "substance": "AMOXICILLINE ANHYDRE",
-          "norm_substance": "amoxicilline anhydre",
           "dosage": ""
         }
       ]
@@ -7476,7 +8339,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "FLURBIPROFENE",
+          "substance": "FLURBIPROFÈNE",
           "norm_substance": "flurbiprofene",
           "dosage": ""
         }
@@ -7489,17 +8352,17 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         },
         {
-          "substance": "PHOSPHATE DE CODEINE HEMIHYDRATE",
+          "substance": "PHOSPHATE DE CODÉINE HÉMIHYDRATÉ",
           "norm_substance": "phosphate de codeine hemihydrate",
           "dosage": ""
         },
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -7512,7 +8375,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "IBUPROFENE",
+          "substance": "IBUPROFÈNE",
           "norm_substance": "ibuprofene",
           "dosage": ""
         }
@@ -7551,12 +8414,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "ACETATE DE DEXAMETHASONE",
+          "substance": "ACÉTATE DE DEXAMÉTHASONE",
           "norm_substance": "acetate de dexamethasone",
           "dosage": ""
         },
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -7569,7 +8432,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "MELATONINE",
+          "substance": "MÉLATONINE",
           "norm_substance": "melatonine",
           "dosage": ""
         }
@@ -7582,7 +8445,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
           "dosage": ""
         }
@@ -7595,17 +8458,17 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
-          "norm_substance": "chlorhydrate de ciprofloxacine",
-          "dosage": ""
-        },
-        {
           "substance": "CIPROFLOXACINE",
           "norm_substance": "ciprofloxacine",
           "dosage": ""
         },
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "CHLORHYDRATE DE CIPROFLOXACINE",
+          "norm_substance": "chlorhydrate de ciprofloxacine",
+          "dosage": ""
+        },
+        {
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -7618,7 +8481,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PASSIFLORE (POUDRE DES PARTIES AERIENNES DE)",
+          "substance": "PASSIFLORE (POUDRE DES PARTIES AÉRIENNES DE)",
           "norm_substance": "passiflore (poudre des parties aeriennes de)",
           "dosage": ""
         }
@@ -7631,7 +8494,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE FEXOFENADINE",
+          "substance": "CHLORHYDRATE DE FEXOFÉNADINE",
           "norm_substance": "chlorhydrate de fexofenadine",
           "dosage": ""
         }
@@ -7657,7 +8520,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "ACIDE ACETYLSALICYLIQUE",
+          "substance": "ACIDE ACÉTYLSALICYLIQUE",
           "norm_substance": "acide acetylsalicylique",
           "dosage": ""
         }
@@ -7670,13 +8533,13 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE D'AMBROXOL",
-          "norm_substance": "chlorhydrate d'ambroxol",
+          "substance": "AMBROXOL BASE",
+          "norm_substance": "ambroxol base",
           "dosage": ""
         },
         {
-          "substance": "AMBROXOL BASE",
-          "norm_substance": "ambroxol base",
+          "substance": "CHLORHYDRATE D'AMBROXOL",
+          "norm_substance": "chlorhydrate d'ambroxol",
           "dosage": ""
         }
       ]
@@ -7701,7 +8564,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -7714,7 +8577,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -7727,8 +8590,26 @@
       "is_otc": false,
       "composition": [
         {
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
+          "dosage": ""
+        },
+        {
           "substance": "HYDROXYDE D'ALUMINIUM",
           "norm_substance": "hydroxyde d'aluminium",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "68933636",
+      "name": "ACTIVIR (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ACICLOVIR",
+          "norm_substance": "aciclovir",
           "dosage": ""
         }
       ]
@@ -7740,7 +8621,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXTROMETHORPHANE (BROMHYDRATE DE)",
+          "substance": "DEXTROMÉTHORPHANE (BROMHYDRATE DE)",
           "norm_substance": "dextromethorphane (bromhydrate de)",
           "dosage": ""
         }
@@ -7753,12 +8634,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CHLORHYDRATE DE METOCLOPRAMIDE ANHYDRE",
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE ANHYDRE",
           "norm_substance": "chlorhydrate de metoclopramide anhydre",
           "dosage": ""
         },
         {
-          "substance": "CHLORHYDRATE DE METOCLOPRAMIDE",
+          "substance": "CHLORHYDRATE DE MÉTOCLOPRAMIDE",
           "norm_substance": "chlorhydrate de metoclopramide",
           "dosage": ""
         }
@@ -7771,7 +8652,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -7810,7 +8691,7 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
+          "substance": "PARACÉTAMOL",
           "norm_substance": "paracetamol",
           "dosage": ""
         }
@@ -7836,8 +8717,34 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "KETOPROFENE",
+          "substance": "KÉTOPROFÈNE",
           "norm_substance": "ketoprofene",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "69171021",
+      "name": "NAAXIA (Ophtalmique)",
+      "route": "ophtalmique",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "ACIDE N-ACÉTYL ASPARTYL GLUTAMIQUE (SEL DE SODIUM)",
+          "norm_substance": "acide nacetyl aspartyl glutamique (sel de sodium)",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "69206885",
+      "name": "ENTALGINE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC DE DIÉTHYLAMINE",
+          "norm_substance": "diclofenac de diethylamine",
           "dosage": ""
         }
       ]
@@ -7849,13 +8756,13 @@
       "is_otc": true,
       "composition": [
         {
-          "substance": "PARACETAMOL",
-          "norm_substance": "paracetamol",
+          "substance": "MALÉATE DE PHÉNIRAMINE",
+          "norm_substance": "maleate de pheniramine",
           "dosage": ""
         },
         {
-          "substance": "MALEATE DE PHENIRAMINE",
-          "norm_substance": "maleate de pheniramine",
+          "substance": "PARACÉTAMOL",
+          "norm_substance": "paracetamol",
           "dosage": ""
         }
       ]
@@ -7867,7 +8774,12 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PHLOROGLUCINOL HYDRATE",
+          "substance": "SIMÉTICONE",
+          "norm_substance": "simeticone",
+          "dosage": ""
+        },
+        {
+          "substance": "PHLOROGLUCINOL HYDRATÉ",
           "norm_substance": "phloroglucinol hydrate",
           "dosage": ""
         }
@@ -7885,8 +8797,26 @@
           "dosage": ""
         },
         {
-          "substance": "AZITHROMYCINE DIHYDRATEE",
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
           "norm_substance": "azithromycine dihydratee",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "69337589",
+      "name": "DIPROLENE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "BÉTAMÉTHASONE (DIPROPIONATE DE)",
+          "norm_substance": "betamethasone (dipropionate de)",
+          "dosage": ""
+        },
+        {
+          "substance": "BÉTAMÉTHASONE",
+          "norm_substance": "betamethasone",
           "dosage": ""
         }
       ]
@@ -7942,7 +8872,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATE",
+          "substance": "PANTOPRAZOLE SODIQUE SESQUIHYDRATÉ",
           "norm_substance": "pantoprazole sodique sesquihydrate",
           "dosage": ""
         },
@@ -7960,8 +8890,21 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "NAPROXENE SODIQUE",
+          "substance": "NAPROXÈNE SODIQUE",
           "norm_substance": "naproxene sodique",
+          "dosage": ""
+        }
+      ]
+    },
+    {
+      "cis": "69494708",
+      "name": "SOLARAZE (Cutanée)",
+      "route": "cutanée",
+      "is_otc": false,
+      "composition": [
+        {
+          "substance": "DICLOFÉNAC SODIQUE",
+          "norm_substance": "diclofenac sodique",
           "dosage": ""
         }
       ]
@@ -7973,7 +8916,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -7986,7 +8929,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CARBOCISTEINE",
+          "substance": "CARBOCISTÉINE",
           "norm_substance": "carbocisteine",
           "dosage": ""
         }
@@ -8025,7 +8968,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -8038,7 +8981,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "CODEINE",
+          "substance": "CODÉINE",
           "norm_substance": "codeine",
           "dosage": ""
         }
@@ -8056,7 +8999,7 @@
           "dosage": ""
         },
         {
-          "substance": "AZITHROMYCINE DIHYDRATEE",
+          "substance": "AZITHROMYCINE DIHYDRATÉE",
           "norm_substance": "azithromycine dihydratee",
           "dosage": ""
         }
@@ -8108,18 +9051,18 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "AMOXICILLINE",
-          "norm_substance": "amoxicilline",
-          "dosage": ""
-        },
-        {
-          "substance": "AMOXICILLINE TRIHYDRATEE",
+          "substance": "AMOXICILLINE TRIHYDRATÉE",
           "norm_substance": "amoxicilline trihydratee",
           "dosage": ""
         },
         {
           "substance": "CLAVULANATE DE POTASSIUM",
           "norm_substance": "clavulanate de potassium",
+          "dosage": ""
+        },
+        {
+          "substance": "AMOXICILLINE",
+          "norm_substance": "amoxicilline",
           "dosage": ""
         }
       ]
@@ -8131,7 +9074,7 @@
       "is_otc": false,
       "composition": [
         {
-          "substance": "GEL D'HYDROXYDE D'ALUMINIUM ET DE CARBONATE DE MAGNESIUM CODESSECHES",
+          "substance": "GEL D'HYDROXYDE D'ALUMINIUM ET DE CARBONATE DE MAGNÉSIUM CODESSÉCHÉS",
           "norm_substance": "gel d'hydroxyde d'aluminium et de carbonate de magnesium codesseches",
           "dosage": ""
         }
@@ -8162,7 +9105,7 @@
           "dosage": ""
         },
         {
-          "substance": "HYDROXYDE DE MAGNESIUM",
+          "substance": "HYDROXYDE DE MAGNÉSIUM",
           "norm_substance": "hydroxyde de magnesium",
           "dosage": ""
         }
@@ -8234,13 +9177,26 @@
       ]
     },
     {
+      "cis": "69955824",
+      "name": "ADVIL (Cutanée)",
+      "route": "cutanée",
+      "is_otc": true,
+      "composition": [
+        {
+          "substance": "IBUPROFÈNE",
+          "norm_substance": "ibuprofene",
+          "dosage": ""
+        }
+      ]
+    },
+    {
       "cis": "69956680",
       "name": "LACRYADEX (Ophtalmique)",
       "route": "ophtalmique",
       "is_otc": false,
       "composition": [
         {
-          "substance": "DEXAMETHASONE",
+          "substance": "DEXAMÉTHASONE",
           "norm_substance": "dexamethasone",
           "dosage": ""
         }
@@ -8462,7 +9418,7 @@
     "saccharomyces boulardii": [
       "GASTRO_ANTIDIARRHEIQUES"
     ],
-    "tifuroxazide": [
+    "nifuroxazide": [
       "GASTRO_ANTIDIARRHEIQUES"
     ],
     "phloroglucinol": [
@@ -8477,7 +9433,10 @@
     "trimebutine": [
       "GASTRO_ANTISPASMODIQUES"
     ],
-    "meteospasmyl": [
+    "alverine": [
+      "GASTRO_ANTISPASMODIQUES"
+    ],
+    "simeticone": [
       "GASTRO_ANTISPASMODIQUES"
     ],
     "metoclopramide": [
@@ -8511,9 +9470,6 @@
       "TOUX_SECHE"
     ],
     "oxomemazine": [
-      "TOUX_SECHE"
-    ],
-    "clobutinol": [
       "TOUX_SECHE"
     ],
     "carbocisteine": [
@@ -8573,7 +9529,7 @@
     "ketotifene": [
       "ALLERGIE_OPHTALMIQUE"
     ],
-    "acide spaglumique": [
+    "acide nacetyl aspartyl glutamique": [
       "ALLERGIE_OPHTALMIQUE"
     ]
   }

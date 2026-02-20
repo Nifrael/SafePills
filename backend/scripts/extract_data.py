@@ -137,8 +137,9 @@ def forge_database():
                     cis = parts[0]
                     name = parts[1].strip()
                     route = parts[3].lower()
+                    route_norm = normalize_name(parts[3])
                     
-                    if any(r in route for r in allowed_routes):
+                    if any(r in route_norm for r in allowed_routes):
                         cis_info[cis] = {
                             "name": name,
                             "route": route,
@@ -223,7 +224,8 @@ def forge_database():
     for brand in brands_to_import.values():
         norm_name = normalize_name(brand["name"])
         route = brand["route"]
-        substances = [c["norm_substance"] for c in brand["composition"]]
+        substances_data = [(c["substance"], c["norm_substance"]) for c in brand["composition"]]
+        substances = [c[1] for c in substances_data]
         
         vip_found = None
         for vip in specific_brands:
@@ -258,15 +260,16 @@ def forge_database():
         if group_key not in grouped_brands:
             brand["name"] = f"{clean_name} ({route.capitalize()})"
             grouped_brands[group_key] = brand
-            grouped_brands[group_key]["all_substances"] = set(substances)
+            grouped_brands[group_key]["all_substances_data"] = set(substances_data)
         else:
             if brand["is_otc"]:
                 grouped_brands[group_key]["is_otc"] = True
-            grouped_brands[group_key]["all_substances"].update(substances)
+            grouped_brands[group_key]["all_substances_data"].update(substances_data)
             
     for brand in grouped_brands.values():
-        all_subs = brand.pop("all_substances")
-        brand["composition"] = [{"substance": s.upper(), "norm_substance": s, "dosage": ""} for s in all_subs]
+        all_subs = brand.pop("all_substances_data", None)
+        if all_subs:
+            brand["composition"] = [{"substance": s_orig, "norm_substance": s_norm, "dosage": ""} for s_orig, s_norm in all_subs]
 
     final_brands = list(grouped_brands.values())
     print(f"📉 Après dé-duplication : {len(final_brands)} médicaments uniques conservés.")
