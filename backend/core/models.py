@@ -3,10 +3,11 @@ from typing import List, Optional
 from enum import Enum
 
 
-class RiskLevel(str, Enum):
-    RED = "RED"       
-    ORANGE = "ORANGE" 
-    GREEN = "GREEN"   
+class RiskLevel(int, Enum):
+    LEVEL_1 = 1  
+    LEVEL_2 = 2  
+    LEVEL_3 = 3  
+    LEVEL_4 = 4  
 
 class Family(BaseModel):
     id: int
@@ -27,7 +28,7 @@ class Brand(BaseModel):
     name: str
     administration_route: Optional[str] = None
     is_otc: bool
-    composition: List[BrandSubstanceInfo] = []
+    composition: List[BrandSubstance] = []
 
 class Rule(BaseModel):
     id: int
