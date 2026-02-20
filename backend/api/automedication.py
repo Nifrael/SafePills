@@ -57,7 +57,7 @@ async def evaluate(request: Request, body: AnswersRequest, lang: str = "fr"):
     )
     result.has_coverage = has_medical_questions
 
-    if result.score.value != "GREEN":
+    if result.score.value != 1:
         from ..services.ai_service import generate_risk_explanation
         
         explanation = await generate_risk_explanation(
