@@ -146,8 +146,8 @@ Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant fac
 
     except Exception as e:
         error_msg = str(e)
-        if "429" in error_msg:
-            logger.warning(f"Quota IA dépassé: {e}")
+        if "429" in error_msg or "503" in error_msg:
+            logger.warning(f"Quota ou surcharge IA: {e}")
             return "Le service d'analyse par IA est temporairement surchargé. Veuillez réessayer dans quelques instants." if lang == "fr" else "El servicio de análisis por IA está temporalmente sobrecargado. Por favor, inténtelo de nuevo en unos momentos."
         
         logger.error(f"Erreur génération IA: {e}", exc_info=True)
