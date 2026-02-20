@@ -1,42 +1,44 @@
-"""
-Modèles de Données (Entités)
-Ces objets représentent la structure des données stockées en base de données.
-"""
 from pydantic import BaseModel
 from typing import List, Optional
 from enum import Enum
 
-# Définition propre des niveaux de risque
-class RiskLevel(str, Enum):
-    RED = "RED"       # Contre-indication absolue
-    ORANGE = "ORANGE" # Précaution nécessaire
-    GREEN = "GREEN"   # Pas de signal
 
-# --- ENTITÉS STOCKÉES ---
+class RiskLevel(str, Enum):
+    RED = "RED"       
+    ORANGE = "ORANGE" 
+    GREEN = "GREEN"   
+
+class Family(BaseModel):
+    id: int
+    name: str
 
 class Substance(BaseModel):
-    """Reflet de la table 'substances'"""
-    code: str
+    id: int
     name: str
-    tags: List[str] = []
+    families: List[Family] = []
 
-class Drug(BaseModel):
-    """Reflet de la table 'drugs'"""
+class BrandSubstance(BaseModel):
+    substance: Substance
+    dosage: Optional[str] = None
+
+class Brand(BaseModel):
+    id: int
     cis: str
     name: str
     administration_route: Optional[str] = None
     is_otc: bool
-    # Note: En base SQL, c'est une relation. Ici pour l'objet métier, on inclut la liste.
-    substances: List[Substance] = []
+    composition: List[BrandSubstanceInfo] = []
 
-class Question(BaseModel):
-    """Reflet de la table 'questions'"""
-    id: str
-    text: str
-    trigger_tags: List[str] = []
-    applicable_routes: List[str] = []
-    target_gender: Optional[str] = None  # "M", "F", ou None
-    age_min: Optional[int] = None  # Age minimum (ex: 65)
-    age_max: Optional[int] = None  # Age maximum (ex: 12 pour enfant)
-    requires_other_meds: bool = False  # Question posée uniquement si polymédication
+class Rule(BaseModel):
+    id: int
+    question_code: str
     risk_level: RiskLevel
+    advice: str
+    
+    family_id: Optional[int] = None
+    substance_id: Optional[int] = None
+    
+    filter_route: Optional[str] = None
+    filter_polymedication: bool = False
+    filter_gender: Optional[str] = None
+    age_min: Optional[int] = None
