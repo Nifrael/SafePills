@@ -15,7 +15,34 @@ $breakpoint-desktop-xxl: 1440px;
   --secondary-color: rgb(255, 255, 255);
   --tertiary-color: rgb(75, 200, 115);
   --paragraph-color: rgb(100, 100, 100);
+  // Risks & Scores
+  --color-green: #2ecc71;
+  --color-yellow: #f1c40f;
+  --color-orange: #f39c12;
+  --color-red: #c0392b;
+
+  // Feedback Cards (IA, Advice, Warnings)
+  --color-info-bg: #f0f7ff;
+  --color-info-border: #a3d5ff;
+  --color-info-text: #0056b3;
+  
+  --color-success-bg: #f0fff4;
+  --color-success-border: #b2dfdb;
+  --color-success-text: #2e7d32;
+
+  --color-warning-bg: #fff8e1;
+  --color-warning-border: #ffe082;
+  --color-warning-text: #5d4037;
+
+  // Global UI elements
+  --color-bg-light: #f9f9f9;
+  --color-border-main: #ddd;
+  --color-text-main: #333;
+  --color-text-light: #888;
+
+  // UI Utilities
   --font-title: "Karla Variable";
+
   --font-text: "Ysabeau Variable";
   --base-size: 1rem;
   --scale: 1.25;
@@ -26,4 +53,5 @@ $breakpoint-desktop-xxl: 1440px;
   --h2: calc(var(--h3) * var(--scale));
   --h1: calc(var(--h2) * var(--scale));
   --small-text: calc(var(--base-size) / var(--scale));
+
 }

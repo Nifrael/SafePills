@@ -1,4 +1,3 @@
-import React from 'react';
 import './AutomedicationScore.scss';
 import { ui } from '../../../i18n/ui';
 
