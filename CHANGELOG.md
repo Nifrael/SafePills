@@ -10,7 +10,7 @@ Audit exhaustif du projet couvrant sécurité, architecture, principes SOLID/KIS
 
 ### 🔐 Sécurité
 
-- **CORS renforcé** : Restriction des `allow_headers` (liste explicite au lieu de `*`) et du regex d'origines Vercel (limité au projet `pharma-tools-*`).
+- **CORS renforcé** : Restriction des `allow_headers` (liste explicite au lieu de `*`) et du regex d'origines Vercel (limité au projet `safe-pills-*`).
 - **Suppression `dangerouslySetInnerHTML`** : Remplacement dans `AutomedicationScore.tsx` par du JSX sûr avec des clés i18n séparées.
 - **Documentation API** : Confirmation que `/docs` et `/openapi.json` sont bien désactivés en production.
 
