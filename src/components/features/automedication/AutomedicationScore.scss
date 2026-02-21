@@ -36,7 +36,7 @@
     }
 
     &.score-red {
-      border-color: #c0392b; /* Rouge foncé */
+      border-color: #c0392b;
       color: #c0392b;
     }
 
@@ -111,7 +111,6 @@
     }
   }
 
-  // P1-A : Conseils généraux "Bon à savoir"
   .general-advice-card {
     background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
     border: 2px solid #b2dfdb;
@@ -152,7 +151,6 @@
     }
   }
 
-  // P1-B : Avertissement couverture manquante
   .no-coverage-warning {
     display: flex;
     align-items: flex-start;
@@ -180,7 +178,6 @@
   }
 }
 
-/* Animation slideIn (importée depuis _animations.scss si nécessaire) */
 @keyframes slideIn {
   from {
     opacity: 0;

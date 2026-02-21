@@ -1,15 +1,8 @@
-/* ========================================
-   UNIFIED QUESTIONNAIRE
-   Styles pour le questionnaire unifié (profil + questions médicales)
-   Une question par écran avec barre de progression
-   ======================================== */
-
 .unified-questionnaire {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
 
-  /* Barre de progression */
   .progress-bar {
     display: flex;
     align-items: center;

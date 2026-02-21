@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { API_BASE_URL } from '../../../config';
+import { ui } from '../../../i18n/ui';
 import './AutomedicationSearch.scss';
 
 interface SearchResult {
@@ -8,8 +9,6 @@ interface SearchResult {
   name: string;
   description?: string;
 }
-
-import { ui } from '../../../i18n/ui';
 
 interface Props {
   onSelect: (id: string, name: string) => void;

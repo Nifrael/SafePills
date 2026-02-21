@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AutomedicationSearch } from './AutomedicationSearch';
 import { UnifiedQuestionnaire } from './UnifiedQuestionnaire';
 import { AutomedicationScore } from './AutomedicationScore';
 import './Automedication.scss';
 
-import { languages, defaultLang, ui } from '../../../i18n/ui';
+import { defaultLang, ui } from '../../../i18n/ui';
 
 interface Props {
   lang: keyof typeof ui;

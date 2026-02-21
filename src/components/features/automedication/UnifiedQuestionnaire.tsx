@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { API_BASE_URL } from '../../../config';
 import './UnifiedQuestionnaire.scss';
 import { ui } from '../../../i18n/ui';
 
-// --- Types ---
 
 interface FlowOption {
   value: string;
@@ -20,7 +19,6 @@ interface FlowQuestion {
   is_profile: boolean;
 }
 
-// --- Helpers ---
 
 /**
  * Évalue si une question doit être affichée selon les réponses données.
