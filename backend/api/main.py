@@ -27,7 +27,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.ALLOWED_ORIGINS,
+    allow_origins=settings.allowed_origins_list,
     allow_origin_regex=r"https://safe-pills-.*\.vercel\.app",
     allow_credentials=False,
     allow_methods=["GET", "POST"],
