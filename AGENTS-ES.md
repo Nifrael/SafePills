@@ -16,18 +16,21 @@ Desarrollo de una aplicación web ("SafePills") diseñada para determinar si la 
 - **Lenguaje:** TypeScript (Requiere modo estricto).
 - **Estilizado:** SCSS (Sass). Sin frameworks CSS de utilidad (Tailwind). Se recomienda el uso de la metodología BEM o modular.
 - **Gestión de Estado:** Nano Stores (nativo de Astro) para compartir el estado entre islas.
+- **Pruebas:** Vitest + React Testing Library.
 
 ### Backend (La Inteligencia - Carpeta /backend)
 
 - **API:** Python con FastAPI.
 - **Base de Datos:** SQLite (Almacenamiento estructurado de medicamentos, DCI, Clases y reglas del Tesauro).
-- **Seguridad API:** `slowapi` (Rate Limiting), CORS restringido, cabeceras de seguridad HTTP, validación estricta con Pydantic.
-- **Logging:** Módulo `logging` de Python (reemplaza `print()`). Niveles `debug`/`info`/`warning`/`error`.
+- **Configuración:** `pydantic-settings` (`BaseSettings`) para la carga y validación automática de variables de entorno desde `.env`.
+- **Seguridad API:** `slowapi` (Rate Limiting), CORS restringido (orígenes + cabeceras específicas), cabeceras de seguridad HTTP, validación estricta con Pydantic.
+- **Logging:** Módulo `logging` de Python (sin `print()`). Niveles `debug`/`info`/`warning`/`error`.
 - **IA / RAG Híbrido:**
   - **Motor:** SDK Google GenAI (`google-genai`).
   - **Modelo:** `gemini-3-flash-preview` (para velocidad y explicaciones pedagógicas).
   - **Flujo:** Contexto estructurado (preguntas/respuestas) -> Inyección en el prompt -> Generación pedagógica divulgativa.
   - **Restricción:** Se desea Salida Estructurada para futuros componentes.
+- **Pruebas:** Pytest (unitarias + integración, mocking del LLM).
 
 ### Despliegue y DevOps (Infraestructura)
 
@@ -39,64 +42,96 @@ Desarrollo de una aplicación web ("SafePills") diseñada para determinar si la 
 
 ### Estructura de carpetas (Convención)
 
+```
 /pharma-tools
-/src # <--- ZONA FRONTEND
-/components
-/ui # Componentes atómicos (Botones, Inputs)
-/features # Componentes de negocio React
-/automedication # AutomedicationContainer, Search, Score, UnifiedQuestionnaire
-/global # Componentes globales Astro (Navbar, Footer, MedicalDisclaimer)
-/home # Componentes página de inicio (Hero, Features)
-/icons # Componentes SVG (PillIcon, ShieldIcon, SearchIcon, etc.)
-/layouts # Layouts Astro (MainLayout)
-/pages # Rutas Astro (index, automedication)
-/styles # Archivos SCSS globales (variables, mixins, reset)
-/config.ts # Configuración global (API_BASE_URL)
-/backend # <--- ZONA BACKEND
-/api # Endpoints FastAPI (Routing + Rate Limiting)
-/core # Modelos de datos (Pydantic) y Esquemas
-/data # DB SQLite (safepills.db), medical_knowledge.json
-/services # Lógica de negocio (AI, Búsqueda)
-/automedication # Lógica modular (Filtros, Calculadora, Repositorio)
-/tests # Pruebas Backend (unitarias e integración)
-/scripts # Scripts de migración e importación (ETL)
+  /src                          # <--- ZONA FRONTEND
+    /components
+      /ui                       # Componentes atómicos (Botones, Inputs)
+      /features                 # Componentes de negocio React
+        /automedication         # Container, Search, Score, UnifiedQuestionnaire
+      /global                   # Componentes Astro (Navbar, Footer, MedicalDisclaimer)
+      /home                     # Componentes página de inicio (Hero, Features)
+      /icons                    # Componentes SVG (PillIcon, ShieldIcon, etc.)
+    /layouts                    # Layouts Astro (MainLayout)
+    /pages                      # Rutas Astro (index, automedication, /es/*)
+    /styles                     # SCSS globales (variables, mixins, reset, componentes)
+    /i18n                       # Sistema i18n (ui.ts, utils.ts)
+    /test                       # Pruebas frontend (Vitest + RTL)
+    /config.ts                  # Configuración global (API_BASE_URL)
+  /backend                      # <--- ZONA BACKEND
+    /api                        # Endpoints FastAPI (routing, validación, rate limiting)
+      main.py                   # App FastAPI, CORS, middlewares, rutas
+      automedication.py         # Endpoint /evaluate (validación → orquestador)
+      drugs.py                  # Endpoint /search
+      flow_endpoint.py          # Endpoint /flow/:id (preguntas dinámicas)
+    /core                       # Capa de dominio
+      config.py                 # Settings (pydantic-settings BaseSettings)
+      models.py                 # Modelos de negocio (Brand, Substance, Rule, RiskLevel)
+      schemas.py                # DTOs Pydantic (SearchResult, EvaluationResponse, etc.)
+      limiter.py                # Configuración de rate limiting
+      i18n.py                   # Servicio i18n backend (FR/ES)
+    /data                       # DB SQLite + medical_knowledge.json
+    /services                   # Lógica de negocio
+      /automedication           # Módulo de automedicación
+        orchestrator.py         # Orquestador (SRP: coordina evaluación + IA)
+        risk_calculator.py      # Cálculo de puntuación (funciones puras)
+        db_repository.py        # DAO SQLite (context managers)
+        __init__.py             # Función evaluate_risk
+      /search                   # Módulo de búsqueda
+        repository.py           # DAO SQLite (SQL LIKE + LIMIT)
+        service.py              # Servicio de búsqueda
+        utils.py                # Normalización de texto
+      ai_service.py             # Integración Google GenAI
+    /tests                      # Pruebas Backend (Pytest)
+    /scripts                    # Scripts ETL (import, build_db, extract, etc.)
+```
 
 ### Principios de Arquitectura
 
 1.  **Arquitectura de "Islas":** El JS se carga únicamente para los componentes interactivos (`client:load`).
-2.  **Separación de responsabilidades:** Frontend (Visualización) vs Backend (Lógica de negocio/IA).
-3.  **Seguridad de Secretos:** Uso estricto de archivos `.env` (nunca integrados en el commit). `.env.example` documentado.
+2.  **Separación de responsabilidades (SRP):** Los endpoints API validan las entradas y delegan al servicio orquestador. La lógica de negocio está en los servicios.
+3.  **Patrón Repository:** Acceso a la BD aislado en clases dedicadas (`DrugRepository`, `AutomedicationRepository`) con context managers para la gestión de conexiones.
+4.  **Seguridad de Secretos:** Uso estricto de archivos `.env` (nunca integrados en el commit). `.env.example` documentado.
 
 ### Seguridad de la API
 
-- **CORS:** Restringido a orígenes autorizados mediante la variable de entorno `ALLOWED_ORIGINS`.
-- **Rate Limiting:** Mediante `slowapi` — 30 req/min para búsqueda, 60 req/min por defecto, protección contra el abuso de créditos IA.
+- **CORS:** Orígenes restringidos vía `ALLOWED_ORIGINS` + regex limitado al proyecto (`pharma-tools-*.vercel.app`). Cabeceras autorizadas explícitas (`Content-Type`, `Accept`, `Accept-Language`).
+- **Rate Limiting:** Mediante `slowapi` — 10 req/min para evaluación, 30 req/min para búsqueda, 60 req/min por defecto.
 - **Cabeceras HTTP:** `X-Content-Type-Options`, `X-Frame-Options`, `X-XSS-Protection`, `Referrer-Policy` en cada respuesta.
-- **Validación de entradas:** Pydantic `Field` con restricciones (edad 0-150, género M/F, tamaño máximo de respuestas).
+- **Validación de entradas:** Pydantic `Field` con restricciones (edad 0-150, género `Literal["M","F"]`, máximo 50 respuestas).
 - **Documentación API:** `/docs` y `/openapi.json` desactivados en producción (`ENV=production`).
 
 ### Estrategia de Gestión de Errores
 
-- **Frontend:** Uso de `Error Boundaries` de React. Mensaje de usuario claro en caso de fallo de la API.
-- **Backend:** Módulo `logging` de Python con niveles (debug/info/warning/error). Ninguna traza de pila expuesta al cliente. Los mensajes debug son silenciosos en producción.
+- **Frontend:** Mensajes claros al usuario en caso de fallo de la API. Sin `dangerouslySetInnerHTML`. Todas las cadenas vía i18n.
+- **Backend:** Módulo `logging` de Python con niveles. `except Exception` (nunca `bare except`). Ninguna traza de pila expuesta al cliente.
 
 ## 4. ESTÁNDARES DE DESARROLLO
 
 ### Calidad de Código
 
 - **Nombres de variables:** Inglés explícito (ej: `drugList`).
+- **Imports:** Siempre al principio del archivo (nunca inline).
+- **Defaults:** Sin argumentos mutables por defecto (`[] → None`).
 - **Seguridad:** No se almacenan datos personales de salud. Consultas al LLM anonimizadas.
+- **Principios:** SOLID, KISS, DRY aplicados sistemáticamente.
 
 ### Idiomas
 
 - **Idioma de desarrollo:** Comentarios y logs en FRANCÉS.
-- **Documentación:** Bilingüe FRANCÉS / ESPAÑOL (Carpetas `/docs/fr` y `/docs/es`).
-- **Salida de la Aplicación:** Formato estandarizado por la IA, capaz de adaptarse al idioma del usuario.
+- **Documentación:** Bilingüe FRANCÉS / ESPAÑOL.
+- **Interfaz (i18n):** Todas las cadenas de UI gestionadas en `src/i18n/ui.ts` (FR + ES). Ninguna cadena hardcodeada en los componentes React.
 
 ### Git & Versionado (Conventional Commits)
 
 - **Formato:** `tipo(ámbito): descripción` (ej: `feat(search): adición de input`)
 - **Tipos:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`.
+
+### SEO
+
+- **Etiquetas Meta:** `<meta description>`, Open Graph (`og:title`, `og:description`, `og:locale`), URL canónica en cada página.
+- **Encabezados:** Un solo `<h1>` por página. Jerarquía de títulos respetada.
+- **Semántica:** HTML5 (`<nav>`, `<main>`, `<footer>`, `<header>`).
 
 ### Accesibilidad (Salud Primero)
 
@@ -106,27 +141,27 @@ Desarrollo de una aplicación web ("SafePills") diseñada para determinar si la 
 ### Documentación (Documentación Viva)
 
 - **Principio:** Sin documentación obsoleta.
-- **Archivos clave:** `CHANGELOG.md`, `README.md`, Docstrings de Python.
+- **Archivos clave:** `CHANGELOG.md` (FR+ES), `AGENTS.md` (FR+ES), `README.md`, Docstrings de Python, `DOCUMENTATION.md`.
 
-## 5. ESTRATEGIA DE PRUEBAS (TDD & E2E)
+## 5. ESTRATEGIA DE PRUEBAS
 
-**Enfoque global: Pirámide de pruebas**
+**Enfoque global: Pirámide de pruebas — 26 pruebas automatizadas**
 
-1.  **Pruebas Unitarias e Integración (Vitest + React Testing Library)**
-    - **Objetivo:** Componentes React complejos, Nano Stores, Libs.
-    - **Flujo de trabajo:** TDD obligatorio (Red-Green-Refactor).
+1.  **Pruebas Unitarias e Integración Frontend (Vitest + React Testing Library)** — 19 pruebas
+    - **Objetivo:** Componentes React (`AutomedicationScore`), utilidades i18n, paridad de traducciones FR/ES.
+    - **Flujo de trabajo:** TDD (Red-Green-Refactor).
 
-2.  **Pruebas de Extremo a Extremo / E2E (Playwright)**
-    - **Objetivo:** Páginas Astro, Hidratación, Enrutamiento, Escenarios completos.
-    - **Objetivo:** Verificar que el usuario puede realizar una búsqueda completa.
-
-3.  **Pruebas Backend (Pytest)**
-    - **Objetivo:** API FastAPI, lógica de extracción.
+2.  **Pruebas Backend (Pytest)** — 7 pruebas
+    - **Objetivo:** API FastAPI (search, flow, evaluate), lógica de negocio (RiskCalculator), servicio IA (mocking GenAI).
     - **Flujo de trabajo:** TDD. Mock de llamadas externas al LLM.
+
+3.  **Pruebas E2E (Playwright)** — Por implementar
+    - **Objetivo:** Páginas Astro, flujo completo de automedicación.
 
 ### Casos críticos a probar
 
 - **Lógica de negocio:** Una automedicación peligrosa (ej: AINE + Embarazada) DEBE activar una alerta.
+- **i18n:** Todas las claves FR deben existir en ES (prueba automatizada).
 - **UI:** La interfaz debe seguir siendo utilizable en dispositivos móviles.
 
 ## 6. INSTRUCCIONES PARA EL AGENTE
