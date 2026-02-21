@@ -46,6 +46,8 @@ export const ui = {
     'automedication.page.title': 'Score d\'Automédication - SafePills',
     'automedication.title': 'Score d\'Automédication',
     'automedication.description': 'Vérifiez si l\'automédication est sûre pour vous en quelques questions.',
+    'automedication.server_notice': 'Note : Le serveur et la base de données sont hébergés gratuitement. La première recherche peut prendre environ 50 secondes le temps que le serveur se réveille.',
+    'automedication.supported_molecules': 'Voici quelques exemples de molécules couvertes par nos conseils experts : Paracétamol, Aspirine, Ibuprofène, Pseudoéphédrine, Gaviscon, Lopéramide, Diosmectite, etc.',
     // Search Component
     'search.title': 'Quel médicament souhaitez-vous prendre ?',
     'search.placeholder.full': 'Ex: Doliprane, Nurofen, Paracétamol...',
@@ -119,6 +121,8 @@ export const ui = {
     'automedication.page.title': 'Puntaje de Automedicación - SafePills',
     'automedication.title': 'Puntaje de Automedicación',
     'automedication.description': 'Verifique si la automedicación es segura para usted en pocas preguntas.',
+    'automedication.server_notice': 'Nota: El servidor y la base de datos están alojados de forma gratuita. La primera búsqueda puede tardar unos 50 segundos mientras el servidor se activa.',
+    'automedication.supported_molecules': 'He aquí algunos ejemplos de moléculas cubiertas por nuestros consejos expertos: Paracetamol, Aspirina, Ibuprofeno, Pseudoefedrina, Gaviscon, Loperamida, Diosmectita, etc.',
     // Search Component
     'search.title': '¿Qué medicamento desea tomar?',
     'search.placeholder.full': 'Ej: Paracetamol, Ibuprofeno, Aspirina...',

@@ -15,6 +15,10 @@ const t = useTranslations(lang);
         <p>
           {t("automedication.description")}
         </p>
+        <div class="server-notice">
+          <p>{t("automedication.server_notice")}</p>
+          <p class="mt-s">{t("automedication.supported_molecules")}</p>
+        </div>
       </header>
 
       <div class="app-container">
@@ -41,6 +45,27 @@ const t = useTranslations(lang);
       p {
         font-size: 1.2rem;
         color: var(--color-text-light);
+      }
+
+      .server-notice {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        background-color: #f8f9fa;
+        border-left: 4px solid var(--tertiary-color);
+        border-radius: 4px;
+        display: inline-block;
+        max-width: 600px;
+
+        p {
+          font-size: 0.9rem;
+          color: #666;
+          margin: 0;
+          font-style: italic;
+
+          & + p {
+            margin-top: 0.5rem;
+          }
+        }
       }
     }
 
