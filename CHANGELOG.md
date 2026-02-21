@@ -2,6 +2,58 @@
 
 Toutes les modifications notables de ce projet seront documentées dans ce fichier.
 
+## [0.7.0] - 2026-02-21
+
+### 🔍 Audit Complet & Refactoring
+
+Audit exhaustif du projet couvrant sécurité, architecture, principes SOLID/KISS/DRY, maintenabilité et code inutilisé. Passage de **7 à 26 tests automatisés**.
+
+### 🔐 Sécurité
+
+- **CORS renforcé** : Restriction des `allow_headers` (liste explicite au lieu de `*`) et du regex d'origines Vercel (limité au projet `pharma-tools-*`).
+- **Suppression `dangerouslySetInnerHTML`** : Remplacement dans `AutomedicationScore.tsx` par du JSX sûr avec des clés i18n séparées.
+- **Documentation API** : Confirmation que `/docs` et `/openapi.json` sont bien désactivés en production.
+
+### 🏗️ Architecture (SRP & Clean Code)
+
+- **Nouveau `orchestrator.py`** : Extraction de la logique métier de l'endpoint `/evaluate` dans un service orchestrateur dédié. L'endpoint passe de 81 à 41 lignes.
+- **`pydantic-settings`** : Migration de `Settings` vers `BaseSettings` pour la validation automatique des variables d'environnement au démarrage.
+- **Context managers DB** : Uniformisation de toutes les connexions SQLite dans `db_repository.py` avec `with self._get_connection()`.
+- **Recherche optimisée** : Remplacement du filtrage Python O(n) par des requêtes SQL `LIKE` + `LIMIT 20` dans `repository.py`.
+
+### 🗑️ Nettoyage (Code mort supprimé)
+
+- **Fichiers supprimés** : `question_filters.py` (modèle inexistant), `test_insert.py` (script abandonné), `SearchDrug.scss` et `SelectedDrugsList.scss` (SCSS orphelins).
+- **Code inline supprimé** : `build_ai_context()` (duplication jamais appelée), alias `compute_risk_score` (jamais importé), 20 lignes CSS commentées dans `_buttons.scss`.
+
+### 📐 Qualité de Code
+
+- **Anti-patterns corrigés** : `bare except` → `except Exception`, `print()` → `logger.error()`, argument mutable par défaut `[] → None`.
+- **Imports** : Tous les imports inline déplacés en haut de fichier.
+- **Docstrings** : Ajout de docstrings sur les méthodes du repository et de l'orchestrateur.
+
+### 🌍 Internationalisation (i18n)
+
+- **10 nouvelles clés** (FR + ES) : `questionnaire.about`, `.age_label`, `.continue`, `.yes`, `.no`, `score.no_coverage.before/bold`, `seo.description`, `seo.og_title`.
+- **Chaînes hardcodées éliminées** : « À propos de », « ans », « Continuer → », « Oui », « Non » remplacées par `t('...')`.
+
+### 🎨 Frontend & SEO
+
+- **Meta SEO** : Ajout de `<meta description>`, Open Graph (`og:title`, `og:description`, `og:locale`), et URL canonique dans `Layout.astro`.
+- **Footer** : Suppression des liens morts (`/mentions-legales`, `/confidentialite`, `/cookies`), `<h1>` → `<p>` (WCAG).
+- **Props typées** : Interface `Props` ajoutée au composant `Layout.astro`.
+
+### 🧪 Tests (19 nouveaux)
+
+- **`AutomedicationScore.test.tsx`** (10 tests) : Rendu des niveaux de risque, i18n FR/ES, conseils généraux, couverture, explication IA, callback reset.
+- **`i18n.test.ts`** (9 tests) : Détection de langue URL, traductions, test de parité automatique FR/ES.
+- **Tests backend mis à jour** : Mock path corrigé pour le nouvel orchestrateur.
+
+### 📝 Documentation
+
+- **`AGENTS.md`** et **`AGENTS-ES.md`** : Mise à jour complète (structure, sécurité, tests, standards).
+- **`DOCUMENTATION.md`** : Nouvelle documentation détaillée de chaque fichier du projet.
+
 ## [0.6.0] - 2026-02-18
 
 ### 🧠 Amélioration du Système RAG & IA
@@ -66,9 +118,9 @@ Toutes les modifications notables de ce projet seront documentées dans ce fichi
 ### 🏗️ Architecture Backend (Refactoring Modulaire)
 
 - **Découpage du Monolithe** : Transformation du service d'automédication en un module structuré (`backend/services/automedication/`) :
-  - `question_filters.py` : Logique pure de filtrage (âge, genre, route).
   - `risk_calculator.py` : Calculateur de score agnostique.
   - `db_repository.py` : Couche d'accès aux données (DAO) isolée.
+  - `orchestrator.py` : Service d'orchestration (ajouté en v0.7.0).
 - **Clean Code** : Séparation stricte de la logique métier (fonctions pures) et des entrées/sorties (IO).
 
 ### 🚢 DevOps & Déploiement Cloud

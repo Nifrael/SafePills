@@ -2,6 +2,58 @@
 
 Todos los cambios notables de este proyecto se documentarán en este archivo.
 
+## [0.7.0] - 2026-02-21
+
+### 🔍 Auditoría Completa & Refactorización
+
+Auditoría exhaustiva del proyecto que cubre seguridad, arquitectura, principios SOLID/KISS/DRY, mantenibilidad y código no utilizado. Paso de **7 a 26 pruebas automatizadas**.
+
+### 🔐 Seguridad
+
+- **CORS reforzado**: Restricción de `allow_headers` (lista explícita en lugar de `*`) y del regex de orígenes Vercel (limitado al proyecto `safe-pills-*`).
+- **Eliminación de `dangerouslySetInnerHTML`**: Reemplazo en `AutomedicationScore.tsx` por JSX seguro con claves i18n separadas.
+- **Documentación API**: Confirmación de que `/docs` y `/openapi.json` están desactivados en producción.
+
+### 🏗️ Arquitectura (SRP & Clean Code)
+
+- **Nuevo `orchestrator.py`**: Extracción de la lógica de negocio del endpoint `/evaluate` en un servicio orquestador dedicado. El endpoint pasa de 81 a 41 líneas.
+- **`pydantic-settings`**: Migración de `Settings` a `BaseSettings` para la validación automática de variables de entorno al inicio.
+- **Context managers DB**: Uniformización de todas las conexiones SQLite en `db_repository.py` con `with self._get_connection()`.
+- **Búsqueda optimizada**: Reemplazo del filtrado Python O(n) por consultas SQL `LIKE` + `LIMIT 20` en `repository.py`.
+
+### 🗑️ Limpieza (Código muerto eliminado)
+
+- **Archivos eliminados**: `question_filters.py` (modelo inexistente), `test_insert.py` (script abandonado), `SearchDrug.scss` y `SelectedDrugsList.scss` (SCSS huérfanos).
+- **Código inline eliminado**: `build_ai_context()` (duplicación nunca llamada), alias `compute_risk_score` (nunca importado), 20 líneas CSS comentadas en `_buttons.scss`.
+
+### 📐 Calidad de Código
+
+- **Anti-patrones corregidos**: `bare except` → `except Exception`, `print()` → `logger.error()`, argumento mutable por defecto `[] → None`.
+- **Imports**: Todos los imports inline movidos al principio del archivo.
+- **Docstrings**: Añadidos en los métodos del repository y del orquestador.
+
+### 🌍 Internacionalización (i18n)
+
+- **10 nuevas claves** (FR + ES): `questionnaire.about`, `.age_label`, `.continue`, `.yes`, `.no`, `score.no_coverage.before/bold`, `seo.description`, `seo.og_title`.
+- **Cadenas hardcodeadas eliminadas**: « À propos de », « ans », « Continuer → », « Oui », « Non » reemplazadas por `t('...')`.
+
+### 🎨 Frontend & SEO
+
+- **Meta SEO**: Añadidos `<meta description>`, Open Graph (`og:title`, `og:description`, `og:locale`), y URL canónica en `Layout.astro`.
+- **Footer**: Eliminación de enlaces muertos (`/mentions-legales`, `/confidentialite`, `/cookies`), `<h1>` → `<p>` (WCAG).
+- **Props tipadas**: Interfaz `Props` añadida al componente `Layout.astro`.
+
+### 🧪 Pruebas (19 nuevas)
+
+- **`AutomedicationScore.test.tsx`** (10 pruebas): Renderizado de niveles de riesgo, i18n FR/ES, consejos generales, cobertura, explicación IA, callback de reinicio.
+- **`i18n.test.ts`** (9 pruebas): Detección de idioma URL, traducciones, prueba de paridad automática FR/ES.
+- **Pruebas backend actualizadas**: Ruta de mock corregida para el nuevo orquestador.
+
+### 📝 Documentación
+
+- **`AGENTS.md`** y **`AGENTS-ES.md`**: Actualización completa (estructura, seguridad, pruebas, estándares).
+- **`DOCUMENTATION.md`**: Nueva documentación detallada de cada archivo del proyecto.
+
 ## [0.6.0] - 2026-02-18
 
 ### 🧠 Mejoras en el Sistema RAG e IA
@@ -66,9 +118,10 @@ Todos los cambios notables de este proyecto se documentarán en este archivo.
 ### 🏗️ Arquitectura Backend (Refactorización Modular)
 
 - **Descomposición del Monolito**: Transformación del servicio de automedicación en un módulo estructurado (`backend/services/automedication/`):
-  - `question_filters.py`: Lógica pura de filtrado (edad, género, vía).
   - `risk_calculator.py`: Calculadora de puntuación agnóstica.
   - `db_repository.py`: Capa de acceso a datos (DAO) aislada.
+  - `orchestrator.py`: Servicio de orquestación (añadido en v0.7.0).
+
 - **Código Limpio (Clean Code)**: Separación estricta de la lógica de negocio (funciones puras) y las entradas/salidas (IO).
 
 ### 🚢 DevOps y Despliegue en la Nube
