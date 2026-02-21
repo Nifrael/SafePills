@@ -6,7 +6,7 @@
     "Q_PREGNANCY": "Êtes-vous enceinte ou allaitez-vous ?",
     "Q_ULCERE": "Avez-vous déjà eu un ulcère à l'estomac ou souffrez-vous de brûlures d'estomac fréquentes ?",
     "Q_LIVER": "Souffrez-vous d'une maladie du foie ou d'une insuffisance hépatique ?",
-    "Q_DIARRHEA": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
+    "Q_DIARRHEA_FEVER": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
     "Q_CONFUSION": "Avez-vous récemment eu des épisodes de confusion ou des troubles de la mémoire ?",
     "Q_POLYMEDICATION": "Prenez-vous actuellement d'autres médicaments de façon régulière ?",
     "Q_HEART": "Souffrez-vous de problèmes cardiaques quelconques (hypertension artérielle, troubles du rythme, etc...) ?",
@@ -68,7 +68,7 @@
         "Le lopéramide ne traite pas la cause de la diarrhée, il ralentit le transit.",
         "Bien s'hydrater pendant un épisode de diarrhée (eau, bouillons, solutions de réhydratation)."
       ],
-      "Q_DIARRHEA": [
+      "Q_DIARRHEA_FEVER": [
         "Une diarrhée avec fièvre ou sang dans les selles peut être le signe d'une infection bactérienne. Dans ce cas, le lopéramide est contre-indiqué car il empêche l'élimination du germe.",
         "Consultez un médecin rapidement si la diarrhée dure plus de 2 jours ou s'accompagne de fièvre."
       ]

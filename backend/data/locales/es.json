@@ -6,7 +6,7 @@
     "Q_PREGNANCY": "¿Está embarazada o amamantando?",
     "Q_ULCERE": "¿Ha tenido alguna vez una úlcera estomacal o sufre de acidez frecuente?",
     "Q_LIVER": "¿Sufre de alguna enfermedad hepática o insuficiencia hepática?",
-    "Q_DIARRHEA": "¿Su diarrea está acompañada de fiebre o sangre en las heces?",
+    "Q_DIARRHEA_FEVER": "¿Su diarrea está acompañada de fiebre o sangre en las heces?",
     "Q_CONFUSION": "¿Ha tenido recientemente episodios de confusión o problemas de memoria?",
     "Q_POLYMEDICATION": "¿Toma actualmente otros medicamentos de forma regular?",
     "Q_HEART": "¿Sufre de problemas cardíacos (hipertensión arterial, trastornos del ritmo, etc.)?",
@@ -68,7 +68,7 @@
         "La loperamida no trata la causa de la diarrea, solo ralentiza el tránsito.",
         "Hidrátese bien durante un episodio de diarrea (agua, caldos, suero de rehidratación)."
       ],
-      "Q_DIARRHEA": [
+      "Q_DIARRHEA_FEVER": [
         "Una diarrea con fiebre o sangre puede indicar una infección. En este caso, la loperamida está contraindicada.",
         "Consulte a un médico rápidamente si la diarrea dura más de 2 días."
       ]

@@ -95,7 +95,7 @@ async def get_flow(request: Request, identifier: str, lang: str = Query("fr")):
         if r.question_code == "GENERAL" and r.risk_level.value == 4:
             return []
     
-    route = _repository.get_drug_route(identifier)
+    route = _repository.get_drug_route(identifier) or "orale"
     
     medical_flow = _convert_rules_to_questions(rules, route, lang)
     

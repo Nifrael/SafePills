@@ -6,13 +6,16 @@ from backend.core.schemas import EvaluationResponse
 class RiskCalculator:
 
     @staticmethod
-    def compute_score(rules: List[Rule], answers: Dict[str, bool]) -> EvaluationResponse:
+    def compute_score(rules: List[Rule], answers: Dict[str, bool], route: str = None) -> EvaluationResponse:
 
         score = RiskLevel.LEVEL_1
         details = []
         answered_questions_context = []
         
         for rule in rules:
+            if route and rule.filter_route and rule.filter_route.lower() not in route.lower():
+                continue
+                
             is_general = rule.question_code == "GENERAL"
             answer = True if is_general else answers.get(rule.question_code, False)
             

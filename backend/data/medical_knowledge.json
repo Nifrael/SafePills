@@ -5,7 +5,7 @@
     "Q_PREGNANCY": "Êtes-vous enceinte ou allaitez-vous ?",
     "Q_ULCERE": "Avez-vous déjà eu un ulcère à l'estomac ou souffrez-vous de brûlures d'estomac fréquentes ?",
     "Q_LIVER": "Souffrez-vous d'une maladie du foie ou d'une insuffisance hépatique ?",
-    "Q_DIARRHEA_FIEVRE": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
+    "Q_DIARRHEA_FEVER": "Votre diarrhée est-elle accompagnée de fièvre ou de sang dans les selles ?",
     "Q_CONFUSION": "Avez-vous récemment eu des épisodes de confusion ou des troubles de la mémoire ?",
     "Q_POLYMEDICATION": "Prenez-vous actuellement d'autres médicaments de façon régulière ?",
     "Q_HEART": "Souffrez-vous de problèmes cardiaques quelconques (hypertension artérielle, troubles du rythme, etc...) ?",
@@ -67,24 +67,9 @@
         "advice": "Les AINS en gel peuvent provoquer des réactions de photosensibilisation graves. Ne pas exposer la zone traitée au soleil."
       }
     ],
-    "ANTALGIQUES_ANTIPYRETIQUES": [
-      {
-        "target_substance": "paracetamol",
-        "question_code": "Q_LIVER",
-        "risk_level": 3,
-        "advice": "En cas d'insuffisance hépatique, le dose de paracétamol doit être réduite. Contactez votre pharmacien ou médecin."
-      },
-      {
-        "target_substance": "paracetamol",
-        "question_code": "Q_POLYMEDICATION",
-        "risk_level": 2,
-        "filter_polymedication": true,
-        "advice": "De nombreux médicaments contiennent du paracétamol caché (Fervex, Ixprim, Lamaline, Humex...). Vérifiez pour éviter le surdosage (maximum 3g à 4g par jour)."
-      }
-    ],
     "GASTRO_ANTIDIARRHEIQUES": [
       {
-        "question_code": "Q_DIARRHEA_FIEVRE",
+        "question_code": "Q_DIARRHEA_FEVER",
         "risk_level": 2,
         "advice": "Consultez un médecin rapidement si la diarrhée s'accompagne de fièvre ou de sang, car cela peut être le signe d'une infection."
       }
@@ -98,8 +83,27 @@
     ],
     "GLOBAL": [
       {
+        "target_substance": "acide acetylsalicylique",
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 3,
+        "advice": "L'aspirine a des effets anticoagulants, si votre traitement habituel comprend des médicaments à visée anticoagulante, l'usage d'aspirine n'est pas recommandé."
+      },
+      {
+        "target_substance": "paracetamol",
+        "question_code": "Q_LIVER",
+        "risk_level": 3,
+        "advice": "En cas d'insuffisance hépatique, le dose de paracétamol doit être réduite. Contactez votre pharmacien ou médecin."
+      },
+      {
+        "target_substance": "paracetamol",
+        "question_code": "Q_POLYMEDICATION",
+        "risk_level": 2,
+        "filter_polymedication": true,
+        "advice": "De nombreux médicaments contiennent du paracétamol caché (Fervex, Ixprim, Lamaline, Humex...). Vérifiez pour éviter le surdosage (maximum 3g à 4g par jour)."
+      },
+      {
         "target_substance": "loperamide",
-        "question_code": "Q_DIARRHEA_FIEVRE",
+        "question_code": "Q_DIARRHEA_FEVER",
         "risk_level": 4,
         "advice": "CONTRE-INDICATION ABSOLUE : Le lopéramide (Imodium) est formellement interdit en cas de diarrhée avec fièvre ou sang, car il empêche l'élimination de la bactérie intestinale."
       },

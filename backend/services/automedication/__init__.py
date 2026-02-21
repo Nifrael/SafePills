@@ -26,13 +26,14 @@ def evaluate_risk(
             )
             
         rules = _repository.get_rules_for_brand(identifier)
+        route = _repository.get_drug_route(identifier) or "orale"
         
         if has_other_meds:
             for r in rules:
                 if r.filter_polymedication or r.question_code == 'Q_POLYMEDICATION':
                     answers[r.question_code] = True
         
-        result = RiskCalculator.compute_score(rules, answers)
+        result = RiskCalculator.compute_score(rules, answers, route=route)
         
         return result
         
