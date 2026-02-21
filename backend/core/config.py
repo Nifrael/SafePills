@@ -1,8 +1,6 @@
 import os
 from functools import lru_cache
-from typing import List
 from pydantic_settings import BaseSettings
-from pydantic import field_validator
 
 
 class Settings(BaseSettings):
@@ -14,18 +12,11 @@ class Settings(BaseSettings):
     
     API_KEY: str = ""
     
-    ALLOWED_ORIGINS: List[str] = [
-        "http://localhost:4321",
-        "http://127.0.0.1:4321",
-        "https://safe-pills-ten.vercel.app"
-    ]
+    ALLOWED_ORIGINS: str = "http://localhost:4321,http://127.0.0.1:4321,https://safe-pills-ten.vercel.app"
 
-    @field_validator('ALLOWED_ORIGINS', mode='before')
-    @classmethod
-    def parse_origins(cls, v):
-        if isinstance(v, str):
-            return [origin.strip() for origin in v.split(",")]
-        return v
+    @property
+    def allowed_origins_list(self) -> list:
+        return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",")]
 
     @property
     def IS_PRODUCTION(self) -> bool:
