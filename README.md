@@ -8,6 +8,10 @@
 _Your AI-powered companion for safe self-medication._
 
 [![Version](https://img.shields.io/badge/version-1.0.0-3cb56f.svg)](CHANGELOG.md)
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen.svg)](https://safe-pills-ten.vercel.app/)
+
+**[Accéder à l'application 🚀](https://safe-pills-ten.vercel.app/)**
+
 [![Astro](https://img.shields.io/badge/Frontend-Astro%20%2F%20React-darkorchid.svg)](https://astro.build/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688.svg)](https://fastapi.tiangolo.com/)
 [![Gemini](https://img.shields.io/badge/AI-Gemini%20Flash%20RAG-blue.svg)](https://deepmind.google/technologies/gemini/)
