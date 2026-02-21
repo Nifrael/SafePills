@@ -41,7 +41,7 @@ export const ui = {
     'features.step3.text': 'Recevez une évaluation claire et des conseils adaptés.',
     'features.cta': 'Tester un médicament',
     // Automedication Page
-    'automedication.page.title': 'Score d\'Automédication - Pharma-Tools',
+    'automedication.page.title': 'Score d\'Automédication - SafePills',
     'automedication.title': 'Score d\'Automédication',
     'automedication.description': 'Vérifiez si l\'automédication est sûre pour vous en quelques questions.',
     // Search Component
@@ -106,7 +106,7 @@ export const ui = {
     'features.step3.text': 'Reciba una evaluación clara y consejos adaptados.',
     'features.cta': 'Probar un medicamento',
     // Automedication Page
-    'automedication.page.title': 'Puntaje de Automedicación - Pharma-Tools',
+    'automedication.page.title': 'Puntaje de Automedicación - SafePills',
     'automedication.title': 'Puntaje de Automedicación',
     'automedication.description': 'Verifique si la automedicación es segura para usted en pocas preguntas.',
     // Search Component
