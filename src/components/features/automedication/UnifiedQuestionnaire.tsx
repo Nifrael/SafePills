@@ -253,7 +253,7 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
 
       {/* Contexte médicament */}
       <div className="drug-context">
-        À propos de <strong>{substanceName}</strong>
+        {t('questionnaire.about')} <strong>{substanceName}</strong>
       </div>
 
       {/* Carte question */}
@@ -293,14 +293,14 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
                 }}
                 autoFocus
               />
-              <span className="age-label">ans</span>
+              <span className="age-label">{t('questionnaire.age_label')}</span>
             </div>
             <button
               className="btn-continue"
               disabled={!ageInput}
               onClick={() => handleAnswer(parseInt(ageInput, 10))}
             >
-              Continuer →
+              {t('questionnaire.continue')}
             </button>
           </div>
         )}
@@ -309,10 +309,10 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
         {currentQuestion.type === 'boolean' && (
           <div className="options">
             <button className="option-btn" onClick={() => handleAnswer(true)}>
-              Oui
+              {t('questionnaire.yes')}
             </button>
             <button className="option-btn" onClick={() => handleAnswer(false)}>
-              Non
+              {t('questionnaire.no')}
             </button>
           </div>
         )}

@@ -3,10 +3,23 @@ import "@styles/main.scss";
 import Navbar from "@components/global/Navbar.astro";
 import Footer from "@components/global/Footer.astro";
 import MedicalDisclaimer from "@components/global/MedicalDisclaimer.astro";
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { ClientRouter } from "astro:transitions";
 
+interface Props {
+  title: string;
+  description?: string;
+}
+
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { title, description } = Astro.props;
+const metaDescription = description || t("seo.description");
+const ogTitle = t("seo.og_title");
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site || "https://pharma-tools-ten.vercel.app",
+);
 ---
 
 <!doctype html>
@@ -19,7 +32,18 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="shortcut icon" href="/favicon.svg?v=3" />
     <meta name="theme-color" content="#4BC873" />
     <meta name="generator" content={Astro.generator} />
-    <title>{Astro.props.title}</title>
+    <title>{title}</title>
+
+    <!-- SEO -->
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonicalURL.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:locale" content={lang === "es" ? "es_ES" : "fr_FR"} />
+    <meta property="og:site_name" content="SafePills" />
 
     <ClientRouter />
   </head>

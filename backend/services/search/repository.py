@@ -1,12 +1,13 @@
 import sqlite3
 import logging
-import json
-from typing import List, Optional, Tuple
+from typing import List, Optional
 from backend.core.config import settings
 from backend.core.schemas import SearchResult
-from backend.core.models import Brand, Substance
+from backend.core.models import Brand, BrandSubstance, Substance as MetierSubstance
+from backend.core.i18n import i18n
 
 logger = logging.getLogger(__name__)
+
 
 class DrugRepository:
     
@@ -19,57 +20,54 @@ class DrugRepository:
         return conn
 
     def search_substances(self, normalized_query: str, lang: str = "fr") -> List[SearchResult]:
-        from backend.core.i18n import i18n
         results = []
         try:
             with self._get_connection() as conn:
                 cursor = conn.cursor()
-                cursor.execute("SELECT id, name FROM substances")
-                all_subs = cursor.fetchall()
+                cursor.execute(
+                    "SELECT id, name FROM substances WHERE LOWER(name) LIKE ? LIMIT 20",
+                    (f"%{normalized_query}%",)
+                )
                 
-                from backend.services.search.utils import normalize_text
-                
-                for sub in all_subs:
-                    if normalized_query in normalize_text(sub['name']):
-                        results.append(SearchResult(
-                            type="substance",
-                            id=str(sub['id']),
-                            name=sub['name'],
-                            description=i18n.get("type_substance", lang, "search") or "Substance active"
-                        ))
+                desc = i18n.get("type_substance", lang, "search") or "Substance active"
+                for sub in cursor.fetchall():
+                    results.append(SearchResult(
+                        type="substance",
+                        id=str(sub['id']),
+                        name=sub['name'],
+                        description=desc
+                    ))
         except Exception as e:
-            logger.error(f"Error searching substances: {e}", exc_info=True)
+            logger.error(f"Erreur recherche substances: {e}", exc_info=True)
             
         return results
 
     def search_drugs(self, normalized_query: str, lang: str = "fr") -> List[SearchResult]:
-        from backend.core.i18n import i18n
-        from backend.services.search.utils import normalize_text
+        """Recherche les médicaments (marques) via SQL LIKE (délégation au moteur DB)."""
         results = []
         try:
             with self._get_connection() as conn:
                 cursor = conn.cursor()
-                cursor.execute("SELECT cis, name, is_otc FROM brands")
-                all_drugs = cursor.fetchall()
+                cursor.execute(
+                    "SELECT cis, name, is_otc FROM brands WHERE LOWER(name) LIKE ? LIMIT 20",
+                    (f"%{normalized_query}%",)
+                )
                 
-                for drug in all_drugs:
-                    if normalized_query in normalize_text(drug['name']):
-                        is_otc = bool(drug['is_otc'])
-                        desc = i18n.get("type_drug", lang, "search") or "Médicament"
-                            
-                        results.append(SearchResult(
-                            type="drug",
-                            id=drug['cis'],
-                            name=drug['name'],
-                            description=desc
-                        ))
+                desc = i18n.get("type_drug", lang, "search") or "Médicament"
+                for drug in cursor.fetchall():
+                    results.append(SearchResult(
+                        type="drug",
+                        id=drug['cis'],
+                        name=drug['name'],
+                        description=desc
+                    ))
         except Exception as e:
-            logger.error(f"Error searching drugs: {e}", exc_info=True)
+            logger.error(f"Erreur recherche médicaments: {e}", exc_info=True)
             
         return results
 
-    def get_drug_details(self, cis: str) -> Optional[dict]:
-        from backend.core.models import Brand, BrandSubstance, Substance as MetierSubstance
+    def get_drug_details(self, cis: str) -> Optional[Brand]:
+        """Récupère les détails complets d'un médicament par son code CIS."""
         try:
             with self._get_connection() as conn:
                 cursor = conn.cursor()
@@ -95,20 +93,18 @@ class DrugRepository:
                     WHERE bs.brand_id = ?
                 """, (brand.id,))
                 
-                sub_rows = cursor.fetchall()
-                for s_row in sub_rows:
+                for s_row in cursor.fetchall():
                     sub_model = MetierSubstance(
                         id=s_row['id'],
                         name=s_row['name']
                     )
-                    br_sub = BrandSubstance(
+                    brand.composition.append(BrandSubstance(
                         substance=sub_model,
                         dosage=s_row['dosage']
-                    )
-                    brand.composition.append(br_sub)
+                    ))
                 
                 return brand
                 
         except Exception as e:
-            logger.error(f"Error retrieving brand details for {cis}: {e}", exc_info=True)
+            logger.error(f"Erreur détails médicament {cis}: {e}", exc_info=True)
             return None

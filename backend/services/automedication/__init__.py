@@ -44,4 +44,3 @@ def evaluate_risk(
             answered_questions_context=[]
         )
 
-compute_risk_score = RiskCalculator.compute_score

@@ -28,9 +28,12 @@ async def generate_risk_explanation(
     score: str,
     details: List[str],
     user_profile: dict,
-    answered_questions: List[dict] = [],
+    answered_questions: List[dict] = None,
     lang: str = "fr"
 ) -> str:
+    if answered_questions is None:
+        answered_questions = []
+
     if not client:
         return "Service d'assistance virtuelle indisponible pour le moment." if lang == "fr" else "Servicio de asistencia virtual no disponible por el momento."
 

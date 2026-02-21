@@ -1,6 +1,9 @@
 import json
 import os
+import logging
 from typing import Dict, Any, Optional
+
+logger = logging.getLogger(__name__)
 
 class I18nService:
     _instances: Dict[str, Any] = {}
@@ -19,23 +22,20 @@ class I18nService:
                     with open(os.path.join(self._locales_dir, filename), "r", encoding="utf-8") as f:
                         self._translations[lang] = json.load(f)
                 except Exception as e:
-                    print(f"Error loading locale {lang}: {e}")
+                    logger.error(f"Erreur chargement locale {lang}: {e}")
 
     def get(self, key: str, lang: str = "fr", section: str = "questions") -> Optional[str]:
         lang = lang if lang in self._translations else self._default_lang
         
         try:
             return self._translations.get(lang, {}).get(section, {}).get(key)
-        except:
+        except Exception:
             return None
 
     def translate_question(self, question_id: str, default_text: str, lang: str) -> str:
-        # Try exact match first
         translated = self.get(question_id, lang, "questions")
         if translated:
             return translated
-
-        # Try stripping suffixes to find base ID (e.g., Q_PREGNANCY_RED -> Q_PREGNANCY)
         base_id = question_id
         for suffix in ['_RED_F', '_ORANGE_F', '_GREEN_F', '_RED', '_ORANGE', '_GREEN']:
             if question_id.endswith(suffix):
@@ -54,10 +54,6 @@ class I18nService:
         return translated if translated else default_label
 
     def get_advice(self, substance: str, key: str, lang: str = "fr") -> list:
-        """
-        Retrieves a list of advice strings for a given substance and key.
-        """
-        # Try target lang
         advice_section = self._translations.get(lang, {}).get("advice", {})
         substance_advice = advice_section.get(substance, {})
         tips = substance_advice.get(key)
@@ -65,7 +61,6 @@ class I18nService:
         if tips:
             return tips
             
-        # Fallback to default lang
         if lang != "fr":
             advice_section = self._translations.get("fr", {}).get("advice", {})
             substance_advice = advice_section.get(substance, {})

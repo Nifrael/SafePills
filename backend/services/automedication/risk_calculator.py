@@ -45,22 +45,4 @@ class RiskCalculator:
             details=details,
             answered_questions_context=answered_questions_context
         )
-    
-    @staticmethod
-    def build_ai_context(rules: List[Rule], answers: Dict[str, bool]) -> List[dict]:
-
-        context = []
-        
-        for rule in rules:
-            is_general = rule.question_code == "GENERAL"
-            answer = True if is_general else answers.get(rule.question_code, False)
-            if answer:  
-                context.append({
-                    'question_text': rule.question_code,
-                    'answer': 'OUI',
-                    'risk_level': rule.risk_level.value,
-                    'triggers_alert': True
-                })
-        
-        return context
 
