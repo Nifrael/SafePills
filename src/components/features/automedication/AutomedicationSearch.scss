@@ -30,11 +30,15 @@
 
     .loader {
       position: absolute;
-      right: 1.5rem;
+      right: 1.2rem;
       top: 50%;
-      transform: translateY(-50%);
-      color: var(--color-text-light, #666);
-      font-size: 0.9rem;
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      border: 3px solid rgba(75, 200, 115, 0.1);
+      border-left-color: var(--tertiary-color);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
     }
 
     .suggestions-list {
@@ -89,4 +93,8 @@
       font-style: italic;
     }
   }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

@@ -153,7 +153,7 @@ Explique-lui pourquoi ce n'est pas recommandé dans sa situation, en restant fac
 """
         
         response = await client.aio.models.generate_content(
-            model='gemini-3-flash-preview',
+            model='gemini-2.5-flash',
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,

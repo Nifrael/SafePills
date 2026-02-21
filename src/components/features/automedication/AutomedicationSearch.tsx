@@ -66,7 +66,7 @@ export const AutomedicationSearch: React.FC<Props> = ({ onSelect, lang }) => {
           onChange={(e) => setQuery(e.target.value)}
         />
         
-        {isLoading && <div className="loader">{t('search.loading')}</div>}
+        {isLoading && <div className="loader"></div>}
         
         {results.length > 0 && (
           <ul className="suggestions-list">

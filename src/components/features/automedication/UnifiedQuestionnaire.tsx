@@ -171,7 +171,9 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
   if (isLoading) {
     return (
       <div className="unified-questionnaire">
-        <div className="loader">{t('questionnaire.loading')}</div>
+        <div className="modern-loader-container">
+          <div className="cube-loader"></div>
+        </div>
       </div>
     );
   }
@@ -187,13 +189,17 @@ export const UnifiedQuestionnaire: React.FC<Props> = ({
               <p>
                 {t('score.risk.high.text').replace('{molecule}', substanceName)}
               </p>
-              <div className="loader">{t('search.loading')}</div>
+              <div className="modern-loader-container">
+                <div className="cube-loader"></div>
+              </div>
             </>
           ) : (
             <>
               <div className="interrupt-icon">🔍</div>
               <h2>{t('search.loading')}</h2>
-              <div className="loader">{t('search.loading')}</div>
+              <div className="modern-loader-container">
+                <div className="cube-loader"></div>
+              </div>
             </>
           )}
         </div>
