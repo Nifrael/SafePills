@@ -2,6 +2,14 @@
 
 Todos los cambios notables de este proyecto se documentarán en este archivo.
 
+## [1.0.0] - 2026-02-21
+
+### 🚀 Lanzamiento de la Versión Estable (Pharma-Tools v1)
+
+- **Auditoría Completa**: Validación de seguridad, arquitectura y mantenibilidad.
+- **Paso a 1.0.0**: Marca la madurez del proyecto tras la remodelación del sistema RAG y la limpieza completa del código.
+- **Documentación Premium**: Rediseño total del README y de los registros de cambios para una claridad máxima.
+
 ## [0.7.0] - 2026-02-21
 
 ### 🔍 Auditoría Completa & Refactorización
