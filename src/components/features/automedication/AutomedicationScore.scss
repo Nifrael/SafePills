@@ -21,23 +21,23 @@
     background: white;
 
     &.score-green {
-      border-color: #2ecc71;
-      color: #2ecc71;
+      border-color: var(--color-green);
+      color: var(--color-green);
     }
 
     &.score-yellow {
-      border-color: #f1c40f;
-      color: #f1c40f;
+      border-color: var(--color-yellow);
+      color: var(--color-yellow);
     }
 
     &.score-orange {
-      border-color: #f39c12;
-      color: #f39c12;
+      border-color: var(--color-orange);
+      color: var(--color-orange);
     }
 
     &.score-red {
-      border-color: #c0392b;
-      color: #c0392b;
+      border-color: var(--color-red);
+      color: var(--color-red);
     }
 
     .score-value {
@@ -75,8 +75,8 @@
   }
 
   .ai-explanation-card {
-    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-    border: 2px solid #a3d5ff;
+    background: linear-gradient(135deg, var(--color-info-bg) 0%, #ffffff 100%);
+    border: 2px solid var(--color-info-border);
     border-radius: 12px;
     padding: 1.5rem;
     margin: 2rem auto;
@@ -86,7 +86,7 @@
     animation: slideIn 0.5s ease-out;
 
     h4 {
-      color: #0056b3;
+      color: var(--color-info-text);
       margin-bottom: 1rem;
       font-size: 1.1rem;
       display: flex;
@@ -112,8 +112,8 @@
   }
 
   .general-advice-card {
-    background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
-    border: 2px solid #b2dfdb;
+    background: linear-gradient(135deg, var(--color-success-bg) 0%, #ffffff 100%);
+    border: 2px solid var(--color-success-border);
     border-radius: 12px;
     padding: 1.5rem;
     margin: 2rem auto;
@@ -122,7 +122,7 @@
     animation: slideIn 0.4s ease-out;
 
     h4 {
-      color: #2e7d32;
+      color: var(--color-success-text);
       margin-bottom: 0.8rem;
       font-size: 1.1rem;
     }
@@ -144,7 +144,7 @@
           content: "•";
           position: absolute;
           left: 0;
-          color: #2e7d32;
+          color: var(--color-success-text);
           font-weight: bold;
         }
       }
@@ -155,8 +155,8 @@
     display: flex;
     align-items: flex-start;
     gap: 0.8rem;
-    background: #fff8e1;
-    border: 2px solid #ffe082;
+    background: var(--color-warning-bg);
+    border: 2px solid var(--color-warning-border);
     border-radius: 12px;
     padding: 1.2rem 1.5rem;
     margin: 1rem auto 2rem;
@@ -170,7 +170,7 @@
     }
 
     p {
-      color: #5d4037;
+      color: var(--color-warning-text);
       line-height: 1.5;
       font-size: 0.95rem;
       margin: 0;
