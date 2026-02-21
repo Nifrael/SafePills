@@ -62,7 +62,7 @@ export const AutomedicationScore: React.FC<Props> = ({
       {!hasCoverage && (
         <div className="no-coverage-warning">
           <span className="warning-icon">ℹ️</span>
-          <p dangerouslySetInnerHTML={{ __html: t('score.no_coverage').replace('**', '<strong>').replace('**', '</strong>') }} />
+          <p>{t('score.no_coverage.before')}<strong>{t('score.no_coverage.bold')}</strong></p>
         </div>
       )}
 
